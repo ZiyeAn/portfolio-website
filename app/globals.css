@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 
+
 @font-face {
   font-family: 'huiwen';
   src: url('/assets/huwenfangsong.001.ttf') format('truetype');
@@ -228,6 +229,67 @@ h3{
 .grid-item p {
     font-size: var(--step-0);
     color: var(--color-text-muted);
+}
+
+/* 推荐放在 app/globals.css 末尾，或新建 page.module.css 并用 className 绑定 */
+
+.hero-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  background: var(--color-bg, #f9f6f1);
+  pointer-events: auto;
+}
+
+.hero-title-img {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+.hero-spacer {
+  height: 100svh; /* 必须与 hero-layer 高度一致 */
+  width: 100%;
+  pointer-events: none;
+}
+
+.content-section {
+  position: relative;
+  min-height: 100svh;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.works-section {
+  background: #212121;
+}
+
+.contact-section {
+  background: #e6e6e6;
+}
+
+/* 适配移动端 */
+@media (max-width: 600px) {
+  .hero-content {
+    gap: 1.2rem;
+    padding: 1rem 0.5rem 0 0.5rem;
+  }
+  .hero-title-img {
+    width: min(95vw, 260px);
+    margin-bottom: 1rem;
+  }
+  .content-section {
+    padding: 2rem 0.5rem;
+  }
 }
 
 @import "tailwindcss/utilities";
