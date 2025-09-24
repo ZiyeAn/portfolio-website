@@ -1,0 +1,47 @@
+.topNav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.2rem 0;
+}
+.topNavDark {
+  background: #232323;
+  color: #fff;
+  border-bottom: 1px solid #444;
+}
+.navInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  min-height: 40px;
+  gap: 2rem; /* 增加左右间距 */
+}
+.navInner a:hover{
+  color: #940000;
+}
+.navLinks {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between; /* 均匀分布 */
+  width: 100%;                   /* 链接组占满可用空间 */
+  max-width: 500px;               /* 可选：限制最大宽度 */
+}
+.navLinks a {
+  text-decoration: none;
+}
+.navLinks a:hover {
+  color: #940000;
+}
+.navInner a {
+  text-decoration: none;
+}
+
+.topNavDark a {
+  color: #fff;
+}
+.topNavDark a:hover {
+  color: #ffd700;
+}

@@ -1,0 +1,45 @@
+.galleryWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.arrow {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+.arrow:hover {
+  background: #f3f3f3;
+}
+.left {
+  margin-right: 0.5rem;
+}
+.right {
+  margin-left: 0.5rem;
+}
+
+.gallery {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  flex: 1;           /* 让容器自适应宽度 */
+  width: 100%;       /* 保证自适应 */
+  padding-bottom: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #eee;
+  min-width: 0;
+}
+.gallery:focus {
+  outline: 2px solid #aaa;
+}
