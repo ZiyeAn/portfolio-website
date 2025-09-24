@@ -1,4 +1,5 @@
-
+@import "tailwindcss/base";
+@import "tailwindcss/components";
 
 @font-face {
   font-family: 'huiwen';
@@ -228,3 +229,5 @@ h3{
     font-size: var(--step-0);
     color: var(--color-text-muted);
 }
+
+@import "tailwindcss/utilities";

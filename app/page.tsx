@@ -1,5 +1,6 @@
 import TopNav from "@/components/TopNav";
 import HandsMenu from "@/components/HandsMenu";
+import { MorphingText } from "@/components/ui/morphing-text";
 
 export default function Home() {
   return (
@@ -7,7 +8,7 @@ export default function Home() {
       <div className="title">
         <img src="/assets/index/title.png" alt="Title" />
         <TopNav />
-        <h3 className="subtitle">"A Table for One?"</h3>
+        <MorphingText texts={["A Table for One?","Ziye An"]} className="subtitle" />
       </div>
       <HandsMenu />
       <section id="works">
