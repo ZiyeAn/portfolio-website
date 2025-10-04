@@ -1,17 +1,18 @@
 import TopNav from "@/components/TopNav";
 import HandsMenu from "@/components/HandsMenu";
+import LogoIntro from '@/components/LogoIntro';
 import { MorphingText } from "@/components/ui/morphing-text";
+import styles from "./page.module.css";
 
 
 export default function Home() {
   return (
-    <>
-      {/* Hero 固定层 */}
+    <div className={styles.staggerContainer}>
+       <TopNav />
       <section id="hero" className="hero-layer">
         <div className="hero-content">
-          <img src="/assets/index/title.png" alt="Title" className="hero-title-img" />
-          <TopNav />
-          <MorphingText texts={["A Table for One?", "Ziye An"]} className="subtitle" />
+          <LogoIntro />
+          <MorphingText texts={["'A Table for One?'", "Ziye An's Portfolio"]} className={styles.subtitle} />
           <HandsMenu />
         </div>
       </section>
@@ -27,6 +28,6 @@ export default function Home() {
         <h2>Contact</h2>
         <p>Coming soon...</p>
       </section>
-    </>
+    </div>
   );
 }

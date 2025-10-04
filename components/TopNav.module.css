@@ -1,47 +1,226 @@
 .topNav {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
-  padding: 0.2rem 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10000;
+  background-color: rgba(249, 246, 241, 0.92);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
+
 .topNavDark {
-  background: #232323;
+  background-color: rgba(35, 35, 35, 0.9);
   color: #fff;
-  border-bottom: 1px solid #444;
+  border-bottom-color: rgba(255, 255, 255, 0.12);
 }
+
+.topNavOpen {
+  border-bottom-color: transparent;
+}
+
 .navInner {
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
-  min-height: 40px;
-  gap: 2rem; /* 增加左右间距 */
-}
-.navInner a:hover{
-  color: #940000;
-}
-.navLinks {
-  display: flex;
-  gap: 2.5rem;
-  justify-content: space-between; /* 均匀分布 */
-  width: 100%;                   /* 链接组占满可用空间 */
-  max-width: 500px;               /* 可选：限制最大宽度 */
-}
-.navLinks a {
-  text-decoration: none;
-}
-.navLinks a:hover {
-  color: #940000;
-}
-.navInner a {
-  text-decoration: none;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  position: relative;
+  width: 100%;
 }
 
-.topNavDark a {
-  color: #fff;
+.brand {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
 }
-.topNavDark a:hover {
+
+.brandMobile {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brandDesktop {
+  display: none;
+}
+
+.menuToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.menuToggle:hover,
+.menuToggle:focus-visible {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.topNavDark .menuToggle:hover,
+.topNavDark .menuToggle:focus-visible {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.menuIcon {
+  position: relative;
+  width: 1.4rem;
+  height: 2px;
+  background: currentColor;
+  transition: background 0.2s ease;
+}
+
+.menuIcon::before,
+.menuIcon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.4rem;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menuIcon::before {
+  transform: translateY(-6px);
+}
+
+.menuIcon::after {
+  transform: translateY(6px);
+}
+
+.topNavOpen .menuIcon {
+  background: transparent;
+}
+
+.topNavOpen .menuIcon::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.topNavOpen .menuIcon::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.navLinks {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 1rem;
+  left: 1rem;
+  display: none;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(249, 246, 241, 0.95);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.topNavDark .navLinks {
+  background: rgba(35, 35, 35, 0.95);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
+}
+
+.navLinksOpen {
+  display: flex;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.navLinks a:hover,
+.navLinks a:focus-visible {
+  color: #940000;
+  outline: none;
+}
+
+.topNavDark .navLinks a:hover,
+.topNavDark .navLinks a:focus-visible {
   color: #ffd700;
+}
+
+.navInner a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navInner a:hover,
+.navInner a:focus-visible {
+  color: #940000;
+  outline: none;
+}
+
+.topNavDark .navInner a:hover,
+.topNavDark .navInner a:focus-visible {
+  color: #ffd700;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 768px) {
+  .navInner {
+    padding: 0.6rem 2rem;
+  }
+
+  .menuToggle {
+    display: none;
+  }
+
+  .navLinks {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding: 0;
+    box-shadow: none;
+    background: transparent;
+    flex: 1;
+  }
+
+  .navLinks a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    flex: 1;
+    text-align: center;
+  }
+
+  .brandDesktop {
+    display: inline-flex;
+    justify-content: flex-start;
+  }
+
+  .brandMobile {
+    display: none;
+  }
 }

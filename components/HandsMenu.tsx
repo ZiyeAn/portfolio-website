@@ -15,14 +15,14 @@ export default function HandsMenu() {
       duration: 1,
       x: "-50%",
       ease: "circ.inOut",
-      delay: 1.5,
+      delay: 0.3,
     }, 0);
     tl.from(`.${styles.rightHand}`, {
       opacity: 0,
       duration: 1,
       x: "50%",
       ease: "circ.inOut",
-      delay: 1.5,
+      delay: 0.3,
     }, 0);
 
     gsap.to(`.${styles.leftHand}`, {
@@ -31,9 +31,8 @@ export default function HandsMenu() {
         start: "top 40%",
         end: "top 10%",
         scrub: true,
-        pin: true,
       },
-      rotation: 20,
+      rotation: -50,
       duration: 2,
       ease: "power3.inOut",
     });
@@ -44,9 +43,8 @@ export default function HandsMenu() {
         start: "top 40%",
         end: "top 10%",
         scrub: true,
-        pin: true,
       },
-      rotation: -20,
+      rotation: 50,
       duration: 2,
       ease: "power3.inOut",
     });

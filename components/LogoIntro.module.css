@@ -1,0 +1,36 @@
+.logoWrap {
+  width: 95%;
+  margin: 0 auto;
+  margin-right: 5vw;
+}
+
+/* SVG 自适应 + 动画变量 */
+.logo {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  /* 初始变量（JS 会把 --wipe-scale-x 从 0 切到 1 触发过渡）*/
+  --wipe-scale-x: 0;
+  --wipe-duration: 2s;
+  --wipe-delay: 0.5s;
+  --wipe-ease: cubic-bezier(0.22, 0.72, 0.22, 1);
+}
+
+/* 遮罩里的白矩形，用变量驱动显现动画 */
+.wipe {
+  transform-origin: left;
+  transform-box: fill-box; /* 关键：让 transform 参照 SVG 自己的坐标盒 */
+  transform: scaleX(var(--wipe-scale-x));
+  transition: transform var(--wipe-duration) var(--wipe-ease) var(--wipe-delay);
+}
+
+/* 无障碍：减少动效时直接显现 */
+@media (prefers-reduced-motion: reduce) {
+  .logo {
+    --wipe-scale-x: 1 !important;
+  }
+  .wipe {
+    transition: none !important;
+  }
+}
