@@ -155,7 +155,7 @@
 
 .topNavDark .navLinks a:hover,
 .topNavDark .navLinks a:focus-visible {
-  color: #ffd700;
+  color: #940000;
 }
 
 .navInner a {
@@ -171,7 +171,7 @@
 
 .topNavDark .navInner a:hover,
 .topNavDark .navInner a:focus-visible {
-  color: #ffd700;
+  color: #940000;
 }
 
 .srOnly {

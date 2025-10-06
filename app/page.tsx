@@ -1,6 +1,7 @@
 import TopNav from "@/components/TopNav";
 import HandsMenu from "@/components/HandsMenu";
 import LogoIntro from '@/components/LogoIntro';
+import SelectedWorksSection from "@/components/SelectedWorksSection"; 
 import { MorphingText } from "@/components/ui/morphing-text";
 import { CometCard } from "@/components/ui/comet-card";
 import styles from "./page.module.css";
@@ -23,40 +24,49 @@ export default function Home() {
       <section id="about" className={`content-section ${styles.aboutSection}`}>
         <CometCard className={styles.aboutCard}>
           <div className={styles.aboutInner}>
-            <header className={styles.aboutHeader}>
-              <span className={styles.aboutTag}>About</span>
-              <h2>Ziye An does</h2>
-              <p className={styles.aboutLead}>
-                Story-driven interfaces that feel tactile, intentional, and just a touch unexpected. I blend typography,
-                motion, and creative coding to build playful narratives that invite you to stay.
-              </p>
-            </header>
-            <div className={styles.aboutHighlights}>
-              <div className={styles.aboutHighlight}>
-                <h3>Experiential Design</h3>
-                <p>Layered narratives and ambient cues guide visitors through playful, memorable journeys.</p>
+            <div className={styles.aboutGrid}>
+              <div className={styles.aboutLabel}>
+                <span className={styles.aboutTag}>About</span>
               </div>
-              <div className={styles.aboutHighlight}>
-                <h3>Creative Technology</h3>
-                <p>Mixing React, motion, and generative visuals to keep interactions expressive yet performant.</p>
+              <div className={styles.aboutImage}>
+                <img
+                  src="/assets/profile.jpg"
+                  alt="Ziye An's profile image"
+                />
               </div>
-              <div className={styles.aboutHighlight}>
-                <h3>Collaborative Practice</h3>
-                <p>Partnering with artists and teams to translate evocative ideas into living, working products.</p>
+              <div className={styles.aboutTitle}>
+                <h2>ZIYE AN</h2>
+                <h3>does</h3>
+              </div>
+              <div className={styles.aboutSubtitle}>
+                <h3>
+                  <MorphingText
+                    texts={["UX_Design", "3D_Modeling","Photography","Art","Photography","Game"]}
+                    className={styles.aboutText}
+                  />
+                </h3>
+              </div>
+              <div className={styles.aboutDescription}>
+                <p>
+                  current student in Design & Technology at Parsons School of Design.
+                </p>
+              </div>
+              <div className={styles.aboutMeta}>
+                <span>Based in New York & Shanghai</span>
               </div>
             </div>
-            <footer className={styles.aboutFooter}>
-              <span>Based in Toronto, CA</span>
-              <span>Open to collaborations worldwide</span>
-              <span>2024 · @ziye.an</span>
-            </footer>
           </div>
         </CometCard>
       </section>
       {/* Works Section */}
       <section id="works" className="content-section works-section">
-        <h2>Works</h2>
-        <p><a href="/works">Go to works page →</a></p>
+        <div className={styles.sectionHeader}>
+          <h2>CHEF's RECOMMENDATION</h2>
+          <a href="/works" className={styles.sectionLink}>
+            See all works →
+          </a>
+        </div>
+        <SelectedWorksSection />
       </section>
       {/* Contact Section */}
       <section id="contact" className="content-section contact-section">

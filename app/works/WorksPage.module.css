@@ -1,5 +1,9 @@
 .worksPageBg {
-  background: #232323;
-  min-height: 100vh;
+  background: #333333;
   width: 100%;
+}
+
+.pageContainer {
+  width: min(95%, 1400px);
+  margin: clamp(1.5rem, 2.2vw, 2rem) auto clamp(2.5rem, 4vw, 3.5rem);
 }

@@ -16,15 +16,12 @@
   font-family: var(--font-geist-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
+@font-face {
+  font-family: 'MixStitch';
+  src: url('/assets/MixStitch.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .main {
@@ -160,11 +157,6 @@ a.secondary {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-}
 
 .topNav {
   position: fixed;
@@ -194,44 +186,82 @@ a.secondary {
 
 .aboutSection {
   background: transparent;
+  font-family: 'huiwen';
 }
 
 .aboutCard {
-  width: min(1100px, 96vw);
+  width: min(1080px, 96vw);
   margin: 0 auto;
 }
 
 .aboutInner {
   width: 100%;
-  display: grid;
-  gap: clamp(1.6rem, 2.5vw, 2.8rem);
-  padding: clamp(2.4rem, 4.5vw, 3.6rem);
-  border-radius: 36px;
-  background: linear-gradient(180deg, rgba(255, 243, 165, 0.95), rgba(255, 249, 213, 0.9));
-  border: 3px solid #1f2020;
-  outline: 2px dotted rgba(31, 32, 32, 0.55);
-  outline-offset: -16px;
-  box-shadow:
-    0 22px 60px rgba(31, 32, 32, 0.16),
-    0 46px 120px rgba(31, 32, 32, 0.12);
-  text-align: left;
-  color: #1f2020;
+  padding: clamp(4.5rem, 6vw, 6rem) clamp(2.5rem, 4vw, 4rem);
+  background: url('/assets/index/about_bg.png') center / cover no-repeat;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #333333;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.aboutHeader {
+.aboutGrid {
+  width: min(620px, 94%);
   display: grid;
-  gap: clamp(1rem, 1.8vw, 2rem);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(0.45rem, 1vw, 1.1rem);
+  row-gap: clamp(0.35rem, 0.7vw, 0.8rem);
+  position: relative;
+  transform: translateX(clamp(0.7rem, 1vw, 2rem));
+}
+
+.aboutGrid > * {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutLabel {
+  grid-area: 1 / 2 / 2 / 13;
+  display: flex;
+  align-items: center;
+}
+
+.aboutImage {
+  grid-area: 2 / 2 / 11 / 5;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(31, 32, 32, 0.35);
+  background: rgba(31, 32, 32, 0.1);
+}
+
+.aboutImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(0.9) saturate(0.85);
+}
+
+.aboutTitle {
+  grid-area: 2 / 5 / 5 / 13;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.4rem, 0.8vw, 0.7rem);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
 .aboutTag {
-  font-family: var(--font-geist-mono, monospace);
-  font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.9rem);
-  letter-spacing: 0.35em;
+  font-family: 'huiwen';
+  font-size: clamp(0.7rem, 0.64rem + 0.18vw, 0.82rem);
+  letter-spacing: 0.32em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
 }
 
 .aboutTag::before,
@@ -239,96 +269,260 @@ a.secondary {
   content: "";
   flex-grow: 1;
   height: 1px;
-  background: rgba(31, 32, 32, 0.45);
+  background: rgba(31, 32, 32, 0.4);
 }
 
-.aboutHeader h2 {
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+.aboutTitle h2 {
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 }
 
-.aboutLead {
-  font-size: clamp(1rem, 1rem + 0.7vw, 1.5rem);
+.aboutSubtitle {
+  grid-area: 5 / 5 / 7 / 13;
+  display: flex;
+  align-items: center;
+}
+
+.aboutSubtitle h3 {
+  font-family: 'huiwen';
+  font-size: clamp(0.75rem, 0.72rem + 0.2vw, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  display: inline-flex;
+  gap: 0.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.aboutSubtitle h3 span {
+  display: inline-block;
+}
+
+.aboutText {
+  font-family: 'huiwen';
+  font-size: clamp(1rem, 1.1rem + 0.35vw, 1.6rem);
+  color: #710000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.aboutDescription {
+  grid-area: 7 / 5 / 10 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.45rem, 0.75vw, 0.75rem);
+  font-family: 'huiwen';
+  padding-right: clamp(0.35rem, 1vw, 1.2rem);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.aboutDescription p {
+  font-size: clamp(0.78rem, 0.76rem + 0.22vw, 0.9rem);
   line-height: 1.6;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  font-family: var(--font-geist-mono, monospace);
+  letter-spacing: 0.04em;
+  max-width: 32ch;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-.aboutHighlights {
-  display: grid;
-  gap: clamp(1.5rem, 2.4vw, 2.5rem);
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: clamp(1.25rem, 2vw, 2rem) 0;
-  border-block: 2px dotted rgba(31, 32, 32, 0.5);
-}
-
-.aboutHighlight {
-  padding: clamp(1rem, 1.5vw, 1.75rem) clamp(0.75rem, 1.4vw, 1.4rem);
-  border-right: 2px dotted rgba(31, 32, 32, 0.35);
-}
-
-.aboutHighlight:last-child {
-  border-right: none;
-}
-
-.aboutHighlight h3 {
-  margin-bottom: 0.7rem;
-  font-size: clamp(1.05rem, 1rem + 0.4vw, 1.3rem);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-family: var(--font-geist-mono, monospace);
-}
-
-.aboutHighlight p {
-  font-size: clamp(0.9rem, 0.85rem + 0.35vw, 1.05rem);
-  line-height: 1.65;
-  color: rgba(31, 32, 32, 0.9);
-}
-
-.aboutFooter {
+.aboutMeta {
+  grid-area: 10 / 2 / 12 / 13;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 0.75rem;
-  font-family: var(--font-geist-mono, monospace);
-  font-size: clamp(0.75rem, 0.7rem + 0.25vw, 0.95rem);
-  letter-spacing: 0.25em;
+  gap: 0.3rem 0.6rem;
+  font-family: 'huiwen';
+  font-size: clamp(0.6rem, 0.58rem + 0.16vw, 0.75rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding-top: clamp(0.5rem, 0.8vw, 1rem);
+  border-top: 2px dotted rgba(31, 32, 32, 0.3);
+  align-items: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contactSection {
+  width: 100%;
+  padding: clamp(3rem, 4vw + 2rem, 6rem) 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #333333;
+}
+
+.contactCard {
+  width: min(680px, 100%);
+  background: #040404;
+  color: #ffffff;
+  border-radius: 24px;
+  padding: clamp(2rem, 3vw + 1.5rem, 3.5rem);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.8rem, 2vw, 2.4rem);
+}
+
+.contactHeader h2 {
+  font-size: clamp(2rem, 1.5rem + 1.2vw, 2.8rem);
+  margin: 0;
+}
+
+.contactHeader p {
+  margin: 0.75rem 0 0;
+  font-size: clamp(0.95rem, 0.85rem + 0.2vw, 1.05rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contactTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.contactBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.contactPrimary:hover,
+.contactPrimary:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.45);
+  outline: none;
+}
+
+.contactLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.contactLinks a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.contactLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.contactLinks a:hover,
+.contactLinks a:focus-visible {
+  color: #ffffff;
+  outline: none;
+}
+
+.contactLinks a:hover::after,
+.contactLinks a:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+@media (max-width: 640px) {
+  .contactCard {
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+  }
+
+  .contactLinks {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .contactPrimary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.sectionHeader {
+  width: min(92%, 1200px);
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: clamp(2.2rem, 1.8rem + 1vw, 3rem);
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-@media (prefers-color-scheme: dark) {
+.sectionLink {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sectionLink:hover,
+.sectionLink:focus-visible {
+  color: #ffffff;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .sectionHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutCard {
+    width: min(94vw, 700px);
+  }
+
   .aboutInner {
-    background: linear-gradient(180deg, rgba(56, 56, 56, 0.95), rgba(34, 34, 34, 0.92));
-    border-color: rgba(255, 255, 255, 0.35);
-    outline-color: rgba(255, 255, 255, 0.4);
-    box-shadow:
-      0 30px 90px rgba(0, 0, 0, 0.5),
-      0 12px 40px rgba(0, 0, 0, 0.4);
-    color: rgba(255, 255, 255, 0.92);
+    padding: clamp(2.6rem, 7vw, 3.8rem);
+    justify-content: center;
   }
 
-  .aboutTag::before,
-  .aboutTag::after {
-    background: rgba(255, 255, 255, 0.35);
-  }
-
-  .aboutLead,
-  .aboutHighlight h3,
-  .aboutFooter span {
-    color: rgba(255, 255, 255, 0.9);
-  }
-
-  .aboutHighlights {
-    border-color: rgba(255, 255, 255, 0.35);
-  }
-
-  .aboutHighlight {
-    border-right-color: rgba(255, 255, 255, 0.3);
-  }
-
-  .aboutHighlight p {
-    color: rgba(255, 255, 255, 0.75);
+  .aboutGrid {
+    width: 100%;
+    transform: none;
   }
 }

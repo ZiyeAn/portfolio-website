@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'MixStitch';
+  src: url('/assets/MixStitch.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 * {
     margin: 0;
@@ -19,7 +26,6 @@
 body, html {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-family: 'Arial', sans-serif;
 }
 
@@ -54,7 +60,6 @@ body {
     background: var(--color-bg);
     line-height: 1.6;
     font-family: 'huiwen';
-    height: 200vh; 
 }
 
 /* Global typography */
@@ -273,11 +278,11 @@ h3{
 }
 
 .works-section {
-  background: #212121;
+  background: #333333;
 }
 
 .contact-section {
-  background: #e6e6e6;
+  background: #333333;
 }
 
 /* 适配移动端 */
