@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import projectsData from "@/data/works.json"; 
+import projectsData from "@/data/works.json";
 
 type Project = {
   title: string;
@@ -16,6 +16,10 @@ type Project = {
     images?: string[];
   };
   intro?: string;
+};
+
+type WorksData = {
+  projects?: Project[];
 };
 
 // 更强健的路径归一化
@@ -35,7 +39,8 @@ const stripHtml = (html?: string): string =>
   html ? html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim() : "";
 
 export default function SelectedWorksSection() {
-  const projects: Project[] = (projectsData as any)?.projects ?? [];
+  const works = projectsData as WorksData;
+  const projects: Project[] = works.projects ?? [];
 
   // 1) 过滤 selected_work
   const selected = projects.filter((p) => p.selected_work);
@@ -65,7 +70,6 @@ export default function SelectedWorksSection() {
 
   // 开发期日志：确认每条 src 是否是以 /assets/ 或 http 开头
   if (process.env.NODE_ENV === "development") {
-    // eslint-disable-next-line no-console
     console.table(
       testimonials.map((t) => ({
         name: t.name,

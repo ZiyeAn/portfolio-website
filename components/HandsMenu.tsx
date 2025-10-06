@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./HandsMenu.module.css";
@@ -63,10 +64,26 @@ export default function HandsMenu() {
     <section>
       <div className={styles.hands}>
         <div className={styles.leftHand}>
-          <img src="/assets/index/left_hand.png" alt="Left Hand" />
+          <Image
+            src="/assets/index/left_hand.png"
+            alt="Left Hand"
+            width={900}
+            height={842}
+            priority
+            sizes="(max-width: 768px) 60vw, 30vw"
+            className={styles.handImage}
+          />
         </div>
         <div className={styles.rightHand}>
-          <img src="/assets/index/right_hand.png" alt="Right Hand" />
+          <Image
+            src="/assets/index/right_hand.png"
+            alt="Right Hand"
+            width={900}
+            height={842}
+            priority
+            sizes="(max-width: 768px) 60vw, 30vw"
+            className={styles.handImage}
+          />
         </div>
       </div>
     </section>
