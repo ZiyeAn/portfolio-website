@@ -56,7 +56,7 @@ export default function Home() {
       {/* Works Section */}
       <section id="works" className="content-section works-section">
         <div className={styles.sectionHeader}>
-          <h2>CHEF's RECOMMENDATION</h2>
+          <h2>CHEF&apos;s RECOMMENDATION</h2>
           <Link href="/works" className={styles.sectionLink}>
             See all works →
           </Link>

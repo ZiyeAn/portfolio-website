@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import projectsData from "@/data/works.json"; // ← 改成你的实际路径
+import projectsData from "@/data/works.json"; 
 
 type Project = {
   title: string;
