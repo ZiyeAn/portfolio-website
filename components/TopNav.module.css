@@ -6,14 +6,13 @@
   width: 100%;
   z-index: 10000;
   background-color: rgba(249, 246, 241, 0.92);
-  backdrop-filter: blur(10px);
+
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .topNavDark {
   background-color: rgba(35, 35, 35, 0.9);
   color: #fff;
-  border-bottom-color: rgba(255, 255, 255, 0.12);
 }
 
 .topNavOpen {

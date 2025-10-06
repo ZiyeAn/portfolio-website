@@ -28,12 +28,6 @@ export default function Home() {
               <div className={styles.aboutLabel}>
                 <span className={styles.aboutTag}>About</span>
               </div>
-              <div className={styles.aboutImage}>
-                <img
-                  src="/assets/profile.jpg"
-                  alt="Ziye An's profile image"
-                />
-              </div>
               <div className={styles.aboutTitle}>
                 <h2>ZIYE AN</h2>
                 <h3>does</h3>
@@ -48,7 +42,7 @@ export default function Home() {
               </div>
               <div className={styles.aboutDescription}>
                 <p>
-                  current student in Design & Technology at Parsons School of Design.
+                  Currently studying Design & Technology at Parsons School of Design, I focus on interactive systems that connect physical computation with digital design. My projects range from Arduino-powered installations and Unity games to React-based web tools that visualize data and behavior.
                 </p>
               </div>
               <div className={styles.aboutMeta}>

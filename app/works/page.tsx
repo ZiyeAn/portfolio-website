@@ -9,7 +9,6 @@ export default function WorksPage() {
     <main className={styles.worksPageBg}>
       <TopNav dark />
       <div className={styles.pageContainer}>
-        <h1>Works</h1>
         <WorksGallery projects={projects.projects} />
       </div>
     </main>

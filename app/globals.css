@@ -121,11 +121,9 @@ small { font-size: var(--step--1); color: var(--color-text-muted); }
     }
 html { scroll-behavior: smooth; }
 
-/* h1{
-    text-align: center;
-    font-size: 9em;
-    color: #353534;
-} */
+h1{
+    color: #9d0000;
+}
 
 h3{
     color: var(--color-text);
