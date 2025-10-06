@@ -9,17 +9,21 @@ import { BlurFade } from "@/components/ui/blur-fade";
 
 type ProjectData = (typeof rawProjects.projects)[number];
 
-type ProcessData = ProjectData["details"] extends { process: infer P }
-  ? P & {
-      inspiration?: string[];
-      development?: string[];
-      images?: string[];
-    }
-  : {
-      inspiration?: string[];
-      development?: string[];
-      images?: string[];
-    };
+type ProcessData = {
+  inspiration?: string[];
+  development?: string[];
+  images?: string[];
+};
+
+type ProjectDetails = {
+  description?: string;
+  techStack?: string[];
+  timeline?: string;
+  demoLink?: string;
+  video?: string[];
+  images?: string[];
+  process?: ProcessData;
+};
 
 const normalizeAsset = (src?: string) => {
   if (!src) return "";
@@ -34,11 +38,11 @@ interface ProjectDetailProps {
 export default function ProjectDetail({ project }: ProjectDetailProps) {
   const [showProcess, setShowProcess] = React.useState(false);
 
-  const details = project.details ?? {};
+  const details: ProjectDetails = project.details ?? {};
   const descriptionHtml = details.description ?? project.intro ?? "";
   const timeline = details.timeline ?? "";
   const techStack = details.techStack ?? [];
-  const process: ProcessData | undefined = details.process as ProcessData;
+  const process = details.process;
   const videos = (details.video ?? []).map(normalizeAsset).filter(Boolean);
   const imageSources = (details.images ?? [])
     .map(normalizeAsset)

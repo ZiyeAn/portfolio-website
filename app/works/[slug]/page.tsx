@@ -13,12 +13,21 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({
+type WorksPageParams = Promise<{ slug?: string | string[] }>;
+
+const resolveSlug = async (params?: WorksPageParams) => {
+  const resolved = params ? await params : undefined;
+  const slugValue = resolved?.slug;
+
+  return Array.isArray(slugValue) ? slugValue[0] : slugValue;
+};
+
+export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params?: WorksPageParams;
 }) {
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const slug = await resolveSlug(params);
   const project = allProjects.find((item) => normalizeId(item.id) === slug);
 
   if (!project) {
@@ -33,12 +42,12 @@ export function generateMetadata({
   };
 }
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params?: WorksPageParams;
 }) {
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug;
+  const slug = await resolveSlug(params);
   const project = allProjects.find((item) => normalizeId(item.id) === slug);
 
   if (!project) {
