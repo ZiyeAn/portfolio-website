@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./TopNav.module.css";
 
@@ -27,13 +28,13 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
       }`}
     >
       <div className={styles.navInner}>
-        <a
+        <Link
           href="/"
           className={`${styles.brand} ${styles.brandMobile}`}
           onClick={closeMenu}
         >
           Ziye An
-        </a>
+        </Link>
         <button
           type="button"
           className={styles.menuToggle}
@@ -48,22 +49,22 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
           id="top-nav-links"
           className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ""}`}
         >
-          <a
+          <Link
             href="/"
             className={`${styles.brand} ${styles.brandDesktop}`}
             onClick={closeMenu}
           >
             Ziye An
-          </a>
-          <a href="/#about" onClick={closeMenu}>
+          </Link>
+          <Link href="/#about" onClick={closeMenu}>
             About
-          </a>
-          <a href="/works" onClick={closeMenu}>
+          </Link>
+          <Link href="/works" onClick={closeMenu}>
             Works
-          </a>
-          <a href="/#contact" onClick={closeMenu}>
+          </Link>
+          <Link href="/#contact" onClick={closeMenu}>
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </nav>

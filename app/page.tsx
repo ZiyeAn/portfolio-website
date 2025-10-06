@@ -4,6 +4,7 @@ import LogoIntro from '@/components/LogoIntro';
 import SelectedWorksSection from "@/components/SelectedWorksSection"; 
 import { MorphingText } from "@/components/ui/morphing-text";
 import { CometCard } from "@/components/ui/comet-card";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 
@@ -56,9 +57,9 @@ export default function Home() {
       <section id="works" className="content-section works-section">
         <div className={styles.sectionHeader}>
           <h2>CHEF's RECOMMENDATION</h2>
-          <a href="/works" className={styles.sectionLink}>
+          <Link href="/works" className={styles.sectionLink}>
             See all works →
-          </a>
+          </Link>
         </div>
         <SelectedWorksSection />
       </section>
