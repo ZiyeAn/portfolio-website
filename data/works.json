@@ -1,9 +1,31 @@
 {
   "projects": [
     {
+      "title": "Orbit",
+      "selected_work": true,
+      "thumbnail": "assets/orbit/orbit1.jpg",
+      "intro": "An retro Futuristic Diner built with MAYA",
+      "tags": ["3D Modeling"],
+      "id": "/works/mountain_spirit.html",
+      "details": {
+        "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
+        "techStack": ["MAYA"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "images": [
+          "../assets/orbit/orbit1.jpg",
+          "../assets/orbit/orbit2.jpg",
+          "../assets/orbit/orbit3.jpg",
+          "../assets/orbit/orbit4.jpg",
+          "../assets/orbit/orbit5.jpg",
+          "../assets/orbit/orbit6.jpg"
+        ]
+      }
+    },
+    {
       "title": "Labyrinth",
       "selected_work": true,
-      "thumbnail": "assets/labyrinth/labyrinth_thumb.png",
+      "thumbnail": "assets/labyrinth/Labyrinth6.jpg",
       "intro": "a two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound)",
       "tags": ["Game"],
       "id": "/works/labyrinth.html",
@@ -12,7 +34,7 @@
         "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
         "timeline": "Mar 2025 – Apr 2025",
         "demoLink": "#",
-        "video": ["../assets/labyrinth/Labyrinth.mp4"],
+        "video": ["https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"],
         "images": [
           "../assets/labyrinth/Labyrinth5.jpg",
           "../assets/labyrinth/Labyrinth6.jpg",
@@ -34,7 +56,7 @@
         "techStack": ["Unity", "C#", "Arduino", "Serial (USB)", "Illustrator"],
         "timeline": "Jan 2025 – Mar 2025",
         "demoLink": "#",
-        "video": ["../assets/spinphony/Spinphony.mov"],
+        "video_ID":["165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo"],
         "images": [
           "../assets/spinphony/spinphony-2.jpg",
           "../assets/spinphony/spinphony-3.jpg",
@@ -42,6 +64,59 @@
           "../assets/spinphony/spinphony-5.jpg",
           "../assets/spinphony/spinphony-7.jpg",
           "../assets/spinphony/spinphony-8.jpg"
+        ]
+      }
+    },
+    {
+      "title": "Ripple",
+      "selected_work": false,
+      "thumbnail": "assets/ripple/ripple1.jpg",
+      "intro": "A cute neclace I made ;",
+      "tags": ["fabrication"],
+      "id": "/works/ripple.html",
+      "details": {
+        "description": "A cute neclace I made ;)",
+        "techStack": ["Silver"],
+        "timeline": "August 2024",
+        "demoLink": "#",
+        "images": [
+          "../assets/ripple/ripple1.jpg"
+        ]
+      }
+    },
+    {
+      "title": "Dragonfly",
+      "selected_work": false,
+      "thumbnail": "assets/dragonfly/dragonfly.jpg",
+      "intro": "A cute dragonfly I made ;",
+      "tags": ["fabrication"],
+      "id": "/works/dragonfly.html",
+      "details": {
+        "description": "A cute neclace I made ;)",
+        "techStack": ["Silver","Copper"],
+        "timeline": "August 2024",
+        "demoLink": "#",
+        "images": [
+          "assets/dragonfly/dragonfly.jpg"
+        ]
+      }
+    },
+    {
+      "title": "Carry Me",
+      "selected_work": true,
+      "thumbnail": "assets/carry_me/carry_me1.jpg",
+      "intro": "A cute neclace I made ;",
+      "tags": ["fabrication"],
+      "id": "/works/carry_me.html",
+      "details": {
+        "description": "A cute neclace I made ;)",
+        "techStack": ["Silver"],
+        "timeline": "August 2024",
+        "demoLink": "#",
+        "images": [
+          "../assets/carry_me/carry_me3.jpg",
+          "../assets/carry_me/carry_me1.jpg",
+          "../assets/carry_me/carry_me2.jpg"
         ]
       }
     },
@@ -84,6 +159,27 @@
           "../assets/funguide/f2.png",
           "../assets/funguide/f3.png",
           "../assets/funguide/f4.png"
+        ]
+      }
+    },
+    {
+      "title": "Mountain Spirit 山鬼",
+      "selected_work": false,
+      "thumbnail": "assets/mountain_spirit/ms3.jpg",
+      "intro": "An retro Futuristic Diner built with MAYA",
+      "tags": ["Installation"],
+      "id": "/works/Orbit.html",
+      "details": {
+        "description": "Mountain Spirit is a interactive installation inspired by the Chinese mythological figure '山鬼' (Mountain Spirit) from the ancient text '楚辞' (Chu Ci). This porject is inspired by Jeremiah 10:3–5, reflects on the human creation of gods — not as divine beings, but as products of shared belief. I see this as a metaphor for how societies construct meaning: through imagination, agreement, and repetition, the intangible becomes real. Centering on a female deity, the piece explores how belief animates what is otherwise inert — how the powerless can exist powerfully through the unity of human conviction.<br><br> \" They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk.\" ",
+        "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=sharing"],
+        "images": [
+          "../assets/mountain_spirit/ms1.jpg",
+          "../assets/mountain_spirit/ms2.jpg",
+          "../assets/mountain_spirit/ms3.jpg",
+          "../assets/mountain_spirit/ms4.jpg"
         ]
       }
     },
@@ -178,6 +274,46 @@
           "../assets/bio_game/g1.png",
           "../assets/bio_game/CC2.png",
           "../assets/bio_game/image3.jpg"
+        ]
+      }
+    },
+    {
+      "title": "Land",
+      "selected_work": false,
+      "thumbnail": "assets/Land/Land_Spread_Ziye.jpg",
+      "intro": "An autobiographical p5.js game exploring self-perception and choices",
+      "tags": ["Game"],
+      "id": "/works/Land.html",
+      "details": {
+        "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
+        "techStack": ["Photodgraphy","Illustrator","InDesign"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
+        "images": [
+          "../assets/Land/Land_Spread_Ziye.jpg",
+          "../assets/Land/Land_Spread_Ziye1.jpg",
+          "../assets/Land/Land_Spread_Ziye2.jpg",
+          "../assets/Land/Land_Spread_Ziye3.jpg",
+          "../assets/Land/Land_Spread_Ziye4.jpg"
+        ]
+      }
+    },
+    {
+      "title": "Portart of Pierre",
+      "selected_work": false,
+      "thumbnail": "assets/portrait_of_pierre/PierP1.jpeg",
+      "intro": "An autobiographical p5.js game exploring self-perception and choices",
+      "tags": ["Drawing"],
+      "id": "/works/Portart_of_Pierre.html",
+      "details": {
+        "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
+        "techStack": ["Photodgraphy","Illustrator","InDesign"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
+        "images": [
+          "../assets/portrait_of_pier/PierP1.jpeg",
+          "../assets/portrait_of_pier/PierP2.jpeg",
+          "../assets/portrait_of_pier/PierP3.jpeg"
         ]
       }
     }
