@@ -172,14 +172,15 @@ export const AnimatedTestimonials = ({
                 }}
                 className="absolute inset-0 origin-bottom"
               >
-                <div className="relative h-full w-full">
+                <div className={styles.imageWrapper}>
                   <Image
-                    fill
                     src={testimonial.src}
                     alt={testimonial.name}
+                    width={1200}
+                    height={1600}
                     draggable={false}
                     className={`${styles.imageInner} ${styles.imageShadow}`}
-                    sizes="(max-width: 1024px) 80vw, 500px"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 700px"
                     priority={isActive(index)}
                   />
                 </div>
