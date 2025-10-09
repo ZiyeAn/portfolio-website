@@ -100,16 +100,14 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <section className={styles.mediaColumn}>
           {driveVideos.map((driveSrc, index) => (
             <div key={`drive-video-${index}`} className={styles.videoFrame}>
-              <div className={styles.driveEmbedWrapper}>
-                <iframe
-                  className={styles.driveEmbed}
-                  src={driveSrc}
-                  title={`${project.title} video ${index + 1}`}
-                  allow="autoplay; fullscreen"
-                  loading="lazy"
-                  allowFullScreen
-                />
-              </div>
+              <iframe
+                className={styles.driveEmbed}
+                src={driveSrc}
+                title={`${project.title} video ${index + 1}`}
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           ))}
           {videos.map((videoSrc, index) => (
