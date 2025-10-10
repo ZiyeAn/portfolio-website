@@ -56,7 +56,7 @@
         "techStack": ["Unity", "C#", "Arduino", "Serial (USB)", "Illustrator"],
         "timeline": "Jan 2025 – Mar 2025",
         "demoLink": "#",
-        "video_ID":["165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo"],
+        "video_ID":["19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4"],
         "images": [
           "../assets/spinphony/spinphony-2.jpg",
           "../assets/spinphony/spinphony-3.jpg",
@@ -214,7 +214,7 @@
         "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
         "timeline": "September 2025",
         "demoLink": "#",
-        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=sharing"],
+        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link","https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link"],
         "images": [
           "../assets/mountain_spirit/ms1.jpg",
           "../assets/mountain_spirit/ms2.jpg",
@@ -347,13 +347,12 @@
       "id": "/works/Portart_of_Pierre.html",
       "details": {
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
-        "techStack": ["Photodgraphy","Illustrator","InDesign"],
+        "techStack": ["Pencil","Papercutting"],
         "timeline": "Jan 2024 - Mar 2024",
-        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
-          "../assets/portrait_of_pier/PierP1.jpeg",
-          "../assets/portrait_of_pier/PierP2.jpeg",
-          "../assets/portrait_of_pier/PierP3.jpeg"
+          "assets/portrait_of_pierre/PierP1.jpeg",
+          "assets/portrait_of_pierre/PierP2.jpeg",
+          "assets/portrait_of_pierre/PierP3.jpeg"
         ]
       }
     }
