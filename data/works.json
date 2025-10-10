@@ -123,7 +123,7 @@
     {
       "title": "Chester Choiceworth",
       "selected_work": true,
-      "thumbnail": "assets/chester/Chester Choiceworth.png",
+      "thumbnail": "assets/chester/CC3.JPG",
       "intro": "\"You don't choose your lifestyle, Data does.\"",
       "tags": ["Installation"],
       "id": "/works/chester_choiceworth.html",
@@ -142,11 +142,30 @@
       }
     },
     {
+      "title": "Python Playground",
+      "selected_work": false,
+      "thumbnail": "assets/python/stardew.gif",
+      "intro": "\"You don't choose your lifestyle, Data does.\"",
+      "tags": ["Coding"],
+      "id": "/works/python_playground.html",
+      "details": {
+        "description": "A collection of small projects I made while learning Python, including terminal scroll art, a kirby game, a simple web scraper, and a Stardew Valley farm planner.",
+        "techStack": ["python"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://github.com/ZiyeAn/Creative_Coding_Python/blob/main/README.md",
+        "images": [
+          "../assets/python/stardew.gif",
+          "../assets/python/SAFInal.gif",
+          "../assets/python/turtle.gif"
+        ]
+      }
+    },
+    {
       "title": "Funguide",
       "selected_work": false,
       "thumbnail": "assets/funguide/Funguide.png",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
-      "tags": ["website"],
+      "tags": ["Coding"],
       "id": "/works/funguide.html",
       "details": {
         "description": "Funguide is a mushroom recognition and recipe generator. Simply upload a photo of a mushroom, and the system will identify it, providing basic information along with a recipe featuring that mushroom.",
@@ -159,6 +178,27 @@
           "../assets/funguide/f2.png",
           "../assets/funguide/f3.png",
           "../assets/funguide/f4.png"
+        ]
+      }
+    },
+    {
+      "title": "Descent | Ascent",
+      "selected_work": false,
+      "thumbnail": "assets/underwater_gesture/ARS Zine-1.jpg",
+      "intro": "An autobiographical p5.js game exploring self-perception and choices",
+      "tags": ["Drawing"],
+      "id": "/works/DescentAscent.html",
+      "details": {
+        "description": "This zine playfully explores the silent, soggy language of divers. Structured as a journey from descent to ascent, it documents how hand gestures become a form of communication when speech disappears underwater. Inspired by real-world diver signaling systems and research in underwater gesture recognition, the project turns practical survival gestures into an unspoken narrative. It’s part observation, part miscommunication, and entirely an ode to talking with your hands when no one can hear you anyway.",
+        "techStack": ["InDesign"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
+        "images": [
+          "../assets/underwater_gesture/ARS Zine-1.jpg",
+          "../assets/underwater_gesture/ARS Zine-2.jpg",
+          "../assets/underwater_gesture/ARS Zine-3.jpg",
+          "../assets/underwater_gesture/ARS Zine-4.jpg",
+          "../assets/underwater_gesture/ARS Zine-5.jpg"
         ]
       }
     },
@@ -186,9 +226,9 @@
     {
       "title": "An Apple",
       "selected_work": false,
-      "thumbnail": "assets/apple/different perspective.png",
+      "thumbnail": "assets/apple/apple.gif",
       "intro": "How can you see an apple from different perspectives?",
-      "tags": ["website"],
+      "tags": ["Coding"],
       "id": "/works/apple.html",
       "details": {
         "description": "How to view an apple from different perspective? To me, apple is a fruit I think is too normal to ear but my mom always push me to eat. She never stop bragging how good it is to eat apples, so I wanted to figure out how poeple from the world view this normal fruit. I also include how I view it at the final section cuz I want also a private perspective of apples.",
@@ -208,7 +248,7 @@
       "selected_work": false,
       "thumbnail": "assets/what_to_cook/wtc_hero_img.png",
       "intro": "A simple cookbook for kids",
-      "tags": ["website"],
+      "tags": ["Coding"],
       "id": "/works/what_to_cook_today.html",
       "details": {
         "description": "A simple cook book for kids. Allows kids to choose the ingredients and make their own meal.",
@@ -227,7 +267,7 @@
       "selected_work": false,
       "thumbnail": "assets/what_to_drink/wtd1.png",
       "intro": "Decide what to drink through a digital Chinese divination",
-      "tags": ["website"],
+      "tags": ["Coding"],
       "id": "/works/what-to-drink-today.html",
       "details": {
         "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
@@ -282,7 +322,7 @@
       "selected_work": false,
       "thumbnail": "assets/Land/Land_Spread_Ziye.jpg",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Game"],
+      "tags": ["Drawing"],
       "id": "/works/Land.html",
       "details": {
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
