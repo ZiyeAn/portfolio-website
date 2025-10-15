@@ -1,6 +1,23 @@
 {
   "projects": [
     {
+      "title": "Apple Universe",
+      "selected_work": true,
+      "thumbnail": "public/assets/apple_animation/mash animation.0085.png",
+      "intro": "An retro Futuristic Diner built with MAYA",
+      "tags": ["3D Modeling"],
+      "id": "/works/mountain_spirit.html",
+      "details": {
+        "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
+        "techStack": ["MAYA"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "images": [
+          "assets/apple_animation/apple_motion_blur.mp4"
+        ]
+      }
+    },
+    {
       "title": "Orbit",
       "selected_work": true,
       "thumbnail": "assets/orbit/orbit1.jpg",
