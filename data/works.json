@@ -12,6 +12,7 @@
         "techStack": ["MAYA"],
         "timeline": "September 2025",
         "demoLink": "#",
+        "video": ["../assets/apple_animation/apple_motion_blur.mp4"],
         "images": [
           "assets/apple_animation/apple_motion_blur.mp4"
         ]
