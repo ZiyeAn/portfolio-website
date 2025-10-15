@@ -3,7 +3,7 @@
     {
       "title": "Apple Universe",
       "selected_work": true,
-      "thumbnail": "assets/apple_animation/mash animation.0085.png",
+      "thumbnail": "public/assets/apple_animation/appleverse.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["3D Modeling"],
       "id": "/works/mountain_spirit.html",
@@ -14,7 +14,7 @@
         "demoLink": "#",
         "video": ["../assets/apple_animation/apple_motion_blur.mp4"],
         "images": [
-          "assets/apple_animation/apple_motion_blur.mp4"
+          "assets/apple_animation/mash animation.0085.png"
         ]
       }
     },
