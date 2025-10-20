@@ -97,6 +97,65 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
       </header>
 
       <main className={styles.content}>
+        <aside className={styles.infoColumn}>
+          <div className={styles.infoBlock}>
+            <div className={styles.infoHeader}>
+              <h1 className={styles.projectTitle}>{project.title}</h1>
+              {timeline ? (
+                <p className={styles.timeline}>Timeline · {timeline}</p>
+              ) : null}
+            </div>
+
+            {descriptionHtml ? (
+              <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
+            ) : null}
+
+            {techStack.length ? (
+              <div className={styles.techStack}>
+                {techStack.map((tech) => (
+                  <span key={tech} className={styles.techItem}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            ) : null}
+
+            {project.tags?.length ? (
+              <div className={styles.tags}>
+                {project.tags.map((tag) => (
+                  <span key={tag}>{tag}</span>
+                ))}
+              </div>
+            ) : null}
+
+            {details.demoLink && details.demoLink !== "#" ? (
+              <a
+                href={details.demoLink}
+                className={styles.demoLink}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Visit Site ↗
+              </a>
+            ) : null}
+
+            {process ? (
+              <button
+                type="button"
+                className={`${styles.processToggle} ${
+                  showProcess ? styles.processToggleActive : ""
+                }`}
+                onClick={handleToggleProcess}
+              >
+                {showProcess ? "Back to Images" : "View Process"}
+              </button>
+            ) : null}
+          </div>
+        </aside>
+
         <section className={styles.mediaColumn}>
           {driveVideos.map((driveSrc, index) => (
             <div key={`drive-video-${index}`} className={styles.videoFrame}>
@@ -136,63 +195,6 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
             <div className={styles.emptyMedia}>Media coming soon.</div>
           ) : null}
         </section>
-
-        <aside className={styles.infoColumn}>
-          <div className={styles.infoHeader}>
-            <h1 className={styles.projectTitle}>{project.title}</h1>
-            {timeline ? (
-              <p className={styles.timeline}>Timeline · {timeline}</p>
-            ) : null}
-          </div>
-
-          {descriptionHtml ? (
-            <div
-              className={styles.description}
-              dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-            />
-          ) : null}
-
-          {techStack.length ? (
-            <div className={styles.techStack}>
-              {techStack.map((tech) => (
-                <span key={tech} className={styles.techItem}>
-                  {tech}
-                </span>
-              ))}
-            </div>
-          ) : null}
-
-          {project.tags?.length ? (
-            <div className={styles.tags}>
-              {project.tags.map((tag) => (
-                <span key={tag}>{tag}</span>
-              ))}
-            </div>
-          ) : null}
-
-          {details.demoLink && details.demoLink !== "#" ? (
-            <a
-              href={details.demoLink}
-              className={styles.demoLink}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Visit Site ↗
-            </a>
-          ) : null}
-
-          {process ? (
-            <button
-              type="button"
-              className={`${styles.processToggle} ${
-                showProcess ? styles.processToggleActive : ""
-              }`}
-              onClick={handleToggleProcess}
-            >
-              {showProcess ? "Back to Images" : "View Process"}
-            </button>
-          ) : null}
-        </aside>
       </main>
 
       {process ? (

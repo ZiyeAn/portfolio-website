@@ -42,9 +42,31 @@
 .content {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.6fr);
   gap: clamp(2rem, 4vw, 4rem);
+  align-items: start;
   padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 6vw, 5rem);
+}
+
+.infoColumn {
+  position: sticky;
+  top: calc(6.5rem);
+  align-self: start;
+  display: flex;
+  width: 100%;
+}
+
+.infoBlock {
+  width: 100%;
+  padding: clamp(1.8rem, 3vw, 2.8rem);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(31, 32, 32, 0.08);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.2vw, 2rem);
 }
 
 .mediaColumn {
@@ -113,27 +135,6 @@
   text-align: center;
   font-family: "VT323", monospace;
   letter-spacing: 0.1em;
-}
-
-.infoColumn {
-  position: sticky;
-  top: calc(6.5rem);
-  align-self: start;
-  padding: clamp(1.75rem, 3vw, 2.75rem);
-  display: flex;
-  flex-direction: column;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
-  max-height: calc(100vh - 8rem);
-  overflow-y: auto;
-}
-
-.infoColumn::-webkit-scrollbar {
-  width: 6px;
-}
-
-.infoColumn::-webkit-scrollbar-thumb {
-  background: rgba(167, 7, 18, 0.35);
-  border-radius: 3px;
 }
 
 .infoHeader {
@@ -214,10 +215,9 @@
 }
 
 .processToggle {
-  position: sticky;
-  bottom: 0;
-  align-self: stretch;
-  margin-top: auto;
+  align-self: flex-start;
+  margin-top: clamp(0.75rem, 2vw, 1.5rem);
+  width: 100%;
   background: transparent;
   color: #a70712;
   border: 1px solid rgba(167, 7, 18, 0.35);
@@ -310,15 +310,15 @@
 
   .infoColumn {
     position: static;
-    max-height: none;
+  }
+
+  .infoBlock {
+    padding: clamp(1.4rem, 4vw, 2.2rem);
   }
 
   .mediaColumn {
     max-height: none;
-  }
-
-  .processToggle {
-    position: static;
+    padding-right: 0;
   }
 
   .processDrawer {
