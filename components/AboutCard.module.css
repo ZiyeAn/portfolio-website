@@ -1,0 +1,143 @@
+.aboutCard {
+  width: min(1080px, 96vw);
+  margin: 0 auto;
+}
+
+.aboutInner {
+  width: 100%;
+  padding: clamp(4.5rem, 6vw, 6rem) clamp(2.5rem, 4vw, 4rem);
+  background: url('/assets/index/about_bg.png') center / cover no-repeat;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #333333;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutGrid {
+  width: min(620px, 94%);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.8rem, 1.2vw, 1.4rem);
+  position: relative;
+}
+
+.aboutGrid > * {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutLabel {
+  display: flex;
+  align-items: center;
+}
+
+.aboutTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(0.4rem, 0.8vw, 0.7rem);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+.aboutTag {
+  font-family: 'huiwen';
+  font-size: clamp(0.7rem, 0.64rem + 0.18vw, 0.82rem);
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.aboutTag::before,
+.aboutTag::after {
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: rgba(31, 32, 32, 0.4);
+}
+
+.aboutTitle h2 {
+  font-size: clamp(1.55rem, 2.4vw, 2.15rem);
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.aboutSubtitle {
+  display: flex;
+  align-items: center;
+}
+
+.aboutSubtitle h3 {
+  font-family: 'huiwen';
+  font-size: clamp(0.75rem, 0.72rem + 0.2vw, 0.9rem);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  display: inline-flex;
+  gap: 0.25rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.aboutSubtitle h3 span {
+  display: inline-block;
+}
+
+.aboutText {
+  font-family: 'huiwen';
+  font-size: clamp(1rem, 1.1rem + 0.35vw, 1.6rem);
+  color: #710000;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+}
+
+.aboutDescription {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.45rem, 0.75vw, 0.75rem);
+  font-family: 'huiwen';
+  padding-right: clamp(0.35rem, 1vw, 1.2rem);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.aboutDescription p {
+  font-size: clamp(0.78rem, 0.76rem + 0.22vw, 0.9rem);
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.aboutMeta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.3rem 0.6rem;
+  font-family: 'huiwen';
+  font-size: clamp(0.6rem, 0.58rem + 0.16vw, 0.75rem);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding-top: clamp(0.5rem, 0.8vw, 1rem);
+  align-items: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .aboutCard {
+    width: min(94vw, 700px);
+  }
+
+  .aboutInner {
+    padding: clamp(2.6rem, 7vw, 3.8rem);
+    justify-content: center;
+  }
+
+  .aboutGrid {
+    gap: clamp(1rem, 2.6vw, 1.6rem);
+  }
+
+  .aboutMeta {
+    gap: clamp(0.4rem, 2vw, 0.9rem);
+  }
+}

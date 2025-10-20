@@ -3,6 +3,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./AnimatedTestimonials.module.css";
 
@@ -11,6 +12,7 @@ type Testimonial = {
   name: string;
   designation: string;
   src: string;
+  href?: string;
 };
 export const AnimatedTestimonials = ({
   testimonials,
@@ -88,7 +90,18 @@ export const AnimatedTestimonials = ({
           className={styles.contentBlock}
         >
           <div className={styles.titleBlock}>
-            <h3 className={styles.title}>{testimonials[active].name}</h3>
+            <h3 className={styles.title}>
+              {testimonials[active].href ? (
+                <Link
+                  href={testimonials[active].href}
+                  className={styles.titleLink}
+                >
+                  {testimonials[active].name}
+                </Link>
+              ) : (
+                testimonials[active].name
+              )}
+            </h3>
             {testimonials[active].designation ? (
               <p className={styles.meta}>{testimonials[active].designation}</p>
             ) : null}
@@ -173,16 +186,36 @@ export const AnimatedTestimonials = ({
                 className="absolute inset-0 origin-bottom"
               >
                 <div className={styles.imageWrapper}>
-                  <Image
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    width={1200}
-                    height={1600}
-                    draggable={false}
-                    className={`${styles.imageInner} ${styles.imageShadow}`}
-                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 700px"
-                    priority={isActive(index)}
-                  />
+                  {testimonial.href ? (
+                    <Link
+                      href={testimonial.href}
+                      className={styles.imageLink}
+                      aria-label={`View ${testimonial.name}`}
+                      tabIndex={isActive(index) ? 0 : -1}
+                    >
+                      <Image
+                        src={testimonial.src}
+                        alt={testimonial.name}
+                        width={1200}
+                        height={1600}
+                        draggable={false}
+                        className={`${styles.imageInner} ${styles.imageShadow}`}
+                        sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 700px"
+                        priority={isActive(index)}
+                      />
+                    </Link>
+                  ) : (
+                    <Image
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      width={1200}
+                      height={1600}
+                      draggable={false}
+                      className={`${styles.imageInner} ${styles.imageShadow}`}
+                      sizes="(max-width: 768px) 90vw, (max-width: 1280px) 60vw, 700px"
+                      priority={isActive(index)}
+                    />
+                  )}
                 </div>
               </motion.div>
             ))}

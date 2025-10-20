@@ -38,6 +38,12 @@ const normalizeSrc = (s?: string): string => {
 const stripHtml = (html?: string): string =>
   html ? html.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim() : "";
 
+const toProjectHref = (id?: string): string | undefined => {
+  if (!id) return undefined;
+  const slug = id.replace(/^\/works\//, "").replace(/\.html$/i, "");
+  return `/works/${slug}`;
+};
+
 export default function SelectedWorksSection() {
   const works = projectsData as WorksData;
   const projects: Project[] = works.projects ?? [];
@@ -65,6 +71,7 @@ export default function SelectedWorksSection() {
       designation,
       quote,
       src: firstImg,
+      href: toProjectHref(p.id),
     };
   });
 
