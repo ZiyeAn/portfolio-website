@@ -15,7 +15,6 @@ export default function Home() {
       <section id="hero" className="hero-layer">
         <div className="hero-content">
           <LogoIntro />
-          <MorphingText texts={["'A Table for One?'", "Ziye An's Portfolio"]} className={styles.subtitle} />
           <HandsMenu />
         </div>
       </section>
