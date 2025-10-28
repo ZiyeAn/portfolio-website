@@ -91,7 +91,7 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   height: auto !important;
   min-height: clamp(3.2rem, 7vw, 6.5rem);
-  transform: translate(-45%, 90%);
+  transform: translate(-45%, 80%);
 }
 
 .aboutDescription {
