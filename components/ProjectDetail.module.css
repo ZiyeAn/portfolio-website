@@ -10,16 +10,17 @@
   position: sticky;
   top: 0;
   z-index: 200;
-  display: flex;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   align-items: center;
-  justify-content: space-between;
-  padding: 1.25rem clamp(1.5rem, 5vw, 3rem);
+  column-gap: 0.75rem;
+  padding: 0.5rem clamp(1.5rem, 5vw, 3rem);
   background: #f8f5f0;
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(31, 32, 32, 0.08);
 }
 
-.backButton,
+.homeButton,
 .nav a {
   font-family: "VT323", monospace;
   font-size: 1.1rem;
@@ -27,16 +28,76 @@
   text-decoration: none;
   color: #1f2020;
   transition: color 0.2s ease;
+  white-space: nowrap;
 }
 
-.backButton:hover,
+.homeButton:hover,
 .nav a:hover {
   color: #a70712;
 }
 
+.homeButton {
+  justify-self: start;
+}
+
 .nav {
-  display: flex;
+  display: inline-flex;
   gap: clamp(1rem, 3vw, 2.5rem);
+  align-items: center;
+  justify-self: end;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: inherit;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  background: rgba(31, 32, 32, 0.06);
+  border-color: rgba(31, 32, 32, 0.12);
+  color: #a70712;
+  outline: none;
+}
+
+.closeButton:active {
+  background: rgba(31, 32, 32, 0.12);
+}
+
+.closeButton :global(svg) {
+  width: 1.25rem;
+  height: 1.25rem;
+  stroke-width: 2;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding-block: 0.6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding-inline: 1rem;
+  }
+
+  .closeButton {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .closeButton :global(svg) {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
 }
 
 .content {

@@ -12,9 +12,8 @@ export default function AboutCard() {
       <div className={styles.aboutInner}>
         <div className={styles.aboutGrid}>
 
-          {/* 盘子+堆字 */}
           <PlatePile
-            src="/assets/index/dish.png"     // ← 换成你的盘子图
+            src="/assets/index/dish.png"   
             width={960}
             height={600}
           >

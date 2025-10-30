@@ -3,6 +3,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { X } from "lucide-react";
 import styles from "./ProjectDetail.module.css";
 import rawProjects from "@/data/works.json";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -91,8 +92,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           Ziye An
         </Link>
         <nav className={styles.nav}>
-          <Link href="/works">Works</Link>
-
+          <Link
+            href="/works"
+            className={styles.closeButton}
+            aria-label="Back to works"
+          >
+            <X aria-hidden />
+          </Link>
         </nav>
       </header>
 
