@@ -1,0 +1,260 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(250, 225, 210, 0.45), transparent 38%),
+    radial-gradient(circle at bottom right, rgba(215, 235, 245, 0.45), transparent 40%),
+    #f9f6f1;
+  color: #1f2020;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: clamp(6rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3rem) clamp(4rem, 8vw, 6rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 5rem);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.4vw, 2rem);
+  padding-top: clamp(2rem, 10vw, 6rem);
+}
+
+.kicker {
+  font-family: 'huiwen';
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: clamp(0.75rem, 0.68rem + 0.2vw, 0.88rem);
+  color: rgba(31, 32, 32, 0.7);
+}
+
+.title {
+  font-size: clamp(2.2rem, 2.4rem + 1vw, 3.4rem);
+  line-height: 1.1;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+.intro {
+  font-family: 'huiwen';
+  font-size: clamp(1rem, 0.98rem + 0.35vw, 1.2rem);
+  line-height: 1.75;
+  color: rgba(31, 32, 32, 0.86);
+  max-width: 58ch;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 1.65rem;
+  border-radius: 999px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.primaryAction {
+  background: #851200;
+  color: #f9f6f1;
+  box-shadow: 0 15px 35px rgba(133, 18, 0, 0.25);
+}
+
+.primaryAction:hover,
+.primaryAction:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(133, 18, 0, 0.3);
+  outline: none;
+}
+
+.secondaryAction {
+  border: 1px solid rgba(31, 32, 32, 0.2);
+  color: #1f2020;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.secondaryAction:hover,
+.secondaryAction:focus-visible {
+  color: #940000;
+  border-color: #940000;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.sectionTitle {
+  font-size: clamp(1.6rem, 1.5rem + 0.8vw, 2.2rem);
+  font-weight: 600;
+  margin-bottom: clamp(1.25rem, 2vw, 2rem);
+  text-wrap: balance;
+}
+
+.sectionIntro {
+  font-family: 'huiwen';
+  font-size: clamp(1rem, 0.96rem + 0.32vw, 1.18rem);
+  line-height: 1.7;
+  color: rgba(31, 32, 32, 0.8);
+  max-width: 56ch;
+}
+
+.highlightsSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2.4vw, 2.2rem);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 2.5vw, 2.8rem);
+}
+
+.highlightCard {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 1.4rem;
+  padding: clamp(1.5rem, 2vw, 2rem);
+  box-shadow: 0 18px 36px rgba(15, 28, 40, 0.08);
+  border: 1px solid rgba(133, 18, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.highlightCard h3 {
+  font-size: clamp(1.15rem, 1.1rem + 0.4vw, 1.5rem);
+  font-weight: 600;
+  color: #851200;
+}
+
+.highlightCard p {
+  font-family: 'huiwen';
+  font-size: clamp(0.95rem, 0.92rem + 0.2vw, 1.05rem);
+  line-height: 1.7;
+  color: rgba(31, 32, 32, 0.8);
+}
+
+.experienceSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2vw, 2.2rem);
+}
+
+.timelineItem {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 2.2vw, 2.4rem);
+  border: 1px solid rgba(31, 32, 32, 0.08);
+  box-shadow: 0 24px 48px rgba(15, 28, 40, 0.09);
+}
+
+.timelineHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.timelineHeader h3 {
+  font-size: clamp(1.2rem, 1.15rem + 0.4vw, 1.45rem);
+  font-weight: 600;
+}
+
+.timelineHeader span {
+  font-family: 'huiwen';
+  font-size: clamp(0.9rem, 0.88rem + 0.18vw, 1.05rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(31, 32, 32, 0.6);
+}
+
+.timelineCompany {
+  margin-top: 0.6rem;
+  font-family: 'huiwen';
+  font-size: clamp(1rem, 0.98rem + 0.22vw, 1.18rem);
+  color: #851200;
+}
+
+.timelineItem ul {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding-left: 1.1rem;
+}
+
+.timelineItem li {
+  font-family: 'huiwen';
+  font-size: clamp(0.95rem, 0.9rem + 0.2vw, 1.05rem);
+  line-height: 1.7;
+  color: rgba(31, 32, 32, 0.82);
+}
+
+.toolsetSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 2.1vw, 2.4rem);
+}
+
+.toolGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: clamp(0.75rem, 1.4vw, 1.6rem);
+}
+
+.toolGrid li {
+  font-family: 'huiwen';
+  font-size: clamp(0.95rem, 0.9rem + 0.18vw, 1.05rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 0.75rem 1.1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px dashed rgba(133, 18, 0, 0.35);
+  text-align: center;
+  color: rgba(31, 32, 32, 0.75);
+}
+
+.beyondSection {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 1.8vw, 2rem);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-top: clamp(5.5rem, 12vw, 7rem);
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .highlightCard,
+  .timelineItem {
+    border-radius: 1.15rem;
+  }
+
+  .toolGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+}

@@ -56,7 +56,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
           >
             Ziye An
           </Link>
-          <Link href="/#about" onClick={closeMenu}>
+          <Link href="/about" onClick={closeMenu}>
             About
           </Link>
           <Link href="/works" onClick={closeMenu}>
