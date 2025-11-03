@@ -6,6 +6,7 @@
   width: 100%;
   z-index: 10000;
   background-color: rgba(249, 246, 241, 0.92);
+  font-family: 'jetbrains-mono', monospace;
 
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
@@ -138,6 +139,16 @@
   display: flex;
 }
 
+.navLeft,
+.navCenter,
+.navRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
 .navLinks a {
   text-decoration: none;
   font-size: 1rem;
@@ -196,10 +207,10 @@
 
   .navLinks {
     position: static;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    justify-content: stretch;
     gap: 0;
     padding: 0;
     box-shadow: none;
@@ -210,8 +221,33 @@
   .navLinks a {
     font-size: 0.95rem;
     font-weight: 500;
-    flex: 1;
-    text-align: center;
+    padding: 0 0.5rem;
+  }
+
+  .navLeft,
+  .navCenter,
+  .navRight {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navLeft {
+    justify-content: flex-start;
+    justify-self: start;
+    width: 100%;
+  }
+
+  .navCenter {
+    justify-content: center;
+    gap: 1.75rem;
+    justify-self: center;
+    width: auto;
+  }
+
+  .navRight {
+    justify-content: flex-end;
+    justify-self: end;
+    width: 100%;
   }
 
   .brandDesktop {

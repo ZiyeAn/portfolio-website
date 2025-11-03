@@ -3,7 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { BlurFade } from "@/components/ui/blur-fade";
-import styles from "./WorksGallery.module.css";
+import styles from "./PlaygroundGallery.module.css";
 
 export interface Project {
   id: string;
@@ -60,6 +60,20 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
           <h3>Filters</h3>
+        </div>
+        <div className={styles.mobileSelect}>
+          <select
+            aria-label="Select a filter"
+            value={activeTag}
+            onChange={(event) => setActiveTag(event.target.value)}
+            className={styles.select}
+          >
+            {tags.map((tag) => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
+          </select>
         </div>
         <nav className={styles.tagList} aria-label="Project filters">
           {tags.map((tag) => {

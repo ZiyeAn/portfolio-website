@@ -2,7 +2,7 @@
 
 import React from "react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import projectsData from "@/data/works.json";
+import projectsData from "@/data/playground.json";
 
 type Project = {
   title: string;

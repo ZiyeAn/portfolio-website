@@ -42,37 +42,84 @@
   gap: 0.65rem;
 }
 
+.mobileSelect {
+  display: none;
+  width: 100%;
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem 2.8rem 0.75rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(247, 241, 232, 0.25);
+  background: rgba(17, 17, 17, 0.35);
+  color: #ffffff;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-family: "jetbrains-mono", monospace;
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, #ffffff 50%),
+    linear-gradient(135deg, #ffffff 50%, transparent 50%);
+  background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
+  background-size: 7px 7px, 7px 7px;
+  background-repeat: no-repeat;
+}
+
+.select:focus {
+  outline: none;
+  border-color: rgba(247, 241, 232, 0.5);
+}
+
 .tagButton {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.6rem;
-  padding: 0.55rem 0.85rem;
-  border-radius: 14px;
-  border: 1px solid rgba(247, 241, 232, 0.15);
-  background: transparent;
-  color: rgba(247, 241, 232, 0.75);
+  padding: 0.2rem 0 0.45rem;
+  border: none;
+  background: none;
+  color: rgba(247, 241, 232, 0.68);
   text-transform: uppercase;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   font-size: 0.78rem;
   cursor: pointer;
-  transition: all 0.2s ease;
-  border-bottom: 2px solid transparent;
+  transition: color 0.25s ease;
+  font-family: "jetbrains-mono", monospace;
+  position: relative;
+}
+
+.tagButton::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: 100% 50%;
+  transition: transform 0.25s ease;
 }
 
 .tagButton:hover,
 .tagButton:focus-visible {
   color: #ffffff;
-  border-color: rgba(247, 241, 232, 0.35);
-  background: rgba(247, 241, 232, 0.12);
   outline: none;
+}
+
+.tagButton:hover::after,
+.tagButton:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
 }
 
 .tagButtonActive {
   color: #ffffff;
-  border-color: rgba(247, 241, 232, 0.45);
-  background: rgba(247, 241, 232, 0.2);
-  border-bottom: 2px solid #c1121f;
+}
+
+.tagButtonActive::after {
+  transform: scaleX(1);
+  transform-origin: 0 50%;
 }
 
 .sidebarFooter {
@@ -168,10 +215,12 @@
     width: 100%;
   }
 
+  .mobileSelect {
+    display: block;
+  }
+
   .tagList {
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 0.5rem;
+    display: none;
   }
 
   .tagButton {

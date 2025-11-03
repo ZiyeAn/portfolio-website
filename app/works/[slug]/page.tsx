@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import projectsData from "@/data/works.json";
+import projectsData from "@/data/playground.json";
 import ProjectDetail from "@/components/ProjectDetail";
 
 const normalizeId = (id: string) =>

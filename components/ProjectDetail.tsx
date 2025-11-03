@@ -5,7 +5,7 @@ import React from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
 import styles from "./ProjectDetail.module.css";
-import rawProjects from "@/data/works.json";
+import rawProjects from "@/data/playground.json";
 import { BlurFade } from "@/components/ui/blur-fade";
 
 type ProjectData = (typeof rawProjects.projects)[number];

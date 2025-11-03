@@ -2,9 +2,9 @@
 import projects from "@/data/playground.json";
 import WorksGallery from "@/components/PlaygroundGallery";
 import TopNav from "@/components/TopNav";
-import styles from "./WorksPage.module.css";
+import styles from "../works/WorksPage.module.css";
 
-export default function WorksPage() {
+export default function PlaygroundPage() {
   return (
     <main className={styles.worksPageBg}>
       <TopNav dark />

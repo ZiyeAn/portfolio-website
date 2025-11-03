@@ -1,0 +1,110 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(247, 241, 232, 0.2);
+}
+
+.row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.2fr) minmax(0, 0.7fr);
+  align-items: start;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1.2rem, 2.5vw, 2rem) 0;
+  border-bottom: 1px solid rgba(247, 241, 232, 0.16);
+}
+
+.titleColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.titleLink {
+  font-family: "jetbrains-mono", monospace;
+  font-size: clamp(1rem, 0.95rem + 0.2vw, 1.2rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f7f1e8;
+  transition: color 0.2s ease;
+}
+
+.titleLink:hover,
+.titleLink:focus-visible {
+  color: #f7b2ab;
+  outline: none;
+}
+
+.meta {
+  font-size: 0.85rem;
+  color: rgba(247, 241, 232, 0.6);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.excerptColumn {
+  max-width: 60ch;
+}
+
+.excerpt {
+  margin: 0;
+  line-height: 1.7;
+  color: rgba(247, 241, 232, 0.82);
+}
+
+.metaColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: "jetbrains-mono", monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 241, 232, 0.9);
+}
+
+.metaLabel {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  color: rgba(247, 241, 232, 0.55);
+  margin-bottom: 0.15rem;
+}
+
+.category span:last-child,
+.tags span:last-child {
+  display: block;
+  font-size: 0.85rem;
+  color: rgba(247, 241, 232, 0.9);
+  letter-spacing: 0.05em;
+  text-transform: none;
+}
+
+@media (max-width: 900px) {
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .metaColumn {
+    grid-column: span 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+  }
+
+  .metaLabel {
+    margin-bottom: 0.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .metaColumn {
+    grid-column: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

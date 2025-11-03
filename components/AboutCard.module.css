@@ -21,7 +21,7 @@
 
 .aboutInner {
   width: 100%;
-  padding: clamp(3.75rem, 5.5vw, 5.5rem) clamp(1.75rem, 4vw, 3.5rem);
+  padding: clamp(3rem, 4.6vw, 4.6rem) clamp(1.4rem, 3.2vw, 2.8rem);
   border: none;
   outline: none;
   box-shadow: none;
@@ -42,6 +42,30 @@
 .aboutGrid > * {
   position: relative;
   z-index: 1;
+}
+
+.aboutMedia {
+  position: relative;
+  width: min(700px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.aboutTextWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(1.2rem, 3vw, 2.2rem);
 }
 
 .aboutLabel {
@@ -102,12 +126,14 @@
 
 .aboutText {
   font-family: 'huiwen';
-  font-size: clamp(1.7rem, 5.1vw, 4.7rem) !important;
+  font-size: clamp(1.3rem, 3.5vw, 3rem) !important;
   color: #851200;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
   height: auto !important;
-  min-height: clamp(3.2rem, 7vw, 6.5rem);
-  transform: translate(-45%, 80%);
+  width: 100%;
+  text-align: center;
+  transform: translate(-48%, 80%);
+  transform-origin: center;
 }
 
 .aboutDescription {

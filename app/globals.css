@@ -10,8 +10,8 @@
 }
 
 @font-face {
-  font-family: 'MixStitch';
-  src: url('/assets/MixStitch.ttf') format('truetype');
+  font-family: 'jetbrains-mono';
+  src: url('/assets/JetBrainsMono-Thin.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -78,6 +78,7 @@ h2 { font-size: var(--step-2); }
 h3 { font-size: var(--step-1); }
 
 p, li, a, button, input { font-size: var(--step-0); }
+p { font-family: 'jetbrains-mono', monospace; }
 small { font-size: var(--step--1); color: var(--color-text-muted); }
 
 .top-nav {
@@ -86,7 +87,8 @@ small { font-size: var(--step--1); color: var(--color-text-muted); }
     overflow: hidden;
     width: 100%;
     z-index: 1000;
-    background: transparent;  
+    background: transparent;
+    font-family: 'jetbrains-mono', monospace;
 }
 .top-nav .nav-inner {
     display: flex;

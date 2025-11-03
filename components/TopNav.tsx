@@ -49,22 +49,31 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
           id="top-nav-links"
           className={`${styles.navLinks} ${menuOpen ? styles.navLinksOpen : ""}`}
         >
-          <Link
-            href="/"
-            className={`${styles.brand} ${styles.brandDesktop}`}
-            onClick={closeMenu}
-          >
-            Ziye An
-          </Link>
-          <Link href="/about" onClick={closeMenu}>
-            About
-          </Link>
-          <Link href="/works" onClick={closeMenu}>
-            Works
-          </Link>
-          <Link href="/#contact" onClick={closeMenu}>
-            Contact
-          </Link>
+          <div className={styles.navLeft}>
+            <Link
+              href="/"
+              className={`${styles.brand} ${styles.brandDesktop}`}
+              onClick={closeMenu}
+            >
+              Ziye An
+            </Link>
+          </div>
+          <div className={styles.navCenter}>
+            <Link href="/projects" onClick={closeMenu}>
+              Projects
+            </Link>
+            <Link href="/playground" onClick={closeMenu}>
+              Playground
+            </Link>
+            <Link href="/writing" onClick={closeMenu}>
+              Writing
+            </Link>
+          </div>
+          <div className={styles.navRight}>
+            <Link href="/about" onClick={closeMenu}>
+              About
+            </Link>
+          </div>
         </div>
       </div>
     </nav>

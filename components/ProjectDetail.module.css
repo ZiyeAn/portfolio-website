@@ -226,6 +226,7 @@
   line-height: 1.6;
   font-size: 1rem;
   color: rgba(31, 32, 32, 0.85);
+  font-family: "jetbrains-mono", monospace;
 }
 
 .description :global(p) {

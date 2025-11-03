@@ -6,7 +6,6 @@ import type { MouseEvent } from "react";
 import Link from "next/link";
 import { MorphingText } from "@/components/ui/morphing-text";
 import { CometCard } from "@/components/ui/comet-card";
-import PlatePile from "@/components/PlatePile";
 import styles from "./AboutCard.module.css";
 
 const ABOUT_TEXTS = [
@@ -14,7 +13,7 @@ const ABOUT_TEXTS = [
   "3D_Modeling",
   "Photography",
   "Art",
-  "Photography",
+  "Coding",
   "Game",
 ];
 
@@ -62,9 +61,19 @@ export default function AboutCard() {
             </span>
           )}
           <div className={styles.aboutGrid}>
-            <PlatePile src="/assets/index/dish.png" width={960} height={600}>
-              <MorphingText texts={ABOUT_TEXTS} className={styles.aboutText} />
-            </PlatePile>
+            <div className={styles.aboutMedia}>
+              <img
+                src="/assets/index/dish.png"
+                alt="Decorative plate"
+                className={styles.aboutImage}
+              />
+              <div className={styles.aboutTextWrap}>
+                <MorphingText
+                  texts={ABOUT_TEXTS}
+                  className={styles.aboutText}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </CometCard>
