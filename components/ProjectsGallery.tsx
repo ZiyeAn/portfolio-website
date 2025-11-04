@@ -1,6 +1,7 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./ProjectsGallery.module.css";
 
@@ -25,8 +26,8 @@ const normalizeImage = (src?: string) => {
 };
 
 const buildProjectHref = (id: string) => {
-  const cleaned = id.replace(/^\/works\//, "").replace(/\.html$/i, "");
-  return `/works/${cleaned}`;
+  const cleaned = id.replace(/^\/projects\//, "").replace(/^\/works\//, "").replace(/\.html$/i, "");
+  return `/projects/${cleaned}`;
 };
 
 const formatYearLabel = (year?: number | string) => {
@@ -59,17 +60,17 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
               </div>
               <div className={styles.infoColumn}>
                 <h2 className={styles.projectTitle}>{project.title}</h2>
-                <a href={href} className={styles.projectLink}>
+                <Link href={href} className={styles.projectLink}>
                   View project ↗
-                </a>
+                </Link>
               </div>
-              <a
+              <Link
                 href={href}
                 className={styles.mediaColumn}
                 aria-label={`View details for ${project.title}`}
               >
                 <img src={imageSrc} alt={project.title} loading="lazy" />
-              </a>
+              </Link>
             </article>
           </BlurFade>
         );

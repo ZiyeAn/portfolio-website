@@ -19,6 +19,22 @@
       }
     },
     {
+      "title": "Sailor Moon!!!",
+      "selected_work": true,
+      "thumbnail": "../assets/SailorMoon/SailorMoon.gif",
+      "intro": "An retro Futuristic Diner built with MAYA",
+      "tags": ["3D Modeling"],
+      "id": "/works/Sailor_Moon.html",
+      "details": {
+        "description": "This a simple MAYA Animtion. ",
+        "techStack": ["MAYA"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "video": ["../assets/SailorMoon/SailorMoon.mp4"],
+        "images": []
+      }
+    },
+    {
       "title": "Orbit",
       "selected_work": true,
       "thumbnail": "assets/orbit/orbit1.jpg",
@@ -49,7 +65,7 @@
       "id": "/works/labyrinth.html",
       "details": {
         "description": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion (Arduino-driven light input that reveals a cone of vision in-game). Player 2 cannot see the maze; instead, they track the hider through spatialized foodstep audio, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo.",
-        "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
+        "techStack": ["Unity", "Arduino", "Leap Motion"],
         "timeline": "Mar 2025 – Apr 2025",
         "demoLink": "#",
         "video": ["https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"],
@@ -71,7 +87,7 @@
       "id": "/works/spinphony.html",
       "details": {
         "description": "Spinphony is a playful platformer controlled by a custom record-like controller. Rotating the physical ‘record’ moves the character through a world of rhythmic platforms, while two arcade buttons trigger jumps and interactions. Built in Unity with an Arduino-based rotary encoder + buttons, the game explores embodied interaction—turning music and motion into level design.",
-        "techStack": ["Unity", "C#", "Arduino", "Serial (USB)", "Illustrator"],
+        "techStack": ["Unity", "Arduino", "Serial (USB)", "Illustrator"],
         "timeline": "Jan 2025 – Mar 2025",
         "demoLink": "#",
         "video_ID":["19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4"],
@@ -336,6 +352,23 @@
       }
     },
     {
+      "title": "Day and Night",
+      "selected_work": false,
+      "thumbnail": "../assets/P5/DayAndNight.gif",
+      "intro": "A p5.js animation reacting to the position of the mouse",
+      "tags": ["Game"],
+      "id": "/works/day_and_night.html",
+      "details": {
+        "description": "An autobiographical p5.js game I did base on my memory with my dog Xiaowu who passed away years before. It depicts my childhood memory imaging my self as a witch and Xiaowu as my familiar spirit. The visual of the game is inspired by Pixel Jeff. The game used p5.play library to create different scenes and interactions. Players can explore the environment, interact with objects, and experience the story through simple gameplay mechanics.<br> I miss Xiaowu.",
+        "techStack": ["p5.js"],
+        "timeline": "Jan 2024 - Mar 2024",
+        "demoLink": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk",
+        "images": [
+          "../assets/P5/day and night.gif"
+        ]
+      }
+    },
+    {
       "title": "Land",
       "selected_work": false,
       "thumbnail": "assets/Land/Land_Spread_Ziye.jpg",
@@ -373,6 +406,27 @@
           "assets/portrait_of_pierre/PierP3.jpeg"
         ]
       }
-    }
+    },
+    {
+  "title": "Ophelia",
+  "selected_work": false,
+  "thumbnail": "assets/ophelia/ophelia_1.jpg",
+  "intro": "A plaster-casting sculpture capturing the ethereal buoyancy of a floating body.",
+  "tags": ["fabrication"],
+  "id": "/works/ophelia.html",
+  "details": {
+    "description": "<strong>Idea</strong>: A plaster-casting sculpture that captures the ethereal essence of a floating person. Because whole-body casting is difficult, selected body parts (face and hands) are composed to form a harmonious figure, inspired by the image of a swimmer and the paintings of Ophelia. The piece explores the tension between the solid, tactile texture of plaster and a feeling of weightlessness.<br><br>My plaster-casting sculpture showcases select parts of the face and hands in detail to convey beauty and mystery in suspension—where heaviness meets float.",
+    "techStack": ["Plaster Casting", "Silicone/Alginate Mold", "Armature", "Sanding/Finishing"],
+    "timeline": "May 2023",
+    "demoLink": "#",
+    "video": [],
+    "images": [
+      "../assets/ophelia/ophelia_1.jpg",
+      "../assets/ophelia/ophelia_2.jpg",
+      "../assets/ophelia/ophelia_3.jpg",
+      "../assets/ophelia/ophelia_4.jpg"
+    ]
+  }
+}
   ]
 }

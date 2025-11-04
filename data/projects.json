@@ -1,5 +1,66 @@
 [
   {
+    "id": "labyrinth",
+    "title": "Labyrinth",
+    "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
+    "year": 2025,
+    "tags": ["Game", "Interaction", "Physical Computing"],
+    "thumbnail": "assets/labyrinth/Labyrinth6.jpg",
+    "intro": "A two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound).",
+    "meta": {
+      "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
+      "timeline": "Mar – Apr 2025",
+      "role": "Game design, Physical Computation, Visual Design",
+      "demoLink": "#",
+      "video": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Concept",
+        "body": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion as an Arduino-driven light input that reveals a cone of vision in-game. Player 2 cannot see the maze; instead, they track the hider through spatialized footsteps, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo."
+      },
+      {
+        "type": "image",
+        "image": "assets/labyrinth/Labyrinth5.jpg",
+        "alt": "Screenshot of the dark maze environment",
+        "caption": "Each player's experience of the maze is distinct—vision vs. hearing."
+      },
+      {
+        "type": "text",
+        "title": "Research",
+        "body": "The game began as a study of sensory asymmetry in cooperative and competitive play. References included horror sound design and echo-based mechanics like those in *Dark Echo*. We explored how withholding one sense amplifies another and how players communicate under unequal perception."
+      },
+      {
+        "type": "gallery",
+        "title": "Development Process",
+        "images": [
+          {
+            "image": "assets/labyrinth/Labyrinth6.jpg",
+            "caption": "Early prototype built in Unity showing light cone rendering."
+          },
+          {
+            "image": "assets/labyrinth/Labyrinth7.jpg",
+            "caption": "Arduino setup controlling flashlight intensity."
+          },
+          {
+            "image": "assets/labyrinth/Labyrinth8.jpg",
+            "caption": "Playtesting asymmetric control balance."
+          },
+          {
+            "image": "assets/labyrinth/Labyrinth9.jpg",
+            "caption": "Final two-player setup: Leap Motion for the hider, headphones for the seeker."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Outcome",
+        "body": "The final version emphasizes the emotional contrast between panic and patience. The Hider experiences claustrophobic flashes of visibility; the Seeker, drifting through echo, becomes both blind and omnipresent. The piece explores how unequal information defines empathy, fear, and control in play."
+      }
+    ]
+  },
+  {
     "id": "chester-choiceworth",
     "title": "Chester Choiceworth",
     "subtitle": "\"You don't choose your lifestyle. Data does.\"",
@@ -10,7 +71,7 @@
     "meta": {
       "techStack": ["Arduino", "JavaScript", "Node.js", "HTML/CSS", "Thermal Receipt Printer"],
       "timeline": "Jan 2024 – Mar 2024",
-      "role": "Concept, software, physical build",
+      "role": "Solo project",
       "demoLink": "https://chester-choiceworth.onrender.com/",
       "video": "../assets/chester/CC.mp4"
     },
@@ -89,64 +150,48 @@
       }
     ]
   },
-  {
-    "id": "labyrinth",
-    "title": "Labyrinth",
-    "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
+   {
+    "id": "marbility",
+    "title": "Marbility",
+    "subtitle": "How to Show Off Quantum Computing",
     "year": 2025,
-    "tags": ["Game", "Interaction", "Physical Computing"],
-    "thumbnail": "assets/labyrinth/Labyrinth6.jpg",
-    "intro": "A two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound).",
+    "tags": ["Game", "Interaction", "Physics Simulation"],
+    "thumbnail": "../assets/marbility/marbility_6.png",
+    "intro": "An experimental physics-based gameplay exploring how to visualize the logic of quantum computing through marbles and motion.",
     "meta": {
-      "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
-      "timeline": "Mar – Apr 2025",
-      "role": "Game design, interaction logic, sound implementation",
-      "demoLink": "#",
-      "video": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"
+      "techStack": ["Unity", "C#", "3D Simulation"],
+      "timeline": "Apr – May 2025",
+      "role": "Visual Design, Gameplay Design",
+      "demoLink": "https://howtoshowoffquantumcomputing.cargo.site/marbility",
+      "video": ""
     },
     "sections": [
       {
         "type": "text",
         "title": "Concept",
-        "body": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion as an Arduino-driven light input that reveals a cone of vision in-game. Player 2 cannot see the maze; instead, they track the hider through spatialized footsteps, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo."
+        "body": "Marbility translates the abstract logic of quantum computing into tangible motion. Inspired by the Galton board and pinball machines, the project uses marbles rolling through a structured field to represent probabilistic behavior, interference, and quantum superposition."
       },
       {
         "type": "image",
-        "image": "assets/labyrinth/Labyrinth5.jpg",
-        "alt": "Screenshot of the dark maze environment",
-        "caption": "Each player's experience of the maze is distinct—vision vs. hearing."
+        "image": "../assets/marbility/marbility_2.jpg",
+        "alt": "Physical or digital simulation of marbles demonstrating quantum behaviors",
+        "caption": "Gameplay concept visualizing probability paths as marble trajectories."
+      },
+      {
+        "type": "image",
+        "image": "../assets/marbility/marbility_1.jpg",
+        "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
+        "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
       },
       {
         "type": "text",
-        "title": "Research",
-        "body": "The game began as a study of sensory asymmetry in cooperative and competitive play. References included horror sound design and echo-based mechanics like those in *Dark Echo*. We explored how withholding one sense amplifies another and how players communicate under unequal perception."
-      },
-      {
-        "type": "gallery",
-        "title": "Development Process",
-        "images": [
-          {
-            "image": "assets/labyrinth/Labyrinth6.jpg",
-            "caption": "Early prototype built in Unity showing light cone rendering."
-          },
-          {
-            "image": "assets/labyrinth/Labyrinth7.jpg",
-            "caption": "Arduino setup controlling flashlight intensity."
-          },
-          {
-            "image": "assets/labyrinth/Labyrinth8.jpg",
-            "caption": "Playtesting asymmetric control balance."
-          },
-          {
-            "image": "assets/labyrinth/Labyrinth9.jpg",
-            "caption": "Final two-player setup: Leap Motion for the hider, headphones for the seeker."
-          }
-        ]
+        "title": "Design Focus",
+        "body": "My role centered on visual design and gameplay balance. The challenge was to make abstract computation principles visually intuitive and physically engaging—turning algorithmic unpredictability into a tactile, observable experience."
       },
       {
         "type": "text",
-        "title": "Outcome",
-        "body": "The final version emphasizes the emotional contrast between panic and patience. The Hider experiences claustrophobic flashes of visibility; the Seeker, drifting through echo, becomes both blind and omnipresent. The piece explores how unequal information defines empathy, fear, and control in play."
+        "title": "Context",
+        "body": "Developed as part of a speculative design exploration, *Marbility* reflects on how we represent complex technologies through play. It asks: what does it mean to 'see' quantum logic, and how can we design systems where uncertainty itself becomes a mechanic?"
       }
     ]
   }
