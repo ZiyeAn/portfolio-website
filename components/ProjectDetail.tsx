@@ -72,9 +72,12 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     .map(extractDriveId)
     .filter(Boolean)
     .map((id) => `https://drive.google.com/file/d/${id}/preview`);
-  const driveVideos = Array.from(
-    new Set([...driveVideosFromIds, ...driveVideosFromLinks])
-  );
+  const driveVideos = [
+    ...driveVideosFromLinks,
+    ...driveVideosFromIds.filter(
+      (driveSrc) => !driveVideosFromLinks.includes(driveSrc)
+    ),
+  ];
   const videos = rawVideoSources
     .filter((src) => !src.includes("drive.google.com"))
     .map(normalizeAsset)

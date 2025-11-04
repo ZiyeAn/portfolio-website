@@ -232,7 +232,7 @@
         "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
         "timeline": "September 2025",
         "demoLink": "#",
-        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link","https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link"],
+        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link","https://drive.google.com/file/d/19ryNrD8y3mbWvlemdr7J07QE1zPmBbRI/view?usp=sharing"],
         "images": [
           "../assets/mountain_spirit/ms1.jpg",
           "../assets/mountain_spirit/ms2.jpg",
@@ -288,7 +288,7 @@
       "tags": ["Coding"],
       "id": "/works/what-to-drink-today.html",
       "details": {
-        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "description": "A website that helps users decide what to drink through two digital Chinese divinations method called 'Qian' (筊杯) and 'Kau Cim' (求籤). Users select their preferred divination method, then interact with the digital representation to receive a cocktail suggestion. This site used a cocktail API to fetch drink recipes based on the divination outcome, providing users with both a fun experience and a new drink to try.",
         "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-4-Digital-Divination/index.html",
@@ -324,7 +324,7 @@
       "tags": ["Game"],
       "id": "/works/autobiographical_game.html",
       "details": {
-        "description": "An interactive installation that visualizes how daily choices shape our lifestyle through data collection and artistic representation.",
+        "description": "An autobiographical p5.js game I did base on my memory with my dog Xiaowu who passed away years before. It depicts my childhood memory imaging my self as a witch and Xiaowu as my familiar spirit. The visual of the game is inspired by Pixel Jeff. The game used p5.play library to create different scenes and interactions. Players can explore the environment, interact with objects, and experience the story through simple gameplay mechanics.<br> I miss Xiaowu.",
         "techStack": ["p5.js"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",

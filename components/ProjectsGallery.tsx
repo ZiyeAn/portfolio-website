@@ -1,7 +1,6 @@
 "use client";
 
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./ProjectsGallery.module.css";
 
@@ -30,109 +29,51 @@ const buildProjectHref = (id: string) => {
   return `/works/${cleaned}`;
 };
 
+const formatYearLabel = (year?: number | string) => {
+  if (year === undefined || year === null) return "";
+  const yearString = String(year).trim();
+  return yearString ? `Year ${yearString}` : "";
+};
+
 export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
-  const projectOptions = React.useMemo(
-    () => projects.map((project) => project.id),
-    [projects],
-  );
-
-  const [activeProjectId, setActiveProjectId] = React.useState<string>(
-    projectOptions[0] ?? "",
-  );
-
-  React.useEffect(() => {
-    if (!projectOptions.length) {
-      setActiveProjectId("");
-      return;
-    }
-
-    if (!projectOptions.includes(activeProjectId)) {
-      setActiveProjectId(projectOptions[0]);
-    }
-  }, [activeProjectId, projectOptions]);
-
-  const filteredProjects = React.useMemo(() => {
-    if (!activeProjectId) return projects;
-    return [projects.find((project) => project.id === activeProjectId)].filter(
-      (project): project is Project => Boolean(project),
-    );
-  }, [activeProjectId, projects]);
-
   return (
-    <div className={styles.galleryLayout}>
-      <aside className={styles.sidebar}>
-        <div className={styles.sidebarHeader}>
-          <h3>Projects</h3>
-        </div>
-        <div className={styles.mobileSelect}>
-          <select
-            aria-label="Select a project"
-            value={activeProjectId}
-            onChange={(event) => setActiveProjectId(event.target.value)}
-            className={styles.select}
-          >
-            {projects.map((project) => (
-              <option key={project.id} value={project.id}>
-                {project.title}
-              </option>
-            ))}
-          </select>
-        </div>
-        <nav className={styles.projectNav} aria-label="Project navigation">
-          {projects.map((project) => {
-            const isActive = activeProjectId === project.id;
-            return (
-              <button
-                key={project.id}
-                type="button"
-                onClick={() => setActiveProjectId(project.id)}
-                className={`${styles.projectButton} ${isActive ? styles.projectButtonActive : ""}`}
-                aria-current={isActive ? "true" : undefined}
-              >
-                {project.title}
-              </button>
-            );
-          })}
-        </nav>
-      </aside>
+    <div className={styles.gallery}>
+      {projects.map((project, index) => {
+        const imageSrc = normalizeImage(project.thumbnail);
+        const href = buildProjectHref(project.id);
+        const yearLabel = formatYearLabel(project.year);
+        const indexLabel = String(index + 1).padStart(2, "0");
 
-      <div className={styles.cardsColumn}>
-        {filteredProjects.map((project, index) => {
-          const imageSrc = normalizeImage(project.thumbnail);
-          const href = buildProjectHref(project.id);
-          return (
-            <BlurFade key={project.id} delay={0.2 + index * 0.08} inView>
+        return (
+          <BlurFade key={project.id} delay={0.18 + index * 0.08} inView>
+            <article className={styles.projectRow}>
+              <div className={styles.yearColumn}>
+                {yearLabel ? (
+                  <span className={styles.yearLabel}>{yearLabel}</span>
+                ) : (
+                  <span className={`${styles.yearLabel} ${styles.yearFallback}`}>
+                    Upcoming
+                  </span>
+                )}
+                <span className={styles.projectIndex}>{indexLabel}</span>
+              </div>
+              <div className={styles.infoColumn}>
+                <h2 className={styles.projectTitle}>{project.title}</h2>
+                <a href={href} className={styles.projectLink}>
+                  View project ↗
+                </a>
+              </div>
               <a
                 href={href}
-                className={styles.projectCard}
+                className={styles.mediaColumn}
                 aria-label={`View details for ${project.title}`}
               >
-                <div className={styles.imageWrapper}>
-                  <img
-                    src={imageSrc}
-                    alt={project.title}
-                    className={styles.projectImage}
-                  />
-                  <div className={styles.cardOverlay}>
-                    <h4 className={styles.cardTitle}>{project.title}</h4>
-                    <div className={styles.cardMeta}>
-                      {project.subtitle ? <span>{project.subtitle}</span> : null}
-                      {project.year ? <span>{project.year}</span> : null}
-                      {project.tags?.length ? <span>{project.tags.join(" • ")}</span> : null}
-                    </div>
-                    {project.intro ? <p className={styles.cardIntro}>{project.intro}</p> : null}
-                  </div>
-                </div>
+                <img src={imageSrc} alt={project.title} loading="lazy" />
               </a>
-            </BlurFade>
-          );
-        })}
-        {!filteredProjects.length ? (
-          <div className={styles.emptyState}>
-            <p>No projects to show yet. Please check back soon.</p>
-          </div>
-        ) : null}
-      </div>
+            </article>
+          </BlurFade>
+        );
+      })}
     </div>
   );
 }
