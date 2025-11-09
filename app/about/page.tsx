@@ -1,4 +1,4 @@
-import TopNav from "@/components/TopNav";
+/* import TopNav from "@/components/TopNav";
 import Link from "next/link";
 import styles from "./page.module.css";
 
@@ -138,4 +138,9 @@ export default function AboutPage() {
       </main>
     </div>
   );
+}
+*/
+
+export default function AboutPage() {
+  return <div>About Page In Construction</div>;
 }

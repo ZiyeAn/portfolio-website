@@ -20,7 +20,7 @@
     },
     {
       "title": "Sailor Moon!!!",
-      "selected_work": true,
+      "selected_work": false,
       "thumbnail": "../assets/SailorMoon/SailorMoon.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["3D Modeling"],
