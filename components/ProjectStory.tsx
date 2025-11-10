@@ -45,12 +45,22 @@ type VideoSection = BaseSection & {
   caption?: string;
 };
 
+type SplitSection = BaseSection & {
+  type: "split";
+  body?: string;
+  image: string;
+  alt?: string;
+  caption?: string;
+  imagePosition?: "left" | "right";
+};
+
 type Section =
   | TextSection
   | ImageSection
   | GallerySection
   | ProcessStepsSection
-  | VideoSection;
+  | VideoSection
+  | SplitSection;
 
 const normalizeAsset = (src?: string) => {
   if (!src) return "";
@@ -112,6 +122,38 @@ const renderSection = (section: Section, index: number) => {
                 </figure>
               );
             })}
+          </div>
+        </section>
+      );
+    }
+    case "split": {
+      const splitSection = section as SplitSection;
+      const src = normalizeAsset(splitSection.image);
+      const imageFirst = splitSection.imagePosition === "left";
+      return (
+        <section
+          key={`split-${index}`}
+          className={`${styles.section} ${styles.splitSection}`}
+        >
+          {splitSection.title ? (
+            <h2 className={styles.sectionHeader}>{splitSection.title}</h2>
+          ) : null}
+          <div
+            className={`${styles.splitContent} ${
+              imageFirst ? styles.splitContentImageFirst : ""
+            }`}
+          >
+            <div className={styles.splitText}>
+              {renderParagraphs(splitSection.body)}
+            </div>
+            <figure className={styles.splitFigure}>
+              <img src={src} alt={splitSection.alt ?? splitSection.title ?? ""} />
+              {splitSection.caption ? (
+                <figcaption className={styles.splitCaption}>
+                  {splitSection.caption}
+                </figcaption>
+              ) : null}
+            </figure>
           </div>
         </section>
       );

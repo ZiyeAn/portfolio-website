@@ -5,7 +5,7 @@
       "selected_work": true,
       "thumbnail": "assets/playground/apple_animation/appleverse.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling"],
+      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
       "id": "/works/Apple_Universe.html",
       "details": {
         "description": "This Maya animation visualizes an “Everything Everywhere All at Once” moment inside a single apple.<br>Through a continuous transformation of forms, textures, and perspectives, the apple becomes a universe of its own—shifting between the microscopic and the cosmic. <br>For the full experience, please watch it with sound on.",
@@ -39,7 +39,7 @@
       "selected_work": true,
       "thumbnail": "assets/playground/orbit/orbit1.jpg",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling"],
+      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
       "id": "/works/Orbit.html",
       "details": {
         "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
@@ -53,29 +53,6 @@
           "../assets/playground/orbit/orbit4.jpg",
           "../assets/playground/orbit/orbit5.jpg",
           "../assets/playground/orbit/orbit6.jpg"
-        ]
-      }
-    },
-    {
-      "title": "Spinphony",
-      "selected_work": true,
-      "thumbnail": "assets/playground/spinphony/spinphony-5.jpg",
-      "intro": "A record-player-inspired platformer where a lost note (Do) spins through musical puzzles to reunite with its scale.",
-      "tags": ["Game"],
-      "id": "/works/Spinphony.html",
-      "details": {
-        "description": "Spinphony is a playful platformer controlled by a custom record-like controller. Rotating the physical ‘record’ moves the character through a world of rhythmic platforms, while two arcade buttons trigger jumps and interactions. Built in Unity with an Arduino-based rotary encoder + buttons, the game explores embodied interaction—turning music and motion into level design.",
-        "techStack": ["Unity", "Arduino", "Serial (USB)", "Illustrator"],
-        "timeline": "Jan 2025 – Mar 2025",
-        "demoLink": "#",
-        "video_ID":["19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4"],
-        "images": [
-          "../assets/playground/spinphony/spinphony-2.jpg",
-          "../assets/playground/spinphony/spinphony-3.jpg",
-          "../assets/playground/spinphony/spinphony-4.jpg",
-          "../assets/playground/spinphony/spinphony-5.jpg",
-          "../assets/playground/spinphony/spinphony-7.jpg",
-          "../assets/playground/spinphony/spinphony-8.jpg"
         ]
       }
     },
@@ -118,7 +95,7 @@
       "selected_work": true,
       "thumbnail": "assets/playground/carry_me/carry_me1.jpg",
       "intro": "A cute neclace I made ;",
-      "tags": ["fabrication"],
+      "tags": ["fabrication","✦Ziye’s Pick✧"],
       "id": "/works/Carry_me.html",
       "details": {
         "description": "A cute neclace I made ;)",
@@ -219,7 +196,7 @@
       "selected_work": false,
       "thumbnail": "assets/playground/apple/apple.gif",
       "intro": "How can you see an apple from different perspectives?",
-      "tags": ["Coding"],
+      "tags": ["Coding","✦Ziye’s Pick✧"],
       "id": "/works/apple.html",
       "details": {
         "description": "How to view an apple from different perspective? To me, apple is a fruit I think is too normal to ear but my mom always push me to eat. She never stop bragging how good it is to eat apples, so I wanted to figure out how poeple from the world view this normal fruit. I also include how I view it at the final section cuz I want also a private perspective of apples.",
@@ -333,10 +310,10 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/DataPortrait.gif",
       "intro": "Data visualization",
-      "tags": ["Coding"],
+      "tags": ["Coding","✦Ziye’s Pick✧"],
       "id": "/works/data_portrait.html",
       "details": {
-        "description": "A p5.js data visualization",
+        "description": "A p5.js data visualization capturing the frequency of opening my phone without purpose. The stiff, repetitive clicking gesture becomes a visual metaphor for the unconscious routines of digital dependence.",
         "techStack": ["p5.js"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk",
@@ -371,7 +348,7 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/ExperimentalClock.gif",
       "intro": "Data visualization",
-      "tags": ["Coding"],
+      "tags": ["Coding","✦Ziye’s Pick✧"],
       "id": "/works/experimental_clock.html",
       "details": {
         "description": "For this project, I use the number of ripples to present Hour (12-hour timing since this looks prettier), the number of rings per ripple to represent minutes(using 10 minutes as an interval). To avoid the situation that nothing is shown when the minutes is single digit, the point in the middle represent single digits. For example, if there is 3 points when pressing the mouse, That means it is around 3 AM/PM o'clock, if there is 4 ripples and each ripple has 1 point and 2 rings, that means it's about 4:20 (need to minus the single digit ring). The rotation of the rings are based on the second() and I used lerp() to make the rotation looks smoother. I kind of like the motion when it lerp from 0 so I make the angle reset to 0 everytime the mouse is released. Also, if moving the mouse while pressed, you can fast forward the time or rewind it.",
@@ -412,7 +389,7 @@
       "selected_work": false,
       "thumbnail": "assets/playground/portrait_of_pierre/PierP1.jpeg",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Drawing"],
+      "tags": ["Drawing","✦Ziye’s Pick✧"],
       "id": "/works/Portart_of_Pierre.html",
       "details": {
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",

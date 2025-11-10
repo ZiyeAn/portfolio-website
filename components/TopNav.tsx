@@ -65,8 +65,8 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
             <Link href="/playground" onClick={closeMenu}>
               Playground
             </Link>
-            <Link href="/writing" onClick={closeMenu}>
-              Writing
+            <Link href="/thoughts" onClick={closeMenu}>
+              Thoughts
             </Link>
           </div>
           <div className={styles.navRight}>

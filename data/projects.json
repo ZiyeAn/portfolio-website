@@ -4,12 +4,22 @@
     "title": "Labyrinth",
     "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
     "year": 2025,
-    "tags": ["Game", "Interaction", "Physical Computing"],
+    "tags": [
+      "Game",
+      "Interaction",
+      "Physical Computing"
+    ],
     "thumbnail": "assets/projects/labyrinth/Labyrinth6.jpg",
     "intro": "A two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound).",
     "meta": {
-      "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
-      "timeline": "Mar – Apr 2025",
+      "techStack": [
+        "Unity",
+        "C#",
+        "Arduino",
+        "Spatial Audio",
+        "Leap Motion"
+      ],
+      "timeline": "Mar \u2013 Apr 2025",
       "role": "Game design, Physical Computation, Visual Design",
       "demoLink": "#",
       "video": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"
@@ -18,13 +28,13 @@
       {
         "type": "text",
         "title": "Concept",
-        "body": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion as an Arduino-driven light input that reveals a cone of vision in-game. Player 2 cannot see the maze; instead, they track the hider through spatialized footsteps, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo."
+        "body": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion as an Arduino-driven light input that reveals a cone of vision in-game. Player 2 cannot see the maze; instead, they track the hider through spatialized footsteps, inspired by echolocation. The tension comes from incomplete, unequal senses\u2014light versus echo."
       },
       {
         "type": "image",
         "image": "assets/projects/labyrinth/Labyrinth5.jpg",
         "alt": "Screenshot of the dark maze environment",
-        "caption": "Each player's experience of the maze is distinct—vision vs. hearing."
+        "caption": "Each player's experience of the maze is distinct\u2014vision vs. hearing."
       },
       {
         "type": "text",
@@ -61,16 +71,120 @@
     ]
   },
   {
+    "id": "spinphony",
+    "title": "Spinphony",
+    "subtitle": "A record-player platformer steered by a tangible controller",
+    "year": 2025,
+    "tags": [
+      "Game",
+      "Physical Computing",
+      "Interaction"
+    ],
+    "thumbnail": "assets/projects/spinphony/spinphony-5.jpg",
+    "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
+    "meta": {
+      "techStack": [
+        "Unity",
+        "C#",
+        "Arduino",
+        "Rotary Encoder",
+        "Illustrator"
+      ],
+      "timeline": "Jan \u2013 Mar 2025",
+      "role": "Game design, Hardware prototyping, Visual design",
+      "demoLink": "#",
+      "video": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/preview"
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Concept",
+        "body": "Spinphony treats the turntable as both controller and narrative device. Rotating the platter spins Do, a lost note, through looping levels of rhythm gates and percussive enemies. Two arcade buttons act as jump and dash, so the player's whole body performs tiny DJ gestures to keep the character on beat."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/spinphony/spinphony-5.jpg",
+        "alt": "Custom Spinphony controller and Unity build",
+        "caption": "Final hardware build: laser-cut platter, rotary encoder, and arcade buttons feeding a Unity platformer."
+      },
+      {
+        "type": "process-steps",
+        "title": "Hardware + Interaction",
+        "steps": [
+          {
+            "step_title": "Prototype the Instrument",
+            "description": "Breadboarded an Arduino-based rotary encoder and tuned the resolution so one full spin maps to a comfortable in-game speed without motion sickness."
+          },
+          {
+            "step_title": "Translate Motion to Mechanics",
+            "description": "Unity interprets encoder delta as horizontal velocity, while button combinations trigger vaults, slides, and tempo boosts synchronized to the soundtrack."
+          },
+          {
+            "step_title": "Visual + Audio Direction",
+            "description": "Illustrated bold shapes inspired by vinyl sleeves and animated parallax backgrounds to reinforce the feeling of traveling through grooves."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "title": "In-game Moments",
+        "images": [
+          {
+            "image": "assets/projects/spinphony/spinphony-2.jpg",
+            "caption": "Early block-out level used to calibrate encoder sensitivity."
+          },
+          {
+            "image": "assets/projects/spinphony/spinphony-3.jpg",
+            "caption": "Final character art and rhythm obstacles."
+          },
+          {
+            "image": "assets/projects/spinphony/spinphony-4.jpg",
+            "caption": "Unity view showing layered parallax backgrounds."
+          },
+          {
+            "image": "assets/projects/spinphony/spinphony-7.jpg",
+            "caption": "Custom UI referencing vinyl liner notes."
+          },
+          {
+            "image": "assets/projects/spinphony/spinphony-8.jpg",
+            "caption": "Playtesting session with full controller setup."
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "title": "Playthrough",
+        "src": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/preview",
+        "caption": "The turntable controller driving the Unity build."
+      },
+      {
+        "type": "text",
+        "title": "What I learned",
+        "body": "Framing the controller as an instrument kept playtesters focused on rhythm rather than button combos. I learned how much onboarding clarity matters for tangible interfaces and how to choreograph UI feedback\u2014lights, vibrations, and animation\u2014so players always know what the controller is asking them to do."
+      }
+    ]
+  },
+  {
     "id": "chester-choiceworth",
     "title": "Chester Choiceworth",
     "subtitle": "\"You don't choose your lifestyle. Data does.\"",
     "year": 2024,
-    "tags": ["Installation", "Data Visualization", "Critical Design"],
+    "tags": [
+      "Installation",
+      "Data Visualization",
+      "Critical Design"
+    ],
     "thumbnail": "assets/projects/chester/CC3.JPG",
     "intro": "An interactive installation that turns your spending habits into an experience. You upload your own transaction history, and the system prints targeted lifestyle ads back at you.",
     "meta": {
-      "techStack": ["Arduino", "JavaScript", "Node.js", "HTML/CSS", "Thermal Receipt Printer"],
-      "timeline": "Jan 2024 – Mar 2024",
+      "techStack": [
+        "Arduino",
+        "JavaScript",
+        "Node.js",
+        "HTML/CSS",
+        "Thermal Receipt Printer"
+      ],
+      "timeline": "Jan 2024 \u2013 Mar 2024",
       "role": "Solo project",
       "demoLink": "https://chester-choiceworth.onrender.com/",
       "video": "../assets/projects/chester/CC.mp4"
@@ -90,7 +204,7 @@
       {
         "type": "text",
         "title": "Why I made this",
-        "body": "We like to believe that lifestyle is about taste, identity, and choice. But in practice, a lot of what gets sold back to us is inferred from our transaction history. What you buy predicts what tier you 'belong to' — grocery store loyalty cards, rent size, Uber vs subway, Whole Foods vs dollar slice. Chester Choiceworth exaggerates that logic out loud. It behaves like a marketing engine that decides: are you luxury-coded, survival-coded, guilty, aspirational, or failing?"
+        "body": "We like to believe that lifestyle is about taste, identity, and choice. But in practice, a lot of what gets sold back to us is inferred from our transaction history. What you buy predicts what tier you 'belong to' \u2014 grocery store loyalty cards, rent size, Uber vs subway, Whole Foods vs dollar slice. Chester Choiceworth exaggerates that logic out loud. It behaves like a marketing engine that decides: are you luxury-coded, survival-coded, guilty, aspirational, or failing?"
       },
       {
         "type": "gallery",
@@ -141,26 +255,33 @@
         "type": "video",
         "title": "Demo Clip",
         "src": "../assets/projects/chester/CC.mp4",
-        "caption": "Live capture of the loop: upload → analyze → map → insult."
+        "caption": "Live capture of the loop: upload \u2192 analyze \u2192 map \u2192 insult."
       },
       {
         "type": "text",
         "title": "What I learned / next steps",
-        "body": "People loved seeing the spend map, but reacted strongest to the printer. Physical paper felt like a 'verdict'. The next iteration will generate different styles of printed output depending on the audience — for example: landlord report, bank report, partner report — to show how different entities read the same data and judge you differently."
+        "body": "People loved seeing the spend map, but reacted strongest to the printer. Physical paper felt like a 'verdict'. The next iteration will generate different styles of printed output depending on the audience \u2014 for example: landlord report, bank report, partner report \u2014 to show how different entities read the same data and judge you differently."
       }
     ]
   },
-   {
+  {
     "id": "marbility",
     "title": "Marbility",
     "subtitle": "How to Show Off Quantum Computing",
     "year": 2025,
-    "tags": ["Game", "Interaction", "Physics Simulation"],
-    "thumbnail": "../assets/projects/marbility/marbility_6.png",
+    "tags": [
+      "Game",
+      "Interaction",
+      "Physics Simulation"
+    ],
+    "thumbnail": "../assets/projects/marbility/marbility_2.jpg",
     "intro": "An experimental physics-based gameplay exploring how to visualize the logic of quantum computing through marbles and motion.",
     "meta": {
-      "techStack": ["Unity", "C#", "3D Simulation"],
-      "timeline": "Apr – May 2025",
+      "techStack": [
+        "arduino",
+        "digital fabrication"
+      ],
+      "timeline": "Apr \u2013 May 2025",
       "role": "Visual Design, Gameplay Design",
       "demoLink": "https://howtoshowoffquantumcomputing.cargo.site/marbility",
       "video": ""
@@ -169,29 +290,128 @@
       {
         "type": "text",
         "title": "Concept",
-        "body": "Marbility translates the abstract logic of quantum computing into tangible motion. Inspired by the Galton board and pinball machines, the project uses marbles rolling through a structured field to represent probabilistic behavior, interference, and quantum superposition."
+        "body": "This interactive exhibit introduces the audience to quantum concepts of entanglement, gates, probability, and qubits through an interactive game.\n\nIn the game, you and your teammate each control a qubit and try to score the correct probability given to you. You interact with gates and learn about probability and entanglement. With the aesthetics of Pinball and Plinko\u2013widely-known, nostalgic games that are easy to understand\u2013we attract people of all ages and backgrounds.\n\nInspired by old arcade games such as Plinko and Pinball."
+      },
+      {
+        "type": "split",
+        "title": "How to Play",
+        "body": "1. This is a 2-player game\u2014bring a friend and play on the same team!\n\n2. Press the Start button on the right to launch the round.\n\n3. Both players receive a probability target while a countdown begins.\n\n4. Each player applies single-qubit gates using their side of the board; rotating the encoder knob sends an Rx gate to evolve the qubit state.\n\n5. Ten levers on each board affect the shared superposition. Some move independently, while entangled levers mirror or invert the teammate's motion, so one player's gate can change the other's qubit.\n\n6. Hitting the large Entangle button reshuffles the entanglement graph, reassigning which levers link and how strongly they influence each other.\n\n7. Tap your personal X-gate button to flip your qubit instantly when timing matters.\n\n8. When the countdown hits zero, all inputs freeze and players pour marbles into the top of the machine.\n\n9. Marbles cascade through the boards and get tallied at the base.\n\n10. Once every marble is counted, the scoreboard reveals each player's accuracy and the final team score.",
+        "image": "../assets/projects/marbility/marbility_process2.svg",
+        "alt": "Marbility interface diagram with controls and lever layout",
+        "imagePosition": "right"
+      },
+      {
+        "type": "gallery",
+        "title": "Development Process",
+        "images": [
+          {
+            "image": "assets/projects/marbility/marbility_process3.png",
+            "caption": "Board Design"
+          },
+          {
+            "image": "assets/projects/marbility/marbility_process5.jpg",
+            "caption": "Early prototype"
+          },
+          {
+            "image": "assets/projects/marbility/marbility_process4.jpg",
+            "caption": "Early prototype"
+          },
+          {
+            "image": "assets/projects/marbility/marbility_process6.jpg",
+            "caption": "assembling servo motors"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Final Outcome"
       },
       {
         "type": "image",
         "image": "../assets/projects/marbility/marbility_2.jpg",
-        "alt": "Physical or digital simulation of marbles demonstrating quantum behaviors",
-        "caption": "Gameplay concept visualizing probability paths as marble trajectories."
+        "alt": "Physical or digital simulation of marbles demonstrating quantum behaviors"
       },
       {
         "type": "image",
         "image": "../assets/projects/marbility/marbility_1.jpg",
-        "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
-        "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
+        "alt": "Physical installation of the Chester Choiceworth setup with printer and display"
+      },
+      {
+        "type": "image",
+        "image": "../assets/projects/marbility/marbility_5.jpg",
+        "alt": "Physical installation of the Chester Choiceworth setup with printer and display"
+      }
+    ]
+  },
+  {
+    "id": "divedex",
+    "title": "DiveDex",
+    "subtitle": "AI-assisted dive console for translating underwater gestures",
+    "year": 2024,
+    "tags": [
+      "Interaction",
+      "Speculative Design",
+      "AI"
+    ],
+    "thumbnail": "assets/projects/divedev/divedex_design.png",
+    "intro": "DiveDex pairs an analog dive computer form factor with on-device AI that can read, translate, and log scuba hand signals, giving recreational divers a shared reference when speech becomes impossible.",
+    "meta": {
+      "techStack": [
+        "Figma",
+        "Blender",
+        "SvelteKit",
+        "TensorFlow.js",
+        "Arduino"
+      ],
+      "timeline": "Oct \u2013 Dec 2024",
+      "role": "Research, Experience Design, Prototyping",
+      "demoLink": "#",
+      "video": ""
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Concept",
+        "body": "Underwater communication still relies on memory, intuition, and paper dive slates. DiveDex imagines a wearable surface computer that watches hand motions, compares them against a learned gesture library, and quietly projects translations back to both divers. The goal is not to replace gesture literacy, but to give new and neurodiverse divers another layer of feedback and safety."
       },
       {
         "type": "text",
-        "title": "Design Focus",
-        "body": "My role centered on visual design and gameplay balance. The challenge was to make abstract computation principles visually intuitive and physically engaging—turning algorithmic unpredictability into a tactile, observable experience."
+        "title": "Research Insights",
+        "body": "I interviewed instructors and recorded over 120 clips of common PADI-approved hand signals. Two themes surfaced: (1) beginners forget multi-step signals once adrenaline spikes; (2) buddy pairs create custom gestures that are meaningful but easy to misinterpret. These findings guided a system that mixes universal references with customizable packs you can preload before a dive."
       },
       {
-        "type": "text",
-        "title": "Context",
-        "body": "Developed as part of a speculative design exploration, *Marbility* reflects on how we represent complex technologies through play. It asks: what does it mean to 'see' quantum logic, and how can we design systems where uncertainty itself becomes a mechanic?"
+        "type": "image",
+        "image": "assets/projects/divedev/divedex_design.png",
+        "alt": "DiveDex hardware and HUD explorations",
+        "caption": "Hardware exploration: a wrist-mounted module with retractable bone-conduction audio, dual cameras, and an OLED band that glows the decoded signal."
+      },
+      {
+        "type": "process-steps",
+        "title": "How it works",
+        "steps": [
+          {
+            "step_title": "Capture",
+            "description": "Dual fisheye cameras on each wrist capture 120fps video of both divers\u2019 hands without bulky housings."
+          },
+          {
+            "step_title": "Classify",
+            "description": "TensorFlow.js runs on an onboard Jetson Nano, comparing the gesture to a library of 60 baseline signals plus any custom packs the buddy team added."
+          },
+          {
+            "step_title": "Translate & Log",
+            "description": "A color-coded HUD flashes the translation, vibrates the relevant finger, and saves the signal + depth data to a dive log you can review on shore."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "title": "Interface Moments",
+        "images": [
+          {
+            "image": "assets/projects/divedev/1.png",
+            "caption": "Low-fidelity prototype showing paired HUDs, mobile prep app, and gesture history."
+          }
+        ]
       }
     ]
   }
