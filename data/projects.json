@@ -5,7 +5,7 @@
     "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
     "year": 2025,
     "tags": ["Game", "Interaction", "Physical Computing"],
-    "thumbnail": "assets/labyrinth/Labyrinth6.jpg",
+    "thumbnail": "assets/projects/labyrinth/Labyrinth6.jpg",
     "intro": "A two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound).",
     "meta": {
       "techStack": ["Unity", "C#", "Arduino", "Spatial Audio", "Leap Motion"],
@@ -22,7 +22,7 @@
       },
       {
         "type": "image",
-        "image": "assets/labyrinth/Labyrinth5.jpg",
+        "image": "assets/projects/labyrinth/Labyrinth5.jpg",
         "alt": "Screenshot of the dark maze environment",
         "caption": "Each player's experience of the maze is distinct—vision vs. hearing."
       },
@@ -36,19 +36,19 @@
         "title": "Development Process",
         "images": [
           {
-            "image": "assets/labyrinth/Labyrinth6.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth6.jpg",
             "caption": "Early prototype built in Unity showing light cone rendering."
           },
           {
-            "image": "assets/labyrinth/Labyrinth7.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth7.jpg",
             "caption": "Arduino setup controlling flashlight intensity."
           },
           {
-            "image": "assets/labyrinth/Labyrinth8.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth8.jpg",
             "caption": "Playtesting asymmetric control balance."
           },
           {
-            "image": "assets/labyrinth/Labyrinth9.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth9.jpg",
             "caption": "Final two-player setup: Leap Motion for the hider, headphones for the seeker."
           }
         ]
@@ -66,14 +66,14 @@
     "subtitle": "\"You don't choose your lifestyle. Data does.\"",
     "year": 2024,
     "tags": ["Installation", "Data Visualization", "Critical Design"],
-    "thumbnail": "assets/chester/CC3.JPG",
+    "thumbnail": "assets/projects/chester/CC3.JPG",
     "intro": "An interactive installation that turns your spending habits into an experience. You upload your own transaction history, and the system prints targeted lifestyle ads back at you.",
     "meta": {
       "techStack": ["Arduino", "JavaScript", "Node.js", "HTML/CSS", "Thermal Receipt Printer"],
       "timeline": "Jan 2024 – Mar 2024",
       "role": "Solo project",
       "demoLink": "https://chester-choiceworth.onrender.com/",
-      "video": "../assets/chester/CC.mp4"
+      "video": "../assets/projects/chester/CC.mp4"
     },
     "sections": [
       {
@@ -83,7 +83,7 @@
       },
       {
         "type": "image",
-        "image": "assets/chester/CC3.JPG",
+        "image": "assets/projects/chester/CC3.JPG",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
         "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
       },
@@ -97,15 +97,15 @@
         "title": "How it presents you back to yourself",
         "images": [
           {
-            "image": "assets/chester/CC1.png",
+            "image": "assets/projects/chester/CC1.png",
             "caption": "Spending map generated from your uploaded transactions: where your money actually goes in the city."
           },
           {
-            "image": "assets/chester/CC2.png",
+            "image": "assets/projects/chester/CC2.png",
             "caption": "Auto-generated summary receipt: categories, totals, and 'lifestyle grade'."
           },
           {
-            "image": "assets/chester/CC4.JPG",
+            "image": "assets/projects/chester/CC4.JPG",
             "caption": "Thermal printer output: targeted ads and financial advice written in a manipulative 'personalized concierge' voice."
           }
         ]
@@ -140,7 +140,7 @@
       {
         "type": "video",
         "title": "Demo Clip",
-        "src": "../assets/chester/CC.mp4",
+        "src": "../assets/projects/chester/CC.mp4",
         "caption": "Live capture of the loop: upload → analyze → map → insult."
       },
       {
@@ -156,7 +156,7 @@
     "subtitle": "How to Show Off Quantum Computing",
     "year": 2025,
     "tags": ["Game", "Interaction", "Physics Simulation"],
-    "thumbnail": "../assets/marbility/marbility_6.png",
+    "thumbnail": "../assets/projects/marbility/marbility_6.png",
     "intro": "An experimental physics-based gameplay exploring how to visualize the logic of quantum computing through marbles and motion.",
     "meta": {
       "techStack": ["Unity", "C#", "3D Simulation"],
@@ -173,13 +173,13 @@
       },
       {
         "type": "image",
-        "image": "../assets/marbility/marbility_2.jpg",
+        "image": "../assets/projects/marbility/marbility_2.jpg",
         "alt": "Physical or digital simulation of marbles demonstrating quantum behaviors",
         "caption": "Gameplay concept visualizing probability paths as marble trajectories."
       },
       {
         "type": "image",
-        "image": "../assets/marbility/marbility_1.jpg",
+        "image": "../assets/projects/marbility/marbility_1.jpg",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
         "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
       },
