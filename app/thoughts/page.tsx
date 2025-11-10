@@ -5,7 +5,16 @@ import worksLayout from "../works/WorksPage.module.css";
 import styles from "./page.module.css";
 
 export default function WritingPage() {
-  const articles = (writingData.articles ?? []) as WritingArticle[];
+  const articles = [
+    ...((writingData.articles ?? []) as WritingArticle[]),
+  ].sort((a, b) => {
+    const timeA = Number.parseInt(a.time ?? "", 10);
+    const timeB = Number.parseInt(b.time ?? "", 10);
+    if (Number.isNaN(timeA) && Number.isNaN(timeB)) return 0;
+    if (Number.isNaN(timeA)) return 1;
+    if (Number.isNaN(timeB)) return -1;
+    return timeB - timeA;
+  });
 
   return (
     <main className={worksLayout.worksPageBg}>

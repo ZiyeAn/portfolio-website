@@ -21,44 +21,27 @@ const formatTags = (tags?: string[]) => {
 export default function WritingList({ articles }: WritingListProps) {
   return (
     <div className={styles.list}>
+      <div className={styles.headerRow}>
+        <span>Tags</span>
+        <span>Project</span>
+        <span>Date</span>
+      </div>
       {articles.map((article) => {
-        const tagLine = formatTags(article.tags);
+        const tagLine = formatTags(article.tags) || "—";
         return (
           <article key={article.title} className={styles.row}>
-            <div className={styles.titleColumn}>
-              <a
-                href={article.href}
-                target="_blank"
-                rel="noreferrer"
-                className={styles.titleLink}
-              >
-                {article.title}
-              </a>
-              {article.time ? (
-                <time className={styles.meta}>{article.time}</time>
-              ) : null}
-            </div>
-            <div className={styles.excerptColumn}>
-              {article.excerpt ? (
-                <p className={styles.excerpt}>{article.excerpt}</p>
-              ) : null}
-            </div>
-            <div className={styles.metaColumn}>
-              {article.category ? (
-                <div className={styles.category}>
-                  <span className={styles.metaLabel}>Category</span>
-                  <span>{article.category}</span>
-                </div>
-              ) : null}
-              {tagLine ? (
-                <div className={styles.tags}>
-                  <span className={styles.metaLabel}>
-                    {article.category ? "Tags" : "Category"}
-                  </span>
-                  <span>{tagLine}</span>
-                </div>
-              ) : null}
-            </div>
+            <span className={styles.tagsCell}>{tagLine}</span>
+            <a
+              href={article.href}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.titleLink}
+            >
+              {article.title}
+            </a>
+            <time className={styles.timeCell}>
+              {article.time ? article.time : "—"}
+            </time>
           </article>
         );
       })}
