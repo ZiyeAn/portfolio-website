@@ -170,18 +170,12 @@
 .hoverLabel {
   position: absolute;
   transform: translate(-50%, -140%);
-  background: rgba(249, 246, 241, 0.95);
-  color: #851200;
-  padding: 0.45rem 0.75rem;
-  border-radius: 999px;
-  font-family: 'huiwen';
-  font-size: clamp(0.72rem, 0.68rem + 0.18vw, 0.85rem);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  width: clamp(55px, 6vw, 95px);
+  height: auto;
+  display: block;
   pointer-events: none;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(148, 0, 0, 0.2);
-  white-space: nowrap;
+  user-select: none;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.15));
   transition: opacity 0.15s ease, transform 0.15s ease;
   z-index: 10;
 }

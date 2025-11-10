@@ -50,15 +50,16 @@ export default function AboutCard() {
           onMouseMove={handleMouseMove}
         >
           {isHovering && (
-            <span
+            <img
+              src="/assets/index/viewMore.png"
+              alt="View more"
               className={styles.hoverLabel}
               style={{
                 left: `${labelPosition.x}px`,
                 top: `${labelPosition.y}px`,
               }}
-            >
-              view more
-            </span>
+              draggable={false}
+            />
           )}
           <div className={styles.aboutGrid}>
             <div className={styles.aboutMedia}>
