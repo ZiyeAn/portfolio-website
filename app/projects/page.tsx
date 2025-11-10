@@ -32,7 +32,7 @@ export default function ProjectsPage() {
       <header className={styles.heroImageWrapper}>
         <h1 className={styles.srOnly}>{heroHeading}</h1>
         <Image
-          src="/assets/Projects/projects_heading.png"
+          src="/assets/Projects/projects_heading.webp"
           alt="Projects hero"
           width={3415}
           height={820}

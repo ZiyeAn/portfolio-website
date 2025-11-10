@@ -65,7 +65,7 @@ export default function HandsMenu() {
       <div className={styles.hands}>
         <div className={styles.leftHand}>
           <Image
-            src="/assets/index/left_hand.png"
+            src="/assets/index/left_hand.webp"
             alt="Left Hand"
             width={900}
             height={842}
@@ -76,7 +76,7 @@ export default function HandsMenu() {
         </div>
         <div className={styles.rightHand}>
           <Image
-            src="/assets/index/right_hand.png"
+            src="/assets/index/right_hand.webp"
             alt="Right Hand"
             width={900}
             height={842}

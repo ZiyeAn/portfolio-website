@@ -12,7 +12,7 @@ export default function WritingPage() {
       <TopNav dark />
       <div className={worksLayout.pageContainer}>
         <header className={styles.header}>
-          <h1 className={styles.title}>Thoughts</h1>
+          <h1 className={styles.title}>Writing</h1>
           <p className={styles.intro}>
             Thoughts, essays, and fragments currently living on Notion. Tap a
             title to jump over and read the full piece.

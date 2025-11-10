@@ -63,7 +63,7 @@ export default function AboutCard() {
           <div className={styles.aboutGrid}>
             <div className={styles.aboutMedia}>
               <img
-                src="/assets/index/dish.png"
+                src="/assets/index/dish.webp"
                 alt="Decorative plate"
                 className={styles.aboutImage}
               />

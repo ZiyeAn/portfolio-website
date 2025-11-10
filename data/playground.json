@@ -12,7 +12,7 @@
         "techStack": ["MAYA"],
         "timeline": "September 2025",
         "demoLink": "#",
-        "video": ["../assets/playground/apple_animation/apple_motion_blur.mp4"],
+        "video": ["https://drive.google.com/file/d/1Ijpprqu19GhOoOhSyA6XWpTnpN-Clf0T/view?usp=drive_link"],
         "images": [
           "assets/playground/apple_animation/appleverse.gif"
         ]
@@ -30,14 +30,14 @@
         "techStack": ["MAYA"],
         "timeline": "September 2025",
         "demoLink": "#",
-        "video": ["../assets/playground/SailorMoon/SailorMoon.mp4"],
+        "video": ["https://drive.google.com/file/d/1qO4ULcRihzL-PYRRePamFmJM_btVsDrz/view?usp=drive_link"],
         "images": []
       }
     },
     {
       "title": "Orbit",
       "selected_work": true,
-      "thumbnail": "assets/playground/orbit/orbit1.jpg",
+      "thumbnail": "assets/playground/orbit/orbit1.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["3D Modeling","✦Ziye’s Pick✧"],
       "id": "/works/Orbit.html",
@@ -47,19 +47,19 @@
         "timeline": "September 2025",
         "demoLink": "#",
         "images": [
-          "../assets/playground/orbit/orbit1.jpg",
-          "../assets/playground/orbit/orbit2.jpg",
-          "../assets/playground/orbit/orbit3.jpg",
-          "../assets/playground/orbit/orbit4.jpg",
-          "../assets/playground/orbit/orbit5.jpg",
-          "../assets/playground/orbit/orbit6.jpg"
+          "../assets/playground/orbit/orbit1.webp",
+          "../assets/playground/orbit/orbit2.webp",
+          "../assets/playground/orbit/orbit3.webp",
+          "../assets/playground/orbit/orbit4.webp",
+          "../assets/playground/orbit/orbit5.webp",
+          "../assets/playground/orbit/orbit6.webp"
         ]
       }
     },
     {
       "title": "Ripple",
       "selected_work": false,
-      "thumbnail": "assets/playground/ripple/ripple1.jpg",
+      "thumbnail": "assets/playground/ripple/ripple1.webp",
       "intro": "A cute neclace I made ;",
       "tags": ["fabrication"],
       "id": "/works/Ripple.html",
@@ -69,14 +69,14 @@
         "timeline": "August 2024",
         "demoLink": "#",
         "images": [
-          "../assets/playground/ripple/ripple1.jpg"
+          "../assets/playground/ripple/ripple1.webp"
         ]
       }
     },
     {
       "title": "Dragonfly",
       "selected_work": false,
-      "thumbnail": "assets/playground/dragonfly/dragonfly.jpg",
+      "thumbnail": "assets/playground/dragonfly/dragonfly.webp",
       "intro": "A cute dragonfly I made ;",
       "tags": ["fabrication"],
       "id": "/works/Dragonfly.html",
@@ -86,14 +86,14 @@
         "timeline": "August 2024",
         "demoLink": "#",
         "images": [
-          "assets/playground/dragonfly/dragonfly.jpg"
+          "assets/playground/dragonfly/dragonfly.webp"
         ]
       }
     },
     {
       "title": "Carry Me",
       "selected_work": true,
-      "thumbnail": "assets/playground/carry_me/carry_me1.jpg",
+      "thumbnail": "assets/playground/carry_me/carry_me1.webp",
       "intro": "A cute neclace I made ;",
       "tags": ["fabrication","✦Ziye’s Pick✧"],
       "id": "/works/Carry_me.html",
@@ -103,9 +103,9 @@
         "timeline": "August 2024",
         "demoLink": "#",
         "images": [
-          "../assets/playground/carry_me/carry_me3.jpg",
-          "../assets/playground/carry_me/carry_me1.jpg",
-          "../assets/playground/carry_me/carry_me2.jpg"
+          "../assets/playground/carry_me/carry_me3.webp",
+          "../assets/playground/carry_me/carry_me1.webp",
+          "../assets/playground/carry_me/carry_me2.webp"
         ]
       }
     },
@@ -131,7 +131,7 @@
     {
       "title": "Funguide",
       "selected_work": false,
-      "thumbnail": "assets/playground/funguide/Funguide.png",
+      "thumbnail": "assets/playground/funguide/Funguide.webp",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
       "tags": ["Coding"],
       "id": "/works/funguide.html",
@@ -140,19 +140,19 @@
         "techStack": ["JavaScript", "HTML/CSS", "Node.js", "Gemini API"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://funguide.onrender.com/",
-        "video": ["../assets/playground/funguide/m1.mp4"],
+        "video": ["https://drive.google.com/file/d/1CCfjavK2WRjbhKrpKcS8k2Yt-9hA8Tax/view?usp=drive_link"],
         "images": [
-          "../assets/playground/funguide/f1.png",
-          "../assets/playground/funguide/f2.png",
-          "../assets/playground/funguide/f3.png",
-          "../assets/playground/funguide/f4.png"
+          "../assets/playground/funguide/f1.webp",
+          "../assets/playground/funguide/f2.webp",
+          "../assets/playground/funguide/f3.webp",
+          "../assets/playground/funguide/f4.webp"
         ]
       }
     },
     {
       "title": "Descent | Ascent",
       "selected_work": false,
-      "thumbnail": "assets/playground/underwater_gesture/ARS Zine-1.jpg",
+      "thumbnail": "assets/playground/underwater_gesture/ARS Zine-1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": ["Drawing"],
       "id": "/works/DescentAscent.html",
@@ -162,18 +162,18 @@
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
-          "../assets/playground/underwater_gesture/ARS Zine-1.jpg",
-          "../assets/playground/underwater_gesture/ARS Zine-2.jpg",
-          "../assets/playground/underwater_gesture/ARS Zine-3.jpg",
-          "../assets/playground/underwater_gesture/ARS Zine-4.jpg",
-          "../assets/playground/underwater_gesture/ARS Zine-5.jpg"
+          "../assets/playground/underwater_gesture/ARS Zine-1.webp",
+          "../assets/playground/underwater_gesture/ARS Zine-2.webp",
+          "../assets/playground/underwater_gesture/ARS Zine-3.webp",
+          "../assets/playground/underwater_gesture/ARS Zine-4.webp",
+          "../assets/playground/underwater_gesture/ARS Zine-5.webp"
         ]
       }
     },
     {
       "title": "Mountain Spirit 山鬼",
       "selected_work": false,
-      "thumbnail": "assets/playground/mountain_spirit/ms3.jpg",
+      "thumbnail": "assets/playground/mountain_spirit/ms3.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["Installation"],
       "id": "/works/Mountain_Spirit.html",
@@ -184,10 +184,10 @@
         "demoLink": "#",
         "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link","https://drive.google.com/file/d/19ryNrD8y3mbWvlemdr7J07QE1zPmBbRI/view?usp=sharing"],
         "images": [
-          "../assets/playground/mountain_spirit/ms1.jpg",
-          "../assets/playground/mountain_spirit/ms2.jpg",
-          "../assets/playground/mountain_spirit/ms3.jpg",
-          "../assets/playground/mountain_spirit/ms4.jpg"
+          "../assets/playground/mountain_spirit/ms1.webp",
+          "../assets/playground/mountain_spirit/ms2.webp",
+          "../assets/playground/mountain_spirit/ms3.webp",
+          "../assets/playground/mountain_spirit/ms4.webp"
         ]
       }
     },
@@ -203,18 +203,18 @@
         "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-2-Different-Perspective/",
-        "video": ["../assets/playground/apple/apple1.mp4"],
+        "video": ["https://drive.google.com/file/d/1QcEd0mhVrzWQoMBTF6hzgILdwW8aTuuW/view?usp=drive_link"],
         "images": [
-          "../assets/playground/apple/a1.png",
-          "../assets/playground/apple/a2.png",
-          "../assets/playground/apple/a3.png"
+          "../assets/playground/apple/a1.webp",
+          "../assets/playground/apple/a2.webp",
+          "../assets/playground/apple/a3.webp"
         ]
       }
     },
     {
       "title": "What to cook today?",
       "selected_work": false,
-      "thumbnail": "assets/playground/what_to_cook/wtc_hero_img.png",
+      "thumbnail": "assets/playground/what_to_cook/wtc_hero_img.webp",
       "intro": "A simple cookbook for kids",
       "tags": ["Coding"],
       "id": "/works/what_to_cook_today.html",
@@ -224,16 +224,16 @@
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-3-Community-Tool-or-Quiz/index.html",
         "images": [
-          "../assets/playground/what_to_cook/wtc1.png",
-          "../assets/playground/what_to_cook/wtc2.png",
-          "../assets/playground/what_to_cook/wtc3.png"
+          "../assets/playground/what_to_cook/wtc1.webp",
+          "../assets/playground/what_to_cook/wtc2.webp",
+          "../assets/playground/what_to_cook/wtc3.webp"
         ]
       }
     },
     {
       "title": "What to drink today?",
       "selected_work": false,
-      "thumbnail": "assets/playground/what_to_drink/wtd1.png",
+      "thumbnail": "assets/playground/what_to_drink/wtd1.webp",
       "intro": "Decide what to drink through a digital Chinese divination",
       "tags": ["Coding"],
       "id": "/works/what-to-drink-today.html",
@@ -242,14 +242,14 @@
         "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-4-Digital-Divination/index.html",
-        "video": ["../assets/playground/what_to_drink/wtd.mp4"],
-        "images": ["../assets/playground/what_to_drink/wtd2.png"]
+        "video": ["https://drive.google.com/file/d/1_DrMmPpaZSvOhCar8epL5ho_NsZvS1wp/view?usp=drive_link"],
+        "images": ["../assets/playground/what_to_drink/wtd2.webp"]
       }
     },
     {
       "title": "Marriage Premium",
       "selected_work": false,
-      "thumbnail": "../assets/playground/marriage_premium/mp_tn.png",
+      "thumbnail": "../assets/playground/marriage_premium/mp_tn.webp",
       "intro": "A physical computing piece showing gender inequality through gameplay and motion",
       "tags": ["Installation"],
       "id": "/works/marriage_premium.html",
@@ -259,18 +259,18 @@
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
         "frame":"https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
-        "video": ["../assets/playground/marriage_premium/mp_video.mp4"],
+        "video": ["https://drive.google.com/file/d/1qntTXL_mvXUsF-Y4JBht0RmvUkuW-Ryt/view?usp=sharing","https://drive.google.com/file/d/1Qu1BxBKbnxw0X6KeBxlOC1RQRsuw_qD9/view?usp=sharing"],
         "images": [
-          "../assets/playground/marriage_premium/mp1.jpg",
-          "../assets/playground/marriage_premium/mp2.jpeg",
-          "../assets/playground/marriage_premium/mp3.jpeg"
+          "../assets/playground/marriage_premium/mp1.webp",
+          "../assets/playground/marriage_premium/mp2.webp",
+          "../assets/playground/marriage_premium/mp3.webp"
         ]
       }
     },
     {
       "title": "Autobiographical Game",
       "selected_work": false,
-      "thumbnail": "assets/playground/bio_game/g1.png",
+      "thumbnail": "assets/playground/bio_game/g1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": ["Game"],
       "id": "/works/autobiographical_game.html",
@@ -280,9 +280,9 @@
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
-          "../assets/playground/bio_game/g1.png",
-          "../assets/playground/bio_game/CC2.png",
-          "../assets/playground/bio_game/image3.jpg"
+          "../assets/playground/bio_game/g1.webp",
+          "../assets/playground/bio_game/CC2.webp",
+          "../assets/playground/bio_game/image3.webp"
         ]
       }
     },
@@ -359,14 +359,14 @@
         "video": ["https://drive.google.com/file/d/18Nknf47Q1c_kjYe8_2Dqh-W_xY9Uqf1k/view?usp=drive_link"],
         "images": [
           "../assets/playground/P5/ExperimentalClock.gif",
-          "../assets/playground/P5/ExperimentalClock1.jpg"
+          "../assets/playground/P5/ExperimentalClock1.webp"
         ]
       }
     },
     {
       "title": "Land",
       "selected_work": false,
-      "thumbnail": "assets/playground/Land/Land_Spread_Ziye.jpg",
+      "thumbnail": "assets/playground/Land/Land_Spread_Ziye.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": ["Drawing"],
       "id": "/works/Land.html",
@@ -374,20 +374,19 @@
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
         "techStack": ["Photodgraphy","Illustrator","InDesign"],
         "timeline": "Jan 2024 - Mar 2024",
-        "demoLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
-          "../assets/playground/Land/Land_Spread_Ziye.jpg",
-          "../assets/playground/Land/Land_Spread_Ziye1.jpg",
-          "../assets/playground/Land/Land_Spread_Ziye2.jpg",
-          "../assets/playground/Land/Land_Spread_Ziye3.jpg",
-          "../assets/playground/Land/Land_Spread_Ziye4.jpg"
+          "../assets/playground/Land/Land_Spread_Ziye.webp",
+          "../assets/playground/Land/Land_Spread_Ziye1.webp",
+          "../assets/playground/Land/Land_Spread_Ziye2.webp",
+          "../assets/playground/Land/Land_Spread_Ziye3.webp",
+          "../assets/playground/Land/Land_Spread_Ziye4.webp"
         ]
       }
     },
     {
       "title": "Portart of Pierre",
       "selected_work": false,
-      "thumbnail": "assets/playground/portrait_of_pierre/PierP1.jpeg",
+      "thumbnail": "assets/playground/portrait_of_pierre/PierP1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": ["Drawing","✦Ziye’s Pick✧"],
       "id": "/works/Portart_of_Pierre.html",
@@ -396,16 +395,16 @@
         "techStack": ["Pencil","Papercutting"],
         "timeline": "Jan 2024 - Mar 2024",
         "images": [
-          "assets/playground/portrait_of_pierre/PierP1.jpeg",
-          "assets/playground/portrait_of_pierre/PierP2.jpeg",
-          "assets/playground/portrait_of_pierre/PierP3.jpeg"
+          "assets/playground/portrait_of_pierre/PierP1.webp",
+          "assets/playground/portrait_of_pierre/PierP2.webp",
+          "assets/playground/portrait_of_pierre/PierP3.webp"
         ]
       }
     },
     {
       "title": "Ophelia",
       "selected_work": false,
-      "thumbnail": "assets/playground/ophelia/ophelia_1.jpg",
+      "thumbnail": "assets/playground/ophelia/ophelia_1.webp",
       "intro": "A plaster-casting sculpture capturing the ethereal buoyancy of a floating body.",
       "tags": ["fabrication"],
       "id": "/works/ophelia.html",
@@ -416,17 +415,17 @@
         "demoLink": "#",
         "video": [],
         "images": [
-          "../assets/playground/ophelia/ophelia_1.jpg",
-          "../assets/playground/ophelia/ophelia_2.jpg",
-          "../assets/playground/ophelia/ophelia_3.jpg",
-          "../assets/playground/ophelia/ophelia_4.jpg"
+          "../assets/playground/ophelia/ophelia_1.webp",
+          "../assets/playground/ophelia/ophelia_2.webp",
+          "../assets/playground/ophelia/ophelia_3.webp",
+          "../assets/playground/ophelia/ophelia_4.webp"
         ]
       }
     },
     {
       "title": "Maternity",
       "selected_work": false,
-      "thumbnail": "assets/playground/drawing/maternity.png",
+      "thumbnail": "assets/playground/drawing/maternity.webp",
       "intro": "Watercolor drawings exploring identity as a mother",
       "tags": ["Drawing"],
       "id": "/works/maternity.html",
@@ -437,14 +436,14 @@
         "demoLink": "#",
         "video": [],
         "images": [
-          "assets/playground/drawing/maternity.png"
+          "assets/playground/drawing/maternity.webp"
         ]
       }
     },
     {
       "title": "'Environmental-Friendly'",
       "selected_work": false,
-      "thumbnail": "assets/playground/drawing/environmental-friendly.png",
+      "thumbnail": "assets/playground/drawing/environmental-friendly.webp",
       "intro": "Watercolor drawings exploring identity as a mother",
       "tags": ["Drawing"],
       "id": "/works/environmental_friendly.html",
@@ -455,7 +454,7 @@
         "demoLink": "#",
         "video": [],
         "images": [
-          "assets/playground/drawing/environmental-friendly.png"
+          "assets/playground/drawing/environmental-friendly.webp"
         ]
       }
     } 

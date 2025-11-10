@@ -9,7 +9,7 @@
       "Interaction",
       "Physical Computing"
     ],
-    "thumbnail": "assets/projects/labyrinth/Labyrinth6.jpg",
+    "thumbnail": "assets/projects/labyrinth/Labyrinth6.webp",
     "intro": "A two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound).",
     "meta": {
       "techStack": [
@@ -32,7 +32,7 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/labyrinth/Labyrinth5.jpg",
+        "image": "assets/projects/labyrinth/Labyrinth5.webp",
         "alt": "Screenshot of the dark maze environment",
         "caption": "Each player's experience of the maze is distinct\u2014vision vs. hearing."
       },
@@ -46,19 +46,19 @@
         "title": "Development Process",
         "images": [
           {
-            "image": "assets/projects/labyrinth/Labyrinth6.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth6.webp",
             "caption": "Early prototype built in Unity showing light cone rendering."
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth7.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth7.webp",
             "caption": "Arduino setup controlling flashlight intensity."
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth8.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth8.webp",
             "caption": "Playtesting asymmetric control balance."
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth9.jpg",
+            "image": "assets/projects/labyrinth/Labyrinth9.webp",
             "caption": "Final two-player setup: Leap Motion for the hider, headphones for the seeker."
           }
         ]
@@ -80,7 +80,7 @@
       "Physical Computing",
       "Interaction"
     ],
-    "thumbnail": "assets/projects/spinphony/spinphony-5.jpg",
+    "thumbnail": "assets/projects/spinphony/spinphony-5.webp",
     "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
     "meta": {
       "techStack": [
@@ -103,7 +103,7 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/spinphony/spinphony-5.jpg",
+        "image": "assets/projects/spinphony/spinphony-5.webp",
         "alt": "Custom Spinphony controller and Unity build",
         "caption": "Final hardware build: laser-cut platter, rotary encoder, and arcade buttons feeding a Unity platformer."
       },
@@ -130,23 +130,23 @@
         "title": "In-game Moments",
         "images": [
           {
-            "image": "assets/projects/spinphony/spinphony-2.jpg",
+            "image": "assets/projects/spinphony/spinphony-2.webp",
             "caption": "Early block-out level used to calibrate encoder sensitivity."
           },
           {
-            "image": "assets/projects/spinphony/spinphony-3.jpg",
+            "image": "assets/projects/spinphony/spinphony-3.webp",
             "caption": "Final character art and rhythm obstacles."
           },
           {
-            "image": "assets/projects/spinphony/spinphony-4.jpg",
+            "image": "assets/projects/spinphony/spinphony-4.webp",
             "caption": "Unity view showing layered parallax backgrounds."
           },
           {
-            "image": "assets/projects/spinphony/spinphony-7.jpg",
+            "image": "assets/projects/spinphony/spinphony-7.webp",
             "caption": "Custom UI referencing vinyl liner notes."
           },
           {
-            "image": "assets/projects/spinphony/spinphony-8.jpg",
+            "image": "assets/projects/spinphony/spinphony-8.webp",
             "caption": "Playtesting session with full controller setup."
           }
         ]
@@ -174,7 +174,7 @@
       "Data Visualization",
       "Critical Design"
     ],
-    "thumbnail": "assets/projects/chester/CC3.JPG",
+    "thumbnail": "assets/projects/chester/CC3.webp",
     "intro": "An interactive installation that turns your spending habits into an experience. You upload your own transaction history, and the system prints targeted lifestyle ads back at you.",
     "meta": {
       "techStack": [
@@ -197,7 +197,7 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/chester/CC3.JPG",
+        "image": "assets/projects/chester/CC3.webp",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
         "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
       },
@@ -211,15 +211,15 @@
         "title": "How it presents you back to yourself",
         "images": [
           {
-            "image": "assets/projects/chester/CC1.png",
+            "image": "assets/projects/chester/CC1.webp",
             "caption": "Spending map generated from your uploaded transactions: where your money actually goes in the city."
           },
           {
-            "image": "assets/projects/chester/CC2.png",
+            "image": "assets/projects/chester/CC2.webp",
             "caption": "Auto-generated summary receipt: categories, totals, and 'lifestyle grade'."
           },
           {
-            "image": "assets/projects/chester/CC4.JPG",
+            "image": "assets/projects/chester/CC4.webp",
             "caption": "Thermal printer output: targeted ads and financial advice written in a manipulative 'personalized concierge' voice."
           }
         ]
@@ -274,7 +274,7 @@
       "Interaction",
       "Physics Simulation"
     ],
-    "thumbnail": "../assets/projects/marbility/marbility_2.jpg",
+    "thumbnail": "../assets/projects/marbility/marbility_2.webp",
     "intro": "An experimental physics-based gameplay exploring how to visualize the logic of quantum computing through marbles and motion.",
     "meta": {
       "techStack": [
@@ -305,19 +305,19 @@
         "title": "Development Process",
         "images": [
           {
-            "image": "assets/projects/marbility/marbility_process3.png",
+            "image": "assets/projects/marbility/marbility_process3.webp",
             "caption": "Board Design"
           },
           {
-            "image": "assets/projects/marbility/marbility_process5.jpg",
+            "image": "assets/projects/marbility/marbility_process5.webp",
             "caption": "Early prototype"
           },
           {
-            "image": "assets/projects/marbility/marbility_process4.jpg",
+            "image": "assets/projects/marbility/marbility_process4.webp",
             "caption": "Early prototype"
           },
           {
-            "image": "assets/projects/marbility/marbility_process6.jpg",
+            "image": "assets/projects/marbility/marbility_process6.webp",
             "caption": "assembling servo motors"
           }
         ]
@@ -328,17 +328,17 @@
       },
       {
         "type": "image",
-        "image": "../assets/projects/marbility/marbility_2.jpg",
+        "image": "../assets/projects/marbility/marbility_2.webp",
         "alt": "Physical or digital simulation of marbles demonstrating quantum behaviors"
       },
       {
         "type": "image",
-        "image": "../assets/projects/marbility/marbility_1.jpg",
+        "image": "../assets/projects/marbility/marbility_1.webp",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display"
       },
       {
         "type": "image",
-        "image": "../assets/projects/marbility/marbility_5.jpg",
+        "image": "../assets/projects/marbility/marbility_5.webp",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display"
       }
     ]
@@ -353,7 +353,7 @@
       "Speculative Design",
       "AI"
     ],
-    "thumbnail": "assets/projects/divedev/divedex_design.png",
+    "thumbnail": "assets/projects/divedev/divedex_design.webp",
     "intro": "DiveDex pairs an analog dive computer form factor with on-device AI that can read, translate, and log scuba hand signals, giving recreational divers a shared reference when speech becomes impossible.",
     "meta": {
       "techStack": [
@@ -381,7 +381,7 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/divedev/divedex_design.png",
+        "image": "assets/projects/divedev/divedex_design.webp",
         "alt": "DiveDex hardware and HUD explorations",
         "caption": "Hardware exploration: a wrist-mounted module with retractable bone-conduction audio, dual cameras, and an OLED band that glows the decoded signal."
       },
@@ -408,7 +408,7 @@
         "title": "Interface Moments",
         "images": [
           {
-            "image": "assets/projects/divedev/1.png",
+            "image": "assets/projects/divedev/1.webp",
             "caption": "Low-fidelity prototype showing paired HUDs, mobile prep app, and gesture history."
           }
         ]
