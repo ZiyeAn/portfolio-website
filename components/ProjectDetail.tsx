@@ -177,6 +177,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 allow="autoplay; fullscreen"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
+                loading="lazy"
               />
             </div>
           ) : null}
@@ -189,6 +190,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 allow="autoplay; fullscreen"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
+                loading="lazy"
               />
             </div>
           ))}
@@ -210,7 +212,13 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               inView
             >
               <div className={styles.imageFrame}>
-                <img src={imageSrc} alt={`${project.title} image ${index + 1}`} />
+                <img
+                  src={imageSrc}
+                  alt={`${project.title} image ${index + 1}`}
+                  loading="lazy"
+                  decoding="async"
+                  fetchPriority="low"
+                />
               </div>
             </BlurFade>
           ))}
