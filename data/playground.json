@@ -40,7 +40,7 @@
       "thumbnail": "assets/playground/orbit/orbit1.jpg",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["3D Modeling"],
-      "id": "/works/mountain_spirit.html",
+      "id": "/works/Orbit.html",
       "details": {
         "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
         "techStack": ["MAYA"],
@@ -57,34 +57,12 @@
       }
     },
     {
-      "title": "Labyrinth",
-      "selected_work": true,
-      "thumbnail": "assets/playground/labyrinth/Labyrinth6.jpg",
-      "intro": "a two-player asymmetric hide-and-seek game set in a dark maze. One player becomes the Hider (a living person trying to escape), while the other becomes the Seeker (a ghostly entity that hunts through sound)",
-      "tags": ["Game"],
-      "id": "/works/labyrinth.html",
-      "details": {
-        "description": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion (Arduino-driven light input that reveals a cone of vision in-game). Player 2 cannot see the maze; instead, they track the hider through spatialized foodstep audio, inspired by echolocation. The tension comes from incomplete, unequal senses—light versus echo.",
-        "techStack": ["Unity", "Arduino", "Leap Motion"],
-        "timeline": "Mar 2025 – Apr 2025",
-        "demoLink": "#",
-        "video": ["https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"],
-        "images": [
-          "../assets/playground/labyrinth/Labyrinth5.jpg",
-          "../assets/playground/labyrinth/Labyrinth6.jpg",
-          "../assets/playground/labyrinth/Labyrinth7.jpg",
-          "../assets/playground/labyrinth/Labyrinth8.jpg",
-          "../assets/playground/labyrinth/Labyrinth9.jpg"
-        ]
-      }
-    },
-    {
       "title": "Spinphony",
       "selected_work": true,
       "thumbnail": "assets/playground/spinphony/spinphony-5.jpg",
       "intro": "A record-player-inspired platformer where a lost note (Do) spins through musical puzzles to reunite with its scale.",
       "tags": ["Game"],
-      "id": "/works/spinphony.html",
+      "id": "/works/Spinphony.html",
       "details": {
         "description": "Spinphony is a playful platformer controlled by a custom record-like controller. Rotating the physical ‘record’ moves the character through a world of rhythmic platforms, while two arcade buttons trigger jumps and interactions. Built in Unity with an Arduino-based rotary encoder + buttons, the game explores embodied interaction—turning music and motion into level design.",
         "techStack": ["Unity", "Arduino", "Serial (USB)", "Illustrator"],
@@ -107,7 +85,7 @@
       "thumbnail": "assets/playground/ripple/ripple1.jpg",
       "intro": "A cute neclace I made ;",
       "tags": ["fabrication"],
-      "id": "/works/ripple.html",
+      "id": "/works/Ripple.html",
       "details": {
         "description": "A cute neclace I made ;)",
         "techStack": ["Silver"],
@@ -124,7 +102,7 @@
       "thumbnail": "assets/playground/dragonfly/dragonfly.jpg",
       "intro": "A cute dragonfly I made ;",
       "tags": ["fabrication"],
-      "id": "/works/dragonfly.html",
+      "id": "/works/Dragonfly.html",
       "details": {
         "description": "A cute neclace I made ;)",
         "techStack": ["Silver","Copper"],
@@ -141,7 +119,7 @@
       "thumbnail": "assets/playground/carry_me/carry_me1.jpg",
       "intro": "A cute neclace I made ;",
       "tags": ["fabrication"],
-      "id": "/works/carry_me.html",
+      "id": "/works/Carry_me.html",
       "details": {
         "description": "A cute neclace I made ;)",
         "techStack": ["Silver"],
@@ -151,27 +129,6 @@
           "../assets/playground/carry_me/carry_me3.jpg",
           "../assets/playground/carry_me/carry_me1.jpg",
           "../assets/playground/carry_me/carry_me2.jpg"
-        ]
-      }
-    },
-    {
-      "title": "Chester Choiceworth",
-      "selected_work": true,
-      "thumbnail": "assets/playground/chester/CC3.JPG",
-      "intro": "\"You don't choose your lifestyle, Data does.\"",
-      "tags": ["Installation"],
-      "id": "/works/chester_choiceworth.html",
-      "details": {
-        "description": "Chester Choiceworth is an interactive installation that turns your spending habits into a visual and playful experience. <br><br>By uploading your monthly transaction record, the system creates a digital receipt summarizing your expenses and maps out where you’ve spent your money. At the same time, a receipt printer prints out exaggerated ads for luxury or budget items based on your spending level, highlighting how consumer targeting shapes our lifestyle.",
-        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Node.js"],
-        "timeline": "Jan 2024 - Mar 2024",
-        "demoLink": "https://ziyean.github.io/-3-MapCeipt/",
-        "video": ["../assets/playground/chester/CC.mp4"],
-        "images": [
-          "../assets/playground/chester/CC3.JPG",
-          "../assets/playground/chester/CC1.png",
-          "../assets/playground/chester/CC2.png",
-          "../assets/playground/chester/CC4.JPG"
         ]
       }
     },
@@ -242,7 +199,7 @@
       "thumbnail": "assets/playground/mountain_spirit/ms3.jpg",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": ["Installation"],
-      "id": "/works/Orbit.html",
+      "id": "/works/Mountain_Spirit.html",
       "details": {
         "description": "Mountain Spirit is a interactive installation inspired by the Chinese mythological figure '山鬼' (Mountain Spirit) from the ancient text '楚辞' (Chu Ci). This porject is inspired by Jeremiah 10:3–5, reflects on the human creation of gods — not as divine beings, but as products of shared belief. I see this as a metaphor for how societies construct meaning: through imagination, agreement, and repetition, the intangible becomes real. Centering on a female deity, the piece explores how belief animates what is otherwise inert — how the powerless can exist powerfully through the unity of human conviction.<br><br> \" They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk.\" ",
         "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
