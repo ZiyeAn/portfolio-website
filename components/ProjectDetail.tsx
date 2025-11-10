@@ -24,6 +24,7 @@ type ProjectDetails = {
   video?: string[];
   video_ID?: string[];
   images?: string[];
+  frame?: string;
   process?: ProcessData;
 };
 
@@ -82,6 +83,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     .filter((src) => !src.includes("drive.google.com"))
     .map(normalizeAsset)
     .filter(Boolean);
+  const frameSrc = normalizeAsset(details.frame);
   const imageSources = (details.images ?? [])
     .map(normalizeAsset)
     .filter(Boolean);
@@ -166,6 +168,18 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         </aside>
 
         <section className={styles.mediaColumn}>
+          {frameSrc ? (
+            <div className={styles.videoFrame}>
+              <iframe
+                className={styles.driveEmbed}
+                src={frameSrc}
+                title={`${project.title} interactive frame`}
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          ) : null}
           {driveVideos.map((driveSrc, index) => (
             <div key={`drive-video-${index}`} className={styles.videoFrame}>
               <iframe
@@ -200,7 +214,10 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               </div>
             </BlurFade>
           ))}
-          {!driveVideos.length && !videos.length && !imageSources.length ? (
+          {!frameSrc &&
+          !driveVideos.length &&
+          !videos.length &&
+          !imageSources.length ? (
             <div className={styles.emptyMedia}>Media coming soon.</div>
           ) : null}
         </section>
