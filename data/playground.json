@@ -178,7 +178,7 @@
       "tags": ["Installation"],
       "id": "/works/Mountain_Spirit.html",
       "details": {
-        "description": "Mountain Spirit is a interactive installation inspired by the Chinese mythological figure '山鬼' (Mountain Spirit) from the ancient text '楚辞' (Chu Ci). This porject is inspired by Jeremiah 10:3–5, reflects on the human creation of gods — not as divine beings, but as products of shared belief. I see this as a metaphor for how societies construct meaning: through imagination, agreement, and repetition, the intangible becomes real. Centering on a female deity, the piece explores how belief animates what is otherwise inert — how the powerless can exist powerfully through the unity of human conviction.<br><br> \" They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk.\" ",
+        "description": "Mountain Spirit is an interactive installation inspired by the Chinese mythological figure Shan Gui and Jeremiah 10:3–5. It reflects on how societies create gods—and meaning itself—through shared imagination, belief, and repetition.<br><br> They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk. ",
         "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
         "timeline": "September 2025",
         "demoLink": "#",
