@@ -5,15 +5,12 @@
   right: 0;
   width: 100%;
   z-index: 10000;
-  background-color: rgba(249, 246, 241, 0.92);
-  font-family: 'jetbrains-mono', monospace;
-
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.topNavDark {
-  background-color: rgba(35, 35, 35, 0.9);
-  color: #fff;
+  background-color: transparent;
+  color: #ffffff;
+  mix-blend-mode: difference;
+  font-family: "jetbrains-mono", monospace;
+  backdrop-filter: blur(24px);
+  transition: border-color 0.2s ease, color 0.2s ease;
 }
 
 .topNavOpen {
@@ -65,15 +62,9 @@
 
 .menuToggle:hover,
 .menuToggle:focus-visible {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.1);
-  outline: none;
-}
-
-.topNavDark .menuToggle:hover,
-.topNavDark .menuToggle:focus-visible {
   background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+  outline: none;
 }
 
 .menuIcon {
@@ -125,14 +116,10 @@
   gap: 1.25rem;
   padding: 1.25rem;
   border-radius: 1rem;
-  background: rgba(249, 246, 241, 0.95);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+  background: rgba(12, 12, 12, 0.7);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   text-align: center;
-}
-
-.topNavDark .navLinks {
-  background: rgba(35, 35, 35, 0.95);
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.3);
 }
 
 .navLinksOpen {
@@ -159,13 +146,8 @@
 
 .navLinks a:hover,
 .navLinks a:focus-visible {
-  color: #940000;
+  color: #f7f3eb;
   outline: none;
-}
-
-.topNavDark .navLinks a:hover,
-.topNavDark .navLinks a:focus-visible {
-  color: #940000;
 }
 
 .navInner a {
@@ -175,13 +157,8 @@
 
 .navInner a:hover,
 .navInner a:focus-visible {
-  color: #940000;
+  color: #f7f3eb;
   outline: none;
-}
-
-.topNavDark .navInner a:hover,
-.topNavDark .navInner a:focus-visible {
-  color: #940000;
 }
 
 .srOnly {
