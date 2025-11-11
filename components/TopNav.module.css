@@ -146,7 +146,7 @@
 
 .navLinks a:hover,
 .navLinks a:focus-visible {
-  color: #f7f3eb;
+  color: yellow;
   outline: none;
 }
 
@@ -157,7 +157,7 @@
 
 .navInner a:hover,
 .navInner a:focus-visible {
-  color: #f7f3eb;
+  color: #ff3b30;
   outline: none;
 }
 

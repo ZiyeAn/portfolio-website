@@ -10,6 +10,13 @@ const normalizeId = (id: string) =>
     .replace(/^\/works\//, "")
     .replace(/\.html$/i, "");
 
+type Project = (typeof projects)[number];
+type Section = Project["sections"] extends Array<infer T> ? T : never;
+
+const isTextSection = (
+  section: Section,
+): section is Section & { body?: string } => section.type === "text";
+
 const allProjects = projects.map((project) => ({
   ...project,
   slug: normalizeId(project.id),
@@ -46,7 +53,7 @@ export async function generateMetadata({
   const description =
     project.intro ??
     project.sections
-      ?.filter((section) => section.type === "text")
+      ?.filter(isTextSection)
       .map((section) => section.body ?? "")
       .join(" ")
       .slice(0, 160);
