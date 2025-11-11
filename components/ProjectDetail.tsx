@@ -2,11 +2,11 @@
 /* eslint-disable @next/next/no-img-element */
 
 import React from "react";
-import Link from "next/link";
-import { X } from "lucide-react";
 import styles from "./ProjectDetail.module.css";
 import rawProjects from "@/data/playground.json";
 import { BlurFade } from "@/components/ui/blur-fade";
+import TopNav from "@/components/TopNav";
+import Link from "next/link";
 
 type ProjectData = (typeof rawProjects.projects)[number];
 
@@ -87,35 +87,25 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
   const imageSources = (details.images ?? [])
     .map(normalizeAsset)
     .filter(Boolean);
+  const tagLine = project.tags?.join(" · ");
+  const hasMeta =
+    techStack.length ||
+    (project.tags?.length ?? 0) > 0 ||
+    (details.demoLink && details.demoLink !== "#");
 
   const handleToggleProcess = () => setShowProcess((prev) => !prev);
 
   return (
     <div className={styles.page}>
-      <header className={styles.header}>
-        <Link href="/" className={styles.backButton}>
-          Ziye An
-        </Link>
-        <nav className={styles.nav}>
-          <Link
-            href="/works"
-            className={styles.closeButton}
-            aria-label="Back to works"
-          >
-            <X aria-hidden />
-          </Link>
-        </nav>
-      </header>
-
+      <TopNav />
       <main className={styles.content}>
         <aside className={styles.infoColumn}>
           <div className={styles.infoBlock}>
-            <div className={styles.infoHeader}>
-              <h1 className={styles.projectTitle}>{project.title}</h1>
-              {timeline ? (
-                <p className={styles.timeline}>Timeline · {timeline}</p>
-              ) : null}
-            </div>
+            <Link href="/playground" className={styles.projectCategory}>
+              ← Back to Playground
+            </Link>
+            <h1 className={styles.projectTitle}>{project.title}</h1>
+            {timeline ? <p className={styles.timeline}>{timeline}</p> : null}
 
             {descriptionHtml ? (
               <div
@@ -124,33 +114,35 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               />
             ) : null}
 
-            {techStack.length ? (
-              <div className={styles.techStack}>
-                {techStack.map((tech) => (
-                  <span key={tech} className={styles.techItem}>
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            ) : null}
-
-            {project.tags?.length ? (
-              <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
-              </div>
-            ) : null}
-
-            {details.demoLink && details.demoLink !== "#" ? (
-              <a
-                href={details.demoLink}
-                className={styles.demoLink}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Visit Site ↗
-              </a>
+            {hasMeta ? (
+              <dl className={styles.metaList}>
+                {techStack.length ? (
+                  <div className={styles.metaRow}>
+                    <dt>Tools</dt>
+                    <dd>{techStack.join(", ")}</dd>
+                  </div>
+                ) : null}
+                {project.tags?.length ? (
+                  <div className={styles.metaRow}>
+                    <dt>Tags</dt>
+                    <dd>{project.tags.join(", ")}</dd>
+                  </div>
+                ) : null}
+                {details.demoLink && details.demoLink !== "#" ? (
+                  <div className={styles.metaRow}>
+                    <dt>Demo</dt>
+                    <dd>
+                      <a
+                        href={details.demoLink}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Visit Site ↗
+                      </a>
+                    </dd>
+                  </div>
+                ) : null}
+              </dl>
             ) : null}
 
             {process ? (

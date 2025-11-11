@@ -237,18 +237,9 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
             {project.subtitle ? (
               <p className={styles.projectSubtitle}>{project.subtitle}</p>
             ) : null}
-            {project.intro ? (
-              <p className={styles.projectIntro}>{project.intro}</p>
-            ) : null}
           </header>
 
           <div className={styles.metaPanel}>
-            {project.year ? (
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Year</span>
-                <span className={styles.metaValue}>{project.year}</span>
-              </div>
-            ) : null}
             {timeline ? (
               <div className={styles.metaBlock}>
                 <span className={styles.metaLabel}>Timeline</span>
@@ -268,7 +259,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
               </div>
             ) : null}
             {project.tags?.length ? (
-              <div className={styles.metaBlock}>
+              <div className={`${styles.metaBlock} ${styles.tagsBlock}`}>
                 <span className={styles.metaLabel}>Tags</span>
                 <div className={styles.metaTags}>
                   {project.tags.map((tag) => (

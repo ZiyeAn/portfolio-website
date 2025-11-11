@@ -1,5 +1,71 @@
 [
   {
+    "id": "divedex",
+    "title": "DiveDex",
+    "subtitle": "Real-time Marine Recognition System for Recreational Divers",
+    "year": 2024,
+    "tags": [
+      "Interaction",
+      "Speculative Design",
+      "AI"
+    ],
+    "thumbnail": "assets/projects/divedev/divedex_design.webp",
+    "intro": "A hybrid system combining smart diving goggles with real-time marine species recognition and a companion mobile app that records and visualizes the fish encountered during a dive.",
+    "meta": {
+      "techStack": [
+        "Figma",
+        "Rhino",
+        "Google Coral Dev Board",
+        "TensorFlow.js",
+        "Arduino"
+      ],
+      "timeline": "Oct \u2013 Dec 2024",
+      "role": "Research, Experience Design, Prototyping",
+      "demoLink": "#",
+      "video": ""
+    },
+    "sections": [
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/DiveDex_Ideation.png",
+        "alt": "DiveDex hardware and HUD explorations"
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/DiveDex_Research.png",
+        "alt": "DiveDex hardware and HUD explorations"
+      },
+      {
+        "type": "process-steps",
+        "title": "How it works",
+        "steps": [
+          {
+            "step_title": "Capture",
+            "description": "Dual fisheye cameras on each wrist capture 120fps video of both divers\u2019 hands without bulky housings."
+          },
+          {
+            "step_title": "Classify",
+            "description": "TensorFlow.js runs on an onboard Jetson Nano, comparing the gesture to a library of 60 baseline signals plus any custom packs the buddy team added."
+          },
+          {
+            "step_title": "Translate & Log",
+            "description": "A color-coded HUD flashes the translation, vibrates the relevant finger, and saves the signal + depth data to a dive log you can review on shore."
+          }
+        ]
+      },
+      {
+        "type": "gallery",
+        "title": "Interface Moments",
+        "images": [
+          {
+            "image": "assets/projects/divedev/1.webp",
+            "caption": "Low-fidelity prototype showing paired HUDs, mobile prep app, and gesture history."
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "labyrinth",
     "title": "Labyrinth",
     "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
@@ -340,78 +406,6 @@
         "type": "image",
         "image": "../assets/projects/marbility/marbility_5.webp",
         "alt": "Physical installation of the Chester Choiceworth setup with printer and display"
-      }
-    ]
-  },
-  {
-    "id": "divedex",
-    "title": "DiveDex",
-    "subtitle": "AI-assisted dive console for translating underwater gestures",
-    "year": 2024,
-    "tags": [
-      "Interaction",
-      "Speculative Design",
-      "AI"
-    ],
-    "thumbnail": "assets/projects/divedev/divedex_design.webp",
-    "intro": "DiveDex pairs an analog dive computer form factor with on-device AI that can read, translate, and log scuba hand signals, giving recreational divers a shared reference when speech becomes impossible.",
-    "meta": {
-      "techStack": [
-        "Figma",
-        "Blender",
-        "SvelteKit",
-        "TensorFlow.js",
-        "Arduino"
-      ],
-      "timeline": "Oct \u2013 Dec 2024",
-      "role": "Research, Experience Design, Prototyping",
-      "demoLink": "#",
-      "video": ""
-    },
-    "sections": [
-      {
-        "type": "text",
-        "title": "Concept",
-        "body": "Underwater communication still relies on memory, intuition, and paper dive slates. DiveDex imagines a wearable surface computer that watches hand motions, compares them against a learned gesture library, and quietly projects translations back to both divers. The goal is not to replace gesture literacy, but to give new and neurodiverse divers another layer of feedback and safety."
-      },
-      {
-        "type": "text",
-        "title": "Research Insights",
-        "body": "I interviewed instructors and recorded over 120 clips of common PADI-approved hand signals. Two themes surfaced: (1) beginners forget multi-step signals once adrenaline spikes; (2) buddy pairs create custom gestures that are meaningful but easy to misinterpret. These findings guided a system that mixes universal references with customizable packs you can preload before a dive."
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/divedev/divedex_design.webp",
-        "alt": "DiveDex hardware and HUD explorations",
-        "caption": "Hardware exploration: a wrist-mounted module with retractable bone-conduction audio, dual cameras, and an OLED band that glows the decoded signal."
-      },
-      {
-        "type": "process-steps",
-        "title": "How it works",
-        "steps": [
-          {
-            "step_title": "Capture",
-            "description": "Dual fisheye cameras on each wrist capture 120fps video of both divers\u2019 hands without bulky housings."
-          },
-          {
-            "step_title": "Classify",
-            "description": "TensorFlow.js runs on an onboard Jetson Nano, comparing the gesture to a library of 60 baseline signals plus any custom packs the buddy team added."
-          },
-          {
-            "step_title": "Translate & Log",
-            "description": "A color-coded HUD flashes the translation, vibrates the relevant finger, and saves the signal + depth data to a dive log you can review on shore."
-          }
-        ]
-      },
-      {
-        "type": "gallery",
-        "title": "Interface Moments",
-        "images": [
-          {
-            "image": "assets/projects/divedev/1.webp",
-            "caption": "Low-fidelity prototype showing paired HUDs, mobile prep app, and gesture history."
-          }
-        ]
       }
     ]
   }
