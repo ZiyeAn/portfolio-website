@@ -27,12 +27,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "assets/projects/divedev/DiveDex_Ideation.png",
-        "alt": "DiveDex hardware and HUD explorations"
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/divedev/DiveDex_Research.png",
+        "image": "assets/projects/divedev/DiveDexResearch.png",
         "alt": "DiveDex hardware and HUD explorations"
       },
       {
@@ -263,18 +258,30 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/chester/CC3.webp",
-        "alt": "Physical installation of the Chester Choiceworth setup with printer and display",
-        "caption": "The installation in use: live dashboard + receipt printer quietly judging you."
-      },
-      {
-        "type": "text",
-        "title": "Why I made this",
-        "body": "We like to believe that lifestyle is about taste, identity, and choice. But in practice, a lot of what gets sold back to us is inferred from our transaction history. What you buy predicts what tier you 'belong to' \u2014 grocery store loyalty cards, rent size, Uber vs subway, Whole Foods vs dollar slice. Chester Choiceworth exaggerates that logic out loud. It behaves like a marketing engine that decides: are you luxury-coded, survival-coded, guilty, aspirational, or failing?"
+        "image": "assets/projects/chester/Chester_Choiceworth.png",
+        "alt": "Research of Chester Choiceworth"
       },
       {
         "type": "gallery",
-        "title": "How it presents you back to yourself",
+        "title": "Prototypes & Process",
+        "images": [
+          {
+            "image": "assets/projects/chester/CC1.webp",
+            "caption": "Spending map generated from your uploaded transactions: where your money actually goes in the city."
+          },
+          {
+            "image": "assets/projects/chester/CC2.webp",
+            "caption": "Auto-generated summary receipt: categories, totals, and 'lifestyle grade'."
+          },
+          {
+            "image": "assets/projects/chester/CC4.webp",
+            "caption": "Thermal printer output: targeted ads and financial advice written in a manipulative 'personalized concierge' voice."
+          }
+        ]
+      },
+       {
+        "type": "gallery",
+        "title": "Final Outcome",
         "images": [
           {
             "image": "assets/projects/chester/CC1.webp",
@@ -291,33 +298,6 @@
         ]
       },
       {
-        "type": "process-steps",
-        "title": "System flow",
-        "steps": [
-          {
-            "step_title": "Upload",
-            "description": "User uploads a JSON of their monthly transactions (date, vendor, price, category)."
-          },
-          {
-            "step_title": "Parse & Categorize",
-            "description": "Node.js script groups spending by category (rent, groceries, snacks, transport, etc.) and estimates relative financial pressure, e.g. % of income spent on rent."
-          },
-          {
-            "step_title": "Visualize",
-            "description": "The browser shows a live dashboard: a map of where you spent, and a printed-like digital 'receipt' of totals."
-          },
-          {
-            "step_title": "Target You",
-            "description": "Arduino + thermal printer spits out exaggerated 'ads' for either budget survival items or high-end lifestyle products, depending on what you 'look like' to the system."
-          }
-        ]
-      },
-      {
-        "type": "text",
-        "title": "Tone / Concept",
-        "body": "The piece is intentionally condescending. It's a parody of recommendation systems. If your rent is 60% of your spending, it might suggest: 'You seem stressed. Consider a Bentley leather sofa to elevate your relaxation tier.' If you eat instant noodles and bodega snacks, it might message you like you're a cost-optimization problem. The joke is that personalization becomes class surveillance dressed as help."
-      },
-      {
         "type": "video",
         "title": "Demo Clip",
         "src": "../assets/projects/chester/CC.mp4",
@@ -325,8 +305,8 @@
       },
       {
         "type": "text",
-        "title": "What I learned / next steps",
-        "body": "People loved seeing the spend map, but reacted strongest to the printer. Physical paper felt like a 'verdict'. The next iteration will generate different styles of printed output depending on the audience \u2014 for example: landlord report, bank report, partner report \u2014 to show how different entities read the same data and judge you differently."
+        "title": "Next Iteration",
+        "body": "Turn this into a physical cardholder that could detect the frequency of using cards and maybe the location of using it. Which feels more like the relationship of how close our data is detected."
       }
     ]
   },
