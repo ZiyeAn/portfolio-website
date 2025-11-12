@@ -224,7 +224,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
 
   return (
     <div className={styles.page}>
-      <TopNav dark />
+      <TopNav />
       <div className={styles.topBarSpacer} aria-hidden />
       <main className={styles.main}>
         <Link href="/projects" className={styles.backLink}>

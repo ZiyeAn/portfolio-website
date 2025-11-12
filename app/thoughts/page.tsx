@@ -18,7 +18,7 @@ export default function WritingPage() {
 
   return (
     <main className={worksLayout.worksPageBg}>
-      <TopNav dark />
+      <TopNav />
       <div className={worksLayout.pageContainer}>
         <header className={styles.header}>
           <h1 className={styles.title}>Writing</h1>

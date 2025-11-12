@@ -5,9 +5,9 @@
   right: 0;
   width: 100%;
   z-index: 10000;
-  background-color: transparent;
-  color: #ffffff;
-  mix-blend-mode: difference;
+  background: transparent;
+  background-color: transparent !important;
+  color: ;
   font-family: "jetbrains-mono", monospace;
   backdrop-filter: blur(24px);
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -116,7 +116,7 @@
   gap: 1.25rem;
   padding: 1.25rem;
   border-radius: 1rem;
-  background: rgba(12, 12, 12, 0.7);
+  background: var(--color-bg);
   backdrop-filter: blur(18px);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
   text-align: center;
@@ -157,7 +157,7 @@
 
 .navInner a:hover,
 .navInner a:focus-visible {
-  color: #ff3b30;
+  color: #820700;
   outline: none;
 }
 

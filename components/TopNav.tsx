@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./TopNav.module.css";
 
-export default function TopNav({ dark = false }: { dark?: boolean }) {
+export default function TopNav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -22,11 +22,7 @@ export default function TopNav({ dark = false }: { dark?: boolean }) {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav
-      className={`${styles.topNav} ${dark ? styles.topNavDark : ""} ${
-        menuOpen ? styles.topNavOpen : ""
-      }`}
-    >
+    <nav className={`${styles.topNav} ${menuOpen ? styles.topNavOpen : ""}`}>
       <div className={styles.navInner}>
         <Link
           href="/"

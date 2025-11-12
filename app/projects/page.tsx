@@ -28,7 +28,7 @@ export default function ProjectsPage() {
 
   return (
     <main className={styles.page}>
-      <TopNav dark />
+      <TopNav />
       <header className={styles.heroImageWrapper}>
         <h1 className={styles.srOnly}>{heroHeading}</h1>
         <Image

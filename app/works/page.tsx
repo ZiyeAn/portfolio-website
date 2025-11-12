@@ -7,7 +7,7 @@ import styles from "./WorksPage.module.css";
 export default function WorksPage() {
   return (
     <main className={styles.worksPageBg}>
-      <TopNav dark />
+      <TopNav />
       <div className={styles.pageContainer}>
         <WorksGallery projects={projects.projects} />
       </div>
