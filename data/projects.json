@@ -87,141 +87,48 @@
     },
     "sections": [
       {
-        "type": "text",
-        "title": "Concept",
-        "body": "Labyrinth is an asymmetric two-player game about perception. Player 1 navigates a maze using Leap Motion as an Arduino-driven light input that reveals a cone of vision in-game. Player 2 cannot see the maze; instead, they track the hider through spatialized footsteps, inspired by echolocation. The tension comes from incomplete, unequal senses\u2014light versus echo."
-      },
-      {
         "type": "image",
-        "image": "assets/projects/labyrinth/Labyrinth5.webp",
-        "alt": "Screenshot of the dark maze environment",
-        "caption": "Each player's experience of the maze is distinct\u2014vision vs. hearing."
+        "image": "assets/projects/labyrinth/Labyrinth.png",
+        "alt": "Research Process of Labyrinth"
       },
       {
-        "type": "text",
-        "title": "Research",
-        "body": "The game began as a study of sensory asymmetry in cooperative and competitive play. References included horror sound design and echo-based mechanics like those in *Dark Echo*. We explored how withholding one sense amplifies another and how players communicate under unequal perception."
+        "type":"video",
+        "title": "Prototypes & Process",
+        "src": "https://drive.google.com/file/d/1e6lcQWAOA4JlD3T4QMHmqW27vD-O_kzl/view?usp=sharing",
+        "caption": "Early prototype testing the flashlight in maze effect"
+      },
+      {
+        "type":"video",
+        "src": "https://drive.google.com/file/d/1oiBfI9dnxJbeUgD1fRf-XKVvHfuzzNIc/view?usp=sharing",
+        "caption": "Testing Leap motion with Unity"
+      },
+      {
+        "type":"video",
+        "src": "https://drive.google.com/file/d/1pCwtnfqaNvrxfCVTl7sFgfulDmirOF1n/view?usp=drive_link",
+        "caption": "Testing maze generation"
       },
       {
         "type": "gallery",
-        "title": "Development Process",
+        "title": "Final Outcome",
         "images": [
           {
-            "image": "assets/projects/labyrinth/Labyrinth6.webp",
-            "caption": "Early prototype built in Unity showing light cone rendering."
+            "image": "assets/projects/labyrinth/Labyrinth6.webp"
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth7.webp",
-            "caption": "Arduino setup controlling flashlight intensity."
+            "image": "assets/projects/labyrinth/Labyrinth7.webp"
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth8.webp",
-            "caption": "Playtesting asymmetric control balance."
+            "image": "assets/projects/labyrinth/Labyrinth8.webp"
           },
           {
-            "image": "assets/projects/labyrinth/Labyrinth9.webp",
-            "caption": "Final two-player setup: Leap Motion for the hider, headphones for the seeker."
+            "image": "assets/projects/labyrinth/Labyrinth9.webp"
           }
         ]
       },
       {
-        "type": "text",
-        "title": "Outcome",
-        "body": "The final version emphasizes the emotional contrast between panic and patience. The Hider experiences claustrophobic flashes of visibility; the Seeker, drifting through echo, becomes both blind and omnipresent. The piece explores how unequal information defines empathy, fear, and control in play."
-      }
-    ]
-  },
-  {
-    "id": "spinphony",
-    "title": "Spinphony",
-    "subtitle": "A record-player platformer steered by a tangible controller",
-    "year": 2025,
-    "tags": [
-      "Game",
-      "Physical Computing",
-      "Interaction"
-    ],
-    "thumbnail": "assets/projects/spinphony/spinphony-5.webp",
-    "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
-    "meta": {
-      "techStack": [
-        "Unity",
-        "C#",
-        "Arduino",
-        "Rotary Encoder",
-        "Illustrator"
-      ],
-      "timeline": "Jan \u2013 Mar 2025",
-      "role": "Game design, Hardware prototyping, Visual design",
-      "demoLink": "#",
-      "video": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/preview"
-    },
-    "sections": [
-      {
-        "type": "text",
-        "title": "Concept",
-        "body": "Spinphony treats the turntable as both controller and narrative device. Rotating the platter spins Do, a lost note, through looping levels of rhythm gates and percussive enemies. Two arcade buttons act as jump and dash, so the player's whole body performs tiny DJ gestures to keep the character on beat."
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/spinphony/spinphony-5.webp",
-        "alt": "Custom Spinphony controller and Unity build",
-        "caption": "Final hardware build: laser-cut platter, rotary encoder, and arcade buttons feeding a Unity platformer."
-      },
-      {
-        "type": "process-steps",
-        "title": "Hardware + Interaction",
-        "steps": [
-          {
-            "step_title": "Prototype the Instrument",
-            "description": "Breadboarded an Arduino-based rotary encoder and tuned the resolution so one full spin maps to a comfortable in-game speed without motion sickness."
-          },
-          {
-            "step_title": "Translate Motion to Mechanics",
-            "description": "Unity interprets encoder delta as horizontal velocity, while button combinations trigger vaults, slides, and tempo boosts synchronized to the soundtrack."
-          },
-          {
-            "step_title": "Visual + Audio Direction",
-            "description": "Illustrated bold shapes inspired by vinyl sleeves and animated parallax backgrounds to reinforce the feeling of traveling through grooves."
-          }
-        ]
-      },
-      {
-        "type": "gallery",
-        "title": "In-game Moments",
-        "images": [
-          {
-            "image": "assets/projects/spinphony/spinphony-2.webp",
-            "caption": "Early block-out level used to calibrate encoder sensitivity."
-          },
-          {
-            "image": "assets/projects/spinphony/spinphony-3.webp",
-            "caption": "Final character art and rhythm obstacles."
-          },
-          {
-            "image": "assets/projects/spinphony/spinphony-4.webp",
-            "caption": "Unity view showing layered parallax backgrounds."
-          },
-          {
-            "image": "assets/projects/spinphony/spinphony-7.webp",
-            "caption": "Custom UI referencing vinyl liner notes."
-          },
-          {
-            "image": "assets/projects/spinphony/spinphony-8.webp",
-            "caption": "Playtesting session with full controller setup."
-          }
-        ]
-      },
-      {
-        "type": "video",
-        "title": "Playthrough",
-        "src": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/preview",
-        "caption": "The turntable controller driving the Unity build."
-      },
-      {
-        "type": "text",
-        "title": "What I learned",
-        "body": "Framing the controller as an instrument kept playtesters focused on rhythm rather than button combos. I learned how much onboarding clarity matters for tangible interfaces and how to choreograph UI feedback\u2014lights, vibrations, and animation\u2014so players always know what the controller is asking them to do."
+        "type":"video",
+        "title": "Video Demo",
+        "src": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=drive_link"
       }
     ]
   },
@@ -248,7 +155,7 @@
       "timeline": "Jan 2024 \u2013 Mar 2024",
       "role": "Solo project",
       "demoLink": "https://chester-choiceworth.onrender.com/",
-      "video": "../assets/projects/chester/CC.mp4"
+      "video": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link"
     },
     "sections": [
       {
@@ -266,42 +173,32 @@
         "title": "Prototypes & Process",
         "images": [
           {
-            "image": "assets/projects/chester/CC1.webp",
-            "caption": "Spending map generated from your uploaded transactions: where your money actually goes in the city."
+            "image": "assets/projects/chester/CC_Prototype1.jpeg"
           },
           {
-            "image": "assets/projects/chester/CC2.webp",
-            "caption": "Auto-generated summary receipt: categories, totals, and 'lifestyle grade'."
-          },
-          {
-            "image": "assets/projects/chester/CC4.webp",
-            "caption": "Thermal printer output: targeted ads and financial advice written in a manipulative 'personalized concierge' voice."
-          }
-        ]
-      },
-       {
-        "type": "gallery",
-        "title": "Final Outcome",
-        "images": [
-          {
-            "image": "assets/projects/chester/CC1.webp",
-            "caption": "Spending map generated from your uploaded transactions: where your money actually goes in the city."
-          },
-          {
-            "image": "assets/projects/chester/CC2.webp",
-            "caption": "Auto-generated summary receipt: categories, totals, and 'lifestyle grade'."
-          },
-          {
-            "image": "assets/projects/chester/CC4.webp",
-            "caption": "Thermal printer output: targeted ads and financial advice written in a manipulative 'personalized concierge' voice."
+            "image": "assets/projects/chester/CC_Prototype2.jpeg"
           }
         ]
       },
       {
+        "type": "gallery",
+        "title": "Final Outcome",
+        "images": [
+          {
+            "image": "assets/projects/chester/CC1.webp"
+          },
+          {
+            "image": "assets/projects/chester/CC2.webp"
+          },
+          {
+            "image": "assets/projects/chester/CC4.webp"
+          }
+        ]
+      },
+       {
         "type": "video",
-        "title": "Demo Clip",
-        "src": "../assets/projects/chester/CC.mp4",
-        "caption": "Live capture of the loop: upload \u2192 analyze \u2192 map \u2192 insult."
+        "title": "Video Demo",
+        "src": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link"
       },
       {
         "type": "text",

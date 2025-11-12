@@ -68,6 +68,30 @@ const normalizeAsset = (src?: string) => {
   return `/${src.replace(/^(\.\.\/)+/, "").replace(/^\//, "")}`;
 };
 
+const extractDriveId = (value: string) => {
+  if (!value) return "";
+  const directMatch = value.match(/\/d\/([a-zA-Z0-9_-]+)/);
+  if (directMatch?.[1]) {
+    return directMatch[1];
+  }
+
+  try {
+    const url = new URL(value);
+    const idParam = url.searchParams.get("id");
+    if (idParam) return idParam;
+  } catch {
+    // not a URL, fall through
+  }
+
+  return "";
+};
+
+const buildDrivePreviewUrl = (value: string) => {
+  const id = extractDriveId(value);
+  if (!id) return value;
+  return `https://drive.google.com/file/d/${id}/preview`;
+};
+
 const renderParagraphs = (body?: string) => {
   if (!body) return null;
   return body.split(/\n\s*\n/).map((chunk, index) => (
@@ -180,8 +204,10 @@ const renderSection = (section: Section, index: number) => {
     }
     case "video": {
       const videoSection = section as VideoSection;
-      const src = normalizeAsset(videoSection.src);
       const isDrive = videoSection.src.includes("drive.google.com");
+      const src = isDrive
+        ? buildDrivePreviewUrl(videoSection.src)
+        : normalizeAsset(videoSection.src);
       return (
         <section key={`video-${index}`} className={styles.section}>
           {videoSection.title ? (
@@ -190,10 +216,11 @@ const renderSection = (section: Section, index: number) => {
           <div className={styles.videoWrapper}>
             {isDrive ? (
               <iframe
-                src={videoSection.src}
+                src={src}
                 title={videoSection.title ?? "Project video"}
                 allow="autoplay; fullscreen"
                 allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
               />
             ) : (
               <video src={src} controls playsInline preload="metadata" />
@@ -216,6 +243,13 @@ interface ProjectStoryProps {
 
 export default function ProjectStory({ project }: ProjectStoryProps) {
   const heroImage = normalizeAsset(project.thumbnail);
+  const rawHeroVideo = project.meta?.video?.trim();
+  const heroVideoIsDrive = !!rawHeroVideo && rawHeroVideo.includes("drive.google.com");
+  const heroVideo = rawHeroVideo
+    ? heroVideoIsDrive
+      ? buildDrivePreviewUrl(rawHeroVideo)
+      : normalizeAsset(rawHeroVideo)
+    : "";
   const timeline = project.meta?.timeline;
   const techStack = project.meta?.techStack ?? [];
   const role = project.meta?.role;
@@ -285,8 +319,31 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
             ) : null}
           </div>
 
-          <div className={styles.heroMedia}>
-            <img src={heroImage} alt={project.title} />
+          <div className={`${styles.heroMedia} ${heroVideo ? styles.heroMediaVideo : ""}`}>
+            {heroVideo ? (
+              heroVideoIsDrive ? (
+                <iframe
+                  src={heroVideo}
+                  title={`${project.title} hero video`}
+                  allow="autoplay; fullscreen"
+                  allowFullScreen
+                  className={styles.heroVideoFrame}
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              ) : (
+                <video
+                  src={heroVideo}
+                  className={styles.heroVideo}
+                  playsInline
+                  autoPlay
+                  muted
+                  loop
+                  controls
+                />
+              )
+            ) : (
+              <img src={heroImage} alt={project.title} />
+            )}
           </div>
         </article>
 
