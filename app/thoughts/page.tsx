@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import TopNav from "@/components/TopNav";
 import WritingList, { type WritingArticle } from "@/components/WritingList";
 import writingData from "@/data/writing.json";
@@ -19,14 +21,18 @@ export default function WritingPage() {
   return (
     <main className={worksLayout.worksPageBg}>
       <TopNav />
+      <header className={styles.header}>
+        <Image
+          src="/assets/thoughts/thoughts_header.png"
+          alt="Ziye An thoughts header artwork"
+          width={2732}
+          height={588}
+          priority
+          className={styles.headerImage}
+          sizes="(max-width: 1024px) 100vw, 1024px"
+        />
+      </header>
       <div className={worksLayout.pageContainer}>
-        <header className={styles.header}>
-          <h1 className={styles.title}>Writing</h1>
-          <p className={styles.intro}>
-            Thoughts, essays, and fragments currently living on Notion. Tap a
-            title to jump over and read the full piece.
-          </p>
-        </header>
         <WritingList articles={articles} />
       </div>
     </main>

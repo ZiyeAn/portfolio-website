@@ -1,6 +1,26 @@
 {
   "projects": [
     {
+      "title": "Moth",
+      "selected_work": true,
+      "thumbnail": "assets/playground/moth_animation/moth.gif",
+      "intro": "A moth animation made with maya.",
+      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "id": "/works/Moth_Animation.html",
+      "details": {
+        "description": "A moth animation made with maya. Character designed, modeled, rigged, animated all by myself.",
+        "techStack": ["MAYA"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "video": ["https://drive.google.com/file/d/1etGkB5cvYj4uMh0iAF6gnfBxRibnsIM-/view?usp=drive_link"],
+        "images": [
+          "assets/playground/moth_animation/moth_process1.webp",
+          "assets/playground/moth_animation/moth_process2.webp",
+          "assets/playground/moth_animation/moth_process3.webp"
+        ]
+      }
+    },
+    {
       "title": "Apple Universe",
       "selected_work": true,
       "thumbnail": "assets/playground/apple_animation/appleverse.gif",
@@ -14,7 +34,8 @@
         "demoLink": "#",
         "video": ["https://drive.google.com/file/d/1Ijpprqu19GhOoOhSyA6XWpTnpN-Clf0T/view?usp=drive_link"],
         "images": [
-          "assets/playground/apple_animation/appleverse.gif"
+          "assets/playground/apple_animation/apple_universe_process.webp",
+          "assets/playground/apple_animation/Process.webp"
         ]
       }
     },
@@ -154,7 +175,7 @@
       "selected_work": true,
       "thumbnail": "assets/projects/spinphony/spinphony-5.webp",
       "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
-      "tags": ["Game", "Physical Computing", "✦Ziye’s Pick✧"],
+      "tags": ["Game", "Tangible", "✦Ziye’s Pick✧"],
       "id": "/works/Spinphony.html",
       "details": {
         "description": "Spinphony treats the turntable as both controller and narrative device. Rotating the platter spins Do, a lost note, through looping levels of rhythm gates and percussive enemies. Two arcade buttons act as jump and dash, so the player's whole body performs tiny DJ gestures to keep the character on beat.<br><br>Hardware and software evolved together: iterative encoder prototypes tuned the physical resistance to match Unity's movement system, while layered vinyl-inspired visuals and audio cues keep players in rhythm.",
@@ -198,7 +219,7 @@
       "selected_work": false,
       "thumbnail": "assets/playground/mountain_spirit/ms3.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["Installation"],
+      "tags": ["Tangible"],
       "id": "/works/Mountain_Spirit.html",
       "details": {
         "description": "Mountain Spirit is an interactive installation inspired by the Chinese mythological figure Shan Gui and Jeremiah 10:3–5. It reflects on how societies create gods—and meaning itself—through shared imagination, belief, and repetition.<br><br> They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk. ",
@@ -274,7 +295,7 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/marriage_premium/mp_tn.webp",
       "intro": "A physical computing piece showing gender inequality through gameplay and motion",
-      "tags": ["Installation"],
+      "tags": ["Tangible"],
       "id": "/works/marriage_premium.html",
       "details": {
         "description": "P5.js is used to create a game showing the problem ‘marriage Premium’ based on my parent’s story, users are able to make choice and decide the life of this couple. And the scale controlled by arduino is gonna tilt by the servo motor to show the unequal result. I wanted to show that even though there are choices given and seems like that people could be able to fight against this inequality, the balance is still telling you that inequality still exists regardless the personal effort since unless the idea and policy changed, such discrimination and difficulties would never end.",
