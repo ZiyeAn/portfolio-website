@@ -261,9 +261,14 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
       <TopNav />
       <div className={styles.topBarSpacer} aria-hidden />
       <main className={styles.main}>
-        <Link href="/projects" className={styles.backLink}>
-          <span aria-hidden>←</span> Back to Projects
-        </Link>
+        <div className={styles.heroTopRow}>
+          <Link href="/projects" className={styles.backLink}>
+            <span aria-hidden>←</span> Back to Projects
+          </Link>
+          {timeline ? (
+            <span className={styles.timelineValue}>{timeline}</span>
+          ) : null}
+        </div>
         <article className={styles.hero}>
           <header className={styles.heroHeader}>
             <span className={styles.srOnly}>Project</span>
@@ -274,12 +279,6 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
           </header>
 
           <div className={styles.metaPanel}>
-            {timeline ? (
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Timeline</span>
-                <span className={styles.metaValue}>{timeline}</span>
-              </div>
-            ) : null}
             {role ? (
               <div className={styles.metaBlock}>
                 <span className={styles.metaLabel}>Role</span>

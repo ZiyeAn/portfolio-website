@@ -20,7 +20,7 @@
         "Arduino"
       ],
       "timeline": "Oct \u2013 Dec 2024",
-      "role": "Research, Experience Design, Prototyping",
+      "role": "Individual Project",
       "demoLink": "#",
       "video": ""
     },
@@ -50,11 +50,11 @@
       },
       {
         "type": "gallery",
-        "title": "Interface Moments",
+        "title": "3D Design for the diving goggles",
         "images": [
           {
             "image": "assets/projects/divedev/1.webp",
-            "caption": "Low-fidelity prototype showing paired HUDs, mobile prep app, and gesture history."
+            "caption": "In progress"
           }
         ]
       }
@@ -153,7 +153,7 @@
         "Thermal Receipt Printer"
       ],
       "timeline": "Jan 2024 \u2013 Mar 2024",
-      "role": "Solo project",
+      "role": "Individual Project",
       "demoLink": "https://chester-choiceworth.onrender.com/",
       "video": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link"
     },
