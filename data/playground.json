@@ -78,6 +78,42 @@
       }
     },
     {
+      "title": "Swallow Arc Bracelet",
+      "selected_work": false,
+      "thumbnail": "/assets/playground/Rhino_Jew/Swallow.webp",
+      "intro": "A bracelet.",
+      "tags": ["3D Modeling"],
+      "id": "/works/SwallowArcBracelet.html",
+      "details": {
+        "description": "Draws inspiration from the swift, fluid motion of the swallow in flight. Made with Rhino ",
+        "techStack": ["Rhino"],
+        "timeline": "October 2025",
+        "demoLink": "#",
+        "images": [
+          "../assets/playground/Rhino_Jew/Swallow.webp",
+          "../assets/playground/Rhino_Jew/Swallow1.webp"
+        ]
+      }
+    },
+    {
+      "title": "Aster Enamel Ring",
+      "selected_work": false,
+      "thumbnail": "/assets/playground/Rhino_Jew/Aster.webp",
+      "intro": "An Enamel Ring.",
+      "tags": ["3D Modeling"],
+      "id": "/works/Aster.html",
+      "details": {
+        "description": "Draws inspiration from the shape of stars and birds. Made with Rhino ",
+        "techStack": ["Rhino"],
+        "timeline": "October 2025",
+        "demoLink": "#",
+        "images": [
+          "../assets/playground/Rhino_Jew/Aster.webp",
+          "../assets/playground/Rhino_Jew/Aster1.webp"
+        ]
+      }
+    },
+    {
       "title": "Ripple",
       "selected_work": false,
       "thumbnail": "assets/playground/ripple/ripple1.webp",
@@ -175,10 +211,10 @@
       "selected_work": true,
       "thumbnail": "assets/projects/spinphony/spinphony-5.webp",
       "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
-      "tags": ["Game", "Tangible", "✦Ziye’s Pick✧"],
+      "tags": ["Tangible", "✦Ziye’s Pick✧"],
       "id": "/works/Spinphony.html",
       "details": {
-        "description": "Spinphony treats the turntable as both controller and narrative device. Rotating the platter spins Do, a lost note, through looping levels of rhythm gates and percussive enemies. Two arcade buttons act as jump and dash, so the player's whole body performs tiny DJ gestures to keep the character on beat.<br><br>Hardware and software evolved together: iterative encoder prototypes tuned the physical resistance to match Unity's movement system, while layered vinyl-inspired visuals and audio cues keep players in rhythm.",
+        "description": "Spinphony turns a turntable into both controller and narrative device. Rotating the platter moves Do, a lost note, through rhythmic looping levels, while two buttons handle jump and dash. Hardware and software co-evolved—encoder prototypes shaped the physical feel, and Unity visuals and audio cues kept players in rhythm.",
         "techStack": ["Unity", "C#", "Arduino", "Rotary Encoder", "Illustrator"],
         "timeline": "Jan \u2013 Mar 2025",
         "demoLink": "#",
@@ -282,7 +318,7 @@
       "tags": ["Coding"],
       "id": "/works/what-to-drink-today.html",
       "details": {
-        "description": "A website that helps users decide what to drink through two digital Chinese divinations method called 'Qian' (筊杯) and 'Kau Cim' (求籤). Users select their preferred divination method, then interact with the digital representation to receive a cocktail suggestion. This site used a cocktail API to fetch drink recipes based on the divination outcome, providing users with both a fun experience and a new drink to try.",
+        "description": "A website that uses two digital Chinese divination methods—Qian and Kau Cim—to help users decide what to drink. After choosing a method, users interact with the divination and receive a cocktail suggestion fetched from a cocktail API.",
         "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://ziyean.github.io/-4-Digital-Divination/index.html",
@@ -298,7 +334,7 @@
       "tags": ["Tangible"],
       "id": "/works/marriage_premium.html",
       "details": {
-        "description": "P5.js is used to create a game showing the problem ‘marriage Premium’ based on my parent’s story, users are able to make choice and decide the life of this couple. And the scale controlled by arduino is gonna tilt by the servo motor to show the unequal result. I wanted to show that even though there are choices given and seems like that people could be able to fight against this inequality, the balance is still telling you that inequality still exists regardless the personal effort since unless the idea and policy changed, such discrimination and difficulties would never end.",
+        "description": "A p5.js game based on my parents’ story that lets players choose the life path of a couple facing the “marriage premium.” A servo-powered scale connected to Arduino tilts to reveal the unequal outcome, showing that even with choices, personal effort cannot erase structural inequality.",
         "techStack": ["p5.js", "arduino"],
         "timeline": "Jan 2024 - Mar 2024",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
@@ -316,7 +352,7 @@
       "selected_work": false,
       "thumbnail": "assets/playground/bio_game/g1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Game"],
+      "tags": ["Coding"],
       "id": "/works/autobiographical_game.html",
       "details": {
         "description": "An autobiographical p5.js game I did base on my memory with my dog Xiaowu who passed away years before. It depicts my childhood memory imaging my self as a witch and Xiaowu as my familiar spirit. The visual of the game is inspired by Pixel Jeff. The game used p5.play library to create different scenes and interactions. Players can explore the environment, interact with objects, and experience the story through simple gameplay mechanics.<br> I miss Xiaowu.",
@@ -463,6 +499,48 @@
           "../assets/playground/ophelia/ophelia_2.webp",
           "../assets/playground/ophelia/ophelia_3.webp",
           "../assets/playground/ophelia/ophelia_4.webp"
+        ]
+      }
+    },
+    {
+      "title": "Mist",
+      "selected_work": false,
+      "thumbnail": "assets/playground/mist/mist4.webp",
+      "intro": "An insence holder",
+      "tags": ["fabrication"],
+      "id": "/works/Mist.html",
+      "details": {
+        "description": "A black, Zen-inspired incense holder with mist-like shapes and gentle circular forms.",
+        "techStack": ["Acrylic", "Laser Cutting"],
+        "timeline": "May 2023",
+        "demoLink": "#",
+        "video": [],
+        "images": [
+          "../assets/playground/mist/mist1.webp",
+          "../assets/playground/mist/mist2.webp",
+          "../assets/playground/mist/mist3.webp",
+          "../assets/playground/mist/mist4.webp"
+        ]
+      }
+    },
+    {
+      "title": "Bone Clock",
+      "selected_work": false,
+      "thumbnail": "assets/playground/BoneClock/BoneClock.webp",
+      "intro": "A wearble sculpture",
+      "tags": ["fabrication"],
+      "id": "/works/Bone_Clock.html",
+      "details": {
+        "description": "This wearable sculpture turns my anxiety about time into a physical experience. Laser-cut pieces form a mechanical spine worn on the back, which stiffens and shifts as a clock mechanism moves. As time passes, the structure subtly tightens, echoing the way my own back tenses under pressure. The piece makes the invisible weight of time visible—and felt—on the body.",
+        "techStack": ["Acrylic", "Laser Cutting"],
+        "timeline": "May 2023",
+        "demoLink": "#",
+        "video": [],
+        "images": [
+          "../assets/playground/BoneClock/BoneClock1.webp",
+          "../assets/playground/BoneClock/BoneClock2.webp",
+          "../assets/playground/BoneClock/BoneClock3.webp",
+          "../assets/playground/BoneClock/BoneClock4.webp"
         ]
       }
     },
