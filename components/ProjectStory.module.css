@@ -179,7 +179,6 @@
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  background: #000;
 }
 
 .splitFigure img {
@@ -275,7 +274,6 @@
   padding: 0.9rem clamp(1rem, 3vw, 1.6rem);
   font-size: 0.95rem;
   line-height: 1.6;
-  background: rgba(247, 243, 235, 0.45);
   backdrop-filter: blur(14px);
   color: rgba(31, 32, 32, 0.8);
 }
@@ -295,7 +293,6 @@
   border-radius: 0;
   overflow: hidden;
   box-shadow: none;
-  background: #000;
   display: flex;
   flex-direction: column;
 }
@@ -309,10 +306,12 @@
 
 .galleryCaption {
   padding: 0.75rem clamp(0.9rem, 2.3vw, 1.4rem);
-  color: rgba(255, 255, 255, 0.84);
-  background: rgba(21, 21, 21, 0.82);
+  color: #7a7a7a;
+  background: none;
   font-size: 0.95rem;
   line-height: 1.55;
+  text-align: center;
+  font-family: "jetbrains-mono", monospace;
 }
 
 .stepsList {

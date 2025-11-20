@@ -28,35 +28,63 @@
       {
         "type": "image",
         "image": "assets/projects/divedev/DiveDexResearch.png",
-        "alt": "DiveDex hardware and HUD explorations"
+        "alt": "DiveDex Ideation and Research"
       },
       {
-        "type": "process-steps",
-        "title": "How it works",
-        "steps": [
-          {
-            "step_title": "Capture",
-            "description": "Dual fisheye cameras on each wrist capture 120fps video of both divers\u2019 hands without bulky housings."
-          },
-          {
-            "step_title": "Classify",
-            "description": "TensorFlow.js runs on an onboard Jetson Nano, comparing the gesture to a library of 60 baseline signals plus any custom packs the buddy team added."
-          },
-          {
-            "step_title": "Translate & Log",
-            "description": "A color-coded HUD flashes the translation, vibrates the relevant finger, and saves the signal + depth data to a dive log you can review on shore."
-          }
-        ]
+        "type": "text",
+        "title": "Smart Goggles Design",
+        "body":"While designing the UI for the goggles, my main goal is to keep it as simple as possible. When diving, there is already so much information to process, and an overly complicated interface would only create distractions and take attention away from the surroundings."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/goggle_UI.webp",
+        "alt": "DiveDex Goggles Design"
+      },
+      {
+        "type": "text",
+        "body":"I added a side button that lets divers activate or deactivate the recognition feature. It is placed on the left side to avoid interference with the regulator hose. This gives divers control over when they want information and lets them turn the feature off when they prefer an uninterrupted experience."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/divedex_design.webp",
+        "alt": "DiveDex Goggles Design"
       },
       {
         "type": "gallery",
-        "title": "3D Design for the diving goggles",
+        "title": "Smart Goggles Model",
         "images": [
           {
-            "image": "assets/projects/divedev/1.webp",
-            "caption": "In progress"
+            "image": "assets/projects/divedev/Dive_Dex_Goggle1.webp",
+            "caption": "3D Modeling With Rhino"
+          },
+          {
+            "image": "assets/projects/divedev/Dive_Dex_Goggle2.webp",
+            "caption": "3D Modeling With Rhino"
+          },
+          {
+            "image": "assets/projects/divedev/Dive_Dex_Goggle3.webp",
+            "caption": "3D Modeling With Rhino"
+          },
+          {
+            "image": "assets/projects/divedev/Dive_Dex_Goggle4.webp",
+            "caption": "3D Modeling With Rhino"
           }
         ]
+      },
+      {
+        "type": "video",
+        "title": "Smart Goggles Recognition Testing",
+        "src": "https://drive.google.com/file/d/1Qj1q-6sVC6emrU92_0lS8uMx7LYhUeDD/view?usp=drive_link"
+      },
+      {
+        "type": "text",
+        "title": "Phone App UI Design",
+        "body":""
+      },
+      {
+        "type": "image",
+        "title": "UI Design of the Phone App",
+        "image": "assets/projects/divedev/DiveDexUI.png"
       }
     ]
   },
@@ -225,7 +253,7 @@
         "digital fabrication"
       ],
       "timeline": "Apr \u2013 May 2025",
-      "role": "Visual Design, Gameplay Design",
+      "role": "Installation Design, Gameplay Design",
       "demoLink": "https://howtoshowoffquantumcomputing.cargo.site/marbility",
       "video": ""
     },
