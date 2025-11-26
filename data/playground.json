@@ -207,29 +207,6 @@
       }
     },
     {
-      "title": "Spinphony",
-      "selected_work": true,
-      "thumbnail": "assets/projects/spinphony/spinphony-5.webp",
-      "intro": "A playful Unity platformer where a lost musical note (Do) spins through rhythm puzzles using a custom-built turntable controller with arcade buttons.",
-      "tags": ["Tangible", "✦Ziye’s Pick✧"],
-      "id": "/works/Spinphony.html",
-      "details": {
-        "description": "Spinphony turns a turntable into both controller and narrative device. Rotating the platter moves Do, a lost note, through rhythmic looping levels, while two buttons handle jump and dash. Hardware and software co-evolved—encoder prototypes shaped the physical feel, and Unity visuals and audio cues kept players in rhythm.",
-        "techStack": ["Unity", "C#", "Arduino", "Rotary Encoder", "Illustrator"],
-        "timeline": "Jan \u2013 Mar 2025",
-        "demoLink": "#",
-        "video": ["https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/preview"],
-        "images": [
-          "assets/projects/spinphony/spinphony-5.webp",
-          "assets/projects/spinphony/spinphony-2.webp",
-          "assets/projects/spinphony/spinphony-3.webp",
-          "assets/projects/spinphony/spinphony-4.webp",
-          "assets/projects/spinphony/spinphony-7.webp",
-          "assets/projects/spinphony/spinphony-8.webp"
-        ]
-      }
-    },
-    {
       "title": "Descent | Ascent",
       "selected_work": false,
       "thumbnail": "assets/playground/underwater_gesture/ARS Zine-1.webp",

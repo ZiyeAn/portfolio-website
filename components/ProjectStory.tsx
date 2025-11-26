@@ -95,7 +95,11 @@ const buildDrivePreviewUrl = (value: string) => {
 const renderParagraphs = (body?: string) => {
   if (!body) return null;
   return body.split(/\n\s*\n/).map((chunk, index) => (
-    <p key={`para-${index}`}>{chunk.trim()}</p>
+    <p
+      key={`para-${index}`}
+      // Allow inline HTML (e.g., links) in project copy controlled by authors
+      dangerouslySetInnerHTML={{ __html: chunk.trim() }}
+    />
   ));
 };
 
