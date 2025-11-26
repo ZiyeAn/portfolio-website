@@ -60,7 +60,7 @@
       "selected_work": true,
       "thumbnail": "assets/playground/orbit/orbit1.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "tags": ["3D Modeling"],
       "id": "/works/Orbit.html",
       "details": {
         "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
@@ -232,7 +232,7 @@
       "selected_work": false,
       "thumbnail": "assets/playground/mountain_spirit/ms3.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["Tangible"],
+      "tags": ["Tangible","✦Ziye’s Pick✧"],
       "id": "/works/Mountain_Spirit.html",
       "details": {
         "description": "Mountain Spirit is an interactive installation inspired by the Chinese mythological figure Shan Gui and Jeremiah 10:3–5. It reflects on how societies create gods—and meaning itself—through shared imagination, belief, and repetition.<br><br> They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk. ",
@@ -308,7 +308,7 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/marriage_premium/mp_tn.webp",
       "intro": "A physical computing piece showing gender inequality through gameplay and motion",
-      "tags": ["Tangible"],
+      "tags": ["Tangible","✦Ziye’s Pick✧"],
       "id": "/works/marriage_premium.html",
       "details": {
         "description": "A p5.js game based on my parents’ story that lets players choose the life path of a couple facing the “marriage premium.” A servo-powered scale connected to Arduino tilts to reveal the unequal outcome, showing that even with choices, personal effort cannot erase structural inequality.",
@@ -343,6 +343,44 @@
         ]
       }
     },
+       {
+      "title": "Heartbeat Fireworks",
+      "selected_work": false,
+      "thumbnail": "../assets/playground/heartbeat_firework/heartbeat_firework.webp",
+      "intro": "A p5.js animation reacting to the position of the mouse",
+      "tags": ["Tangible"],
+      "id": "/works/heartbeat_fireworks.html",
+      "details": {
+        "description": "A resposive p5.js animation that changes based on the position of the mouse and change of light using phototresistor sensor.",
+        "techStack": ["p5.js","Arduino","Serial (USB)","flex sensor"],
+        "timeline": "Jan 2023 - Mar 2023",
+        "demoLink": "",
+        "frame":"",
+        "video": ["https://drive.google.com/file/d/19g45--A92MqoXeEa8g6cWv9XCCoRpuIB/view?usp=drive_link","https://drive.google.com/file/d/1WtPDjXAEu6UJzF-dvnLeiek36A0EeWxW/view?usp=drive_link"],
+        "images": [
+          "../assets/playground/heartbeat_firework/hf.webp"
+        ]
+      }
+    },
+    {
+      "title": "Misty Mountains",
+      "selected_work": false,
+      "thumbnail": "../assets/playground/Misty_Mountains/Misty_Mountains.webp",
+      "intro": "A p5.js animation reacting to the position of the mouse",
+      "tags": ["Tangible"],
+      "id": "/works/misty_mountains.html",
+      "details": {
+        "description": "A resposive p5.js animation that changes based on the position of the mouse and change of light using phototresistor sensor.",
+        "techStack": ["p5.js","Arduino","Serial (USB)","flex sensor"],
+        "timeline": "Jan 2023 - Mar 2023",
+        "demoLink": "https://github.com/ZiyeAn/P5js_arduino_misty_mountain",
+        "frame":"",
+        "video": ["https://drive.google.com/file/d/1N10DpsmwlnqmXVeuoNw6utr9B34BUKhL/view?usp=drive_link"],
+        "images": [
+          "../assets/playground/Misty_Mountains/Misty_Mountains1.webp"
+        ]
+      }
+    },
     {
       "title": "Day and Night",
       "selected_work": false,
@@ -353,7 +391,7 @@
       "details": {
         "description": "A resposive p5.js animation that changes based on the position of the mouse and change of light using phototresistor sensor.",
         "techStack": ["p5.js","Arduino","Serial (USB)","photoresistor"],
-        "timeline": "Jan 2024 - Mar 2024",
+        "timeline": "Jan 2023 - Mar 2023",
         "demoLink": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk",
         "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
         "video": ["https://drive.google.com/file/d/1Bh13trYYT_pBnXJaPeY5oLTI9o6hjfdZ/view?usp=sharing"],
@@ -391,7 +429,7 @@
       "details": {
         "description": "A p5.js face collage that chanegs while couse clicked. Using the webcam to capture the face and Face Landmarks machine-learning model to detect the position of the face and create a collage based on the position.",
         "techStack": ["p5.js"],
-        "timeline": "Jan 2024 - Mar 2024",
+        "timeline": "Jan 2023 - Mar 2023",
         "demoLink": "https://editor.p5js.org/ZiyeAn/sketches/0HEqia3HE",
         "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
         "video": ["https://drive.google.com/file/d/1oMBpAa6s6quIKJ5UK7qV-p9uC94E63cv/view?usp=drive_link"],
@@ -410,7 +448,7 @@
       "details": {
         "description": "For this project, I use the number of ripples to present Hour (12-hour timing since this looks prettier), the number of rings per ripple to represent minutes(using 10 minutes as an interval). To avoid the situation that nothing is shown when the minutes is single digit, the point in the middle represent single digits. For example, if there is 3 points when pressing the mouse, That means it is around 3 AM/PM o'clock, if there is 4 ripples and each ripple has 1 point and 2 rings, that means it's about 4:20 (need to minus the single digit ring). The rotation of the rings are based on the second() and I used lerp() to make the rotation looks smoother. I kind of like the motion when it lerp from 0 so I make the angle reset to 0 everytime the mouse is released. Also, if moving the mouse while pressed, you can fast forward the time or rewind it.",
         "techStack": ["p5.js"],
-        "timeline": "Jan 2024 - Mar 2024",
+        "timeline": "Jan 2023 - Mar 2023",
         "demoLink": "https://editor.p5js.org/ZiyeAn/sketches/p7ATze3Xz",
         "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
         "video": ["https://drive.google.com/file/d/18Nknf47Q1c_kjYe8_2Dqh-W_xY9Uqf1k/view?usp=drive_link"],
@@ -430,7 +468,7 @@
       "details": {
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
         "techStack": ["Photodgraphy","Illustrator","InDesign"],
-        "timeline": "Jan 2024 - Mar 2024",
+        "timeline": "Jan 2023 - Mar 2023",
         "images": [
           "../assets/playground/Land/Land_Spread_Ziye.webp",
           "../assets/playground/Land/Land_Spread_Ziye1.webp",
