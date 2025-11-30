@@ -352,7 +352,7 @@
       "id": "/works/heartbeat_fireworks.html",
       "details": {
         "description": "A PCB Eching project that uses pulse sensor to detect the heartbeat and trigger light.",
-        "techStack": ["p5.js","Arduino","Serial (USB)","flex sensor"],
+        "techStack": ["Arduino","pulse sensor"],
         "timeline": "Jan 2023 - Mar 2023",
         "demoLink": "",
         "frame":"",
