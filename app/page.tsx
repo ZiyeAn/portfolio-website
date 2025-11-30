@@ -35,9 +35,42 @@ export default function Home() {
         <SelectedWorksSection />
       </section>
       {/* Contact Section */}
-      <section id="contact" className="content-section contact-section">
-        <h2>Contact</h2>
-        <p>Coming soon...</p>
+      <section
+        id="contact"
+        className={`content-section contact-section ${styles.contactImageSection}`}
+      >
+        <div className={styles.contactInfo}>
+          <h2>Contact</h2>
+          <div className={styles.contactLinksRow}>
+            <a
+              href="mailto:ziyean076@gmail.com"
+              className={styles.contactLink}
+            >
+              Gmail · ziyean076@gmail.com
+            </a>
+            <a
+              href="https://www.instagram.com/ziye_an_works_archive"
+              className={styles.contactLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram · @ziye_an_works_archive
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ziye-an-356649269/"
+              className={styles.contactLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn · Ziye An
+            </a>
+          </div>
+        </div>
+        <img
+          src="/assets/index/contact.webp"
+          alt="Contact"
+          className={styles.contactImage}
+        />
       </section>
     </div>
   );
