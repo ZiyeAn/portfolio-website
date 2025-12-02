@@ -133,7 +133,7 @@
       {
         "type": "text",
         "title": "Project Overview",
-        "body":"This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters."
+        "body":" This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters."
       },
       {
         "type": "image",
@@ -143,16 +143,7 @@
       {
         "type": "text",
         "title": "Smart Goggles Design",
-        "body":"While designing the UI for the goggles, my main goal is to keep it as simple as possible. When diving, there is already so much information to process, and an overly complicated interface would only create distractions and take attention away from the surroundings."
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/divedev/goggle_UI.webp",
-        "alt": "DiveDex Goggles Design"
-      },
-      {
-        "type": "text",
-        "body":"I added a side button that lets divers activate or deactivate the recognition feature. It is placed on the left side to avoid interference with the regulator hose. This gives divers control over when they want information and lets them turn the feature off when they prefer an uninterrupted experience."
+        "body": "<strong>PART 1: Industrial Design</strong><br><br>I added a side button that lets divers activate or deactivate the recognition feature. It is placed on the left side to avoid interference with the regulator hose. This gives divers control over when they want information and lets them turn the feature off when they prefer an uninterrupted experience."
       },
       {
         "type": "image",
@@ -182,9 +173,13 @@
         ]
       },
       {
-        "type": "video",
-        "title": "Smart Goggles Recognition Testing",
-        "src": "https://drive.google.com/file/d/1Qj1q-6sVC6emrU92_0lS8uMx7LYhUeDD/view?usp=drive_link"
+        "type": "text",
+        "body":"<strong>PART 2: UI Design</strong><br><br>While designing the UI for the goggles, my main goal is to keep it as simple as possible. When diving, there is already so much information to process, and an overly complicated interface would only create distractions and take attention away from the surroundings."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/goggle_UI.webp",
+        "alt": "DiveDex Goggles Design"
       },
       {
         "type": "text",
@@ -195,7 +190,27 @@
         "type": "image",
         "title": "UI Design of the Phone App",
         "image": "assets/projects/divedev/DiveDexUI.png"
-      }
+      },
+      {
+        "type": "text",
+        "title": "Tech Prototype setup",
+        "body":"This technical prototype focuses on testing the core pipeline of video-based marine species recognition on-device, without relying on an internet connection. At this stage, the system can upload a video clip through the app and run a basic fish-recognition model locally. The current model is an early test version, so its accuracy is still limited—especially when handling motion blur, underwater color shifts, and partially occluded fish."
+      },
+      {
+        "type": "image",
+        "title": "UI Design of the Phone App",
+        "image": "assets/projects/divedev/divedex_coral_setup.webp"
+      },
+      {
+        "type": "video",
+        "title": "",
+        "src": "https://drive.google.com/file/d/1Qj1q-6sVC6emrU92_0lS8uMx7LYhUeDD/view?usp=drive_link"
+      },
+      {
+      "type": "text",
+      "title": "Future Iteration",
+      "body": "In the next stage, I plan to improve both performance and reliability:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
+    }
     ]
   },
   {
