@@ -5,7 +5,7 @@
     "subtitle": "",
     "year": "",
     "tags": [],
-    "thumbnail": "/assets/projects/WIP.webp",
+    "thumbnail": "assets/projects/lifemart/lifemartWIP.webp",
     "intro": "",
     "meta": {
       "techStack": [
@@ -35,7 +35,39 @@
       },
       {
         "type": "text",
-        "title": "LifeMart Ideation Sketches"
+        "title": "LifeMart Tech Stack"
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/lifemart/LifemartTechStack.webp",
+        "alt": "LifeMart Tech Stack"
+      },
+      {
+        "type": "text",
+        "title": "LifeMart Userflow"
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/lifemart/LifemartUserflow.webp",
+        "alt": "LifeMart Research"
+      },
+      {
+        "type": "gallery",
+        "title": "Setup Design and Renderings",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/1.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/2.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/3.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/4.webp"
+          }
+        ]
       }
     ]
   },
