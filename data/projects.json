@@ -43,6 +43,11 @@
         "alt": "LifeMart Tech Stack"
       },
       {
+        "type": "image",
+        "image": "assets/projects/lifemart/lifemartVisualResearch.png",
+        "alt": "LifeMart Visual Research"
+      },
+      {
         "type": "text",
         "title": "LifeMart Userflow"
       },
