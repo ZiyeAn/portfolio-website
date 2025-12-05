@@ -1,6 +1,25 @@
 {
   "projects": [
     {
+      "title": "Moth Scene Render",
+      "selected_work": true,
+      "thumbnail": "assets/playground/moth_animation/moth_scene2.webp",
+      "intro": "A moth animation made with maya.",
+      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "id": "/works/Moth_Animation.html",
+      "details": {
+        "description": "A moth animation made with maya. Character designed, modeled, rigged, animated all by myself.",
+        "techStack": ["MAYA"],
+        "timeline": "September 2025",
+        "demoLink": "#",
+        "video": [],
+        "images": [
+          "assets/playground/moth_animation/moth_scene2.webp",
+          "assets/playground/moth_animation/moth.webp"
+        ]
+      }
+    },
+    {
       "title": "Moth",
       "selected_work": true,
       "thumbnail": "assets/playground/moth_animation/moth.gif",
