@@ -6,6 +6,25 @@
   color: #1f2020;
 }
 
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5.5rem 1.5rem 2.5rem;
+  background: #f9f6f1;
+  color: #1f2020;
+}
+
+.message {
+  text-align: center;
+  white-space: pre-line;
+  font-size: clamp(1.05rem, 1rem + 0.32vw, 1.35rem);
+  line-height: 1.8;
+  max-width: 38rem;
+  margin: 0;
+}
+
 .main {
   max-width: 960px;
   margin: 0 auto;

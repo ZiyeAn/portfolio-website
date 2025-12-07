@@ -141,6 +141,22 @@ export default function AboutPage() {
 }
 */
 
+import TopNav from "@/components/TopNav";
+import styles from "./page.module.css";
+
 export default function AboutPage() {
-  return <div>About Page In Construction</div>;
+  return (
+    <div className={styles.container}>
+      <TopNav />
+      <p className={styles.message}>
+        This About Page is currently marinating.
+        {"\n"}
+        The chef (that’s me) is still deciding how much humor, sincerity,
+        {"\n"}
+        and shameless self-bragging to season it with.
+        {"\n"}
+        Please come back later to taste the final dish.
+      </p>
+    </div>
+  );
 }
