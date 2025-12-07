@@ -17,6 +17,18 @@
   gap: clamp(2.5rem, 5vw, 4.5rem);
 }
 
+.cta {
+  text-align: center;
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  color: #f3efe7;
+  letter-spacing: 0.02em;
+}
+
+.cta a {
+  color:#9d0000;
+  text-underline-offset: 0.2em;
+}
+
 .heroImageWrapper {
   position: relative;
   margin: 0;

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 import TopNav from "@/components/TopNav";
 import ProjectsGallery from "@/components/ProjectsGallery";
@@ -42,6 +43,10 @@ export default function ProjectsPage() {
       </header>
       <div className={styles.pageInner}>
         <ProjectsGallery projects={projects} />
+        <p className={styles.cta}>
+          Still hungry? Dessert is served in the{" "}
+          <Link href="/playground">Playground</Link>.
+        </p>
       </div>
     </main>
   );
