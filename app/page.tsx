@@ -29,7 +29,7 @@ export default function Home() {
         <div className={styles.sectionHeader}>
           <h2>Seasonal Specials</h2>
           <Link href="/works" className={styles.sectionLink}>
-            See all works →
+            See more works →
           </Link>
         </div>
         <SelectedWorksSection />
