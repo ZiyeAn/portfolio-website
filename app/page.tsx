@@ -27,7 +27,7 @@ export default function Home() {
       {/* Works Section */}
       <section id="works" className="content-section works-section">
         <div className={styles.sectionHeader}>
-          <h2>Featured Works</h2>
+          <h2>Seasonal Specials</h2>
           <Link href="/works" className={styles.sectionLink}>
             See all works →
           </Link>
