@@ -4,6 +4,7 @@ import LogoIntro from '@/components/LogoIntro';
 import SelectedWorksSection from "@/components/SelectedWorksSection"; 
 import { MorphingText } from "@/components/ui/morphing-text";
 import AboutCard from "@/components/AboutCard";
+import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 import styles from "./page.module.css";
 

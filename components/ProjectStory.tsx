@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import TopNav from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
 import styles from "./ProjectStory.module.css";
 import projectsData from "@/data/projects.json";
 
@@ -257,7 +258,10 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
   const timeline = project.meta?.timeline;
   const techStack = project.meta?.techStack ?? [];
   const role = project.meta?.role;
-  const demoLink = project.meta?.demoLink;
+  const relatedLink = project.meta?.relatedLink;
+  const relatedLabel = (
+    project.meta as { relatedLabel?: string } | undefined
+  )?.relatedLabel?.trim();
   const sections = project.sections ?? [];
 
   return (
@@ -307,16 +311,16 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
                 </div>
               </div>
             ) : null}
-            {demoLink && demoLink !== "#" ? (
+            {relatedLink && relatedLink !== "#" ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Demo</span>
+                <span className={styles.metaLabel}>Related Link</span>
                 <a
-                  href={demoLink}
+                  href={relatedLink}
                   className={styles.metaValue}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Visit ↗
+                  {(relatedLabel || "Open Link") + " ↗"}
                 </a>
               </div>
             ) : null}
@@ -354,6 +358,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
           {sections.map((section, index) => renderSection(section as Section, index))}
         </article>
       </main>
+      <SiteFooter />
     </div>
   );
 }

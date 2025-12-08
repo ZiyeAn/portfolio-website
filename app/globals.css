@@ -285,6 +285,19 @@ h3{
   background: #333333;
 }
 
+.site-footer {
+  width: 100%;
+  padding: 1.75rem 1.5rem 2rem;
+  text-align: center;
+  font-family: 'jetbrains-mono', monospace;
+  font-size: clamp(0.9rem, 0.86rem + 0.18vw, 1.05rem);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: inherit;
+  background: inherit;
+  border-top: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
 /* 适配移动端 */
 @media (max-width: 600px) {
   .hero-content {

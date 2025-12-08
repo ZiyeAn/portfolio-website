@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import TopNav from "@/components/TopNav";
 import WritingList, { type WritingArticle } from "@/components/WritingList";
 import writingData from "@/data/writing.json";
+import SiteFooter from "@/components/SiteFooter";
 import worksLayout from "../works/WorksPage.module.css";
 import styles from "./page.module.css";
 

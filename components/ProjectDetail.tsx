@@ -6,6 +6,7 @@ import styles from "./ProjectDetail.module.css";
 import rawProjects from "@/data/playground.json";
 import { BlurFade } from "@/components/ui/blur-fade";
 import TopNav from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 
 type ProjectData = (typeof rawProjects.projects)[number];
@@ -20,7 +21,8 @@ type ProjectDetails = {
   description?: string;
   techStack?: string[];
   timeline?: string;
-  demoLink?: string;
+  relatedLink?: string;
+  relatedLabel?: string;
   video?: string[];
   video_ID?: string[];
   images?: string[];
@@ -91,7 +93,8 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
   const hasMeta =
     techStack.length ||
     (project.tags?.length ?? 0) > 0 ||
-    (details.demoLink && details.demoLink !== "#");
+    (details.relatedLink && details.relatedLink !== "#");
+  const relatedLabel = details.relatedLabel?.trim();
 
   const handleToggleProcess = () => setShowProcess((prev) => !prev);
 
@@ -128,16 +131,16 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                     <dd>{project.tags.join(", ")}</dd>
                   </div>
                 ) : null}
-                {details.demoLink && details.demoLink !== "#" ? (
+                {details.relatedLink && details.relatedLink !== "#" ? (
                   <div className={styles.metaRow}>
-                    <dt>Demo</dt>
+                    <dt>Related</dt>
                     <dd>
                       <a
-                        href={details.demoLink}
+                        href={details.relatedLink}
                         target="_blank"
                         rel="noreferrer"
                       >
-                        Visit Site ↗
+                        {(relatedLabel || "Open Link") + " ↗"}
                       </a>
                     </dd>
                   </div>
@@ -266,6 +269,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           </div>
         </div>
       ) : null}
+      <SiteFooter />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import TopNav from "@/components/TopNav";
 import ProjectsGallery from "@/components/ProjectsGallery";
+import SiteFooter from "@/components/SiteFooter";
 import projects from "@/data/projects.json";
 import styles from "./ProjectsPage.module.css";
 
@@ -48,6 +49,7 @@ export default function ProjectsPage() {
           <Link href="/playground">Playground</Link>.
         </p>
       </div>
+      <SiteFooter />
     </main>
   );
 }

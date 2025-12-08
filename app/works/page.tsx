@@ -2,6 +2,7 @@
 import projects from "@/data/playground.json";
 import WorksGallery from "@/components/PlaygroundGallery";
 import TopNav from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
 import styles from "./WorksPage.module.css";
 
 export default function WorksPage() {
@@ -11,6 +12,7 @@ export default function WorksPage() {
       <div className={styles.pageContainer}>
         <WorksGallery projects={projects.projects} />
       </div>
+      <SiteFooter />
     </main>
   );
 }
