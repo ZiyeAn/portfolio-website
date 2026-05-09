@@ -5,18 +5,23 @@
       "selected_work": true,
       "thumbnail": "assets/playground/moth_animation/moth_scene2.webp",
       "intro": "A moth rendering made with maya.",
-      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "tags": [
+        "3D Modeling",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Moth_Animation.html",
       "details": {
         "description": "Still the moth I modeled and animated, but this time rendered with Arnold in Maya to showcase the textures and lighting.",
-        "techStack": ["MAYA"],
+        "techStack": [
+          "MAYA"
+        ],
         "timeline": "September 2025",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "assets/playground/moth_animation/moth_scene2.webp",
           "assets/playground/moth_animation/moth.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -24,19 +29,26 @@
       "selected_work": true,
       "thumbnail": "assets/playground/moth_animation/moth.gif",
       "intro": "A moth animation made with maya.",
-      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "tags": [
+        "3D Modeling",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Moth_Animation.html",
       "details": {
         "description": "A moth animation made with maya. Character designed, modeled, rigged, animated all by myself.",
-        "techStack": ["MAYA"],
+        "techStack": [
+          "MAYA"
+        ],
         "timeline": "September 2025",
-        "relatedLink": "#",
-        "video": ["https://drive.google.com/file/d/1etGkB5cvYj4uMh0iAF6gnfBxRibnsIM-/view?usp=drive_link"],
+        "video": [
+          "https://drive.google.com/file/d/1etGkB5cvYj4uMh0iAF6gnfBxRibnsIM-/view?usp=drive_link"
+        ],
         "images": [
           "assets/playground/moth_animation/moth_process1.webp",
           "assets/playground/moth_animation/moth_process2.webp",
           "assets/playground/moth_animation/moth_process3.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -44,18 +56,25 @@
       "selected_work": true,
       "thumbnail": "assets/playground/apple_animation/appleverse.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling","✦Ziye’s Pick✧"],
+      "tags": [
+        "3D Modeling",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Apple_Universe.html",
       "details": {
         "description": "This Maya animation visualizes an “Everything Everywhere All at Once” moment inside a single apple.<br>Through a continuous transformation of forms, textures, and perspectives, the apple becomes a universe of its own—shifting between the microscopic and the cosmic. <br>For the full experience, please watch it with sound on.",
-        "techStack": ["MAYA"],
+        "techStack": [
+          "MAYA"
+        ],
         "timeline": "September 2025",
-        "relatedLink": "#",
-        "video": ["https://drive.google.com/file/d/1Ijpprqu19GhOoOhSyA6XWpTnpN-Clf0T/view?usp=drive_link"],
+        "video": [
+          "https://drive.google.com/file/d/1Ijpprqu19GhOoOhSyA6XWpTnpN-Clf0T/view?usp=drive_link"
+        ],
         "images": [
           "assets/playground/apple_animation/apple_universe_process.webp",
           "assets/playground/apple_animation/Process.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -63,15 +82,21 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/SailorMoon/SailorMoon.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling"],
+      "tags": [
+        "3D Modeling"
+      ],
       "id": "/works/Sailor_Moon.html",
       "details": {
         "description": "This a simple MAYA Animtion. ",
-        "techStack": ["MAYA"],
+        "techStack": [
+          "MAYA"
+        ],
         "timeline": "September 2025",
-        "relatedLink": "#",
-        "video": ["https://drive.google.com/file/d/1qO4ULcRihzL-PYRRePamFmJM_btVsDrz/view?usp=drive_link"],
-        "images": []
+        "video": [
+          "https://drive.google.com/file/d/1qO4ULcRihzL-PYRRePamFmJM_btVsDrz/view?usp=drive_link"
+        ],
+        "images": [],
+        "relatedLinks": []
       }
     },
     {
@@ -79,13 +104,16 @@
       "selected_work": true,
       "thumbnail": "assets/playground/orbit/orbit1.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["3D Modeling"],
+      "tags": [
+        "3D Modeling"
+      ],
       "id": "/works/Orbit.html",
       "details": {
         "description": "Orbit is a retro-futuristic diner inspired by 1950s American diners and mid-century modern design. Most of the furniture design tells my interest in space age style and how I imagine I would design for my house :)",
-        "techStack": ["MAYA"],
+        "techStack": [
+          "MAYA"
+        ],
         "timeline": "September 2025",
-        "relatedLink": "#",
         "images": [
           "../assets/playground/orbit/orbit1.webp",
           "../assets/playground/orbit/orbit2.webp",
@@ -93,7 +121,8 @@
           "../assets/playground/orbit/orbit4.webp",
           "../assets/playground/orbit/orbit5.webp",
           "../assets/playground/orbit/orbit6.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -101,17 +130,21 @@
       "selected_work": false,
       "thumbnail": "/assets/playground/Rhino_Jew/Swallow.webp",
       "intro": "A bracelet.",
-      "tags": ["3D Modeling"],
+      "tags": [
+        "3D Modeling"
+      ],
       "id": "/works/SwallowArcBracelet.html",
       "details": {
         "description": "Draws inspiration from the swift, fluid motion of the swallow in flight. Made with Rhino ",
-        "techStack": ["Rhino"],
+        "techStack": [
+          "Rhino"
+        ],
         "timeline": "October 2025",
-        "relatedLink": "#",
         "images": [
           "../assets/playground/Rhino_Jew/Swallow.webp",
           "../assets/playground/Rhino_Jew/Swallow1.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -119,17 +152,21 @@
       "selected_work": false,
       "thumbnail": "/assets/playground/Rhino_Jew/Aster.webp",
       "intro": "An Enamel Ring.",
-      "tags": ["3D Modeling"],
+      "tags": [
+        "3D Modeling"
+      ],
       "id": "/works/Aster.html",
       "details": {
         "description": "Draws inspiration from the shape of stars and birds. Made with Rhino ",
-        "techStack": ["Rhino"],
+        "techStack": [
+          "Rhino"
+        ],
         "timeline": "October 2025",
-        "relatedLink": "#",
         "images": [
           "../assets/playground/Rhino_Jew/Aster.webp",
           "../assets/playground/Rhino_Jew/Aster1.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -137,16 +174,20 @@
       "selected_work": false,
       "thumbnail": "assets/playground/ripple/ripple1.webp",
       "intro": "A cute neclace I made ;",
-      "tags": ["fabrication"],
+      "tags": [
+        "fabrication"
+      ],
       "id": "/works/Ripple.html",
       "details": {
         "description": "A cute neclace I made ;)",
-        "techStack": ["Silver"],
+        "techStack": [
+          "Silver"
+        ],
         "timeline": "August 2024",
-        "relatedLink": "#",
         "images": [
           "../assets/playground/ripple/ripple1.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -154,16 +195,21 @@
       "selected_work": false,
       "thumbnail": "assets/playground/dragonfly/dragonfly.webp",
       "intro": "A cute dragonfly I made ;",
-      "tags": ["fabrication"],
+      "tags": [
+        "fabrication"
+      ],
       "id": "/works/Dragonfly.html",
       "details": {
         "description": "A cute neclace I made ;)",
-        "techStack": ["Silver","Copper"],
+        "techStack": [
+          "Silver",
+          "Copper"
+        ],
         "timeline": "August 2024",
-        "relatedLink": "#",
         "images": [
           "assets/playground/dragonfly/dragonfly.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -171,18 +217,23 @@
       "selected_work": true,
       "thumbnail": "assets/playground/carry_me/carry_me1.webp",
       "intro": "A cute neclace I made ;",
-      "tags": ["fabrication","✦Ziye’s Pick✧"],
+      "tags": [
+        "fabrication",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Carry_me.html",
       "details": {
         "description": "A cute neclace I made ;)",
-        "techStack": ["Silver"],
+        "techStack": [
+          "Silver"
+        ],
         "timeline": "August 2024",
-        "relatedLink": "#",
         "images": [
           "../assets/playground/carry_me/carry_me3.webp",
           "../assets/playground/carry_me/carry_me1.webp",
           "../assets/playground/carry_me/carry_me2.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -190,17 +241,26 @@
       "selected_work": false,
       "thumbnail": "assets/playground/python/stardew.gif",
       "intro": "\"You don't choose your lifestyle, Data does.\"",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/python_playground.html",
       "details": {
         "description": "A collection of small projects I made while learning Python, including terminal scroll art, a kirby game, a simple web scraper, and a Stardew Valley farm planner.",
-        "techStack": ["python"],
+        "techStack": [
+          "python"
+        ],
         "timeline": "Jan 2024 - Mar 2024",
-        "relatedLink": "https://github.com/ZiyeAn/Creative_Coding_Python/blob/main/README.md",
         "images": [
           "../assets/playground/python/stardew.gif",
           "../assets/playground/python/SAFInal.gif",
           "../assets/playground/python/turtle.gif"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://github.com/ZiyeAn/Creative_Coding_Python/blob/main/README.md"
+          }
         ]
       }
     },
@@ -209,19 +269,33 @@
       "selected_work": false,
       "thumbnail": "assets/playground/funguide/Funguide.webp",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/funguide.html",
       "details": {
         "description": "Funguide is a mushroom recognition and recipe generator. Simply upload a photo of a mushroom, and the system will identify it, providing basic information along with a recipe featuring that mushroom.<br>It doesn't work right now due to the API key issue, but you can check out the code and demo link for more details.",
-        "techStack": ["JavaScript", "HTML/CSS", "Node.js", "Gemini API"],
+        "techStack": [
+          "JavaScript",
+          "HTML/CSS",
+          "Node.js",
+          "Gemini API"
+        ],
         "timeline": "Jan 2024 - Mar 2024",
-        "relatedLink": "https://funguide.onrender.com/",
-        "video": ["https://drive.google.com/file/d/1CCfjavK2WRjbhKrpKcS8k2Yt-9hA8Tax/view?usp=drive_link"],
+        "video": [
+          "https://drive.google.com/file/d/1CCfjavK2WRjbhKrpKcS8k2Yt-9hA8Tax/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/funguide/f1.webp",
           "../assets/playground/funguide/f2.webp",
           "../assets/playground/funguide/f3.webp",
           "../assets/playground/funguide/f4.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://funguide.onrender.com/"
+          }
         ]
       }
     },
@@ -230,19 +304,28 @@
       "selected_work": false,
       "thumbnail": "assets/playground/underwater_gesture/ARS Zine-1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Drawing"],
+      "tags": [
+        "Drawing"
+      ],
       "id": "/works/DescentAscent.html",
       "details": {
         "description": "This zine playfully explores the silent, soggy language of divers. Structured as a journey from descent to ascent, it documents how hand gestures become a form of communication when speech disappears underwater. Inspired by real-world diver signaling systems and research in underwater gesture recognition, the project turns practical survival gestures into an unspoken narrative. It’s part observation, part miscommunication, and entirely an ode to talking with your hands when no one can hear you anyway.",
-        "techStack": ["InDesign"],
+        "techStack": [
+          "InDesign"
+        ],
         "timeline": "Jan 2024 - Mar 2024",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
           "../assets/playground/underwater_gesture/ARS Zine-1.webp",
           "../assets/playground/underwater_gesture/ARS Zine-2.webp",
           "../assets/playground/underwater_gesture/ARS Zine-3.webp",
           "../assets/playground/underwater_gesture/ARS Zine-4.webp",
           "../assets/playground/underwater_gesture/ARS Zine-5.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP"
+          }
         ]
       }
     },
@@ -251,20 +334,31 @@
       "selected_work": false,
       "thumbnail": "assets/playground/mountain_spirit/ms3.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
-      "tags": ["Tangible","✦Ziye’s Pick✧"],
+      "tags": [
+        "Tangible",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Mountain_Spirit.html",
       "details": {
         "description": "Mountain Spirit is an interactive installation inspired by the Chinese mythological figure Shan Gui and Jeremiah 10:3–5. It reflects on how societies create gods—and meaning itself—through shared imagination, belief, and repetition.<br><br> They cut a tree from the forest,<br>a craftsman shapes it with his hands;<br>they adorn it with silver and gold,<br>fasten it with nails and hammers so that it will not move.<br>It stands upright like a palm tree, but cannot speak;<br>it must be carried because it cannot walk. ",
-        "techStack": ["TouchDesigner", "Arduino","Plaster Casting","Premiere Pro"],
+        "techStack": [
+          "TouchDesigner",
+          "Arduino",
+          "Plaster Casting",
+          "Premiere Pro"
+        ],
         "timeline": "2024",
-        "relatedLink": "#",
-        "video": ["https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link","https://drive.google.com/file/d/19ryNrD8y3mbWvlemdr7J07QE1zPmBbRI/view?usp=sharing"],
+        "video": [
+          "https://drive.google.com/file/d/1y63P-hlPfgVvJsVaYGh6ij9I6jMFLnIS/view?usp=drive_link",
+          "https://drive.google.com/file/d/19ryNrD8y3mbWvlemdr7J07QE1zPmBbRI/view?usp=sharing"
+        ],
         "images": [
           "../assets/playground/mountain_spirit/ms1.webp",
           "../assets/playground/mountain_spirit/ms2.webp",
           "../assets/playground/mountain_spirit/ms3.webp",
           "../assets/playground/mountain_spirit/ms4.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -272,18 +366,33 @@
       "selected_work": false,
       "thumbnail": "assets/playground/apple/apple.gif",
       "intro": "How can you see an apple from different perspectives?",
-      "tags": ["Coding","✦Ziye’s Pick✧"],
+      "tags": [
+        "Coding",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/apple.html",
       "details": {
         "description": "How to view an apple from different perspective? To me, apple is a fruit I think is too normal to ear but my mom always push me to eat. She never stop bragging how good it is to eat apples, so I wanted to figure out how poeple from the world view this normal fruit. I also include how I view it at the final section cuz I want also a private perspective of apples.",
-        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
+        "techStack": [
+          "Arduino",
+          "JavaScript",
+          "HTML/CSS",
+          "Python"
+        ],
         "timeline": "2023",
-        "relatedLink": "https://ziyean.github.io/-2-Different-Perspective/",
-        "video": ["https://drive.google.com/file/d/1QcEd0mhVrzWQoMBTF6hzgILdwW8aTuuW/view?usp=drive_link"],
+        "video": [
+          "https://drive.google.com/file/d/1QcEd0mhVrzWQoMBTF6hzgILdwW8aTuuW/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/apple/a1.webp",
           "../assets/playground/apple/a2.webp",
           "../assets/playground/apple/a3.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://ziyean.github.io/-2-Different-Perspective/"
+          }
         ]
       }
     },
@@ -292,17 +401,28 @@
       "selected_work": false,
       "thumbnail": "assets/playground/what_to_cook/wtc_hero_img.webp",
       "intro": "A simple cookbook for kids",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/what_to_cook_today.html",
       "details": {
         "description": "A simple cook book for kids. Allows kids to choose the ingredients and make their own meal.",
-        "techStack": ["JavaScript", "HTML/CSS", "Local Storage"],
+        "techStack": [
+          "JavaScript",
+          "HTML/CSS",
+          "Local Storage"
+        ],
         "timeline": "2023",
-        "relatedLink": "https://ziyean.github.io/-3-Community-Tool-or-Quiz/index.html",
         "images": [
           "../assets/playground/what_to_cook/wtc1.webp",
           "../assets/playground/what_to_cook/wtc2.webp",
           "../assets/playground/what_to_cook/wtc3.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://ziyean.github.io/-3-Community-Tool-or-Quiz/index.html"
+          }
         ]
       }
     },
@@ -311,15 +431,31 @@
       "selected_work": false,
       "thumbnail": "assets/playground/what_to_drink/wtd1.webp",
       "intro": "Decide what to drink through a digital Chinese divination",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/what-to-drink-today.html",
       "details": {
         "description": "A website that uses two digital Chinese divination methods—Qian and Kau Cim—to help users decide what to drink. After choosing a method, users interact with the divination and receive a cocktail suggestion fetched from a cocktail API.",
-        "techStack": ["Arduino", "JavaScript", "HTML/CSS", "Python"],
+        "techStack": [
+          "Arduino",
+          "JavaScript",
+          "HTML/CSS",
+          "Python"
+        ],
         "timeline": "2023",
-        "relatedLink": "https://ziyean.github.io/-4-Digital-Divination/index.html",
-        "video": ["https://drive.google.com/file/d/1_DrMmPpaZSvOhCar8epL5ho_NsZvS1wp/view?usp=drive_link"],
-        "images": ["../assets/playground/what_to_drink/wtd2.webp"]
+        "video": [
+          "https://drive.google.com/file/d/1_DrMmPpaZSvOhCar8epL5ho_NsZvS1wp/view?usp=drive_link"
+        ],
+        "images": [
+          "../assets/playground/what_to_drink/wtd2.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://ziyean.github.io/-4-Digital-Divination/index.html"
+          }
+        ]
       }
     },
     {
@@ -327,19 +463,33 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/marriage_premium/mp_tn.webp",
       "intro": "A physical computing piece showing gender inequality through gameplay and motion",
-      "tags": ["Tangible","✦Ziye’s Pick✧"],
+      "tags": [
+        "Tangible",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/marriage_premium.html",
       "details": {
         "description": "A p5.js game based on my parents’ story that lets players choose the life path of a couple facing the “marriage premium.” A servo-powered scale connected to Arduino tilts to reveal the unequal outcome, showing that even with choices, personal effort cannot erase structural inequality.",
-        "techStack": ["p5.js", "arduino"],
+        "techStack": [
+          "p5.js",
+          "arduino"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
-        "frame":"https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
-        "video": ["https://drive.google.com/file/d/1qntTXL_mvXUsF-Y4JBht0RmvUkuW-Ryt/view?usp=sharing","https://drive.google.com/file/d/1Qu1BxBKbnxw0X6KeBxlOC1RQRsuw_qD9/view?usp=sharing"],
+        "frame": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB",
+        "video": [
+          "https://drive.google.com/file/d/1qntTXL_mvXUsF-Y4JBht0RmvUkuW-Ryt/view?usp=sharing",
+          "https://drive.google.com/file/d/1Qu1BxBKbnxw0X6KeBxlOC1RQRsuw_qD9/view?usp=sharing"
+        ],
         "images": [
           "../assets/playground/marriage_premium/mp1.webp",
           "../assets/playground/marriage_premium/mp2.webp",
           "../assets/playground/marriage_premium/mp3.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB"
+          }
         ]
       }
     },
@@ -348,37 +498,54 @@
       "selected_work": false,
       "thumbnail": "assets/playground/bio_game/g1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/autobiographical_game.html",
       "details": {
         "description": "An autobiographical p5.js game I did base on my memory with my dog Xiaowu who passed away years before. It depicts my childhood memory imaging my self as a witch and Xiaowu as my familiar spirit. The visual of the game is inspired by Pixel Jeff. The game used p5.play library to create different scenes and interactions. Players can explore the environment, interact with objects, and experience the story through simple gameplay mechanics.<br> I miss Xiaowu.",
-        "techStack": ["p5.js"],
+        "techStack": [
+          "p5.js"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP",
         "images": [
           "../assets/playground/bio_game/g1.webp",
           "../assets/playground/bio_game/CC2.webp",
           "../assets/playground/bio_game/image3.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP"
+          }
         ]
       }
     },
-       {
+    {
       "title": "Heartbeat Fireworks",
       "selected_work": false,
       "thumbnail": "../assets/playground/heartbeat_firework/heartbeat_firework.webp",
       "intro": "A p5.js animation reacting to the position of the mouse",
-      "tags": ["Tangible"],
+      "tags": [
+        "Tangible"
+      ],
       "id": "/works/heartbeat_fireworks.html",
       "details": {
         "description": "A PCB Eching project that uses pulse sensor to detect the heartbeat and trigger light.",
-        "techStack": ["Arduino","pulse sensor"],
+        "techStack": [
+          "Arduino",
+          "pulse sensor"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "",
-        "frame":"",
-        "video": ["https://drive.google.com/file/d/19g45--A92MqoXeEa8g6cWv9XCCoRpuIB/view?usp=drive_link","https://drive.google.com/file/d/1WtPDjXAEu6UJzF-dvnLeiek36A0EeWxW/view?usp=drive_link"],
+        "frame": "",
+        "video": [
+          "https://drive.google.com/file/d/19g45--A92MqoXeEa8g6cWv9XCCoRpuIB/view?usp=drive_link",
+          "https://drive.google.com/file/d/1WtPDjXAEu6UJzF-dvnLeiek36A0EeWxW/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/heartbeat_firework/hf.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -386,17 +553,31 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/Misty_Mountains/Misty_Mountains.webp",
       "intro": "A p5.js animation reacting to the position of the mouse",
-      "tags": ["Tangible"],
+      "tags": [
+        "Tangible"
+      ],
       "id": "/works/misty_mountains.html",
       "details": {
         "description": "A resposive p5.js animation that changes based on the flex sensor.",
-        "techStack": ["p5.js","Arduino","Serial (USB)","flex sensor"],
+        "techStack": [
+          "p5.js",
+          "Arduino",
+          "Serial (USB)",
+          "flex sensor"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://github.com/ZiyeAn/P5js_arduino_misty_mountain",
-        "frame":"",
-        "video": ["https://drive.google.com/file/d/1N10DpsmwlnqmXVeuoNw6utr9B34BUKhL/view?usp=drive_link"],
+        "frame": "",
+        "video": [
+          "https://drive.google.com/file/d/1N10DpsmwlnqmXVeuoNw6utr9B34BUKhL/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/Misty_Mountains/Misty_Mountains1.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://github.com/ZiyeAn/P5js_arduino_misty_mountain"
+          }
         ]
       }
     },
@@ -405,17 +586,31 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/DayAndNight.gif",
       "intro": "A p5.js animation reacting to the position of the mouse",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/day_and_night.html",
       "details": {
         "description": "A resposive p5.js animation that changes based on the position of the mouse and change of light using phototresistor sensor.",
-        "techStack": ["p5.js","Arduino","Serial (USB)","photoresistor"],
+        "techStack": [
+          "p5.js",
+          "Arduino",
+          "Serial (USB)",
+          "photoresistor"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk",
-        "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
-        "video": ["https://drive.google.com/file/d/1Bh13trYYT_pBnXJaPeY5oLTI9o6hjfdZ/view?usp=sharing"],
+        "frame": "https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
+        "video": [
+          "https://drive.google.com/file/d/1Bh13trYYT_pBnXJaPeY5oLTI9o6hjfdZ/view?usp=sharing"
+        ],
         "images": [
           "../assets/playground/P5/DataPortrait.gif"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk"
+          }
         ]
       }
     },
@@ -424,17 +619,29 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/DataPortrait.gif",
       "intro": "Data visualization",
-      "tags": ["Coding","✦Ziye’s Pick✧"],
+      "tags": [
+        "Coding",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/data_portrait.html",
       "details": {
         "description": "A p5.js data visualization capturing the frequency of opening my phone without purpose. The stiff, repetitive clicking gesture becomes a visual metaphor for the unconscious routines of digital dependence.",
-        "techStack": ["p5.js"],
+        "techStack": [
+          "p5.js"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/sketches/xNtxOtEo9",
-        "frame":"https://editor.p5js.org/ZiyeAn/full/xNtxOtEo9",
-        "video": ["https://drive.google.com/file/d/1K4p2PFfHp_VZTp5tm8oclV5Tx9wKL8MA/view?usp=drive_link"],
+        "frame": "https://editor.p5js.org/ZiyeAn/full/xNtxOtEo9",
+        "video": [
+          "https://drive.google.com/file/d/1K4p2PFfHp_VZTp5tm8oclV5Tx9wKL8MA/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/P5/DataPortrait.gif"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/sketches/xNtxOtEo9"
+          }
         ]
       }
     },
@@ -443,17 +650,28 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/ExperimentalCamera.gif",
       "intro": "Data visualization",
-      "tags": ["Coding"],
+      "tags": [
+        "Coding"
+      ],
       "id": "/works/experimental_camera.html",
       "details": {
         "description": "A p5.js face collage that chanegs while couse clicked. Using the webcam to capture the face and Face Landmarks machine-learning model to detect the position of the face and create a collage based on the position.",
-        "techStack": ["p5.js"],
+        "techStack": [
+          "p5.js"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/sketches/0HEqia3HE",
-        "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
-        "video": ["https://drive.google.com/file/d/1oMBpAa6s6quIKJ5UK7qV-p9uC94E63cv/view?usp=drive_link"],
+        "frame": "https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
+        "video": [
+          "https://drive.google.com/file/d/1oMBpAa6s6quIKJ5UK7qV-p9uC94E63cv/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/P5/ExperimentalCamera.gif"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/sketches/0HEqia3HE"
+          }
         ]
       }
     },
@@ -462,18 +680,30 @@
       "selected_work": false,
       "thumbnail": "../assets/playground/P5/ExperimentalClock.gif",
       "intro": "Data visualization",
-      "tags": ["Coding","✦Ziye’s Pick✧"],
+      "tags": [
+        "Coding",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/experimental_clock.html",
       "details": {
         "description": "For this project, I use the number of ripples to present Hour (12-hour timing since this looks prettier), the number of rings per ripple to represent minutes(using 10 minutes as an interval). To avoid the situation that nothing is shown when the minutes is single digit, the point in the middle represent single digits. For example, if there is 3 points when pressing the mouse, That means it is around 3 AM/PM o'clock, if there is 4 ripples and each ripple has 1 point and 2 rings, that means it's about 4:20 (need to minus the single digit ring). Also, if moving the mouse while pressed, you can fast forward the time or rewind it.",
-        "techStack": ["p5.js"],
+        "techStack": [
+          "p5.js"
+        ],
         "timeline": "Jan 2023 - Mar 2023",
-        "relatedLink": "https://editor.p5js.org/ZiyeAn/sketches/p7ATze3Xz",
-        "frame":"https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
-        "video": ["https://drive.google.com/file/d/18Nknf47Q1c_kjYe8_2Dqh-W_xY9Uqf1k/view?usp=drive_link"],
+        "frame": "https://editor.p5js.org/ZiyeAn/full/p7ATze3Xz",
+        "video": [
+          "https://drive.google.com/file/d/18Nknf47Q1c_kjYe8_2Dqh-W_xY9Uqf1k/view?usp=drive_link"
+        ],
         "images": [
           "../assets/playground/P5/ExperimentalClock.gif",
           "../assets/playground/P5/ExperimentalClock1.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Open Link",
+            "url": "https://editor.p5js.org/ZiyeAn/sketches/p7ATze3Xz"
+          }
         ]
       }
     },
@@ -482,11 +712,17 @@
       "selected_work": false,
       "thumbnail": "assets/playground/Land/Land_Spread_Ziye.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Drawing"],
+      "tags": [
+        "Drawing"
+      ],
       "id": "/works/Land.html",
       "details": {
         "description": "Land explores the boundary between observation and imagination.A camera, an instrument meant to capture reality, becomes a canvas for imagined creatures.",
-        "techStack": ["Photodgraphy","Illustrator","InDesign"],
+        "techStack": [
+          "Photodgraphy",
+          "Illustrator",
+          "InDesign"
+        ],
         "timeline": "2023",
         "images": [
           "../assets/playground/Land/Land_Spread_Ziye.webp",
@@ -494,7 +730,8 @@
           "../assets/playground/Land/Land_Spread_Ziye2.webp",
           "../assets/playground/Land/Land_Spread_Ziye3.webp",
           "../assets/playground/Land/Land_Spread_Ziye4.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -502,17 +739,24 @@
       "selected_work": false,
       "thumbnail": "assets/playground/portrait_of_pierre/PierP1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
-      "tags": ["Drawing","✦Ziye’s Pick✧"],
+      "tags": [
+        "Drawing",
+        "✦Ziye’s Pick✧"
+      ],
       "id": "/works/Portart_of_Pierre.html",
       "details": {
         "description": "Portait of Pierre",
-        "techStack": ["Pencil","Papercutting"],
+        "techStack": [
+          "Pencil",
+          "Papercutting"
+        ],
         "timeline": "2023",
         "images": [
           "assets/playground/portrait_of_pierre/PierP1.webp",
           "assets/playground/portrait_of_pierre/PierP2.webp",
           "assets/playground/portrait_of_pierre/PierP3.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -520,20 +764,27 @@
       "selected_work": false,
       "thumbnail": "assets/playground/ophelia/ophelia_1.webp",
       "intro": "A plaster-casting sculpture capturing the ethereal buoyancy of a floating body.",
-      "tags": ["fabrication"],
+      "tags": [
+        "fabrication"
+      ],
       "id": "/works/ophelia.html",
       "details": {
         "description": "<strong>Idea</strong>: A plaster-casting sculpture that captures the ethereal essence of a floating person. Because whole-body casting is difficult, selected body parts (face and hands) are composed to form a harmonious figure, inspired by the image of a swimmer and the paintings of Ophelia. The piece explores the tension between the solid, tactile texture of plaster and a feeling of weightlessness.<br><br>My plaster-casting sculpture showcases select parts of the face and hands in detail to convey beauty and mystery in suspension—where heaviness meets float.",
-        "techStack": ["Plaster Casting", "Silicone/Alginate Mold", "Armature", "Sanding/Finishing"],
+        "techStack": [
+          "Plaster Casting",
+          "Silicone/Alginate Mold",
+          "Armature",
+          "Sanding/Finishing"
+        ],
         "timeline": "2022",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "../assets/playground/ophelia/ophelia_1.webp",
           "../assets/playground/ophelia/ophelia_2.webp",
           "../assets/playground/ophelia/ophelia_3.webp",
           "../assets/playground/ophelia/ophelia_4.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -541,20 +792,25 @@
       "selected_work": false,
       "thumbnail": "assets/playground/mist/mist4.webp",
       "intro": "An insence holder",
-      "tags": ["fabrication"],
+      "tags": [
+        "fabrication"
+      ],
       "id": "/works/Mist.html",
       "details": {
         "description": "A black, Zen-inspired incense holder with mist-like shapes and gentle circular forms.",
-        "techStack": ["Acrylic", "Laser Cutting"],
+        "techStack": [
+          "Acrylic",
+          "Laser Cutting"
+        ],
         "timeline": "2022",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "../assets/playground/mist/mist1.webp",
           "../assets/playground/mist/mist2.webp",
           "../assets/playground/mist/mist3.webp",
           "../assets/playground/mist/mist4.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -562,20 +818,25 @@
       "selected_work": false,
       "thumbnail": "assets/playground/BoneClock/BoneClock.webp",
       "intro": "A wearble sculpture",
-      "tags": ["fabrication"],
+      "tags": [
+        "fabrication"
+      ],
       "id": "/works/Bone_Clock.html",
       "details": {
         "description": "This wearable sculpture turns my anxiety about time into a physical experience. Laser-cut pieces form a mechanical spine worn on the back, which stiffens and shifts as a clock mechanism moves. As time passes, the structure subtly tightens, echoing the way my own back tenses under pressure. The piece makes the invisible weight of time visible—and felt—on the body.",
-        "techStack": ["Acrylic", "Laser Cutting"],
+        "techStack": [
+          "Acrylic",
+          "Laser Cutting"
+        ],
         "timeline": "2022",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "../assets/playground/BoneClock/BoneClock1.webp",
           "../assets/playground/BoneClock/BoneClock2.webp",
           "../assets/playground/BoneClock/BoneClock3.webp",
           "../assets/playground/BoneClock/BoneClock4.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -583,17 +844,22 @@
       "selected_work": false,
       "thumbnail": "assets/playground/drawing/maternity.webp",
       "intro": "Watercolor drawings exploring identity as a mother",
-      "tags": ["Drawing"],
+      "tags": [
+        "Drawing"
+      ],
       "id": "/works/maternity.html",
       "details": {
         "description": "This series of paintings was inspired by my mother. During my high school years, she was struggling to balance her roles as a mother, a wife, and a daughter. My grandfather was suffering from depression, and my grandmother was ill. At the same time, I was going through my college application process and needed her support. Witnessing her efforts to hold everything together deeply moved me, and this work reflects her quiet resilience and the weight of familial responsibility.",
-        "techStack": ["watercolor","pencil"],
+        "techStack": [
+          "watercolor",
+          "pencil"
+        ],
         "timeline": "2022",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "assets/playground/drawing/maternity.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
     },
     {
@@ -601,18 +867,24 @@
       "selected_work": false,
       "thumbnail": "assets/playground/drawing/environmental-friendly.webp",
       "intro": "Watercolor drawings exploring identity as a mother",
-      "tags": ["Drawing"],
+      "tags": [
+        "Drawing"
+      ],
       "id": "/works/environmental_friendly.html",
       "details": {
         "description": "This piece was inspired by the idea of how “environmentally friendly” has become a concept to consume. It appears to be carefully held in a hand, yet it is, in fact, placed on a plate—ready to be consumed.",
-        "techStack": ["Pencil","Cotton","Flowers"],
+        "techStack": [
+          "Pencil",
+          "Cotton",
+          "Flowers"
+        ],
         "timeline": "2022",
-        "relatedLink": "#",
         "video": [],
         "images": [
           "assets/playground/drawing/environmental-friendly.webp"
-        ]
+        ],
+        "relatedLinks": []
       }
-    } 
+    }
   ]
 }

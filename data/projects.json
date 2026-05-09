@@ -13,17 +13,25 @@
         "Arduino",
         "Digital Fabrication"
       ],
-      "timeline": "Oct \u2013 Dec 2024",
+      "timeline": "Oct – Dec 2024",
       "role": "Individual Project",
-      "relatedLabel":"Writing: Design Research and Brief",
-      "relatedLink": "https://outgoing-concrete-919.notion.site/LifeMart-Design-Brief-2c378d921ea08008b920f8590aed6829",
-      "video": "https://drive.google.com/file/d/1d4hWRwF7L7uhhz38-f2PaCQGedaPDuJO/view?usp=drive_link"
+      "video": "https://drive.google.com/file/d/1d4hWRwF7L7uhhz38-f2PaCQGedaPDuJO/view?usp=drive_link",
+      "relatedLinks": [
+        {
+          "label": "Writing: Design Research and Brief",
+          "url": "https://outgoing-concrete-919.notion.site/LifeMart-Design-Brief-2c378d921ea08008b920f8590aed6829"
+        },
+        {
+          "label": "Code Repository",
+          "url": "https://github.com/ZiyeAn/Price_Label_Test"
+        }
+      ]
     },
     "sections": [
-       {
+      {
         "type": "text",
         "title": "Project Overview",
-        "body":"LifeMart is an interactive system that examines how living beings become measurable inside market, biological, and emotional frameworks. Using a barcode scanner, a physical slider, and dynamic pricing algorithms, the project simulates the full journey of a life entering a retail logic: from pet, to species unit, to commodity, and—rarely—to an unquantifiable existence that resists valuation. Each scan generates a price label, breaking down how emotional value, ecological data, farming cost, labor, transport, and market forces shape the “worth” of a single creature. By pushing users to slide between layers of killability and care, LifeMart exposes the absurdity and violence of converting living beings into products, inviting viewers to reconsider what it means for a life to have value at all."
+        "body": "LifeMart is an interactive system that examines how living beings become measurable inside market, biological, and emotional frameworks. Using a barcode scanner, a physical slider, and dynamic pricing algorithms, the project simulates the full journey of a life entering a retail logic: from pet, to species unit, to commodity, and—rarely—to an unquantifiable existence that resists valuation. Each scan generates a price label, breaking down how emotional value, ecological data, farming cost, labor, transport, and market forces shape the “worth” of a single creature. By pushing users to slide between layers of killability and care, LifeMart exposes the absurdity and violence of converting living beings into products, inviting viewers to reconsider what it means for a life to have value at all."
       },
       {
         "type": "text",
@@ -102,17 +110,21 @@
         "3D Printing",
         "Arduino"
       ],
-      "timeline": "Oct \u2013 Dec 2024",
+      "timeline": "Oct – Dec 2024",
       "role": "Individual Project",
-      "relatedLabel":"Free Writing: My 23 kilograms Home",
-      "relatedLink": "https://outgoing-concrete-919.notion.site/My-23-Kilograms-Home-29a78d921ea080faab20fc77be6c548a",
-      "video": "https://drive.google.com/file/d/1f8HyRYHQ_StySFnBnwIhXl9D-zYP_Kd1/view?usp=drive_link"
+      "video": "https://drive.google.com/file/d/1f8HyRYHQ_StySFnBnwIhXl9D-zYP_Kd1/view?usp=drive_link",
+      "relatedLinks": [
+        {
+          "label": "Free Writing: My 23 kilograms Home",
+          "url": "https://outgoing-concrete-919.notion.site/My-23-Kilograms-Home-29a78d921ea080faab20fc77be6c548a"
+        }
+      ]
     },
     "sections": [
       {
         "type": "text",
         "title": "Project Overview",
-        "body":"I Want a Home I Could Carry With is a portable, personal “house” that exists not as architecture, but through my sense of possession. Inspired by my habit of treating my 23-kg luggage as a movable home, this project explores what “home” becomes when stability is impossible or constantly shifting. Through a compact, wearable form, it stores fragments of my routines, comforts, and identity, challenging the idea that home must be rooted in a place. Instead, it becomes something I assemble, carry, and rebuild wherever I go."
+        "body": "I Want a Home I Could Carry With is a portable, personal “house” that exists not as architecture, but through my sense of possession. Inspired by my habit of treating my 23-kg luggage as a movable home, this project explores what “home” becomes when stability is impossible or constantly shifting. Through a compact, wearable form, it stores fragments of my routines, comforts, and identity, challenging the idea that home must be rooted in a place. Instead, it becomes something I assemble, carry, and rebuild wherever I go."
       },
       {
         "type": "image",
@@ -122,7 +134,7 @@
       {
         "type": "text",
         "title": "Related Writing",
-        "body":"The inspiration for this project comes from my essay “My 23 Kilograms Home,” where I reflect on how my luggage has become a portable home—one that carries my identity, comforts, and the small possessions that shape who I am. These objects not oly just travel with me; they construct a sense of self, grounding me wherever I go. You can read the full essay here: <a href='https://outgoing-concrete-919.notion.site/My-23-Kilograms-Home-29a78d921ea080faab20fc77be6c548a' target='_blank'>My 23 Kilograms Home</a>, or find it in the Writing section."
+        "body": "The inspiration for this project comes from my essay “My 23 Kilograms Home,” where I reflect on how my luggage has become a portable home—one that carries my identity, comforts, and the small possessions that shape who I am. These objects not oly just travel with me; they construct a sense of self, grounding me wherever I go. You can read the full essay here: <a href='https://outgoing-concrete-919.notion.site/My-23-Kilograms-Home-29a78d921ea080faab20fc77be6c548a' target='_blank'>My 23 Kilograms Home</a>, or find it in the Writing section."
       },
       {
         "type": "gallery",
@@ -168,10 +180,10 @@
         "TensorFlow.js",
         "Arduino"
       ],
-      "timeline": "Oct \u2013 Dec 2024",
+      "timeline": "Oct – Dec 2024",
       "role": "Individual Project",
-      "relatedLink": "#",
-      "video": ""
+      "video": "",
+      "relatedLinks": []
     },
     "sections": [
       {
@@ -182,7 +194,7 @@
       {
         "type": "text",
         "title": "Project Overview",
-        "body":" This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters."
+        "body": " This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters."
       },
       {
         "type": "image",
@@ -223,7 +235,7 @@
       },
       {
         "type": "text",
-        "body":"<strong>PART 2: UI Design</strong><br><br>While designing the UI for the goggles, my main goal is to keep it as simple as possible. When diving, there is already so much information to process, and an overly complicated interface would only create distractions and take attention away from the surroundings."
+        "body": "<strong>PART 2: UI Design</strong><br><br>While designing the UI for the goggles, my main goal is to keep it as simple as possible. When diving, there is already so much information to process, and an overly complicated interface would only create distractions and take attention away from the surroundings."
       },
       {
         "type": "image",
@@ -233,7 +245,7 @@
       {
         "type": "text",
         "title": "Phone App UI Design",
-        "body":""
+        "body": ""
       },
       {
         "type": "image",
@@ -243,7 +255,7 @@
       {
         "type": "text",
         "title": "Tech Prototype setup",
-        "body":"This technical prototype focuses on testing the core pipeline of video-based marine species recognition on-device, without relying on an internet connection. At this stage, the system can upload a video clip through the app and run a basic fish-recognition model locally. The current model is an early test version, so its accuracy is still limited—especially when handling motion blur, underwater color shifts, and partially occluded fish."
+        "body": "This technical prototype focuses on testing the core pipeline of video-based marine species recognition on-device, without relying on an internet connection. At this stage, the system can upload a video clip through the app and run a basic fish-recognition model locally. The current model is an early test version, so its accuracy is still limited—especially when handling motion blur, underwater color shifts, and partially occluded fish."
       },
       {
         "type": "image",
@@ -256,16 +268,16 @@
         "src": "https://drive.google.com/file/d/1Qj1q-6sVC6emrU92_0lS8uMx7LYhUeDD/view?usp=drive_link"
       },
       {
-      "type": "text",
-      "title": "Future Iteration",
-      "body": "In the next stage, I plan to improve both performance and reliability:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
-    }
+        "type": "text",
+        "title": "Future Iteration",
+        "body": "In the next stage, I plan to improve both performance and reliability:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
+      }
     ]
   },
   {
     "id": "labyrinth",
     "title": "Labyrinth",
-    "subtitle": "A two-player asymmetric hide-and-seek game in the dark",
+    "subtitle": "Group Project: Ziye An, Carla Budar, Jaiden Brown, Eve Xu \n\nA two-player asymmetric hide-and-seek game in the dark",
     "year": 2025,
     "tags": [
       "Game",
@@ -282,10 +294,10 @@
         "Spatial Audio",
         "Leap Motion"
       ],
-      "timeline": "Mar \u2013 Apr 2025",
+      "timeline": "Mar – Apr 2025",
       "role": "Game design, Physical Computation, Visual Design",
-      "relatedLink": "#",
-      "video": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing"
+      "video": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=sharing",
+      "relatedLinks": []
     },
     "sections": [
       {
@@ -294,18 +306,18 @@
         "alt": "Research Process of Labyrinth"
       },
       {
-        "type":"video",
+        "type": "video",
         "title": "Prototypes & Process",
         "src": "https://drive.google.com/file/d/1e6lcQWAOA4JlD3T4QMHmqW27vD-O_kzl/view?usp=sharing",
         "caption": "Early prototype testing the flashlight in maze effect"
       },
       {
-        "type":"video",
+        "type": "video",
         "src": "https://drive.google.com/file/d/1oiBfI9dnxJbeUgD1fRf-XKVvHfuzzNIc/view?usp=sharing",
         "caption": "Testing Leap motion with Unity"
       },
       {
-        "type":"video",
+        "type": "video",
         "src": "https://drive.google.com/file/d/1pCwtnfqaNvrxfCVTl7sFgfulDmirOF1n/view?usp=drive_link",
         "caption": "Testing maze generation"
       },
@@ -328,13 +340,13 @@
         ]
       },
       {
-        "type":"video",
+        "type": "video",
         "title": "Video Demo",
         "src": "https://drive.google.com/file/d/165iQDdZ-lnZaZsXlYEj68sQvxgBplwUo/view?usp=drive_link"
       }
     ]
   },
-   {
+  {
     "id": "chester-choiceworth",
     "title": "Chester Choiceworth",
     "subtitle": "\"You don't choose your lifestyle. Data does.\"",
@@ -354,10 +366,15 @@
         "HTML/CSS",
         "Thermal Receipt Printer"
       ],
-      "timeline": "Jan 2024 \u2013 Mar 2024",
+      "timeline": "Jan 2024 – Mar 2024",
       "role": "Individual Project",
-      "relatedLink": "https://chester-choiceworth.onrender.com/",
-      "video": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link"
+      "video": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link",
+      "relatedLinks": [
+        {
+          "label": "Open Link",
+          "url": "https://chester-choiceworth.onrender.com/"
+        }
+      ]
     },
     "sections": [
       {
@@ -397,7 +414,7 @@
           }
         ]
       },
-       {
+      {
         "type": "video",
         "title": "Video Demo",
         "src": "https://drive.google.com/file/d/1Dcma4qMs0TnFWSxmBYZaAIdIEaZ1sUpN/view?usp=drive_link"
@@ -429,16 +446,16 @@
         "Rotary Encoder",
         "Illustrator"
       ],
-      "timeline": "Jan \u2013 Mar 2025",
+      "timeline": "Jan – Mar 2025",
       "role": "Game design, Hardware prototyping, Visual design",
-      "relatedLink": "#",
-      "video": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/view?usp=drive_link"
+      "video": "https://drive.google.com/file/d/19kc1bCYh1YEJwTRbnC9ZNqiNxuVhCuV4/view?usp=drive_link",
+      "relatedLinks": []
     },
     "sections": [
       {
         "type": "text",
         "title": "Project Overview",
-        "body": "Spinphony turns a turntable into both controller and narrative device. Rotating the platter moves Do, a lost note, through rhythmic looping levels, while four buttons handle jump and walking. Hardware and software co-evolved\u2014encoder prototypes shaped the physical feel, and Unity visuals and audio cues kept players in rhythm."
+        "body": "Spinphony turns a turntable into both controller and narrative device. Rotating the platter moves Do, a lost note, through rhythmic looping levels, while four buttons handle jump and walking. Hardware and software co-evolved—encoder prototypes shaped the physical feel, and Unity visuals and audio cues kept players in rhythm."
       },
       {
         "type": "gallery",
@@ -505,22 +522,26 @@
         "arduino",
         "digital fabrication"
       ],
-      "timeline": "Apr \u2013 May 2025",
+      "timeline": "Apr – May 2025",
       "role": "Installation Design, Gameplay Design",
-      "relatedLabel":"Marbility Project Page",
-      "relatedLink": "https://howtoshowoffquantumcomputing.cargo.site/marbility",
-      "video": ""
+      "video": "",
+      "relatedLinks": [
+        {
+          "label": "Marbility Project Page",
+          "url": "https://howtoshowoffquantumcomputing.cargo.site/marbility"
+        }
+      ]
     },
     "sections": [
       {
         "type": "text",
         "title": "Concept",
-        "body": "This interactive exhibit introduces the audience to quantum concepts of entanglement, gates, probability, and qubits through an interactive game.\n\nIn the game, you and your teammate each control a qubit and try to score the correct probability given to you. You interact with gates and learn about probability and entanglement. With the aesthetics of Pinball and Plinko\u2013widely-known, nostalgic games that are easy to understand\u2013we attract people of all ages and backgrounds.\n\nInspired by old arcade games such as Plinko and Pinball."
+        "body": "This interactive exhibit introduces the audience to quantum concepts of entanglement, gates, probability, and qubits through an interactive game.\n\nIn the game, you and your teammate each control a qubit and try to score the correct probability given to you. You interact with gates and learn about probability and entanglement. With the aesthetics of Pinball and Plinko–widely-known, nostalgic games that are easy to understand–we attract people of all ages and backgrounds.\n\nInspired by old arcade games such as Plinko and Pinball."
       },
       {
         "type": "split",
         "title": "How to Play",
-        "body": "1. This is a 2-player game\u2014bring a friend and play on the same team!\n\n2. Press the Start button on the right to launch the round.\n\n3. Both players receive a probability target while a countdown begins.\n\n4. Each player applies single-qubit gates using their side of the board; rotating the encoder knob sends an Rx gate to evolve the qubit state.\n\n5. Ten levers on each board affect the shared superposition. Some move independently, while entangled levers mirror or invert the teammate's motion, so one player's gate can change the other's qubit.\n\n6. Hitting the large Entangle button reshuffles the entanglement graph, reassigning which levers link and how strongly they influence each other.\n\n7. Tap your personal X-gate button to flip your qubit instantly when timing matters.\n\n8. When the countdown hits zero, all inputs freeze and players pour marbles into the top of the machine.\n\n9. Marbles cascade through the boards and get tallied at the base.\n\n10. Once every marble is counted, the scoreboard reveals each player's accuracy and the final team score.",
+        "body": "1. This is a 2-player game—bring a friend and play on the same team!\n\n2. Press the Start button on the right to launch the round.\n\n3. Both players receive a probability target while a countdown begins.\n\n4. Each player applies single-qubit gates using their side of the board; rotating the encoder knob sends an Rx gate to evolve the qubit state.\n\n5. Ten levers on each board affect the shared superposition. Some move independently, while entangled levers mirror or invert the teammate's motion, so one player's gate can change the other's qubit.\n\n6. Hitting the large Entangle button reshuffles the entanglement graph, reassigning which levers link and how strongly they influence each other.\n\n7. Tap your personal X-gate button to flip your qubit instantly when timing matters.\n\n8. When the countdown hits zero, all inputs freeze and players pour marbles into the top of the machine.\n\n9. Marbles cascade through the boards and get tallied at the base.\n\n10. Once every marble is counted, the scoreboard reveals each player's accuracy and the final team score.",
         "image": "../assets/projects/marbility/marbility_process2.svg",
         "alt": "Marbility interface diagram with controls and lever layout",
         "imagePosition": "right"

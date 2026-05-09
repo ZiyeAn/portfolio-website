@@ -17,12 +17,16 @@ type ProcessData = {
   images?: string[];
 };
 
+type RelatedLink = {
+  label?: string;
+  url?: string;
+};
+
 type ProjectDetails = {
   description?: string;
   techStack?: string[];
   timeline?: string;
-  relatedLink?: string;
-  relatedLabel?: string;
+  relatedLinks?: RelatedLink[];
   video?: string[];
   video_ID?: string[];
   images?: string[];
@@ -89,12 +93,23 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
   const imageSources = (details.images ?? [])
     .map(normalizeAsset)
     .filter(Boolean);
+  const relatedLinks =
+    (details.relatedLinks ?? []).filter(
+      (link): link is { label?: string; url: string } =>
+        !!link?.url && typeof link.url === "string" && link.url.trim() !== "#"
+    );
+  const normalizedRelatedLinks = relatedLinks.map((link) => ({
+    url: link.url.trim(),
+    label:
+      typeof link.label === "string" && link.label.trim()
+        ? link.label.trim()
+        : "Open Link",
+  }));
   const tagLine = project.tags?.join(" · ");
   const hasMeta =
     techStack.length ||
     (project.tags?.length ?? 0) > 0 ||
-    (details.relatedLink && details.relatedLink !== "#");
-  const relatedLabel = details.relatedLabel?.trim();
+    normalizedRelatedLinks.length;
 
   const handleToggleProcess = () => setShowProcess((prev) => !prev);
 
@@ -131,17 +146,20 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                     <dd>{project.tags.join(", ")}</dd>
                   </div>
                 ) : null}
-                {details.relatedLink && details.relatedLink !== "#" ? (
+                {normalizedRelatedLinks.length ? (
                   <div className={styles.metaRow}>
                     <dt>Related</dt>
-                    <dd>
-                      <a
-                        href={details.relatedLink}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {(relatedLabel || "Open Link") + " ↗"}
-                      </a>
+                    <dd className={styles.metaLinks}>
+                      {normalizedRelatedLinks.map((link, index) => (
+                        <a
+                          key={`related-${index}`}
+                          href={link.url}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {link.label} ↗
+                        </a>
+                      ))}
                     </dd>
                   </div>
                 ) : null}

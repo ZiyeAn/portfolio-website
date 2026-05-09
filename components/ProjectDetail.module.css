@@ -145,6 +145,12 @@
   font-family: "jetbrains-mono", monospace;
 }
 
+.metaLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .metaRow dd a {
   color: #a70712;
   text-decoration: none;

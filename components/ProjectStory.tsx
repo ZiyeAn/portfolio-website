@@ -63,6 +63,11 @@ type Section =
   | VideoSection
   | SplitSection;
 
+type RelatedLink = {
+  label?: string;
+  url?: string;
+};
+
 const normalizeAsset = (src?: string) => {
   if (!src) return "";
   if (/^https?:\/\//i.test(src)) return src;
@@ -258,10 +263,21 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
   const timeline = project.meta?.timeline;
   const techStack = project.meta?.techStack ?? [];
   const role = project.meta?.role;
-  const relatedLink = project.meta?.relatedLink;
-  const relatedLabel = (
-    project.meta as { relatedLabel?: string } | undefined
-  )?.relatedLabel?.trim();
+  const relatedLinks =
+    ((project.meta as { relatedLinks?: RelatedLink[] } | undefined)?.relatedLinks ??
+      []) as RelatedLink[];
+  const normalizedRelatedLinks = relatedLinks
+    .filter(
+      (link): link is { label?: string; url: string } =>
+        !!link?.url && typeof link.url === "string" && link.url.trim() !== "#"
+    )
+    .map((link) => ({
+      url: link.url.trim(),
+      label:
+        typeof link.label === "string" && link.label.trim()
+          ? link.label.trim()
+          : "Open Link",
+    }));
   const sections = project.sections ?? [];
 
   return (
@@ -311,17 +327,22 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
                 </div>
               </div>
             ) : null}
-            {relatedLink && relatedLink !== "#" ? (
+            {normalizedRelatedLinks.length ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Related Link</span>
-                <a
-                  href={relatedLink}
-                  className={styles.metaValue}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {(relatedLabel || "Open Link") + " ↗"}
-                </a>
+                <span className={styles.metaLabel}>Related</span>
+                <div className={styles.metaLinks}>
+                  {normalizedRelatedLinks.map((link, index) => (
+                    <a
+                      key={`related-${index}`}
+                      href={link.url}
+                      className={`${styles.metaValue} ${styles.metaLink}`}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {link.label} ↗
+                    </a>
+                  ))}
+                </div>
               </div>
             ) : null}
           </div>
