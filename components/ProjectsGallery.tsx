@@ -1,7 +1,7 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./ProjectsGallery.module.css";
 
@@ -69,7 +69,13 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
                 className={styles.mediaColumn}
                 aria-label={`View details for ${project.title}`}
               >
-                <img src={imageSrc} alt={project.title} loading="lazy" />
+                <Image
+                  src={imageSrc}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 720px) 100vw, (max-width: 1080px) 90vw, 38vw"
+                  priority={index < 2}
+                />
               </Link>
             </article>
           </BlurFade>

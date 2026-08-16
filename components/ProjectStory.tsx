@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/image";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import styles from "./ProjectStory.module.css";
@@ -128,7 +128,13 @@ const renderSection = (section: Section, index: number) => {
       const src = normalizeAsset(imageSection.image);
       return (
         <figure key={`image-${index}`} className={`${styles.section} ${styles.figure}`}>
-          <img src={src} alt={imageSection.alt ?? imageSection.title ?? ""} />
+          <Image
+            src={src}
+            alt={imageSection.alt ?? imageSection.title ?? ""}
+            width={1800}
+            height={1200}
+            sizes="(max-width: 900px) 100vw, 82vw"
+          />
           {imageSection.caption ? (
             <figcaption className={styles.caption}>{imageSection.caption}</figcaption>
           ) : null}
@@ -147,7 +153,13 @@ const renderSection = (section: Section, index: number) => {
               const src = normalizeAsset(item.image);
               return (
                 <figure key={`gallery-item-${imageIndex}`} className={styles.galleryItem}>
-                  <img src={src} alt={item.caption ?? gallery.title ?? ""} />
+                  <Image
+                    src={src}
+                    alt={item.caption ?? gallery.title ?? ""}
+                    width={1200}
+                    height={900}
+                    sizes="(max-width: 700px) 100vw, 42vw"
+                  />
                   {item.caption ? (
                     <figcaption className={styles.galleryCaption}>
                       {item.caption}
@@ -181,7 +193,13 @@ const renderSection = (section: Section, index: number) => {
               {renderParagraphs(splitSection.body)}
             </div>
             <figure className={styles.splitFigure}>
-              <img src={src} alt={splitSection.alt ?? splitSection.title ?? ""} />
+              <Image
+                src={src}
+                alt={splitSection.alt ?? splitSection.title ?? ""}
+                width={1200}
+                height={900}
+                sizes="(max-width: 800px) 100vw, 45vw"
+              />
               {splitSection.caption ? (
                 <figcaption className={styles.splitCaption}>
                   {splitSection.caption}
@@ -370,7 +388,14 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
                 />
               )
             ) : (
-              <img src={heroImage} alt={project.title} />
+              <Image
+                src={heroImage}
+                alt={project.title}
+                width={1800}
+                height={1200}
+                sizes="100vw"
+                priority
+              />
             )}
           </div>
         </article>

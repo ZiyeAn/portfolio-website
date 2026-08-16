@@ -6,6 +6,7 @@ import { MorphingText } from "@/components/ui/morphing-text";
 import AboutCard from "@/components/AboutCard";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 
@@ -67,10 +68,13 @@ export default function Home() {
             </a>
           </div>
         </div>
-        <img
+        <Image
           src="/assets/index/contact.webp"
           alt="Contact"
+          width={1920}
+          height={1080}
           className={styles.contactImage}
+          sizes="100vw"
         />
       </section>
     </div>

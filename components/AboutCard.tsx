@@ -4,6 +4,7 @@
 import { useState } from "react";
 import type { MouseEvent } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MorphingText } from "@/components/ui/morphing-text";
 import { CometCard } from "@/components/ui/comet-card";
 import styles from "./AboutCard.module.css";
@@ -50,9 +51,11 @@ export default function AboutCard() {
           onMouseMove={handleMouseMove}
         >
           {isHovering && (
-            <img
+            <Image
               src="/assets/index/viewMore.png"
               alt="View more"
+              width={400}
+              height={180}
               className={styles.hoverLabel}
               style={{
                 left: `${labelPosition.x}px`,
@@ -63,10 +66,13 @@ export default function AboutCard() {
           )}
           <div className={styles.aboutGrid}>
             <div className={styles.aboutMedia}>
-              <img
+              <Image
                 src="/assets/index/dish.webp"
                 alt="Decorative plate"
+                width={1200}
+                height={900}
                 className={styles.aboutImage}
+                sizes="(max-width: 768px) 92vw, 700px"
               />
               <div className={styles.aboutTextWrap}>
                 <MorphingText

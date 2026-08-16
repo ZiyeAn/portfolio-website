@@ -1,7 +1,7 @@
 "use client";
 
-/* eslint-disable @next/next/no-img-element */
 import React from "react";
+import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./PlaygroundGallery.module.css";
 
@@ -22,6 +22,8 @@ const normalizeImage = (src?: string) => {
   if (src.startsWith("http")) return src;
   return `/${src.replace(/^(\.\.\/)+/, "").replace(/^\//, "")}`;
 };
+
+const toWebVideo = (src: string) => src.replace(/\.gif$/i, ".webm");
 
 const buildProjectHref = (id: string) => {
   const cleaned = id.replace(/^\/works\//, "").replace(/\.html$/i, "");
@@ -110,11 +112,27 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
                 aria-label={`View details for ${project.title}`}
               >
                 <div className={styles.projectImageWrapper}>
-                  <img
-                    src={imageSrc}
-                    alt={project.title}
-                    className={styles.projectImage}
-                  />
+                  {/\.gif$/i.test(imageSrc) ? (
+                    <video
+                      src={toWebVideo(imageSrc)}
+                      aria-label={project.title}
+                      className={styles.projectImage}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      preload={index < 8 ? "auto" : "metadata"}
+                    />
+                  ) : (
+                    <Image
+                      src={imageSrc}
+                      alt={project.title}
+                      fill
+                      className={styles.projectImage}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={index < 8}
+                    />
+                  )}
                   <div className={styles.projectOverlay}>
                     <span>{project.title}</span>
                   </div>

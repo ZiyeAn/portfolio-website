@@ -4,16 +4,18 @@
 
 @font-face {
   font-family: 'huiwen';
-  src: url('/assets/huwenfangsong.001.ttf') format('truetype');
+  src: url('/assets/huwenfangsong-latin.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'jetbrains-mono';
-  src: url('/assets/JetBrainsMono-Thin.ttf') format('truetype');
+  src: url('/assets/JetBrainsMono-Thin-latin.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 
@@ -30,6 +32,8 @@ body, html {
 }
 
 :root {
+    --font-geist-sans: Arial, Helvetica, sans-serif;
+    --font-geist-mono: 'jetbrains-mono', monospace;
     /* Color tokens */
     --color-text: #353534;
     --color-text-muted: #6b6a68;

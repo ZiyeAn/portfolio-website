@@ -1,7 +1,6 @@
 "use client";
-/* eslint-disable @next/next/no-img-element */
-
 import React from "react";
+import Image from "next/image";
 import styles from "./ProjectDetail.module.css";
 import rawProjects from "@/data/playground.json";
 import { BlurFade } from "@/components/ui/blur-fade";
@@ -39,6 +38,8 @@ const normalizeAsset = (src?: string) => {
   if (/^https?:/i.test(src)) return src;
   return `/${src.replace(/^(\.\.\/)+/, "").replace(/^\//, "")}`;
 };
+
+const toWebVideo = (src: string) => src.replace(/\.gif$/i, ".webm");
 
 const extractDriveId = (value: string) => {
   const trimmed = value.trim();
@@ -225,13 +226,26 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               inView
             >
               <div className={styles.imageFrame}>
-                <img
-                  src={imageSrc}
-                  alt={`${project.title} image ${index + 1}`}
-                  loading="lazy"
-                  decoding="async"
-                  fetchPriority="low"
-                />
+                {/\.gif$/i.test(imageSrc) ? (
+                  <video
+                    src={toWebVideo(imageSrc)}
+                    aria-label={`${project.title} animation ${index + 1}`}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload={index < 2 ? "auto" : "metadata"}
+                  />
+                ) : (
+                  <Image
+                    src={imageSrc}
+                    alt={`${project.title} image ${index + 1}`}
+                    width={1600}
+                    height={1200}
+                    sizes="(max-width: 900px) 100vw, 72vw"
+                    priority={index < 2}
+                  />
+                )}
               </div>
             </BlurFade>
           ))}
