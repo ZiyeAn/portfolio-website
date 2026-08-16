@@ -1,31 +1,79 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import styles from "./TopNav.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { t } from "@/lib/i18n";
 
 export default function TopNav() {
+  const pathname = usePathname();
+  const { language, setLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasLightText, setHasLightText] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
 
   const evaluateTextTone = useCallback(() => {
     if (typeof window === "undefined" || !navRef.current) return;
-    const computed = window.getComputedStyle(navRef.current);
-    const color = computed.color;
-    const rgbMatch = color.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/i);
 
-    if (!rgbMatch) {
+    const alwaysLightRoutes = new Set([
+      "/projects",
+      "/playground",
+      "/thoughts",
+      "/works",
+      "/writing",
+    ]);
+    if (alwaysLightRoutes.has(pathname)) {
+      setHasLightText(true);
+      return;
+    }
+    if (pathname === "/about") {
       setHasLightText(false);
       return;
     }
 
-    const r = Number(rgbMatch[1]);
-    const g = Number(rgbMatch[2]);
-    const b = Number(rgbMatch[3]);
-    const brightness = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-    setHasLightText(brightness > 0.75);
-  }, []);
+    const navBottom = navRef.current.getBoundingClientRect().bottom;
+    const elements = document.elementsFromPoint(
+      Math.round(window.innerWidth / 2),
+      Math.min(window.innerHeight - 1, Math.ceil(navBottom + 2))
+    );
+    const isOverHomeDarkSection = elements.some((element) =>
+      element.closest(".works-section, .contact-section")
+    );
+    if (pathname === "/") {
+      setHasLightText(isOverHomeDarkSection);
+      return;
+    }
+
+    const parseBackground = (value: string) => {
+      const match = value.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?/i);
+      if (!match) return null;
+      const alpha = match[4] === undefined ? 1 : Number(match[4]);
+      if (alpha < 0.1) return null;
+      return [Number(match[1]), Number(match[2]), Number(match[3])] as const;
+    };
+
+    let background: readonly [number, number, number] | null = null;
+    for (const hit of elements) {
+      if (navRef.current.contains(hit)) continue;
+      let current: Element | null = hit;
+      while (current && current !== document.documentElement) {
+        background = parseBackground(window.getComputedStyle(current).backgroundColor);
+        if (background) break;
+        current = current.parentElement;
+      }
+      if (background) break;
+    }
+
+    if (!background) {
+      setHasLightText(false);
+      return;
+    }
+    const [r, g, b] = background;
+    const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+    setHasLightText(luminance < 0.55);
+  }, [pathname]);
 
   useEffect(() => {
     if (typeof window === "undefined") return undefined;
@@ -38,27 +86,12 @@ export default function TopNav() {
     };
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", evaluateTextTone, { passive: true });
     evaluateTextTone();
-
-    const colorScheme = window.matchMedia?.("(prefers-color-scheme: dark)");
-    const handleSchemeChange = () => evaluateTextTone();
-    if (colorScheme) {
-      if (colorScheme.addEventListener) {
-        colorScheme.addEventListener("change", handleSchemeChange);
-      } else if (colorScheme.addListener) {
-        colorScheme.addListener(handleSchemeChange);
-      }
-    }
 
     return () => {
       window.removeEventListener("resize", handleResize);
-      if (colorScheme) {
-        if (colorScheme.removeEventListener) {
-          colorScheme.removeEventListener("change", handleSchemeChange);
-        } else if (colorScheme.removeListener) {
-          colorScheme.removeListener(handleSchemeChange);
-        }
-      }
+      window.removeEventListener("scroll", evaluateTextTone);
     };
   }, [evaluateTextTone]);
 
@@ -93,7 +126,7 @@ export default function TopNav() {
           aria-controls="top-nav-links"
           aria-expanded={menuOpen}
         >
-          <span className={styles.srOnly}>Toggle navigation</span>
+          <span className={styles.srOnly}>{t("toggleNavigation", language)}</span>
           <span className={styles.menuIcon} aria-hidden="true" />
         </button>
         <div
@@ -108,22 +141,32 @@ export default function TopNav() {
             >
               Ziye An
             </Link>
+            <div className={`${styles.languageSwitch} ${styles.languageSwitchDesktop}`} aria-label="Language / 语言">
+              <button type="button" className={language === "en" ? styles.languageActive : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
+              <span aria-hidden="true">/</span>
+              <button type="button" className={language === "zh" ? styles.languageActive : ""} onClick={() => setLanguage("zh")} aria-pressed={language === "zh"}>中文</button>
+            </div>
           </div>
           <div className={styles.navCenter}>
             <Link href="/projects" onClick={closeMenu}>
-              Projects
+              {t("projects", language)}
             </Link>
             <Link href="/playground" onClick={closeMenu}>
-              Playground
+              {t("playground", language)}
             </Link>
             <Link href="/thoughts" onClick={closeMenu}>
-              Thoughts
+              {t("thoughts", language)}
             </Link>
           </div>
           <div className={styles.navRight}>
             <Link href="/about" onClick={closeMenu}>
-              About
+              {t("about", language)}
             </Link>
+            <div className={`${styles.languageSwitch} ${styles.languageSwitchMobile}`} aria-label="Language / 语言">
+              <button type="button" className={language === "en" ? styles.languageActive : ""} onClick={() => setLanguage("en")} aria-pressed={language === "en"}>EN</button>
+              <span aria-hidden="true">/</span>
+              <button type="button" className={language === "zh" ? styles.languageActive : ""} onClick={() => setLanguage("zh")} aria-pressed={language === "zh"}>中文</button>
+            </div>
           </div>
         </div>
       </div>

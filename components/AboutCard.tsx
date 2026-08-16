@@ -8,6 +8,7 @@ import Image from "next/image";
 import { MorphingText } from "@/components/ui/morphing-text";
 import { CometCard } from "@/components/ui/comet-card";
 import styles from "./AboutCard.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
 
 const ABOUT_TEXTS = [
   "UX_Design",
@@ -18,7 +19,10 @@ const ABOUT_TEXTS = [
   "Game",
 ];
 
+const ABOUT_TEXTS_ZH = ["UX_设计", "3D_建模", "摄影", "艺术", "编程", "游戏"];
+
 export default function AboutCard() {
+  const { language } = useLanguage();
   const [isHovering, setIsHovering] = useState(false);
   const [labelPosition, setLabelPosition] = useState({ x: 0, y: 0 });
 
@@ -76,7 +80,7 @@ export default function AboutCard() {
               />
               <div className={styles.aboutTextWrap}>
                 <MorphingText
-                  texts={ABOUT_TEXTS}
+                  texts={language === "zh" ? ABOUT_TEXTS_ZH : ABOUT_TEXTS}
                   className={styles.aboutText}
                 />
               </div>

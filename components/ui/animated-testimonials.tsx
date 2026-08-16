@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import styles from "./AnimatedTestimonials.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
 
 type Testimonial = {
   quote: string;
@@ -21,6 +22,7 @@ export const AnimatedTestimonials = ({
   testimonials: Testimonial[];
   autoplay?: boolean;
 }) => {
+  const { language } = useLanguage();
   const [active, setActive] = useState(0);
   const total = testimonials.length;
 
@@ -136,14 +138,14 @@ export const AnimatedTestimonials = ({
           <button
             onClick={handlePrev}
             className={`${styles.controlButton} ${styles.controlButtonPrev}`}
-            aria-label="Previous project"
+            aria-label={language === "zh" ? "上一个项目" : "Previous project"}
           >
             <IconArrowLeft className={styles.controlIcon} />
           </button>
           <button
             onClick={handleNext}
             className={`${styles.controlButton} ${styles.controlButtonNext}`}
-            aria-label="Next project"
+            aria-label={language === "zh" ? "下一个项目" : "Next project"}
           >
             <IconArrowRight className={styles.controlIcon} />
           </button>

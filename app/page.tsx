@@ -1,3 +1,5 @@
+"use client";
+
 import TopNav from "@/components/TopNav";
 import HandsMenu from "@/components/HandsMenu";
 import LogoIntro from '@/components/LogoIntro';
@@ -8,9 +10,12 @@ import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { t } from "@/lib/i18n";
 
 
 export default function Home() {
+  const { language } = useLanguage();
   return (
     <div className={styles.staggerContainer}>
        <TopNav />
@@ -21,17 +26,23 @@ export default function Home() {
         </div>
       </section>
       {/* Spacer 占位，确保滚动时内容能推上来 */}
-      <div className="hero-spacer" />
+      <div className="hero-spacer home-snap-target" />
       {/* About Section */}
-      <section id="about" className={`content-section ${styles.aboutSection}`}>
+      <section
+        id="about"
+        className={`content-section home-snap-target ${styles.aboutSection}`}
+      >
         <AboutCard />
       </section>
       {/* Works Section */}
-      <section id="works" className="content-section works-section">
+      <section
+        id="works"
+        className="content-section works-section home-snap-target"
+      >
         <div className={styles.sectionHeader}>
-          <h2>Seasonal Specials</h2>
+          <h2>{t("seasonalSpecials", language)}</h2>
           <Link href="/projects" className={styles.sectionLink}>
-            See more works →
+            {t("seeMoreWorks", language)}
           </Link>
         </div>
         <SelectedWorksSection />
@@ -39,10 +50,10 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className={`content-section contact-section ${styles.contactImageSection}`}
+        className={`content-section contact-section home-snap-target ${styles.contactImageSection}`}
       >
         <div className={styles.contactInfo}>
-          <h2>Contact</h2>
+          <h2>{t("contact", language)}</h2>
           <div className={styles.contactLinksRow}>
             <a
               href="mailto:ziyean076@gmail.com"

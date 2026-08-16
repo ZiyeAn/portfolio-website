@@ -2,24 +2,21 @@
 
 import React from "react";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
-import projectsData from "@/data/playground.json";
+import projectsData from "@/data/projects.json";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizeProject } from "@/lib/i18n";
 
 type Project = {
+  id: string;
   title: string;
-  selected_work?: boolean;
+  subtitle?: string;
   thumbnail?: string;
   tags?: string[];
-  id?: string;
-  details?: {
-    description?: string;
-    timeline?: string;
-    images?: string[];
-  };
   intro?: string;
-};
-
-type WorksData = {
-  projects?: Project[];
+  meta?: {
+    timeline?: string;
+  };
+  sections?: Array<{ type?: string; body?: string }>;
 };
 
 // 更强健的路径归一化
@@ -40,50 +37,36 @@ const stripHtml = (html?: string): string =>
 
 const toProjectHref = (id?: string): string | undefined => {
   if (!id) return undefined;
-  const slug = id.replace(/^\/works\//, "").replace(/\.html$/i, "");
-  return `/works/${slug}`;
+  return `/projects/${id}`;
 };
 
 export default function SelectedWorksSection() {
-  const works = projectsData as WorksData;
-  const projects: Project[] = works.projects ?? [];
+  const { language } = useLanguage();
+  const projects = (projectsData as Project[]).map((project) =>
+    localizeProject(project, language)
+  );
 
-  // 1) 过滤 selected_work
-  const selected = projects.filter((p) => p.selected_work);
-
-  // 2) 映射成 AnimatedTestimonials 需要的数据
-  const testimonials = selected.map((p) => {
-    const firstImg =
-      normalizeSrc(p.details?.images?.[0]) ||
-      normalizeSrc(p.thumbnail) ||
-      "/placeholder.png";
-
+  const testimonials = projects.map((project) => {
+    const firstTextSection = project.sections?.find(
+      (section) => section.type === "text" && section.body
+    );
     const quote =
-      stripHtml(p.details?.description) ||
-      stripHtml(p.intro) ||
+      stripHtml(project.subtitle) ||
+      stripHtml(project.intro) ||
+      stripHtml(firstTextSection?.body) ||
       "—";
-
     const designation =
-      p.details?.timeline || (p.tags?.length ? p.tags.join(" · ") : "");
+      project.meta?.timeline ||
+      (project.tags?.length ? project.tags.join(" · ") : "");
 
     return {
-      name: p.title || "Untitled",
+      name: project.title || "Untitled",
       designation,
       quote,
-      src: firstImg,
-      href: toProjectHref(p.id),
+      src: normalizeSrc(project.thumbnail) || "/placeholder.png",
+      href: toProjectHref(project.id),
     };
   });
-
-  // 开发期日志：确认每条 src 是否是以 /assets/ 或 http 开头
-  if (process.env.NODE_ENV === "development") {
-    console.table(
-      testimonials.map((t) => ({
-        name: t.name,
-        src: t.src,
-      }))
-    );
-  }
 
   return (
     <section className="w-full mt-12">

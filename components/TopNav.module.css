@@ -7,7 +7,7 @@
   z-index: 10000;
   background: transparent;
   background-color: transparent !important;
-  color: ;
+  color: #353534;
   font-family: "jetbrains-mono", monospace;
   backdrop-filter: blur(24px);
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -18,7 +18,7 @@
 }
 
 .topNavLightText {
-  color: #fdf7ee;
+  color: #f9f6ee;
 }
 
 .topNavLightText .menuToggle {
@@ -169,6 +169,51 @@
   outline: none;
 }
 
+.languageSwitch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+  font-family: "jetbrains-mono", monospace;
+}
+
+.languageSwitchDesktop {
+  display: none;
+}
+
+.languageSwitchMobile {
+  display: inline-flex;
+}
+
+.languageSwitch button {
+  border: 0;
+  padding: 0.35rem 0.15rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.86rem;
+  cursor: pointer;
+  opacity: 0.52;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.languageSwitch button:hover,
+.languageSwitch button:focus-visible,
+.languageSwitch .languageActive {
+  opacity: 1;
+  color: #820700;
+  outline: none;
+}
+
+.topNavLightText .navInner a:hover,
+.topNavLightText .navInner a:focus-visible,
+.topNavLightText .languageSwitch button:hover,
+.topNavLightText .languageSwitch button:focus-visible,
+.topNavLightText .languageSwitch .languageActive {
+  color: #ffd166;
+}
+
 .srOnly {
   position: absolute;
   width: 1px;
@@ -187,6 +232,14 @@
   }
 
   .menuToggle {
+    display: none;
+  }
+
+  .languageSwitchDesktop {
+    display: inline-flex;
+  }
+
+  .languageSwitchMobile {
     display: none;
   }
 
@@ -233,6 +286,7 @@
     justify-content: flex-end;
     justify-self: end;
     width: 100%;
+    gap: 0.75rem;
   }
 
   .brandDesktop {
@@ -246,17 +300,21 @@
 }
 
 @media (max-width: 767px) {
+  .navLinks,
   .topNavLightText .navLinks {
-    background: rgba(5, 5, 5, 0.92);
-    color: #fdf7ee;
+    background: #f9f6f1;
+    color: #353534;
   }
 
   .topNavLightText .navLinks a {
-    color: #fdf7ee;
+    color: #353534;
   }
 
   .topNavLightText .navLinks a:hover,
-  .topNavLightText .navLinks a:focus-visible {
-    color: #ffd166;
+  .topNavLightText .navLinks a:focus-visible,
+  .topNavLightText .navLinks .languageSwitch button:hover,
+  .topNavLightText .navLinks .languageSwitch button:focus-visible,
+  .topNavLightText .navLinks .languageSwitch .languageActive {
+    color: #820700;
   }
 }

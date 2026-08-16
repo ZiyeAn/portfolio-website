@@ -8,8 +8,11 @@ import ProjectsGallery from "@/components/ProjectsGallery";
 import SiteFooter from "@/components/SiteFooter";
 import projects from "@/data/projects.json";
 import styles from "./ProjectsPage.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { t } from "@/lib/i18n";
 
 export default function ProjectsPage() {
+  const { language } = useLanguage();
   const numericYears = projects
     .map((project) => {
       if (typeof project.year === "number") return project.year;
@@ -45,8 +48,8 @@ export default function ProjectsPage() {
       <div className={styles.pageInner}>
         <ProjectsGallery projects={projects} />
         <p className={styles.cta}>
-          Still hungry? Dessert is served in the{" "}
-          <Link href="/playground">Playground</Link>.
+          {t("stillHungry", language)}{" "}
+          <Link href="/playground">{t("playground", language)}</Link>.
         </p>
       </div>
       <SiteFooter />

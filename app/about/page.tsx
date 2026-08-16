@@ -1,3 +1,5 @@
+"use client";
+
 /* import TopNav from "@/components/TopNav";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -144,20 +146,21 @@ export default function AboutPage() {
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import styles from "./page.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+
 
 export default function AboutPage() {
+  const { language } = useLanguage();
   return (
     <>
       <div className={styles.container}>
         <TopNav />
         <p className={styles.message}>
-          This About Page is currently marinating.
-          {"\n"}
-          The chef (that’s me) is still deciding how much humor, sincerity,
-          {"\n"}
-          and shameless self-bragging to season it with.
-          {"\n"}
-          Please come back later to taste the final dish.
+          {language === "zh" ? (
+            <>这个关于页面还在腌制中。{"\n"}主厨（也就是我）仍在决定该加入多少幽默、真诚，{"\n"}以及毫不害羞的自我夸奖。{"\n"}欢迎稍后再回来品尝最终成品。</>
+          ) : (
+            <>This About Page is currently marinating.{"\n"}The chef (that’s me) is still deciding how much humor, sincerity,{"\n"}and shameless self-bragging to season it with.{"\n"}Please come back later to taste the final dish.</>
+          )}
         </p>
       </div>
       <SiteFooter />

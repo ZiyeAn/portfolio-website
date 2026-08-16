@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import styles from "./ProjectStory.module.css";
 import projectsData from "@/data/projects.json";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizeProject, t } from "@/lib/i18n";
 
 type ProjectData = (typeof projectsData)[number];
 
@@ -269,7 +273,9 @@ interface ProjectStoryProps {
   project: ProjectData;
 }
 
-export default function ProjectStory({ project }: ProjectStoryProps) {
+export default function ProjectStory({ project: rawProject }: ProjectStoryProps) {
+  const { language } = useLanguage();
+  const project = localizeProject(rawProject, language);
   const heroImage = normalizeAsset(project.thumbnail);
   const rawHeroVideo = project.meta?.video?.trim();
   const heroVideoIsDrive = !!rawHeroVideo && rawHeroVideo.includes("drive.google.com");
@@ -294,7 +300,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
       label:
         typeof link.label === "string" && link.label.trim()
           ? link.label.trim()
-          : "Open Link",
+          : t("openLink", language),
     }));
   const sections = project.sections ?? [];
 
@@ -305,7 +311,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
       <main className={styles.main}>
         <div className={styles.heroTopRow}>
           <Link href="/projects" className={styles.backLink}>
-            <span aria-hidden>←</span> Back to Projects
+            <span aria-hidden>←</span> {t("backToProjects", language)}
           </Link>
           {timeline ? (
             <span className={styles.timelineValue}>{timeline}</span>
@@ -313,7 +319,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
         </div>
         <article className={styles.hero}>
           <header className={styles.heroHeader}>
-            <span className={styles.srOnly}>Project</span>
+            <span className={styles.srOnly}>{t("project", language)}</span>
             <h1 className={styles.projectTitle}>{project.title}</h1>
             {project.subtitle ? (
               <p className={styles.projectSubtitle}>{project.subtitle}</p>
@@ -323,19 +329,19 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
           <div className={styles.metaPanel}>
             {role ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Role</span>
+                <span className={styles.metaLabel}>{t("role", language)}</span>
                 <span className={styles.metaValue}>{role}</span>
               </div>
             ) : null}
             {techStack.length ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Tech Stack</span>
+                <span className={styles.metaLabel}>{t("techStack", language)}</span>
                 <span className={styles.metaValue}>{techStack.join(", ")}</span>
               </div>
             ) : null}
             {project.tags?.length ? (
               <div className={`${styles.metaBlock} ${styles.tagsBlock}`}>
-                <span className={styles.metaLabel}>Tags</span>
+                <span className={styles.metaLabel}>{t("tags", language)}</span>
                 <div className={styles.metaTags}>
                   {project.tags.map((tag) => (
                     <span key={tag} className={styles.tagPill}>
@@ -347,7 +353,7 @@ export default function ProjectStory({ project }: ProjectStoryProps) {
             ) : null}
             {normalizedRelatedLinks.length ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>Related</span>
+                <span className={styles.metaLabel}>{t("related", language)}</span>
                 <div className={styles.metaLinks}>
                   {normalizedRelatedLinks.map((link, index) => (
                     <a

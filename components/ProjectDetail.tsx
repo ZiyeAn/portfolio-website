@@ -7,6 +7,8 @@ import { BlurFade } from "@/components/ui/blur-fade";
 import TopNav from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizeProject, t } from "@/lib/i18n";
 
 type ProjectData = (typeof rawProjects.projects)[number];
 
@@ -63,7 +65,9 @@ interface ProjectDetailProps {
   project: ProjectData;
 }
 
-export default function ProjectDetail({ project }: ProjectDetailProps) {
+export default function ProjectDetail({ project: rawProject }: ProjectDetailProps) {
+  const { language } = useLanguage();
+  const project = localizeProject(rawProject, language);
   const [showProcess, setShowProcess] = React.useState(false);
 
   const details: ProjectDetails = project.details ?? {};
@@ -104,7 +108,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
     label:
       typeof link.label === "string" && link.label.trim()
         ? link.label.trim()
-        : "Open Link",
+        : t("openLink", language),
   }));
   const tagLine = project.tags?.join(" · ");
   const hasMeta =
@@ -121,7 +125,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <aside className={styles.infoColumn}>
           <div className={styles.infoBlock}>
             <Link href="/playground" className={styles.projectCategory}>
-              ← Back to Playground
+              ← {t("playground", language)}
             </Link>
             <h1 className={styles.projectTitle}>{project.title}</h1>
             {timeline ? <p className={styles.timeline}>{timeline}</p> : null}
@@ -137,19 +141,19 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               <dl className={styles.metaList}>
                 {techStack.length ? (
                   <div className={styles.metaRow}>
-                    <dt>Tools</dt>
+                    <dt>{t("tools", language)}</dt>
                     <dd>{techStack.join(", ")}</dd>
                   </div>
                 ) : null}
                 {project.tags?.length ? (
                   <div className={styles.metaRow}>
-                    <dt>Tags</dt>
+                    <dt>{t("tags", language)}</dt>
                     <dd>{project.tags.join(", ")}</dd>
                   </div>
                 ) : null}
                 {normalizedRelatedLinks.length ? (
                   <div className={styles.metaRow}>
-                    <dt>Related</dt>
+                    <dt>{t("related", language)}</dt>
                     <dd className={styles.metaLinks}>
                       {normalizedRelatedLinks.map((link, index) => (
                         <a
@@ -175,7 +179,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 }`}
                 onClick={handleToggleProcess}
               >
-                {showProcess ? "Back to Images" : "View Process"}
+                {showProcess ? t("backToImages", language) : t("viewProcess", language)}
               </button>
             ) : null}
           </div>
@@ -253,7 +257,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           !driveVideos.length &&
           !videos.length &&
           !imageSources.length ? (
-            <div className={styles.emptyMedia}>Media coming soon.</div>
+            <div className={styles.emptyMedia}>{t("mediaComingSoon", language)}</div>
           ) : null}
         </section>
       </main>
@@ -265,11 +269,11 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           }`}
         >
           <div className={styles.processInner}>
-            <h2>Process &amp; Development</h2>
+            <h2>{t("processDevelopment", language)}</h2>
             <div className={styles.processSections}>
               {process.inspiration?.length ? (
                 <section>
-                  <h3>Inspirations</h3>
+                  <h3>{t("inspirations", language)}</h3>
                   <ul>
                     {process.inspiration.map((item, index) => (
                       <li key={`insp-${index}`}>{item}</li>
@@ -279,7 +283,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               ) : null}
               {process.development?.length ? (
                 <section>
-                  <h3>Development</h3>
+                  <h3>{t("development", language)}</h3>
                   <ul>
                     {process.development.map((item, index) => (
                       <li key={`dev-${index}`}>{item}</li>
@@ -289,7 +293,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
               ) : null}
               {process.images?.length ? (
                 <section>
-                  <h3>Testing &amp; Refinement</h3>
+                  <h3>{t("testingRefinement", language)}</h3>
                   <ul>
                     {process.images.map((item, index) => (
                       <li key={`testing-${index}`}>{item}</li>

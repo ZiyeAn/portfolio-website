@@ -4,6 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./PlaygroundGallery.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizeProject, t, tagZh } from "@/lib/i18n";
 
 export interface Project {
   id: string;
@@ -43,6 +45,7 @@ const buildTagList = (projects: Project[]) => {
 };
 
 export default function WorksGallery({ projects }: WorksGalleryProps) {
+  const { language } = useLanguage();
   const tags = React.useMemo(() => buildTagList(projects), [projects]);
   const [activeTag, setActiveTag] = React.useState<string>(tags[0] ?? "All");
 
@@ -53,31 +56,33 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
   }, [tags, activeTag]);
 
   const filteredProjects = React.useMemo(() => {
-    if (activeTag === "All") return projects;
-    return projects.filter((project) => project.tags?.includes(activeTag));
-  }, [projects, activeTag]);
+    const filtered = activeTag === "All"
+      ? projects
+      : projects.filter((project) => project.tags?.includes(activeTag));
+    return filtered.map((project) => localizeProject(project, language));
+  }, [projects, activeTag, language]);
 
   return (
     <div className={styles.galleryLayout}>
       <aside className={styles.sidebar}>
         <div className={styles.sidebarHeader}>
-          <h3>Filters</h3>
+          <h3>{t("filters", language)}</h3>
         </div>
         <div className={styles.mobileSelect}>
           <select
-            aria-label="Select a filter"
+            aria-label={t("selectFilter", language)}
             value={activeTag}
             onChange={(event) => setActiveTag(event.target.value)}
             className={styles.select}
           >
             {tags.map((tag) => (
               <option key={tag} value={tag}>
-                {tag}
+                {tag === "All" ? t("all", language) : language === "zh" ? (tagZh[tag] ?? tag) : tag}
               </option>
             ))}
           </select>
         </div>
-        <nav className={styles.tagList} aria-label="Project filters">
+        <nav className={styles.tagList} aria-label={t("projectFilters", language)}>
           {tags.map((tag) => {
             const isActive = tag === activeTag;
             return (
@@ -87,13 +92,13 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
                 onClick={() => setActiveTag(tag)}
                 className={`${styles.tagButton} ${isActive ? styles.tagButtonActive : ""}`}
               >
-                {tag}
+                {tag === "All" ? t("all", language) : language === "zh" ? (tagZh[tag] ?? tag) : tag}
               </button>
             );
           })}
         </nav>
         <div className={styles.sidebarFooter}>
-          <span>{filteredProjects.length} works</span>
+          <span>{filteredProjects.length} {t("works", language)}</span>
         </div>
       </aside>
 
@@ -143,7 +148,7 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
         })}
         {!filteredProjects.length ? (
           <div className={styles.emptyState}>
-            <p>No works match the selected tag yet.</p>
+            <p>{t("noMatchingWorks", language)}</p>
           </div>
         ) : null}
       </div>

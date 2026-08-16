@@ -11,6 +11,33 @@
 }
 
 @font-face {
+  font-family: 'huiwen-zh';
+  src: url('/assets/huwenfangsong.001.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: 'huiwen';
+  src: url('/assets/huwenfangsong.001.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+
+@font-face {
+  font-family: 'jetbrains-mono';
+  src: url('/assets/huwenfangsong.001.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+2E80-2EFF, U+3000-303F, U+31C0-31EF, U+3400-4DBF, U+4E00-9FFF, U+F900-FAFF, U+FE30-FE4F, U+FF00-FFEF;
+}
+
+@font-face {
   font-family: 'jetbrains-mono';
   src: url('/assets/JetBrainsMono-Thin-latin.woff2') format('woff2');
   font-weight: normal;
@@ -64,6 +91,11 @@ body {
     background: var(--color-bg);
     line-height: 1.6;
     font-family: 'huiwen';
+}
+
+html[lang="zh-CN"] {
+    --font-geist-sans: 'huiwen-zh', Arial, Helvetica, sans-serif;
+    --font-geist-mono: 'huiwen-zh', 'jetbrains-mono', monospace;
 }
 
 /* Global typography */
@@ -125,7 +157,16 @@ small { font-size: var(--step--1); color: var(--color-text-muted); }
     .top-nav .nav-inner { padding: 12px 24px; }
     .top-nav .nav-links a { margin-left: 28px; }
     }
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 3.5rem;
+}
+
+.home-snap-target {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
 
 h1{
     color: #9d0000;

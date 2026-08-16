@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./ProjectsGallery.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { localizeProject, t } from "@/lib/i18n";
 
 export interface Project {
   id: string;
@@ -33,13 +35,15 @@ const buildProjectHref = (id: string) => {
 const formatYearLabel = (year?: number | string) => {
   if (year === undefined || year === null) return "";
   const yearString = String(year).trim();
-  return yearString ? `Year ${yearString}` : "";
+  return yearString;
 };
 
 export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
+  const { language } = useLanguage();
   return (
     <div className={styles.gallery}>
-      {projects.map((project, index) => {
+      {projects.map((rawProject, index) => {
+        const project = localizeProject(rawProject, language);
         const imageSrc = normalizeImage(project.thumbnail);
         const href = buildProjectHref(project.id);
         const yearLabel = formatYearLabel(project.year);
@@ -50,10 +54,10 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
             <article className={styles.projectRow}>
               <div className={styles.yearColumn}>
                 {yearLabel ? (
-                  <span className={styles.yearLabel}>{yearLabel}</span>
+                  <span className={styles.yearLabel}>{t("year", language)} {yearLabel}</span>
                 ) : (
                   <span className={`${styles.yearLabel} ${styles.yearFallback}`}>
-                    Upcoming
+                    {t("upcoming", language)}
                   </span>
                 )}
                 <span className={styles.projectIndex}>{indexLabel}</span>
@@ -61,7 +65,7 @@ export default function ProjectsGallery({ projects }: ProjectsGalleryProps) {
               <div className={styles.infoColumn}>
                 <h2 className={styles.projectTitle}>{project.title}</h2>
                 <Link href={href} className={styles.projectLink}>
-                  View project ↗
+                  {t("viewProject", language)}
                 </Link>
               </div>
               <Link
