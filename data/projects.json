@@ -1,11 +1,11 @@
 [
   {
     "id": "lifemart",
-    "title": "LifeMart™  [WIP]",
+    "title": "LifeMart™",
     "subtitle": "",
-    "year": "",
+    "year": "2026",
     "tags": [],
-    "thumbnail": "assets/projects/lifemart/lifemartWIP.webp",
+    "thumbnail": "assets/projects/lifemart/LifeMart-1.webp",
     "intro": "",
     "meta": {
       "techStack": [
@@ -32,6 +32,23 @@
         "type": "text",
         "title": "Project Overview",
         "body": "LifeMart is an interactive system that examines how living beings become measurable inside market, biological, and emotional frameworks. Using a barcode scanner, a physical slider, and dynamic pricing algorithms, the project simulates the full journey of a life entering a retail logic: from pet, to species unit, to commodity, and—rarely—to an unquantifiable existence that resists valuation. Each scan generates a price label, breaking down how emotional value, ecological data, farming cost, labor, transport, and market forces shape the “worth” of a single creature. By pushing users to slide between layers of killability and care, LifeMart exposes the absurdity and violence of converting living beings into products, inviting viewers to reconsider what it means for a life to have value at all."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/LifeMart-1.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/LifeMart-3.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/LifeMart-2.webp"
+          },
+          {
+            "image": "assets/projects/lifemart/LifeMart-4.webp"
+          }
+        ]
       },
       {
         "type": "text",
@@ -62,8 +79,8 @@
       },
       {
         "type": "image",
-        "image": "assets/projects/lifemart/LifemartUserflow.webp",
-        "alt": "LifeMart Research"
+        "image": "assets/projects/lifemart/Lifemart Userflow.png",
+        "alt": "LifeMart Userflow"
       },
       {
         "type": "gallery",
