@@ -1,0 +1,33 @@
+.research { display: grid; gap: clamp(2rem, 5vw, 3.5rem); padding-top: 2rem; border-top: 1px solid #c9c5bd; scroll-margin-top: 90px; }
+.research p { margin: 0; font-size: 1rem; line-height: 1.8; }
+.header { display: grid; gap: 1.25rem; }
+.header .question { font-family: inherit; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.4; }
+.header > p:last-child { max-width: 850px; }
+.methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 1.5rem 0; border-block: 1px solid #c9c5bd; gap: 1rem; }
+.methods > div { display: flex; flex-direction: column-reverse; gap: .5rem; }
+.methods dt { font: 14px/1.5 Arial, sans-serif; color: #53534f; }
+.methods dd { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1; color: #075d80; }
+.findings { display: grid; }
+.finding { display: grid; grid-template-columns: 40px minmax(0, 1.7fr) minmax(0, 1fr); gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid #d9d6cf; }
+.finding:first-child { padding-top: 0; }
+.number { font: 16px/1.5 Arial, sans-serif; color: #075d80; }
+.findingBody { display: grid; gap: 1rem; }
+.finding h3 { font-size: 1.4rem; line-height: 1.35; }
+.implication { border-left: 2px solid #b8d4df; padding-left: 1.25rem; align-self: start; }
+.implication h4 { margin: 0 0 .75rem; font: 14px/1.5 Arial, sans-serif; color: #075d80; }
+.quote { margin: .25rem 0 0; }
+.quote p { font-family: inherit; font-size: 1.1rem; line-height: 1.65; }
+.quote figcaption { margin-top: .5rem; color: #62615b; font: 14px/1.5 Arial, sans-serif; }
+.materials, .direction { display: grid; gap: 1rem; min-width: 0; }
+.direction { padding: clamp(1.25rem, 3vw, 2rem); border-left: 3px solid #075d80; background: #e8edef; }
+.direction ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style-position: inside; gap: 1rem; padding-top: 1rem; }
+.direction li { font-size: 1rem; line-height: 1.6; }
+.direction li::marker { color: #075d80; }
+@media (max-width: 700px) {
+  .finding { grid-template-columns: 28px minmax(0, 1fr); gap: .75rem; }
+  .implication { grid-column: 2; margin-top: .5rem; }
+  .direction ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 380px) {
+  .direction ol { grid-template-columns: 1fr; }
+}

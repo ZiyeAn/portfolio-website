@@ -60,7 +60,7 @@ type ProjectTranslation = { title?: string; intro?: string; description?: string
 export const projectZh: Record<string, ProjectTranslation> = {
   lifemart: { title: "LifeMart™［进行中］", intro: "一项重新思考日常消费与生活方式的体验设计。" },
   "i-want-home-i-could-carry-with": { title: "一座我能随身携带的家", intro: "探索归属感、记忆与可携带空间的设计研究。" },
-  divedex: { intro: "一套结合智能潜水镜、实时海洋物种识别与配套手机应用的混合系统，用来记录并可视化潜水途中遇见的鱼类。" },
+  divedex: { intro: "一款潜水后的探索伙伴概念，帮助休闲潜水员从照片和视频中探索海洋生物、比较可能的识别结果，并将发现保存到个人收藏。" },
   labyrinth: { intro: "一款发生在黑暗迷宫中的双人非对称捉迷藏游戏：一人是试图逃离的生者，另一人是依靠声音追猎的幽灵。" },
   "chester-choiceworth": { intro: "一件把消费习惯转化为体验的互动装置：上传个人交易记录后，系统会打印为你量身定制的生活方式广告。" },
   spinphony: { intro: "一款俏皮的 Unity 平台游戏：迷路的音符 Do 使用自制唱盘控制器和街机按钮，旋转穿过节奏谜题。" },
@@ -100,6 +100,13 @@ export const projectZh: Record<string, ProjectTranslation> = {
 };
 
 const caseStudyTextZh: Record<string, string> = {
+  "User Research": "用户研究",
+  "Earlier Exploration": "早期探索",
+  "Earlier Phone App UI Design": "早期手机应用界面设计",
+  "Earlier Prototype: Planned Next Steps": "早期原型：当时规划的下一步",
+  "DiveDex explores how underwater photos and videos can become a starting point for learning and remembering after a dive. The revised concept helps recreational divers import their media, compare candidate species, learn distinguishing features, and save discoveries to My Ocean, a personal collection. The focus is on helping divers make sense of what they encountered and take part in the identification, rather than simply receiving a species name.": "DiveDex 探索如何让水下照片和视频成为潜水后学习与记录的起点。新版概念帮助休闲潜水员导入影像、比较候选物种、学习辨识特征，并将发现保存到个人收藏 My Ocean。重点在于帮助潜水员理解自己的水下相遇并参与识别判断，而不只是得到一个物种名称。",
+  "The project began with an exploration of smart goggles for real-time marine recognition and a companion phone app. The revised direction above focuses on the post-dive experience. The designs and prototypes below document the earlier concept, developed in Oct–Dec 2024 using Figma, Rhino, Google Coral Dev Board, TensorFlow.js, and Arduino.": "项目最初探索的是实时识别海洋生物的智能潜水镜，以及配套手机应用。上方的新版方向聚焦潜水后的体验。以下设计与原型记录了早期方案，于 2024 年 10–12 月使用 Figma、Rhino、Google Coral Dev Board、TensorFlow.js 和 Arduino 开发。",
+  "These screens belong to the original goggles-connected app concept. They are retained here as part of the earlier exploration, rather than as interfaces for the revised post-dive direction.": "这些界面属于最初连接智能潜水镜的应用概念，作为早期探索过程保留在此，并非新版潜后体验的界面。",
   "Project Overview": "项目概览",
   "LifeMart Research": "LifeMart 研究",
   "LifeMart Tech Stack": "LifeMart 技术栈",

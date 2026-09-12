@@ -180,7 +180,7 @@
   {
     "id": "divedex",
     "title": "DiveDex",
-    "subtitle": "Real-time Marine Recognition System for Recreational Divers",
+    "subtitle": "A Post-dive Discovery Companion for Recreational Divers",
     "year": 2025,
     "tags": [
       "Interaction",
@@ -188,30 +188,35 @@
       "AI"
     ],
     "thumbnail": "assets/projects/divedev/hero_img.webp",
-    "intro": "A hybrid system combining smart diving goggles with real-time marine species recognition and a companion mobile app that records and visualizes the fish encountered during a dive.",
+    "intro": "A post-dive companion concept that helps recreational divers explore marine life in their photos and videos, compare possible identifications, and save discoveries to a personal collection.",
     "meta": {
       "techStack": [
-        "Figma",
-        "Rhino",
-        "Google Coral Dev Board",
-        "TensorFlow.js",
-        "Arduino"
+        "Figma"
       ],
-      "timeline": "Oct – Dec 2024",
+      "timeline": "",
       "role": "Individual Project",
       "video": "",
       "relatedLinks": []
     },
     "sections": [
       {
-        "type": "image",
-        "image": "assets/projects/divedev/UI.webp",
-        "alt": "DiveDex Ideation and Research"
+        "type": "text",
+        "title": "Project Overview",
+        "body": "DiveDex explores how underwater photos and videos can become a starting point for learning and remembering after a dive. The revised concept helps recreational divers import their media, compare candidate species, learn distinguishing features, and save discoveries to My Ocean, a personal collection. The focus is on helping divers make sense of what they encountered and take part in the identification, rather than simply receiving a species name."
+      },
+      {
+        "type": "divedex-research",
+        "title": "User Research"
       },
       {
         "type": "text",
-        "title": "Project Overview",
-        "body": " This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters."
+        "title": "Earlier Exploration",
+        "body": "The project began with an exploration of smart goggles for real-time marine recognition and a companion phone app. The revised direction above focuses on the post-dive experience. The designs and prototypes below document the earlier concept, developed in Oct–Dec 2024 using Figma, Rhino, Google Coral Dev Board, TensorFlow.js, and Arduino."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/divedev/UI.webp",
+        "alt": "DiveDex Ideation and Research"
       },
       {
         "type": "image",
@@ -261,8 +266,8 @@
       },
       {
         "type": "text",
-        "title": "Phone App UI Design",
-        "body": ""
+        "title": "Earlier Phone App UI Design",
+        "body": "These screens belong to the original goggles-connected app concept. They are retained here as part of the earlier exploration, rather than as interfaces for the revised post-dive direction."
       },
       {
         "type": "image",
@@ -286,8 +291,8 @@
       },
       {
         "type": "text",
-        "title": "Future Iteration",
-        "body": "In the next stage, I plan to improve both performance and reliability:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
+        "title": "Earlier Prototype: Planned Next Steps",
+        "body": "At the end of the earlier prototype, I outlined the following possible next steps:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
       }
     ]
   },

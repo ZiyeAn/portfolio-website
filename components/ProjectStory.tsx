@@ -8,6 +8,7 @@ import styles from "./ProjectStory.module.css";
 import projectsData from "@/data/projects.json";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizeProject, t } from "@/lib/i18n";
+import DiveDexResearch from "@/components/DiveDexResearch";
 
 type ProjectData = (typeof projectsData)[number];
 
@@ -65,7 +66,8 @@ type Section =
   | GallerySection
   | ProcessStepsSection
   | VideoSection
-  | SplitSection;
+  | SplitSection
+  | { type: "divedex-research"; title?: string };
 
 type RelatedLink = {
   label?: string;
@@ -115,6 +117,8 @@ const renderParagraphs = (body?: string) => {
 
 const renderSection = (section: Section, index: number) => {
   switch (section.type) {
+    case "divedex-research":
+      return <DiveDexResearch key={`research-${index}`} />;
     case "text": {
       return (
         <section key={`text-${index}`} className={styles.section}>
