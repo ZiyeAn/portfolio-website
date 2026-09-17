@@ -42,6 +42,8 @@ export type UiKey = keyof typeof ui;
 export const t = (key: UiKey, language: Language) => ui[key][language];
 
 export const tagZh: Record<string, string> = {
+  "Visual Identity": "视觉识别",
+  "Web Development": "网站开发",
   "3D Modeling": "3D 建模",
   "Physical Computing": "实体交互",
   "Creative Coding": "创意编程",
@@ -55,9 +57,10 @@ export const tagZh: Record<string, string> = {
   Painting: "绘画",
 };
 
-type ProjectTranslation = { title?: string; intro?: string; description?: string };
+type ProjectTranslation = { title?: string; intro?: string; subtitle?: string; role?: string; description?: string };
 
 export const projectZh: Record<string, ProjectTranslation> = {
+  "zq-sports": { intro: "为众祺匹克球俱乐部设计视觉识别与网站，将球场上的品牌形象延伸到线上。", subtitle: "视觉识别、网站设计与搭建", role: "视觉识别、网站设计与开发" },
   lifemart: { title: "LifeMart™［进行中］", intro: "一项重新思考日常消费与生活方式的体验设计。" },
   "i-want-home-i-could-carry-with": { title: "一座我能随身携带的家", intro: "探索归属感、记忆与可携带空间的设计研究。" },
   divedex: { intro: "一款潜水后的探索伙伴概念，帮助休闲潜水员从照片和视频中探索海洋生物、比较可能的识别结果，并将发现保存到个人收藏。" },
@@ -100,6 +103,15 @@ export const projectZh: Record<string, ProjectTranslation> = {
 };
 
 const caseStudyTextZh: Record<string, string> = {
+  "ZQ Sports is a visual identity and website project for Zhongqi Pickleball Club. I designed the club’s visual identity and website, then built the site to bring its match coverage, learning content, equipment, and club merchandise into one experience.": "ZQ Sports 是为众祺匹克球俱乐部完成的视觉识别与网站项目。我负责品牌视觉、网站设计与搭建，将赛事、知识、装备与俱乐部周边组织成统一的线上体验。",
+  "The identity pairs a circular club emblem with bold, textured lettering. Black, light grey, and yellow-green versions give the mark distinct expressions while keeping the same silhouette and typographic arrangement. The website carries this contrast into its large headings, fine rules, and bright accents.": "视觉识别以圆形俱乐部徽标搭配粗重、带有磨损质感的字母。黑色、浅灰与黄绿色三个版本保留相同的轮廓和文字结构，呈现不同的色彩表达。网站将这种对比延续到大标题、细线分隔与亮色强调中。",
+  "“Find Your Pace” introduces the site through oversized typography and an abstract court graphic. The page moves from global competitions to pickleball knowledge, paddle selection, and club merchandise. Alternating light, dark, and yellow-green sections give each part a clear place in the reading sequence.": "网站以 “Find Your Pace” 开场，通过大字排版与抽象球场图形建立第一印象。页面依次展开全球赛事、匹克球知识、球拍选择和俱乐部周边，以浅色、深色和黄绿色区块区分内容，形成清晰的阅读顺序。",
+  "The opening composition sets the pace with a split layout and court-inspired geometry. In the learning section, an editorial grid turns rules, technique, and terminology into individual articles that visitors can explore at their own pace.": "首屏以左右分栏和球场几何图形建立节奏。知识区采用文章式网格，将规则、技术和术语拆分为独立内容，方便访客按自己的节奏阅读。",
+  "I built the site with HTML, CSS, and JavaScript, using GSAP for entrance motion, the animated ball, and desktop scroll transitions. The implementation includes a collapsible mobile navigation, separate learning articles, and reduced-motion support. Club membership, paddle purchasing, and merchandise are presented as upcoming features; competition information is marked for confirmation rather than shown as a live results feed.": "网站使用 HTML、CSS 与 JavaScript 搭建，通过 GSAP 实现入场动效、球体运动和桌面端滚动过渡。实现包含可折叠的移动端导航、独立知识文章与减少动态效果的适配。俱乐部加入、球拍购买和周边入口标明尚未开放，赛事信息标记为待确认，并非实时赛况。",
+  "Visual Identity": "视觉识别",
+  "Website Design": "网站设计",
+  "Website Details": "网站细节",
+  "Website Development": "网站搭建",
   "User Research": "用户研究",
   "Earlier Exploration": "早期探索",
   "Earlier Phone App UI Design": "早期手机应用界面设计",
@@ -147,7 +159,7 @@ const localizeSections = (sections: unknown[]) => sections.map((section) => {
   return translated;
 });
 
-export function localizeProject<T extends { id: string; title: string; intro?: string; subtitle?: string; tags?: string[]; details?: { description?: string } }>(project: T, language: Language): T {
+export function localizeProject<T extends { id: string; title: string; intro?: string; subtitle?: string; tags?: string[]; meta?: { role?: string }; details?: { description?: string } }>(project: T, language: Language): T {
   if (language === "en") return project;
   const translated = projectZh[project.id] ?? {};
   const sections = (project as { sections?: unknown[] }).sections;
@@ -155,7 +167,8 @@ export function localizeProject<T extends { id: string; title: string; intro?: s
     ...project,
     title: translated.title ?? project.title,
     intro: translated.intro ?? project.intro,
-    subtitle: translated.intro ?? project.subtitle,
+    subtitle: translated.subtitle ?? translated.intro ?? project.subtitle,
+    ...(project.meta && translated.role ? { meta: { ...project.meta, role: translated.role } } : {}),
     tags: project.tags?.map((tag) => tagZh[tag] ?? tag),
     details: project.details
       ? { ...project.details, description: translated.description ?? project.details.description }

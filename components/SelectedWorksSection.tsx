@@ -15,11 +15,16 @@ type Project = {
   intro?: string;
   meta?: {
     timeline?: string;
+    role?: string;
   };
   sections?: Array<{ type?: string; body?: string }>;
 };
 
 const summaries: Record<string, { en: string; zh: string }> = {
+  "zq-sports": {
+    en: "From a mark on the court to a first impression on screen. A visual identity and website connecting Zhongqi’s competitions, knowledge, and gear.",
+    zh: "从球场上的一枚标志，到屏幕上的第一印象。为众祺体育设计视觉识别，并把它延伸成一个连接赛事、知识与装备的网站。",
+  },
   lifemart: {
     en: "How much is a life worth? Scan, price, and print a receipt in a supermarket where living beings become commodities.",
     zh: "一条生命值多少钱？在这间超市里，扫描、定价、打印小票，看看生命如何变成货架上的商品。",

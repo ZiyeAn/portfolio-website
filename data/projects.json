@@ -1,5 +1,83 @@
 [
   {
+    "id": "zq-sports",
+    "title": "ZQ Sports",
+    "subtitle": "Visual Identity, Website Design & Development",
+    "year": 2026,
+    "tags": [
+      "Visual Identity",
+      "Web Design",
+      "Web Development"
+    ],
+    "thumbnail": "assets/projects/zq-sports/logo-lime.webp",
+    "intro": "A visual identity and website for Zhongqi Pickleball Club, connecting the club’s presence on the court with its home online.",
+    "meta": {
+      "techStack": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "GSAP"
+      ],
+      "timeline": "",
+      "role": "Visual Identity, Web Design & Development",
+      "video": "",
+      "relatedLinks": []
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Project Overview",
+        "body": "ZQ Sports is a visual identity and website project for Zhongqi Pickleball Club. I designed the club’s visual identity and website, then built the site to bring its match coverage, learning content, equipment, and club merchandise into one experience."
+      },
+      {
+        "type": "text",
+        "title": "Visual Identity",
+        "body": "The identity pairs a circular club emblem with bold, textured lettering. Black, light grey, and yellow-green versions give the mark distinct expressions while keeping the same silhouette and typographic arrangement. The website carries this contrast into its large headings, fine rules, and bright accents."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "image": "assets/projects/zq-sports/logo-dark.webp"
+          },
+          {
+            "image": "assets/projects/zq-sports/logo-light.webp"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Website Design",
+        "body": "“Find Your Pace” introduces the site through oversized typography and an abstract court graphic. The page moves from global competitions to pickleball knowledge, paddle selection, and club merchandise. Alternating light, dark, and yellow-green sections give each part a clear place in the reading sequence."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/zq-sports/website-full.webp",
+        "alt": "ZQ Sports website showing the opening court graphic, global competitions, learning articles, paddle selection, and club merchandise."
+      },
+      {
+        "type": "text",
+        "title": "Website Details",
+        "body": "The opening composition sets the pace with a split layout and court-inspired geometry. In the learning section, an editorial grid turns rules, technique, and terminology into individual articles that visitors can explore at their own pace."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/zq-sports/website-hero.webp",
+        "alt": "ZQ Sports website opening: Find Your Pace and an abstract court graphic."
+      },
+      {
+        "type": "image",
+        "image": "assets/projects/zq-sports/website-learning.webp",
+        "alt": "ZQ Sports learning section with four articles on pickleball rules, technique, and terminology."
+      },
+      {
+        "type": "text",
+        "title": "Website Development",
+        "body": "I built the site with HTML, CSS, and JavaScript, using GSAP for entrance motion, the animated ball, and desktop scroll transitions. The implementation includes a collapsible mobile navigation, separate learning articles, and reduced-motion support. Club membership, paddle purchasing, and merchandise are presented as upcoming features; competition information is marked for confirmation rather than shown as a live results feed."
+      }
+    ]
+  },
+  {
     "id": "lifemart",
     "title": "LifeMart™",
     "subtitle": "",
