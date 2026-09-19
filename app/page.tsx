@@ -2,6 +2,8 @@
 
 import TopNav from "@/components/TopNav";
 import HomeOpening from "@/components/HomeOpening";
+import HomeWorksSnap from "@/components/HomeWorksSnap";
+import QuickLinks from "@/components/QuickLinks";
 import SelectedWorksSection from "@/components/SelectedWorksSection"; 
 import Link from "next/link";
 import Image from "next/image";
@@ -16,6 +18,7 @@ export default function Home() {
     <div className={styles.staggerContainer}>
        <TopNav />
       <HomeOpening />
+      <HomeWorksSnap />
       {/* Works Section */}
       <section
         id="works"
@@ -29,6 +32,7 @@ export default function Home() {
         </div>
         <SelectedWorksSection />
       </section>
+      <QuickLinks />
       {/* Contact Section */}
       <section
         id="contact"

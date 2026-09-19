@@ -42,11 +42,12 @@ export const AnimatedTestimonials = ({
     if (!start) return;
     const dx = event.clientX - start.x;
     const dy = event.clientY - start.y;
-    if (!start.horizontal && Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) {
+    // Keep ordinary vertical page scrolling, while allowing a relaxed diagonal swipe.
+    if (!start.horizontal && Math.abs(dy) > 18 && Math.abs(dy) > Math.abs(dx) * 1.8) {
       gesture.current = null;
       return;
     }
-    if (Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+    if (Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 0.55) {
       start.horizontal = true;
       suppressClick.current = true;
       event.currentTarget.setPointerCapture(event.pointerId);
@@ -57,7 +58,7 @@ export const AnimatedTestimonials = ({
     gesture.current = null;
     if (!start?.horizontal) return;
     const dx = event.clientX - start.x;
-    if (Math.abs(dx) >= 40) {
+    if (Math.abs(dx) >= 40 && Math.abs(dx) > Math.abs(event.clientY - start.y) * 0.45) {
       setActive(previous => (previous + (dx < 0 ? 1 : -1) + total) % total);
       setAutoplayCycle(cycle => cycle + 1);
     }
@@ -96,7 +97,7 @@ export const AnimatedTestimonials = ({
 
   useEffect(() => {
     const container = containerRef.current;
-    if (!autoplay || !pointerEffects || total <= 1 || !container) return;
+    if (!autoplay || total <= 1 || !container) return;
     let visible = false;
     let interval: ReturnType<typeof setInterval> | undefined;
     const sync = () => {
@@ -114,7 +115,7 @@ export const AnimatedTestimonials = ({
       observer.disconnect();
       document.removeEventListener("visibilitychange", sync);
     };
-  }, [autoplay, pointerEffects, total, handleNext, autoplayCycle]);
+  }, [autoplay, total, handleNext, autoplayCycle]);
 
   if (total === 0) {
     return null;
@@ -286,6 +287,15 @@ export const AnimatedTestimonials = ({
             ))}
           </AnimatePresence>
         </div>
+        {testimonials[active].href ? (
+          <p className={styles.imageHint}>
+            {language === "zh" ? (
+              "点击图片，查看项目详情 ↗"
+            ) : (
+              <><span className={styles.desktopHint}>Click</span><span className={styles.mobileHint}>Tap</span> image to view project details ↗</>
+            )}
+          </p>
+        ) : null}
       </div>
       <div className={styles.mobilePagination}>
         <span>{language === "zh" ? "左右滑动" : "Swipe to explore"}</span>
