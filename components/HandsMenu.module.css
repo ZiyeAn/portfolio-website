@@ -3,39 +3,32 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  margin: 2rem 0;
+  margin: clamp(6rem, 12vh, 8rem) 0 2rem;
   position: relative;
+  pointer-events: none;
 }
-.leftHand, .rightHand {
-  width: 30vw;
-  height: auto;
+.leftHand, .rightHand { width: 30vw; height: auto; }
+.leftHand { transform-origin: 12% 12%; }
+.rightHand { transform-origin: 88% 12%; }
+.handImage { width: 100%; height: auto; object-fit: contain; }
+
+@media (max-width: 767px) {
+  .hands { position: absolute; inset: 0; margin: 0; }
+  .leftHand, .rightHand { position: absolute; width: 64vw; max-width: 390px; }
+  .leftHand { left: -24vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
+  .rightHand { right: -24vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
 }
-.handImage {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
+
+/* Entrance lives on the image; scroll transforms stay on its parent. */
+@media (prefers-reduced-motion: no-preference) {
+  .leftHand .handImage { animation: enterLeft 1.25s cubic-bezier(.16, 1, .3, 1) 180ms both; }
+  .rightHand .handImage { animation: enterRight 1.25s cubic-bezier(.16, 1, .3, 1) 180ms both; }
 }
-.menuContainer {
-  margin: 2rem auto;
-  width: 80vw;
-  min-width: 300px;
-  min-height: 60px;
-  background: #eee;
-  border-radius: 8px;
-  position: relative;
-  opacity: 1;
-  transition: background 0.3s;
-  overflow: hidden;
+@keyframes enterLeft {
+  from { transform: translateX(-110%) rotate(-12deg); opacity: 0; }
+  to { transform: translateX(0) rotate(0); opacity: 1; }
 }
-.menuContent {
-  opacity: 0;
-  color: #fff;
-  padding: 2rem;
-  font-size: 1.2rem;
-}
-.catalogContainer {
-  margin-top: 2rem;
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 8px;
+@keyframes enterRight {
+  from { transform: translateX(110%) rotate(12deg); opacity: 0; }
+  to { transform: translateX(0) rotate(0); opacity: 1; }
 }

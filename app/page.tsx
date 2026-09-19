@@ -1,12 +1,8 @@
 "use client";
 
 import TopNav from "@/components/TopNav";
-import HandsMenu from "@/components/HandsMenu";
-import LogoIntro from '@/components/LogoIntro';
+import HomeOpening from "@/components/HomeOpening";
 import SelectedWorksSection from "@/components/SelectedWorksSection"; 
-import { MorphingText } from "@/components/ui/morphing-text";
-import AboutCard from "@/components/AboutCard";
-import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./page.module.css";
@@ -19,21 +15,7 @@ export default function Home() {
   return (
     <div className={styles.staggerContainer}>
        <TopNav />
-      <section id="hero" className="hero-layer">
-        <div className="hero-content">
-          <LogoIntro />
-          <HandsMenu />
-        </div>
-      </section>
-      {/* Spacer 占位，确保滚动时内容能推上来 */}
-      <div className="hero-spacer home-snap-target" />
-      {/* About Section */}
-      <section
-        id="about"
-        className={`content-section home-snap-target ${styles.aboutSection}`}
-      >
-        <AboutCard />
-      </section>
+      <HomeOpening />
       {/* Works Section */}
       <section
         id="works"

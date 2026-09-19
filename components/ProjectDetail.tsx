@@ -110,7 +110,6 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
         ? link.label.trim()
         : t("openLink", language),
   }));
-  const tagLine = project.tags?.join(" · ");
   const hasMeta =
     techStack.length ||
     (project.tags?.length ?? 0) > 0 ||

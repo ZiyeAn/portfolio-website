@@ -2,9 +2,9 @@ import type { Language } from "@/components/LanguageProvider";
 
 const ui = {
   projects: { en: "Projects", zh: "项目" },
-  playground: { en: "Playground", zh: "实验场" },
+  playground: { en: "Playground", zh: "探索" },
   thoughts: { en: "Thoughts", zh: "随想" },
-  about: { en: "About", zh: "关于" },
+  about: { en: "About", zh: "简介" },
   toggleNavigation: { en: "Toggle navigation", zh: "展开或收起导航" },
   seasonalSpecials: { en: "Seasonal Specials", zh: "本季精选" },
   seeMoreWorks: { en: "See more works →", zh: "查看更多作品 →" },

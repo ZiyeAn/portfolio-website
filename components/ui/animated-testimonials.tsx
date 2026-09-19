@@ -1,10 +1,11 @@
 "use client";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type PointerEvent } from "react";
+import { usePointerEffects } from "@/lib/usePointerEffects";
 import styles from "./AnimatedTestimonials.module.css";
 import { useLanguage } from "@/components/LanguageProvider";
 
@@ -23,8 +24,44 @@ export const AnimatedTestimonials = ({
   autoplay?: boolean;
 }) => {
   const { language } = useLanguage();
+  const pointerEffects = usePointerEffects();
+  const reducedMotion = useReducedMotion();
+  const containerRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
+  const [autoplayCycle, setAutoplayCycle] = useState(0);
   const total = testimonials.length;
+  const gesture = useRef<{ x: number; y: number; horizontal: boolean } | null>(null);
+  const suppressClick = useRef(false);
+  const onPointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    suppressClick.current = false;
+    if (window.innerWidth >= 768 || !event.isPrimary || event.button !== 0) return;
+    gesture.current = { x: event.clientX, y: event.clientY, horizontal: false };
+  };
+  const onPointerMove = (event: PointerEvent<HTMLDivElement>) => {
+    const start = gesture.current;
+    if (!start) return;
+    const dx = event.clientX - start.x;
+    const dy = event.clientY - start.y;
+    if (!start.horizontal && Math.abs(dy) > 12 && Math.abs(dy) > Math.abs(dx)) {
+      gesture.current = null;
+      return;
+    }
+    if (Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 1.2) {
+      start.horizontal = true;
+      suppressClick.current = true;
+      event.currentTarget.setPointerCapture(event.pointerId);
+    }
+  };
+  const onPointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    const start = gesture.current;
+    gesture.current = null;
+    if (!start?.horizontal) return;
+    const dx = event.clientX - start.x;
+    if (Math.abs(dx) >= 40) {
+      setActive(previous => (previous + (dx < 0 ? 1 : -1) + total) % total);
+      setAutoplayCycle(cycle => cycle + 1);
+    }
+  };
 
   const rotationAngles = useMemo(() => {
     return testimonials.map((item, index) => {
@@ -37,11 +74,13 @@ export const AnimatedTestimonials = ({
   const handleNext = useCallback(() => {
     if (total <= 1) return;
     setActive((prev) => (prev + 1) % total);
+    setAutoplayCycle(cycle => cycle + 1);
   }, [total]);
 
   const handlePrev = useCallback(() => {
     if (total <= 1) return;
     setActive((prev) => (prev - 1 + total) % total);
+    setAutoplayCycle(cycle => cycle + 1);
   }, [total]);
 
   useEffect(() => {
@@ -56,25 +95,46 @@ export const AnimatedTestimonials = ({
   const isActive = (index: number) => index === active;
 
   useEffect(() => {
-    if (!autoplay || total <= 1) {
-      return;
-    }
-    const interval = setInterval(() => {
-      setActive((prev) => (prev + 1) % total);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [autoplay, total]);
+    const container = containerRef.current;
+    if (!autoplay || !pointerEffects || total <= 1 || !container) return;
+    let visible = false;
+    let interval: ReturnType<typeof setInterval> | undefined;
+    const sync = () => {
+      clearInterval(interval);
+      if (visible && !document.hidden) interval = setInterval(handleNext, 5000);
+    };
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      sync();
+    });
+    observer.observe(container);
+    document.addEventListener("visibilitychange", sync);
+    return () => {
+      clearInterval(interval);
+      observer.disconnect();
+      document.removeEventListener("visibilitychange", sync);
+    };
+  }, [autoplay, pointerEffects, total, handleNext, autoplayCycle]);
 
   if (total === 0) {
     return null;
   }
   return (
-    <div className={styles.container}>
-      <div className={styles.textColumn}>
+    <div ref={containerRef} className={styles.container}
+      role="region" aria-roledescription="carousel" aria-label={language === "zh" ? "精选作品" : "Selected works"}
+      onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
+      onPointerCancel={() => { gesture.current = null; }}
+      onClickCapture={event => { if (suppressClick.current) { event.preventDefault(); event.stopPropagation(); suppressClick.current = false; } }}
+      onKeyDown={event => {
+        if (event.key === "ArrowLeft") { event.preventDefault(); handlePrev(); }
+        if (event.key === "ArrowRight") { event.preventDefault(); handleNext(); }
+      }}>
+
+      <div className={styles.textColumn} aria-live="polite" aria-atomic="true">
         <motion.div
           key={active}
           initial={{
-            y: 20,
+            y: reducedMotion ? 0 : 20,
             opacity: 0,
           }}
           animate={{
@@ -82,11 +142,11 @@ export const AnimatedTestimonials = ({
             opacity: 1,
           }}
           exit={{
-            y: -20,
+            y: reducedMotion ? 0 : -20,
             opacity: 0,
           }}
           transition={{
-            duration: 0.2,
+            duration: reducedMotion ? 0 : 0.2,
             ease: "easeInOut",
           }}
           className={styles.contentBlock}
@@ -109,7 +169,7 @@ export const AnimatedTestimonials = ({
             ) : null}
           </div>
           <motion.p className={styles.quote}>
-            {testimonials[active].quote.split(" ").map((word, index) => (
+            {!pointerEffects ? testimonials[active].quote : testimonials[active].quote.split(" ").map((word, index) => (
               <motion.span
                 key={index}
                 initial={{
@@ -123,7 +183,7 @@ export const AnimatedTestimonials = ({
                   y: 0,
                 }}
                 transition={{
-                  duration: 0.2,
+                  duration: reducedMotion ? 0 : 0.2,
                   ease: "easeInOut",
                   delay: 0.02 * index,
                 }}
@@ -161,7 +221,7 @@ export const AnimatedTestimonials = ({
                   opacity: 0,
                   scale: 0.9,
                   z: -100,
-                  rotate: rotationAngles[index] ?? 0,
+                  rotate: reducedMotion ? 0 : (rotationAngles[index] ?? 0) * (pointerEffects ? 1 : 0.3),
                 }}
                 animate={{
                   opacity: isActive(index) ? 1 : 0.7,
@@ -169,28 +229,31 @@ export const AnimatedTestimonials = ({
                   z: isActive(index) ? 0 : -100,
                   rotate: isActive(index)
                     ? 0
-                    : rotationAngles[index] ?? 0,
+                    : reducedMotion ? 0 : (rotationAngles[index] ?? 0) * (pointerEffects ? 1 : 0.3),
                   zIndex: isActive(index)
                     ? 40
                     : testimonials.length + 2 - index,
-                  y: isActive(index) ? [0, -30, 0] : 0,
+                  y: pointerEffects && isActive(index) ? [0, -30, 0] : 0,
                 }}
                 exit={{
                   opacity: 0,
                   scale: 0.9,
                   z: 100,
-                  rotate: rotationAngles[index] ?? 0,
+                  rotate: reducedMotion ? 0 : (rotationAngles[index] ?? 0) * (pointerEffects ? 1 : 0.3),
                 }}
                 transition={{
-                  duration: 0.4,
+                  duration: reducedMotion ? 0 : 0.4,
                   ease: "easeInOut",
                 }}
-                className="absolute inset-0 origin-bottom"
+                className={styles.imageSlide}
+                aria-hidden={!isActive(index)}
+                style={{ pointerEvents: isActive(index) ? "auto" : "none" }}
               >
                 <div className={styles.imageWrapper}>
                   {testimonial.href ? (
                     <Link
                       href={testimonial.href}
+                      draggable={false}
                       className={styles.imageLink}
                       aria-label={`View ${testimonial.name}`}
                       tabIndex={isActive(index) ? 0 : -1}
@@ -223,6 +286,19 @@ export const AnimatedTestimonials = ({
             ))}
           </AnimatePresence>
         </div>
+      </div>
+      <div className={styles.mobilePagination}>
+        <span>{language === "zh" ? "左右滑动" : "Swipe to explore"}</span>
+        <div className={styles.dots}>
+          {testimonials.map((item, index) => <button key={item.src} type="button"
+            aria-label={`${language === "zh" ? "查看" : "Show"} ${item.name}`}
+            aria-current={isActive(index) ? "true" : undefined}
+            onClick={() => {
+              setActive(index);
+              setAutoplayCycle(cycle => cycle + 1);
+            }}><span /></button>)}
+        </div>
+        <span>{active + 1} / {total}</span>
       </div>
     </div>
   );

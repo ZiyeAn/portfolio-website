@@ -397,3 +397,17 @@ a.secondary {
     gap: 0.75rem;
   }
 }
+
+@media (max-width: 767px) {
+  .aboutSection {
+    min-height: auto;
+    padding: 0 12px 64px;
+    background: var(--color-bg);
+  }
+}
+
+@media (max-width: 767px) {
+  .sectionHeader { width: 100%; margin: 0; gap: 2px; flex-shrink: 0; }
+  .sectionHeader h2 { font-size: clamp(1.5rem, 6.5vw, 2rem); line-height: 1.1; }
+  .sectionLink { font-size: 0.72rem; letter-spacing: 0.12em; }
+}

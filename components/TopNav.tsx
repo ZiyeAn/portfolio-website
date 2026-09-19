@@ -13,6 +13,7 @@ export default function TopNav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasLightText, setHasLightText] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
 
   const evaluateTextTone = useCallback(() => {
     if (typeof window === "undefined" || !navRef.current) return;
@@ -99,6 +100,48 @@ export default function TopNav() {
     evaluateTextTone();
   }, [evaluateTextTone, menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const nav = navRef.current;
+    if (!nav) return;
+    const scrollY = window.scrollY;
+    const body = document.body;
+    const previous = { position: body.style.position, top: body.style.top, width: body.style.width, overflow: body.style.overflow };
+    Object.assign(body.style, { position: "fixed", top: `-${scrollY}px`, width: "100%", overflow: "hidden" });
+    const blocked: Array<{ element: HTMLElement; inert: boolean }> = [];
+    let branch: HTMLElement = nav;
+    while (branch.parentElement) {
+      for (const sibling of branch.parentElement.children) {
+        if (sibling !== branch && sibling instanceof HTMLElement) {
+          blocked.push({ element: sibling, inert: sibling.inert });
+          sibling.inert = true;
+        }
+      }
+      if (branch.parentElement === body) break;
+      branch = branch.parentElement;
+    }
+    const toggle = toggleRef.current;
+    toggle?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { setMenuOpen(false); return; }
+      if (event.key !== "Tab") return;
+      const focusable = Array.from(nav.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'))
+        .filter(element => element.getClientRects().length > 0);
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      blocked.forEach(({ element, inert }) => { element.inert = inert; });
+      Object.assign(body.style, previous);
+      window.scrollTo({ top: scrollY, behavior: "instant" });
+      toggle?.focus({ preventScroll: true });
+    };
+  }, [menuOpen]);
+
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
   const navClassName = [
@@ -110,7 +153,7 @@ export default function TopNav() {
     .join(" ");
 
   return (
-    <nav ref={navRef} className={navClassName}>
+    <nav ref={navRef} className={navClassName} role={menuOpen ? "dialog" : undefined} aria-modal={menuOpen ? true : undefined} aria-label={language === "zh" ? "主导航" : "Main navigation"}>
       <div className={styles.navInner}>
         <Link
           href="/"
@@ -120,6 +163,7 @@ export default function TopNav() {
           Ziye An
         </Link>
         <button
+          ref={toggleRef}
           type="button"
           className={styles.menuToggle}
           onClick={toggleMenu}

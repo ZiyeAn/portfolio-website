@@ -28,8 +28,7 @@ const articleTitleZh: Record<string, string> = {
   "Thoughts on Reading The Clash of Civilizations and the Remaking of World Order": "读《文明的冲突与世界秩序的重建》随想",
   "LifeMart™ Design Brief": "LifeMart™ 设计简报",
   "My 23 kilograms Home": "我 23 公斤重的家",
-  "Why We Keep Building Ourselves: The Obsession with Humanoid Robots": "为什么我们不断复制自己：对人形机器人的执迷",
-  "Recent Thought on Funeral": "近期关于葬礼的思考",
+  "Why We Keep Building Ourselves: The Obsession with Humanoid Robots": "为什么我们不断复制自己：对人形机器人的执迷"
 };
 
 const writingTagZh: Record<string, string> = {

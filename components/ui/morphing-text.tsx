@@ -1,96 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useRef } from "react";
-
+import { useEffect, useId, useRef } from "react";
 import { cn } from "@/lib/utils";
-
-const useMorphingText = (
-  texts: string[],
-  morphTime = 2.5,
-  cooldownTime = 1.0,
-) => {
-  const textIndexRef = useRef(0);
-  const morphRef = useRef(0);
-  const cooldownRef = useRef(0);
-  const timeRef = useRef(new Date());
-
-  const text1Ref = useRef<HTMLSpanElement>(null);
-  const text2Ref = useRef<HTMLSpanElement>(null);
-
-  const setStyles = useCallback(
-    (fraction: number) => {
-      const [current1, current2] = [text1Ref.current, text2Ref.current];
-      if (!current1 || !current2) return;
-
-      current2.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-      current2.style.opacity = `${Math.pow(fraction, 0.4) * 100}%`;
-
-      const invertedFraction = 1 - fraction;
-      current1.style.filter = `blur(${Math.min(
-        8 / invertedFraction - 8,
-        100,
-      )}px)`;
-      current1.style.opacity = `${Math.pow(invertedFraction, 0.4) * 100}%`;
-
-      current1.textContent = texts[textIndexRef.current % texts.length];
-      current2.textContent = texts[(textIndexRef.current + 1) % texts.length];
-    },
-    [texts],
-  );
-
-  const doMorph = useCallback(() => {
-    morphRef.current -= cooldownRef.current;
-    cooldownRef.current = 0;
-
-    let fraction = morphRef.current / morphTime;
-
-    if (fraction > 1) {
-      cooldownRef.current = cooldownTime;
-      fraction = 1;
-    }
-
-    setStyles(fraction);
-
-    if (fraction === 1) {
-      textIndexRef.current++;
-    }
-  }, [setStyles, morphTime, cooldownTime]);
-
-  const doCooldown = useCallback(() => {
-    morphRef.current = 0;
-    const [current1, current2] = [text1Ref.current, text2Ref.current];
-    if (current1 && current2) {
-      current2.style.filter = "none";
-      current2.style.opacity = "100%";
-      current1.style.filter = "none";
-      current1.style.opacity = "0%";
-    }
-  }, []);
-
-  useEffect(() => {
-    let animationFrameId: number;
-
-    const animate = () => {
-      animationFrameId = requestAnimationFrame(animate);
-
-      const newTime = new Date();
-      const dt = (newTime.getTime() - timeRef.current.getTime()) / 1000;
-      timeRef.current = newTime;
-
-      cooldownRef.current -= dt;
-
-      if (cooldownRef.current <= 0) doMorph();
-      else doCooldown();
-    };
-
-    animate();
-    return () => {
-      cancelAnimationFrame(animationFrameId);
-    };
-  }, [doMorph, doCooldown]);
-
-  return { text1Ref, text2Ref };
-};
 
 interface MorphingTextProps {
   className?: string;
@@ -99,60 +10,110 @@ interface MorphingTextProps {
   cooldownTime?: number;
 }
 
-const Texts: React.FC<{
-  texts: string[];
-  morphTime?: number;
-  cooldownTime?: number;
-}> = ({ texts, morphTime, cooldownTime }) => {
-  const { text1Ref, text2Ref } = useMorphingText(texts, morphTime, cooldownTime);
+export function MorphingText({ texts, className, morphTime = 1.5, cooldownTime = 0.5 }: MorphingTextProps) {
+  const rootRef = useRef<HTMLDivElement>(null);
+  const firstRef = useRef<HTMLSpanElement>(null);
+  const secondRef = useRef<HTMLSpanElement>(null);
+  const filterId = `morph-${useId().replace(/:/g, "")}`;
+
+  useEffect(() => {
+    const root = rootRef.current;
+    const first = firstRef.current;
+    const second = secondRef.current;
+    if (!root || !first || !second || !texts.length) return;
+
+    const mobile = window.matchMedia("(max-width: 767px), (pointer: coarse)");
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let visible = false;
+    let index = 0;
+    let frame = 0;
+    let timer: ReturnType<typeof setInterval> | undefined;
+    let transitions: Animation[] = [];
+
+    const stop = () => {
+      cancelAnimationFrame(frame);
+      clearInterval(timer);
+      transitions.forEach(animation => animation.cancel());
+      transitions = [];
+    };
+    const resetText = () => {
+      first.textContent = texts[index];
+      second.textContent = texts[(index + 1) % texts.length];
+      first.style.opacity = "1";
+      second.style.opacity = "0";
+      first.style.filter = second.style.filter = "none";
+    };
+    const sync = () => {
+      stop();
+      resetText();
+      const lightweight = mobile.matches || reduced.matches;
+      root.style.filter = lightweight ? "none" : `url(#${filterId}) blur(0.6px)`;
+      if (!visible || document.hidden || reduced.matches || texts.length < 2) return;
+
+      if (mobile.matches) {
+        // A short crossfade replaces continuous blur work on touch screens.
+        timer = setInterval(() => {
+          transitions.forEach(animation => animation.cancel());
+          first.textContent = texts[index];
+          index = (index + 1) % texts.length;
+          second.textContent = texts[index];
+          transitions = [
+            first.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 260, fill: "forwards" }),
+            second.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, fill: "forwards" }),
+          ];
+        }, 2800);
+        return;
+      }
+
+      let start = performance.now();
+      const cooldownMs = Math.max(0, cooldownTime) * 1000;
+      const morphMs = Math.max(0.1, morphTime) * 1000;
+      const animate = (now: number) => {
+        const fraction = Math.min(1, Math.max(0, (now - start - cooldownMs) / morphMs));
+        if (fraction > 0) {
+          first.style.filter = `blur(${Math.min(8 / Math.max(1 - fraction, 0.001) - 8, 100)}px)`;
+          second.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
+          first.style.opacity = String(Math.pow(1 - fraction, 0.4));
+          second.style.opacity = String(Math.pow(fraction, 0.4));
+        }
+        if (fraction === 1) {
+          index = (index + 1) % texts.length;
+          resetText();
+          start = now;
+        }
+        frame = requestAnimationFrame(animate);
+      };
+      frame = requestAnimationFrame(animate);
+    };
+
+    const observer = new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting;
+      sync();
+    });
+    observer.observe(root);
+    mobile.addEventListener("change", sync);
+    reduced.addEventListener("change", sync);
+    document.addEventListener("visibilitychange", sync);
+    sync();
+    return () => {
+      stop();
+      observer.disconnect();
+      mobile.removeEventListener("change", sync);
+      reduced.removeEventListener("change", sync);
+      document.removeEventListener("visibilitychange", sync);
+    };
+  }, [texts, morphTime, cooldownTime, filterId]);
+
   return (
-    <>
-      <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
-        ref={text1Ref}
-      />
-      <span
-        className="absolute inset-x-0 top-0 m-auto inline-block w-full"
-        ref={text2Ref}
-      />
-    </>
+    <div ref={rootRef} className={cn(
+      "relative mx-auto w-full max-w-screen-md text-center font-sans font-bold leading-none min-h-[clamp(3rem,8vw,7rem)] text-[clamp(1.8rem,6vw,5rem)]", className,
+    )}>
+      <span className="sr-only">{texts.join(", ")}</span>
+      <span aria-hidden="true" ref={firstRef} className="absolute inset-x-0 top-0 m-auto inline-block w-full">{texts[0]}</span>
+      <span aria-hidden="true" ref={secondRef} className="absolute inset-x-0 top-0 m-auto inline-block w-full" style={{ opacity: 0 }}>{texts[1] ?? texts[0]}</span>
+      <svg aria-hidden="true" className="absolute h-0 w-0">
+        <defs><filter id={filterId}><feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 255 -140" /></filter></defs>
+      </svg>
+    </div>
   );
-};
-
-const SvgFilters: React.FC = () => (
-  <svg
-    id="filters"
-    className="fixed h-0 w-0"
-    preserveAspectRatio="xMidYMid slice"
-  >
-    <defs>
-      <filter id="threshold">
-        <feColorMatrix
-          in="SourceGraphic"
-          type="matrix"
-          values="1 0 0 0 0
-                  0 1 0 0 0
-                  0 0 1 0 0
-                  0 0 0 255 -140"
-        />
-      </filter>
-    </defs>
-  </svg>
-);
-
-export const MorphingText: React.FC<MorphingTextProps> = ({
-  texts,
-  className,
-  morphTime = 1.5,
-  cooldownTime = 0.5,
-}) => (
-  <div
-    className={cn(
-      "relative mx-auto w-full max-w-screen-md text-center font-sans font-bold leading-none [filter:url(#threshold)_blur(0.6px)] min-h-[clamp(3rem,8vw,7rem)] text-[clamp(1.8rem,6vw,5rem)]",
-      className,
-    )}
-  >
-    <Texts texts={texts} morphTime={morphTime} cooldownTime={cooldownTime} />
-    <SvgFilters />
-  </div>
-);
+}

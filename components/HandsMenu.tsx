@@ -1,91 +1,60 @@
 "use client";
-import { useEffect } from "react";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./HandsMenu.module.css";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function HandsMenu() {
+  const container = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const tl = gsap.timeline();
+    gsap.registerPlugin(ScrollTrigger);
+    const root = container.current;
+    if (!root) return;
+    const hero = root.closest("#hero");
+    const scene = root.closest(".opening-scene");
+    const media = gsap.matchMedia();
 
-    tl.from(`.${styles.leftHand}`, {
-      opacity: 0,
-      duration: 1,
-      x: "-50%",
-      ease: "circ.inOut",
-      delay: 0.3,
-    }, 0);
-    tl.from(`.${styles.rightHand}`, {
-      opacity: 0,
-      duration: 1,
-      x: "50%",
-      ease: "circ.inOut",
-      delay: 0.3,
-    }, 0);
+    media.add({
+      mobile: "(max-width: 767px)",
+      desktop: "(min-width: 768px)",
+      reduced: "(prefers-reduced-motion: reduce)",
+    }, (context) => {
+      const { mobile, reduced } = context.conditions!;
+      if (reduced || !hero || !scene) return;
+      const left = root.querySelector(`.${styles.leftHand}`);
+      const right = root.querySelector(`.${styles.rightHand}`);
+      // The trigger stays in document flow; only its decorative children move.
+      const timeline = gsap.timeline({
+        defaults: { ease: "none", duration: 1 },
+        scrollTrigger: {
+          trigger: scene,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+          invalidateOnRefresh: true,
+        },
+      });
+      timeline
+        .to(left, { rotation: mobile ? -8 : -20 }, 0)
+        .to(right, { rotation: mobile ? 8 : 20 }, 0);
+    }, root);
 
-    gsap.to(`.${styles.leftHand}`, {
-      scrollTrigger: {
-        trigger: `.${styles.leftHand}`,
-        start: "top 40%",
-        end: "top 10%",
-        scrub: true,
-      },
-      rotation: -50,
-      duration: 2,
-      ease: "power3.inOut",
-    });
-
-    gsap.to(`.${styles.rightHand}`, {
-      scrollTrigger: {
-        trigger: `.${styles.rightHand}`,
-        start: "top 40%",
-        end: "top 10%",
-        scrub: true,
-      },
-      rotation: 50,
-      duration: 2,
-      ease: "power3.inOut",
-    });
-
-
-    return () => {
-      gsap.killTweensOf([
-        `.${styles.leftHand}`,
-        `.${styles.rightHand}`
-      ]);
-      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    };
+    return () => media.revert();
   }, []);
 
   return (
-    <section>
-      <div className={styles.hands}>
-        <div className={styles.leftHand}>
-          <Image
-            src="/assets/index/left_hand.webp"
-            alt="Left Hand"
-            width={900}
-            height={842}
-            priority
-            sizes="(max-width: 768px) 60vw, 30vw"
-            className={styles.handImage}
-          />
-        </div>
-        <div className={styles.rightHand}>
-          <Image
-            src="/assets/index/right_hand.webp"
-            alt="Right Hand"
-            width={900}
-            height={842}
-            priority
-            sizes="(max-width: 768px) 60vw, 30vw"
-            className={styles.handImage}
-          />
-        </div>
+    <div ref={container} className={styles.hands} aria-hidden="true">
+      <div className={styles.leftHand}>
+        <Image src="/assets/index/left_hand.webp" alt="" width={900} height={842}
+          priority sizes="(max-width: 767px) 64vw, 30vw" className={styles.handImage} />
       </div>
-    </section>
+      <div className={styles.rightHand}>
+        <Image src="/assets/index/right_hand.webp" alt="" width={900} height={842}
+          priority sizes="(max-width: 767px) 64vw, 30vw" className={styles.handImage} />
+      </div>
+    </div>
   );
 }

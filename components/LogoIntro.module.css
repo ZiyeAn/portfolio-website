@@ -1,36 +1,39 @@
 .logoWrap {
   width: 100%;
-  margin: 0 auto;
-  margin-left: -2vw;
+  margin: 0 auto 0 -2vw;
 }
 
-/* SVG 自适应 + 动画变量 */
 .logo {
   width: 100%;
   height: auto;
   display: block;
-
-  /* 初始变量（JS 会把 --wipe-scale-x 从 0 切到 1 触发过渡）*/
-  --wipe-scale-x: 0;
-  --wipe-duration: 2s;
-  --wipe-delay: 0.5s;
-  --wipe-ease: cubic-bezier(0.22, 0.72, 0.22, 1);
 }
 
-/* 遮罩里的白矩形，用变量驱动显现动画 */
 .wipe {
   transform-origin: left;
-  transform-box: fill-box; /* 关键：让 transform 参照 SVG 自己的坐标盒 */
-  transform: scaleX(var(--wipe-scale-x));
-  transition: transform var(--wipe-duration) var(--wipe-ease) var(--wipe-delay);
+  transform-box: fill-box;
+  animation: reveal 1s cubic-bezier(0.22, 0.72, 0.22, 1) 0.3s both;
 }
 
-/* 无障碍：减少动效时直接显现 */
+.mobileLogo { display: none; }
+
+@keyframes reveal {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (max-width: 767px) {
+  .logoWrap { width: calc(100% - 32px); margin: 0 auto; }
+  .logo { display: none; }
+  .mobileLogo { display: block; width: 100%; height: auto; }
+  .mobileSignature { animation: signature 600ms ease-out 150ms both; }
+}
+
+@keyframes signature {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .logo {
-    --wipe-scale-x: 1 !important;
-  }
-  .wipe {
-    transition: none !important;
-  }
+  .wipe, .mobileSignature { animation: none; }
 }

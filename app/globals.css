@@ -283,6 +283,7 @@ h3{
 /* 推荐放在 app/globals.css 末尾，或新建 page.module.css 并用 className 绑定 */
 
 .hero-layer {
+  overflow: clip;
   position: fixed;
   inset: 0;
   z-index: 1;
@@ -326,6 +327,22 @@ h3{
   background: #333333;
 }
 
+/* Keep the desktop work carousel, including its heading, within one viewport. */
+@media (min-width: 768px) {
+  .works-section {
+    height: 100svh;
+    min-height: 0;
+    padding: clamp(4.5rem, 8vh, 6.5rem) clamp(1.25rem, 4vw, 3rem) clamp(2rem, 5vh, 4rem);
+    justify-content: flex-start;
+  }
+  .works-section > section {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
 .contact-section {
   background: #333333;
 }
@@ -359,3 +376,47 @@ h3{
 }
 
 @import "tailwindcss/utilities";
+
+/* Portrait composition: native scrolling and one continuous opening scene. */
+@media (max-width: 767px) {
+  html:has(.hero-layer) { scroll-snap-type: none; scroll-behavior: auto; }
+  .hero-layer {
+    position: relative;
+    inset: auto;
+    height: auto;
+    min-height: 0;
+    padding-top: 92px;
+    overflow: clip;
+  }
+  .hero-content {
+    padding: 0;
+    gap: 0;
+    min-height: clamp(550px, 72svh, 650px);
+  }
+  .hero-spacer { display: none; }
+  .home-snap-target { scroll-snap-align: none; }
+  .works-section { overflow: clip; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; scroll-snap-type: none; }
+}
+
+/* One sticky stage: the plate arrives, then the whole scene leaves together. */
+html:has(.opening-scene) { scroll-snap-type: none; }
+.opening-scene { position: relative; height: 180svh; }
+.opening-stage { position: sticky; top: 0; height: 100svh; overflow: clip; isolation: isolate; }
+.opening-stage .hero-layer { position: absolute; inset: 0; height: 100%; }
+.opening-plate { position: absolute; z-index: 3; top: 35%; left: 0; width: 100%; }
+@media (max-width: 767px) {
+  .opening-stage .hero-content { min-height: 0; height: 100%; }
+  .opening-plate { top: 58%; padding: 0 12px; }
+  .works-section {
+    height: 100svh;
+    min-height: 0;
+    padding: max(56px, env(safe-area-inset-top)) 20px max(12px, env(safe-area-inset-bottom));
+    justify-content: flex-start;
+    gap: 8px;
+  }
+  .works-section > section { flex: 1; min-height: 0; margin-top: 0; width: 100%; }
+}

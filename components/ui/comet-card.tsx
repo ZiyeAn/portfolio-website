@@ -7,6 +7,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { usePointerEffects } from "@/lib/usePointerEffects";
 
 export const CometCard = ({
   rotateDepth = 17.5,
@@ -18,6 +19,7 @@ export const CometCard = ({
   children: React.ReactNode;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const pointerEffects = usePointerEffects();
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -59,20 +61,20 @@ export const CometCard = ({
     <div className={cn("perspective-distant transform-3d", className)}>
       <motion.div
         ref={ref}
-        onMouseMove={handleMouseMove}
+        onMouseMove={pointerEffects ? handleMouseMove : undefined}
         onMouseLeave={handleMouseLeave}
         style={{
-          rotateX,
-          rotateY,
+          rotateX: pointerEffects ? rotateX : 0,
+          rotateY: pointerEffects ? rotateY : 0,
           /* ❌ 去掉背景干扰项 */
           boxShadow: "none",
           background: "transparent",
         }}
         initial={{ scale: 1 }}
-        whileHover={{
+        whileHover={pointerEffects ? {
           scale: 1.03,
           transition: { duration: 0.2 },
-        }}
+        } : undefined}
         className="relative rounded-2xl"
       >
         {children}

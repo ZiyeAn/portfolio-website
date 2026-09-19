@@ -2,7 +2,7 @@
   display: block;
   color: inherit;
   text-decoration: none;
-  cursor: pointer;
+  cursor: auto;
 }
 
 .aboutLink:focus-visible {
@@ -167,19 +167,6 @@
   width: 100%;
 }
 
-.hoverLabel {
-  position: absolute;
-  transform: translate(-50%, -140%);
-  width: clamp(55px, 6vw, 95px);
-  height: auto;
-  display: block;
-  pointer-events: none;
-  user-select: none;
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.15));
-  transition: opacity 0.15s ease, transform 0.15s ease;
-  z-index: 10;
-}
-
 @media (max-width: 768px) {
   .aboutCard {
     width: min(94vw, 700px);
@@ -199,9 +186,7 @@
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .aboutLink,
-  .aboutInner {
-    cursor: none;
-  }
+@media (max-width: 767px) {
+  .aboutCard { width: 100%; }
+  .aboutInner { padding: 16px 0; }
 }

@@ -318,3 +318,53 @@
     color: #820700;
   }
 }
+
+@media (max-width: 767px) {
+  .topNav {
+    backdrop-filter: none;
+    background-color: rgba(249, 246, 241, 0.96) !important;
+  }
+  .topNavLightText { background-color: rgba(51, 51, 51, 0.96) !important; }
+}
+
+@media (max-width: 767px) {
+  .topNavOpen,
+  .topNavOpen.topNavLightText {
+    height: 100dvh;
+    background-color: var(--color-bg) !important;
+    color: #353534;
+  }
+  .topNavOpen .navInner { height: 100%; align-items: flex-start; padding-top: max(8px, env(safe-area-inset-top)); }
+  .topNavOpen .brandMobile { padding-top: 8px; }
+  .topNavOpen .brandMobile, .topNavOpen .menuToggle { position: relative; z-index: 2; }
+  .navLinks {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: max(88px, env(safe-area-inset-top)) 24px max(40px, env(safe-area-inset-bottom));
+    border-radius: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    justify-content: center;
+    gap: 36px;
+  }
+  .navLeft { display: none; }
+  .navCenter, .navRight { gap: 36px; }
+  .navLinks a { font-family: 'huiwen'; font-size: clamp(1.4rem, 6vw, 1.75rem); line-height: 1.2; }
+  .languageSwitchMobile { margin-top: 32px; }
+  .languageSwitchMobile button { min-width: 44px; min-height: 44px; font-size: 1rem; }
+  .topNavOpen .menuToggle { width: 44px; height: 44px; border-color: transparent; }
+  .topNavOpen .menuToggle:focus-visible, .navLinks a:focus-visible {
+    outline: 2px solid #820700;
+    outline-offset: 4px;
+  }
+}
+@media (max-width: 767px) and (max-height: 560px) {
+  .navLinks { justify-content: flex-start; gap: 20px; }
+  .navCenter, .navRight { gap: 20px; }
+  .navLinks a { font-size: 1.25rem; }
+  .languageSwitchMobile { margin-top: 0; }
+}
