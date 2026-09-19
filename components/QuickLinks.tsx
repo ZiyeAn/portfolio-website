@@ -8,9 +8,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./QuickLinks.module.css";
 
 const links = [
-  { label: "PLAYGROUND", href: "/playground", number: "01", className: "playground" },
-  { label: "THOUGHTS", href: "/thoughts", number: "02", className: "thoughts" },
-  { label: "ABOUT ZIYE", href: "/about", number: "03", className: "about" },
+  { label: "PROJECTS", href: "/projects", number: "01", className: "projects" },
+  { label: "PLAYGROUND", href: "/playground", number: "02", className: "playground" },
+  { label: "THOUGHTS", href: "/thoughts", number: "03", className: "thoughts" },
+  { label: "ABOUT ZIYE", href: "/about", number: "04", className: "about" },
 ];
 
 // Tune the timing of the single bottle-cap/link scene from one place.

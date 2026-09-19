@@ -16,10 +16,11 @@ export default function HomeWorksSnap() {
 
       ScrollTrigger.create({
         trigger: works,
-        start: "top 80%",
+        // The opening scene remains free-scrolling; only settle once Works is near.
+        start: "top 42%",
         end: "top top",
         snap: {
-          snapTo: (_progress, trigger) => ((trigger?.direction ?? 1) > 0 ? 1 : 0),
+          snapTo: (progress, trigger) => ((trigger?.direction ?? 1) > 0 ? 1 : progress),
           delay: 0.08,
           duration: { min: 0.25, max: 0.65 },
           ease: "power2.out",

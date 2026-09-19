@@ -15,8 +15,8 @@
 @media (max-width: 767px) {
   .hands { position: absolute; inset: 0; margin: 0; }
   .leftHand, .rightHand { position: absolute; width: 64vw; max-width: 390px; }
-  .leftHand { left: -24vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
-  .rightHand { right: -24vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
+  .leftHand { left: -31vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
+  .rightHand { right: -31vw; top: clamp(296px, calc(58svh - 92px - 38vw + 96px), 396px); }
 }
 
 /* Entrance lives on the image; scroll transforms stay on its parent. */

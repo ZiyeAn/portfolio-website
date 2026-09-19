@@ -286,6 +286,14 @@ export const AnimatedTestimonials = ({
               </motion.div>
             ))}
           </AnimatePresence>
+          <div className={styles.mobileImageControls} aria-label={language === "zh" ? "切换项目" : "Change project"}>
+            <button type="button" onClick={handlePrev} aria-label={language === "zh" ? "上一个项目" : "Previous project"}>
+              <IconArrowLeft aria-hidden="true" />
+            </button>
+            <button type="button" onClick={handleNext} aria-label={language === "zh" ? "下一个项目" : "Next project"}>
+              <IconArrowRight aria-hidden="true" />
+            </button>
+          </div>
         </div>
         {testimonials[active].href ? (
           <p className={styles.imageHint}>

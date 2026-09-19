@@ -192,6 +192,9 @@ export default function TopNav() {
             </div>
           </div>
           <div className={styles.navCenter}>
+            <Link href="/" onClick={closeMenu}>
+              {t("home", language)}
+            </Link>
             <Link href="/projects" onClick={closeMenu}>
               {t("projects", language)}
             </Link>

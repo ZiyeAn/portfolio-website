@@ -1,6 +1,7 @@
 import type { Language } from "@/components/LanguageProvider";
 
 const ui = {
+  home: { en: "Home", zh: "首页" },
   projects: { en: "Projects", zh: "项目" },
   playground: { en: "Playground", zh: "探索" },
   thoughts: { en: "Thoughts", zh: "随想" },
