@@ -26,14 +26,18 @@ const summaries: Record<string, { en: string; zh: string }> = {
     zh: "从球场上的一枚标志，到屏幕上的第一印象。为众祺体育设计视觉识别，并把它延伸成一个连接赛事、知识与装备的网站。",
   },
   lifemart: {
-    en: "How much is a life worth? Scan, price, and print a receipt in a supermarket where living beings become commodities.",
-    zh: "一条生命值多少钱？在这间超市里，扫描、定价、打印小票，看看生命如何变成货架上的商品。",
+    en: "Who gets to price a life? Scan a human or animal, switch valuation systems with coupons, and discover what it takes to leave without a price.",
+    zh: "谁有权为生命定价？扫描人类或动物，用优惠券切换估值体系，体验离开定价逻辑需要付出怎样的努力。",
   },
   "i-want-home-i-could-carry-with": {
     en: "What if home could come with you? A wearable little house holds the belongings, habits, and memories that make somewhere feel like yours.",
     zh: "如果家能跟着我走呢？把物品、习惯和记忆装进一座可穿戴的小房子，带着熟悉的生活去往下一站。",
   },
   divedex: {
+    en: "What if your goggles could help you recognize the fish around you? Exploring marine recognition through hardware, underwater interfaces, and an early prototype.",
+    zh: "如果潜水镜能帮你认出身边的鱼呢？通过硬件设计、水下界面与早期原型，探索潜水中的海洋生物识别。",
+  },
+  "divedex-mobile-app": {
     en: "Back on land, still wondering what that fish was? Revisit your dive footage, compare species, and give your underwater discoveries a home.",
     zh: "上岸了，还惦记着刚才那条不认识的鱼？回看潜水影像、比较物种，把水下的偶遇收进自己的海洋收藏。",
   },

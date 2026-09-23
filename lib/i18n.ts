@@ -50,6 +50,8 @@ export const tagZh: Record<string, string> = {
   "Creative Coding": "创意编程",
   "Web Design": "网页设计",
   "UX Design": "用户体验设计",
+  "Design Research": "设计研究",
+  "Critical Design": "批判性设计",
   "Game Design": "游戏设计",
   "Data Visualization": "数据可视化",
   Illustration: "插画",
@@ -62,9 +64,10 @@ type ProjectTranslation = { title?: string; intro?: string; subtitle?: string; r
 
 export const projectZh: Record<string, ProjectTranslation> = {
   "zq-sports": { intro: "为众祺匹克球俱乐部设计视觉识别与网站，将球场上的品牌形象延伸到线上。", subtitle: "视觉识别、网站设计与搭建", role: "视觉识别、网站设计与开发" },
-  lifemart: { title: "LifeMart™［进行中］", intro: "一项重新思考日常消费与生活方式的体验设计。" },
+  lifemart: { title: "LifeMart™", subtitle: "谁有权为生命定价？", intro: "一件借用自助结账体验，探索人类与动物如何被不同制度定价的批判性设计装置。", role: "个人项目 · 研究、交互设计与装置制作" },
   "i-want-home-i-could-carry-with": { title: "一座我能随身携带的家", intro: "探索归属感、记忆与可携带空间的设计研究。" },
-  divedex: { intro: "一款潜水后的探索伙伴概念，帮助休闲潜水员从照片和视频中探索海洋生物、比较可能的识别结果，并将发现保存到个人收藏。" },
+  divedex: { subtitle: "用于海洋生物识别的智能潜水镜", intro: "结合工业设计、水下界面与设备端海洋生物识别原型的智能潜水镜概念。" },
+  "divedex-mobile-app": { subtitle: "休闲潜水员的潜后探索伙伴", intro: "回看潜水影像、比较候选物种，并将水下发现保存到个人收藏的手机应用概念。" },
   labyrinth: { intro: "一款发生在黑暗迷宫中的双人非对称捉迷藏游戏：一人是试图逃离的生者，另一人是依靠声音追猎的幽灵。" },
   "chester-choiceworth": { intro: "一件把消费习惯转化为体验的互动装置：上传个人交易记录后，系统会打印为你量身定制的生活方式广告。" },
   spinphony: { intro: "一款俏皮的 Unity 平台游戏：迷路的音符 Do 使用自制唱盘控制器和街机按钮，旋转穿过节奏谜题。" },
@@ -104,6 +107,77 @@ export const projectZh: Record<string, ProjectTranslation> = {
 };
 
 const caseStudyTextZh: Record<string, string> = {
+  "A visitor at LifeMart": "观众在 LifeMart 现场",
+  "Choosing human and animal products": "挑选人类与动物商品",
+  "Scanning a coupon at self-checkout": "在自助结账台扫描优惠券",
+  "Printing a valuation receipt": "打印估值小票",
+  "Early 3D installation study": "早期 3D 渲染设计",
+  "Early 3D render of the LifeMart store and checkout layout.": "LifeMart 商店与结账区域的早期 3D 渲染。",
+  "Early 3D installation study · Exploring the store and self-checkout layout.": "早期 3D 渲染设计 · 探索商品陈列与自助结账台的空间布局。",
+  "An early 3D study explored how the product display and self-checkout station could share one retail setting.": "通过早期 3D 渲染，探索商品陈列与自助结账台如何共同构成商店空间。",
+  "A life at the checkout": "当生命进入自助结账",
+  "LifeMart™ is a critical design installation staged as a pop-up store. Visitors pick up a packaged human or animal, scan its barcode, and use coupons to switch between systems of valuation. The same life acquires a different identity, image, and price depending on the system applied.\n\nFor humans, the lenses include the job market, insurance, and bodily resources; animals have their own corresponding categories. Visitors can choose any coupon directly. At checkout, a receipt makes the selected valuation tangible. Leaving without a price is also possible, but requires staff authorization.": "LifeMart™ 是一件以快闪商店为场景的批判性设计装置。观众拿起包装中的人类或动物，扫描条码，再使用优惠券切换估值体系。同一个生命，在不同体系中获得不同的身份、图像与价格。\n\n人类的估值视角包括工作市场、保险与身体资源，动物则有各自对应的分类。观众可以任意选择优惠券、直接切换，最后通过小票带走一次具体的估值结果。也可以不带走任何价格，但需要店员授权。",
+  "From research to an experience": "从研究命题到体验策略",
+  "I used secondary research to examine how institutions distinguish between lives that can be owned, used, protected, or mourned. The research brought together biopolitics, market value, and human–animal relationships, including the tensions between “zoe” and “bios,” and between killability and grievability.\n\nThis led to a design question: how could someone encounter these abstract distinctions through an everyday action? Self-checkout places the visitor at the moment a value is assigned. Coupons let them apply a different institutional lens, while the receipt turns that choice into something they can hold. I developed the valuation rules through secondary research and AI assistance; the prices belong to the work’s constructed scenario.": "我通过二手研究，考察制度如何区分可以被占有、使用、保护或哀悼的生命。研究连接生命政治、市场价值与人和动物的关系，包括 zoe 与 bios，以及“可被杀害”与“值得被哀悼”之间的张力。\n\n由此形成的设计问题是：如何让人通过日常行为，接触这些抽象的区分？自助结账把观众放在价值被赋予的时刻；优惠券让他们应用不同的制度视角；小票则把这次选择变成可以带走的实物。我通过二手研究并借助 AI 构建估值规则，作品中的价格服务于这一设计情境。",
+  "Secondary research: mapping the questions and systems behind life valuation.": "二手研究：梳理生命估值背后的问题与制度。",
+  "Testing how the idea comes across": "测试交互能否传达概念",
+  "Across approximately 5–6 rounds with around 10 participants, I asked people to explore without instructions, then discussed what they thought the work meant. Early slider and web-only interactions did not make the intended concept clear enough.\n\nI compared a web-only prototype with a scanning prototype, observing exploration and asking about subjective preferences. This process informed the choice of scanning: I wanted the interaction to feel like an actual act of consumption. The comparisons focused on interaction feasibility, exploration, and how participants interpreted the work.": "在约 5–6 轮、约 10 人参与的测试中，我先让参与者在没有提示的情况下自由探索，再询问他们如何理解作品。早期滑杆与纯网页交互，未能充分传达作品想讨论的问题。\n\n随后，我比较纯网页与扫描两个原型，观察探索过程，并收集参与者的主观偏好。测试推动了最终采用扫描的决定：我希望操作更贴近真实的消费行为。这些是围绕可行性与概念理解展开的探索性质性比较。",
+  "Iterations across the website, objects, packaging, and coupons.": "网站、实体、包装与优惠券的原型迭代。",
+  "One life, several systems of value": "同一个生命，不同的估值体系",
+  "The experience begins with a life that has not been priced. Scanning a coupon changes the valuation lens and the representation on screen. The three coupons can be selected in any order; they are alternatives to explore, not a required sequence.\n\nHuman and animal layers differ. Coupon wording and packaging colors correspond to these differences, carrying the rules beyond the screen. The design asks visitors to notice what each system chooses to recognize—and what disappears when a life becomes a category.": "体验从尚未被定价的生命开始。扫描优惠券后，估值视角与屏幕中的生命形象随之改变。三张优惠券可以任意选择，不要求按顺序操作。\n\n人类与动物对应不同的估值层次，优惠券文字与包装颜色也作出相应区分，让规则延伸到屏幕之外。作品邀请观众注意：每套体系选择看见什么，而当生命被归入一个分类时，又有什么消失了。",
+  "Starting point · A life without a price": "起点 · 尚未被定价的生命",
+  "Human layer · Job market value": "人类估值层次 · 工作市场价值",
+  "Human layer · Insurance value": "人类估值层次 · 保险价值",
+  "Human layer · Body resource value": "人类估值层次 · 身体资源价值",
+  "Human and animal representations change across their respective valuation layers.": "人类与动物在各自的估值层次中呈现不同形象。",
+  "Supporting exploration at self-checkout": "让探索在自助结账中发生",
+  "I designed the flow and interface in Figma, including the decisions around changing items, coupon eligibility, clearing coupons, and checking out. A 1/2/3 indicator encourages visitors to explore all three layers without prescribing their order.\n\nPop-ups and voice prompts support the familiar checkout interaction. The system explains when a coupon does not apply, asks for confirmation before replacing an item or removing coupons, and offers a route to checkout without coupons. Designing these branches made the experience coherent beyond its main path.": "我使用 Figma 设计流程与界面，并考虑切换商品、优惠券适用范围、清除优惠券和结账等分支。1／2／3 进度提示鼓励观众探索三个层次，但不限定先后顺序。\n\n弹窗与语音提示共同支撑熟悉的自助结账操作。系统会解释优惠券为何不适用，在切换商品或清除优惠券前请求确认，并提供不使用优惠券的结账入口。这些分支让体验在主流程之外也保持完整。",
+  "Eligibility checks, confirmations, and exploration cues in the final interface.": "最终界面中的适用性检查、确认弹窗与探索提示。",
+  "The cost of refusing a price": "拒绝定价，也需要付出阻力",
+  "If a visitor uses no coupons, or cancels them all, an alternative ending becomes possible: a receipt with the life’s photograph and no pricing breakdown. To reach it, they must ask the store attendant—played by me—to scan an employee authorization code.\n\nI deliberately made this outcome less immediate. The intervention echoes the permissions of real self-checkout machines, while making it difficult to step outside every system of valuation. The photograph gives the visitor a different kind of takeaway: an encounter with a life that the receipt does not reduce to a price.": "当观众不使用优惠券，或取消全部优惠券时，可以进入另一个结局：打印一张带有生命照片、没有定价明细的小票。但他们需要请由我扮演的店员扫描员工码，取得操作权限。\n\n我有意为这个结果增加阻力。它既呼应真实自助结账中的权限限制，也让脱离所有估值体系变得不那么容易。观众最终带走一张生命的照片；在这张小票上，它不再被归结为一个价格。",
+  "Alternative receipt with a portrait and no price breakdown.": "隐藏结局的小票：生命照片，没有价格明细。",
+  "No coupons → staff authorization → a photograph without a price.": "不使用优惠券 → 店员授权 → 没有价格的生命照片。",
+  "Carrying the rules into the store": "把规则延伸到商店空间",
+  "I designed the packaging in Adobe Illustrator, with colors and coupon copy that correspond to the human and animal systems. Products, promotional posters, coupons, and store signage establish a shared retail language so the conceptual premise can be encountered through familiar objects.\n\nI developed the website with AI assistance and presented it in Google Chrome’s kiosk mode. Physical production included printing, cutting acrylic, and CNC-cutting metal for the pop-up installation. The work brought interaction design, interface design, fabrication, and live facilitation into one experience.": "我使用 Adobe Illustrator 设计包装，通过颜色与优惠券文字对应人类和动物的不同体系。商品、促销海报、优惠券与商店标识共同建立零售语境，让观众通过熟悉的物件接触作品命题。\n\n网站在 AI 协助下开发，使用 Google Chrome 的 Kiosk 模式呈现。实体制作包括打印、亚克力切割与用于快闪商店装置的 CNC 金属加工。项目将交互、界面、实体制作与现场引导组织为同一套体验。",
+  "Packaged human and animal products": "包装中的人类与动物商品",
+  "Packaging as an interface to the system": "作为系统入口的商品包装",
+  "Coupons, posters & fabrication": "优惠券、海报与实体制作",
+  "Coupons · The language of a sale becomes a valuation rule": "优惠券 · 将促销语言转化为估值规则",
+  "Human poster · A shared retail identity": "人类海报 · 统一的零售视觉语言",
+  "Salmon poster · A shared retail identity": "三文鱼海报 · 统一的零售视觉语言",
+  "Cow poster · A shared retail identity": "牛海报 · 统一的零售视觉语言",
+  "Fabrication · Store lettering": "实体制作 · 商店字标",
+  "Fabrication · Product shelves": "实体制作 · 商品货架",
+  "Fabrication · Self-checkout counter": "实体制作 · 自助结账台",
+  "What the project taught me": "项目带来的设计反思",
+  "LifeMart taught me to test whether an interaction communicates an idea, as well as whether someone can operate it. The shift toward scanning connected the concept to a familiar behavior; the staff authorization step used a familiar obstacle to make refusal meaningful.\n\nI learned to connect a research question to specific rules and touchpoints, then use qualitative testing to examine that connection. In this project, ease of use and deliberate friction each had a role: one invited exploration, while the other made an institutional constraint felt.": "LifeMart 让我在测试中同时关注两件事：观众能否完成操作，以及交互能否传达命题。转向扫描，让概念与熟悉的行为产生联系；员工授权则借用一种熟悉的障碍，让拒绝定价具有具体的意义。\n\n我学会将研究问题落实为具体规则与触点，再通过质性测试检查它们之间的联系。在这个项目中，流畅的操作与有意设计的阻力各有作用：前者邀请探索，后者让制度限制被切身感受到。",
+  "Earlier Design Research & Brief": "早期设计研究与简报",
+  "Prototype Code Repository": "原型代码仓库",
+  "AI-assisted web development": "AI 辅助网站开发",
+  "Digital Fabrication": "数字制造",
+  "Aug 2025 – May 2026": "2025 年 8 月—2026 年 5 月",
+  "AI & Feature Planning": "AI 与功能规划",
+  "Design in Progress": "设计进行中",
+  "AI feature decisions · Keep, modify, discard": "AI 功能决策 · 保留、修改与舍弃",
+  "AI responsibilities · Uncertainty and consent": "AI 责任 · 不确定性与用户同意",
+  "Feature priorities · Must, should, could": "功能优先级 · 核心、后续与潜在功能",
+  "App structure · Proposed navigation": "应用结构 · 拟定导航",
+  "Low-fidelity wireframes · Needs user testing": "低保真线框图 · 待用户测试",
+  "DiveDex Mobile App is a work-in-progress post-dive discovery companion for recreational divers. It explores how photos and short videos can become a starting point for identifying marine life, learning visible traits and fun facts, and collecting personally meaningful discoveries in My Ocean. The current work covers user research, AI interaction decisions, feature priorities, and low-fidelity wireframes; user testing is still needed.": "DiveDex Mobile App 是一款正在设计中的休闲潜水员潜后探索应用。它探索如何将照片和短视频转化为辨认海洋生物、学习可见特征与趣味知识的起点，并将有个人意义的发现收藏到 My Ocean。目前已展开用户研究、AI 交互决策、功能优先级与低保真线框设计，仍需用户测试。",
+  "Keep species candidates as a useful starting point. Replace dense evidence and excessive controls with short visual cues, uncertainty flags, and simple correction actions. Add optional location and habitat context when images are ambiguous. Avoid false certainty: unresolved outcomes remain valid. Location use is optional, and research contributions require explicit consent with clear information about purpose, recipient, data precision, commercial use, and withdrawal. No automatic sharing is planned.": "保留物种候选建议作为探索起点，将繁杂的证据与控制选项改为简短视觉提示、不确定性标记和简单纠正操作。影像难以判断时，可选择补充地点与栖息地信息。避免制造虚假确定性，允许结果保持未解决。地点使用由用户选择；研究贡献需明确征得同意，并说明用途、接收方、数据精度、商业使用与撤回方式，不自动分享。",
+  "The must-have scope centers on importing photos or short videos, AI species candidates, visible-trait comparison, confirm/correct/defer actions, a personal discovery record, and the My Ocean collection. Drafts, pending reviews, optional dive details, a private encounter map, and search are next priorities. Regional guides, shareable cards, and opt-in research contributions are potential extensions.": "核心范围包括照片或短视频导入、AI 物种候选、可见特征比较、确认／纠正／暂缓操作、个人发现记录，以及 My Ocean 收藏。草稿与待处理结果、可选潜水信息、私人相遇地图和搜索属于后续优先项。区域指南、分享卡片与自愿研究贡献作为潜在扩展。",
+  "The proposed navigation includes Home, Import & Identify, Explore, and My Ocean. Home brings together drafts, pending AI reviews, and recent discoveries; whether it should remain separate from Import is a question for user testing. Explore is a planned area for regional guides and discovery missions. These low-fidelity screens show a proposed structure, not a finished or validated interface.": "拟定导航包含 Home、Import & Identify、Explore 和 My Ocean。Home 汇集草稿、待确认的 AI 结果与近期发现；是否应与 Import 合并，是用户测试要回答的问题。Explore 是规划中的区域指南与探索任务入口。这些低保真页面呈现待验证的结构，并非已完成或验证通过的界面。",
+  "Test whether a separate Home helps people resume discoveries, whether the Explore concept is useful, and whether uncertainty cues and simple correction actions are understandable. The findings will guide the next iteration of the navigation and identification flow.": "下一步测试独立 Home 是否有助于继续探索、Explore 概念是否有用，以及不确定性提示与简单纠正操作是否容易理解。测试结果将用于调整导航与识别流程。",
+  "AI Decisions & Responsibilities": "AI 决策与责任",
+  "Feature Priorities": "功能优先级",
+  "App Structure & Wireframes": "应用结构与线框图",
+  "Next: User Testing": "下一步：用户测试",
+  "DiveDex Smart Goggles explores how marine recognition could become part of the underwater experience. The concept combines a physical goggle design, a simple in-dive interface, and a companion app for reviewing detections after surfacing. The work includes Rhino models, interface studies, and an early on-device recognition prototype; integration into working diving goggles remains a future step.": "DiveDex Smart Goggles 探索如何将海洋生物识别融入水下体验。方案结合潜水镜实体设计、简洁的潜水中界面，以及用于出水后回看识别记录的配套应用。项目包含 Rhino 模型、界面探索与早期设备端识别原型；将系统集成到可实际使用的潜水镜中，仍是后续方向。",
+  "DiveDex Mobile App explores how underwater photos and videos can become a starting point for learning and remembering after a dive. The revised concept helps recreational divers import their media, compare candidate species, learn distinguishing features, and save discoveries to My Ocean, a personal collection. The focus is on helping divers make sense of what they encountered and take part in the identification, rather than simply receiving a species name.": "DiveDex Mobile App 探索如何让水下照片和视频成为潜水后学习与记录的起点。新版概念帮助休闲潜水员导入影像、比较候选物种、学习辨识特征，并将发现保存到个人收藏 My Ocean。重点在于帮助潜水员理解自己的水下相遇并参与识别判断，而不只是得到一个物种名称。",
+  "Early App Exploration": "早期应用探索",
+  "These early interface studies explored a phone app connected to the smart goggles. The user research above informed a later direction focused on reviewing post-dive media, comparing candidate species, and collecting discoveries. The screens below document that starting point, rather than the finished interface of the revised app.": "这些早期界面探索的是连接智能潜水镜的手机应用。上方的用户研究推动了后续方向：回看潜后影像、比较候选物种，并收藏水下发现。以下界面记录了这一探索的起点，并非新版应用的最终界面。",
+  "Prototype: Planned Next Steps": "原型：规划的下一步",
+  "Marine Recognition Prototype": "海洋生物识别原型",
   "ZQ Sports is a visual identity and website project for Zhongqi Pickleball Club. I designed the club’s visual identity and website, then built the site to bring its match coverage, learning content, equipment, and club merchandise into one experience.": "ZQ Sports 是为众祺匹克球俱乐部完成的视觉识别与网站项目。我负责品牌视觉、网站设计与搭建，将赛事、知识、装备与俱乐部周边组织成统一的线上体验。",
   "The identity pairs a circular club emblem with bold, textured lettering. Black, light grey, and yellow-green versions give the mark distinct expressions while keeping the same silhouette and typographic arrangement. The website carries this contrast into its large headings, fine rules, and bright accents.": "视觉识别以圆形俱乐部徽标搭配粗重、带有磨损质感的字母。黑色、浅灰与黄绿色三个版本保留相同的轮廓和文字结构，呈现不同的色彩表达。网站将这种对比延续到大标题、细线分隔与亮色强调中。",
   "“Find Your Pace” introduces the site through oversized typography and an abstract court graphic. The page moves from global competitions to pickleball knowledge, paddle selection, and club merchandise. Alternating light, dark, and yellow-green sections give each part a clear place in the reading sequence.": "网站以 “Find Your Pace” 开场，通过大字排版与抽象球场图形建立第一印象。页面依次展开全球赛事、匹克球知识、球拍选择和俱乐部周边，以浅色、深色和黄绿色区块区分内容，形成清晰的阅读顺序。",
@@ -143,7 +217,6 @@ const caseStudyTextZh: Record<string, string> = {
   "Concept": "概念",
   "How to Play": "玩法说明",
   "Development Process": "开发过程",
-  "LifeMart is an interactive system that examines how living beings become measurable inside market, biological, and emotional frameworks. Using a barcode scanner, a physical slider, and dynamic pricing algorithms, the project simulates the full journey of a life entering a retail logic: from pet, to species unit, to commodity, and—rarely—to an unquantifiable existence that resists valuation. Each scan generates a price label, breaking down how emotional value, ecological data, farming cost, labor, transport, and market forces shape the “worth” of a single creature. By pushing users to slide between layers of killability and care, LifeMart exposes the absurdity and violence of converting living beings into products, inviting viewers to reconsider what it means for a life to have value at all.": "LifeMart 是一套互动系统，研究生命如何在市场、生物与情感框架中变成可衡量的对象。作品使用条码扫描器、实体滑杆与动态定价算法，模拟生命进入零售逻辑的完整旅程：从宠物到物种单位，再到商品，偶尔也会成为拒绝被估价、无法量化的存在。每次扫描都会生成价格标签，拆解情感价值、生态数据、养殖成本、劳动力、运输与市场力量如何塑造一只生物的“价值”。用户在可被杀害与被关怀的不同层次之间滑动，从而直面把生命转化为商品的荒谬与暴力，并重新思考生命拥有价值究竟意味着什么。",
   "I Want a Home I Could Carry With is a portable, personal “house” that exists not as architecture, but through my sense of possession. Inspired by my habit of treating my 23-kg luggage as a movable home, this project explores what “home” becomes when stability is impossible or constantly shifting. Through a compact, wearable form, it stores fragments of my routines, comforts, and identity, challenging the idea that home must be rooted in a place. Instead, it becomes something I assemble, carry, and rebuild wherever I go.": "《一座我能随身携带的家》是一栋便携而私人的“房子”。它并非以建筑形式存在，而是由我的占有感构成。作品源于我把 23 公斤行李箱当作移动居所的习惯，探索当稳定不可能存在或不断变化时，“家”会变成什么。紧凑、可穿戴的形态保存了日常习惯、安慰与身份的碎片，挑战家必须扎根于某个地点的观念；家成为我无论走到哪里都能重新组装、携带与建造的东西。",
   " This project combines smart diving goggles that run on-device, real-time fish recognition with a mobile app that syncs the detections after the dive. When a diver encounters a fish, the goggles highlight it and classify the species; once back on the surface, the recorded detections automatically transfer to the app, where they are organized by dive session and turned into a searchable personal log of underwater encounters.": "本项目结合可在设备端运行的智能潜水镜、实时鱼类识别，以及潜水结束后同步识别记录的手机应用。潜水员遇见鱼类时，潜水镜会高亮目标并识别物种；回到水面后，记录会自动传输至应用，按潜水场次整理成可搜索的个人水下观察日志。",
   "Chester Choiceworth is an interactive installation that turns your spending habits into a playful but slightly uncomfortable mirror. By uploading your monthly transaction record, the system generates two things: (1) a digital receipt summarizing what you spent and where, and (2) a stream of targeted 'lifestyle suggestions' printed on a physical receipt printer. The tone is fake-friendly, like a personal financial assistant that thinks it knows who you are and what kind of life you deserve.": "Chester Choiceworth 是一件互动装置，把消费习惯变成一面有趣却略令人不适的镜子。上传每月交易记录后，系统会生成两样东西：一张总结消费内容与地点的数字收据，以及由实体小票打印机不断输出的定向“生活方式建议”。它使用一种虚假的友好语气，像是自认为了解你是谁、又认为你应该过怎样生活的私人理财助手。",
@@ -157,23 +230,45 @@ const localizeSections = (sections: unknown[]) => sections.map((section) => {
   const translated: Record<string, unknown> = { ...item };
   if (typeof item.title === "string") translated.title = caseStudyTextZh[item.title] ?? item.title;
   if (typeof item.body === "string") translated.body = caseStudyTextZh[item.body] ?? item.body;
+  if (typeof item.caption === "string") translated.caption = caseStudyTextZh[item.caption] ?? item.caption;
+  if (typeof item.alt === "string") translated.alt = caseStudyTextZh[item.alt] ?? item.alt;
+  if ((item.type === "slideshow" || item.type === "gallery") && Array.isArray(item.images)) {
+    translated.images = item.images.map((image: { image: string; caption?: string }) => ({
+      ...image,
+      caption: image.caption ? caseStudyTextZh[image.caption] ?? image.caption : undefined,
+    }));
+  }
   return translated;
 });
+
+function localizeLifemartMeta(meta: { role?: string }, role?: string) {
+  const details = meta as { role?: string; timeline?: string; techStack?: string[]; relatedLinks?: { label?: string; url?: string }[] };
+  return {
+    ...details,
+    role: role ?? details.role,
+    timeline: details.timeline ? caseStudyTextZh[details.timeline] ?? details.timeline : undefined,
+    techStack: details.techStack?.map((tool) => caseStudyTextZh[tool] ?? tool),
+    relatedLinks: details.relatedLinks?.map((link) => ({ ...link, label: link.label ? caseStudyTextZh[link.label] ?? link.label : undefined })),
+  };
+}
 
 export function localizeProject<T extends { id: string; title: string; intro?: string; subtitle?: string; tags?: string[]; meta?: { role?: string }; details?: { description?: string } }>(project: T, language: Language): T {
   if (language === "en") return project;
   const translated = projectZh[project.id] ?? {};
   const sections = (project as { sections?: unknown[] }).sections;
+  const heroImages = (project as { heroImages?: { image: string; caption?: string }[] }).heroImages;
   return {
     ...project,
     title: translated.title ?? project.title,
     intro: translated.intro ?? project.intro,
     subtitle: translated.subtitle ?? translated.intro ?? project.subtitle,
     ...(project.meta && translated.role ? { meta: { ...project.meta, role: translated.role } } : {}),
+    ...(project.id === "lifemart" && project.meta ? { meta: localizeLifemartMeta(project.meta, translated.role) } : {}),
     tags: project.tags?.map((tag) => tagZh[tag] ?? tag),
     details: project.details
       ? { ...project.details, description: translated.description ?? project.details.description }
       : project.details,
+    ...(heroImages ? { heroImages: heroImages.map((image) => ({ ...image, caption: image.caption ? caseStudyTextZh[image.caption] ?? image.caption : undefined })) } : {}),
     ...(sections ? { sections: localizeSections(sections) } : {}),
   } as T;
 }

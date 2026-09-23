@@ -9,6 +9,7 @@ import projectsData from "@/data/projects.json";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizeProject, t } from "@/lib/i18n";
 import DiveDexResearch from "@/components/DiveDexResearch";
+import ResearchGallery from "@/components/ResearchGallery";
 
 type ProjectData = (typeof projectsData)[number];
 
@@ -30,7 +31,7 @@ type ImageSection = BaseSection & {
 };
 
 type GallerySection = BaseSection & {
-  type: "gallery";
+  type: "gallery" | "slideshow";
   images: {
     image: string;
     caption?: string;
@@ -117,6 +118,18 @@ const renderParagraphs = (body?: string) => {
 
 const renderSection = (section: Section, index: number) => {
   switch (section.type) {
+    case "slideshow": {
+      return (
+        <section key={`slideshow-${index}`} className={styles.section}>
+          {section.title ? <h2 className={styles.sectionHeader}>{section.title}</h2> : null}
+          <ResearchGallery title={section.title ?? "Project slides"} slides={section.images.map((item) => ({
+            src: normalizeAsset(item.image),
+            title: item.caption ?? section.title ?? "Project slide",
+            alt: item.caption ?? section.title ?? "Project slide",
+          }))} />
+        </section>
+      );
+    }
     case "divedex-research":
       return <DiveDexResearch key={`research-${index}`} />;
     case "text": {
@@ -281,6 +294,7 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
   const { language } = useLanguage();
   const project = localizeProject(rawProject, language);
   const heroImage = normalizeAsset(project.thumbnail);
+  const heroImages = project.heroImages;
   const rawHeroVideo = project.meta?.video?.trim();
   const heroVideoIsDrive = !!rawHeroVideo && rawHeroVideo.includes("drive.google.com");
   const heroVideo = rawHeroVideo
@@ -309,7 +323,7 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
   const sections = project.sections ?? [];
 
   return (
-    <div className={styles.page}>
+    <div className={styles.page} data-project={project.id}>
       <TopNav />
       <div className={styles.topBarSpacer} aria-hidden />
       <main className={styles.main}>
@@ -339,7 +353,7 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
             ) : null}
             {techStack.length ? (
               <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>{t("techStack", language)}</span>
+                <span className={styles.metaLabel}>{t(project.id === "lifemart" ? "tools" : "techStack", language)}</span>
                 <span className={styles.metaValue}>{techStack.join(", ")}</span>
               </div>
             ) : null}
@@ -375,6 +389,19 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
             ) : null}
           </div>
 
+          {heroImages?.length ? (
+            <div className={styles.heroGallery}>
+              <ResearchGallery
+                title={language === "zh" ? "LifeMart 现场记录" : "LifeMart installation documentation"}
+                priority
+                slides={heroImages.map((item) => ({
+                  src: normalizeAsset(item.image),
+                  title: item.caption ?? project.title,
+                  alt: item.caption ?? project.title,
+                }))}
+              />
+            </div>
+          ) : (
           <div className={`${styles.heroMedia} ${heroVideo ? styles.heroMediaVideo : ""}`}>
             {heroVideo ? (
               heroVideoIsDrive ? (
@@ -408,6 +435,7 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
               />
             )}
           </div>
+          )}
         </article>
 
         <article className={styles.article}>

@@ -19,7 +19,7 @@ function GalleryIcon({ name, size = 20 }: { name: "previous" | "next" | "expand"
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name]} /></svg>;
 }
 
-export default function ResearchGallery({ slides, title }: { slides: ResearchSlide[]; title: string }) {
+export default function ResearchGallery({ slides, title, priority = false }: { slides: ResearchSlide[]; title: string; priority?: boolean }) {
   const { language } = useLanguage();
   const zh = language === "zh";
   const [index, setIndex] = useState(0);
@@ -96,7 +96,7 @@ export default function ResearchGallery({ slides, title }: { slides: ResearchSli
           onTouchEnd={endTouch}
           onTouchCancel={() => { touch.current = null; }}
         >
-          <Image src={slide.src} alt={slide.alt} width={2400} height={1350} sizes="(max-width: 1095px) 95vw, 1040px" />
+          <Image src={slide.src} alt={slide.alt} width={2400} height={1350} sizes="(max-width: 1095px) 95vw, 1040px" priority={priority && index === 0} />
           <span className={styles.expand}><GalleryIcon name="expand" size={16} />{zh ? "放大查看" : "Expand image"}</span>
         </button>
         <figcaption className={styles.footer}>

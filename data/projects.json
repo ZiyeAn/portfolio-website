@@ -1,5 +1,90 @@
 [
   {
+    "id": "divedex-mobile-app",
+    "title": "DiveDex Mobile App (WIP, Working Progress)",
+    "subtitle": "A Post-dive Discovery Companion for Recreational Divers",
+    "year": 2026,
+    "tags": [
+      "UX Design",
+      "UI Design",
+      "AI"
+    ],
+    "thumbnail": "assets/projects/divedev/mobile-2026/direction.webp",
+    "intro": "A post-dive companion concept that helps recreational divers explore marine life in their photos and videos, compare possible identifications, and save discoveries to a personal collection.",
+    "meta": {
+      "techStack": [
+        "Figma"
+      ],
+      "timeline": "2026 · Work in Progress",
+      "role": "Individual Project",
+      "video": "",
+      "relatedLinks": []
+    },
+    "sections": [
+      {
+        "type": "text",
+        "title": "Project Overview",
+        "body": "DiveDex Mobile App is a work-in-progress post-dive discovery companion for recreational divers. It explores how photos and short videos can become a starting point for identifying marine life, learning visible traits and fun facts, and collecting personally meaningful discoveries in My Ocean. The current work covers user research, AI interaction decisions, feature priorities, and low-fidelity wireframes; user testing is still needed."
+      },
+      {
+        "type": "divedex-research",
+        "title": "User Research"
+      },
+      {
+        "type": "text",
+        "title": "AI Decisions & Responsibilities",
+        "body": "Keep species candidates as a useful starting point. Replace dense evidence and excessive controls with short visual cues, uncertainty flags, and simple correction actions. Add optional location and habitat context when images are ambiguous. Avoid false certainty: unresolved outcomes remain valid. Location use is optional, and research contributions require explicit consent with clear information about purpose, recipient, data precision, commercial use, and withdrawal. No automatic sharing is planned."
+      },
+      {
+        "type": "text",
+        "title": "Feature Priorities",
+        "body": "The must-have scope centers on importing photos or short videos, AI species candidates, visible-trait comparison, confirm/correct/defer actions, a personal discovery record, and the My Ocean collection. Drafts, pending reviews, optional dive details, a private encounter map, and search are next priorities. Regional guides, shareable cards, and opt-in research contributions are potential extensions."
+      },
+      {
+        "type": "slideshow",
+        "title": "AI & Feature Planning",
+        "images": [
+          {
+            "image": "assets/projects/divedev/mobile-2026/ai-decisions.webp",
+            "caption": "AI feature decisions · Keep, modify, discard"
+          },
+          {
+            "image": "assets/projects/divedev/mobile-2026/ai-responsibilities.webp",
+            "caption": "AI responsibilities · Uncertainty and consent"
+          },
+          {
+            "image": "assets/projects/divedev/mobile-2026/priorities.webp",
+            "caption": "Feature priorities · Must, should, could"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "App Structure & Wireframes",
+        "body": "The proposed navigation includes Home, Import & Identify, Explore, and My Ocean. Home brings together drafts, pending AI reviews, and recent discoveries; whether it should remain separate from Import is a question for user testing. Explore is a planned area for regional guides and discovery missions. These low-fidelity screens show a proposed structure, not a finished or validated interface."
+      },
+      {
+        "type": "slideshow",
+        "title": "Design in Progress",
+        "images": [
+          {
+            "image": "assets/projects/divedev/mobile-2026/structure.webp",
+            "caption": "App structure · Proposed navigation"
+          },
+          {
+            "image": "assets/projects/divedev/mobile-2026/wireframes.webp",
+            "caption": "Low-fidelity wireframes · Needs user testing"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Next: User Testing",
+        "body": "Test whether a separate Home helps people resume discoveries, whether the Explore concept is useful, and whether uncertainty cues and simple correction actions are understandable. The findings will guide the next iteration of the navigation and identification flow."
+      }
+    ]
+  },
+  {
     "id": "zq-sports",
     "title": "ZQ Sports",
     "subtitle": "Visual Identity, Website Design & Development",
@@ -80,27 +165,32 @@
   {
     "id": "lifemart",
     "title": "LifeMart™",
-    "subtitle": "",
+    "subtitle": "Who gets to put a price on a life?",
     "year": "2026",
-    "tags": [],
-    "thumbnail": "assets/projects/lifemart/LifeMart-1.webp",
-    "intro": "",
+    "tags": [
+      "UX Design",
+      "Design Research",
+      "Critical Design"
+    ],
+    "thumbnail": "assets/projects/lifemart/final-2026/installation-view.webp",
+    "intro": "A critical design installation that turns self-checkout into an encounter with the systems that price human and animal lives.",
     "meta": {
       "techStack": [
-        "Web Development",
-        "Arduino",
+        "Figma",
+        "Adobe Illustrator",
+        "AI-assisted web development",
+        "Chrome Kiosk",
         "Digital Fabrication"
       ],
-      "timeline": "Oct – Dec 2024",
-      "role": "Individual Project",
-      "video": "https://drive.google.com/file/d/1d4hWRwF7L7uhhz38-f2PaCQGedaPDuJO/view?usp=drive_link",
+      "timeline": "Aug 2025 – May 2026",
+      "role": "Individual project · Research, interaction design & installation",
       "relatedLinks": [
         {
-          "label": "Writing: Design Research and Brief",
+          "label": "Earlier Design Research & Brief",
           "url": "https://outgoing-concrete-919.notion.site/LifeMart-Design-Brief-2c378d921ea08008b920f8590aed6829"
         },
         {
-          "label": "Code Repository",
+          "label": "Prototype Code Repository",
           "url": "https://github.com/ZiyeAn/Price_Label_Test"
         }
       ]
@@ -108,85 +198,180 @@
     "sections": [
       {
         "type": "text",
-        "title": "Project Overview",
-        "body": "LifeMart is an interactive system that examines how living beings become measurable inside market, biological, and emotional frameworks. Using a barcode scanner, a physical slider, and dynamic pricing algorithms, the project simulates the full journey of a life entering a retail logic: from pet, to species unit, to commodity, and—rarely—to an unquantifiable existence that resists valuation. Each scan generates a price label, breaking down how emotional value, ecological data, farming cost, labor, transport, and market forces shape the “worth” of a single creature. By pushing users to slide between layers of killability and care, LifeMart exposes the absurdity and violence of converting living beings into products, inviting viewers to reconsider what it means for a life to have value at all."
+        "title": "A life at the checkout",
+        "body": "LifeMart™ is a critical design installation staged as a pop-up store. Visitors pick up a packaged human or animal, scan its barcode, and use coupons to switch between systems of valuation. The same life acquires a different identity, image, and price depending on the system applied.\n\nFor humans, the lenses include the job market, insurance, and bodily resources; animals have their own corresponding categories. Visitors can choose any coupon directly. At checkout, a receipt makes the selected valuation tangible. Leaving without a price is also possible, but requires staff authorization."
       },
       {
-        "type": "gallery",
+        "type": "text",
+        "title": "From research to an experience",
+        "body": "I used secondary research to examine how institutions distinguish between lives that can be owned, used, protected, or mourned. The research brought together biopolitics, market value, and human–animal relationships, including the tensions between “zoe” and “bios,” and between killability and grievability.\n\nThis led to a design question: how could someone encounter these abstract distinctions through an everyday action? Self-checkout places the visitor at the moment a value is assigned. Coupons let them apply a different institutional lens, while the receipt turns that choice into something they can hold. I developed the valuation rules through secondary research and AI assistance; the prices belong to the work’s constructed scenario."
+      },
+      {
+        "type": "slideshow",
         "images": [
           {
-            "image": "assets/projects/lifemart/LifeMart-1.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/LifeMart-3.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/LifeMart-2.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/LifeMart-4.webp"
+            "image": "assets/projects/lifemart/final-2026/research.webp",
+            "caption": "Secondary research: mapping the questions and systems behind life valuation."
           }
         ]
       },
       {
         "type": "text",
-        "title": "LifeMart Research"
+        "title": "Early 3D installation study",
+        "body": "An early 3D study explored how the product display and self-checkout station could share one retail setting."
       },
       {
         "type": "image",
-        "image": "assets/projects/lifemart/lifemart_research.png",
-        "alt": "LifeMart Research"
+        "title": "Early 3D installation study",
+        "image": "assets/projects/lifemart/final-2026/installation.webp",
+        "alt": "Early 3D render of the LifeMart store and checkout layout.",
+        "caption": "Early 3D installation study · Exploring the store and self-checkout layout."
       },
       {
         "type": "text",
-        "title": "LifeMart Tech Stack"
+        "title": "Testing how the idea comes across",
+        "body": "Across approximately 5–6 rounds with around 10 participants, I asked people to explore without instructions, then discussed what they thought the work meant. Early slider and web-only interactions did not make the intended concept clear enough.\n\nI compared a web-only prototype with a scanning prototype, observing exploration and asking about subjective preferences. This process informed the choice of scanning: I wanted the interaction to feel like an actual act of consumption. The comparisons focused on interaction feasibility, exploration, and how participants interpreted the work."
       },
       {
-        "type": "image",
-        "image": "assets/projects/lifemart/LifemartTechStack.webp",
-        "alt": "LifeMart Tech Stack"
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/lifemart/lifemartVisualResearch.png",
-        "alt": "LifeMart Visual Research"
-      },
-      {
-        "type": "text",
-        "title": "LifeMart Userflow"
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/lifemart/Lifemart Userflow.png",
-        "alt": "LifeMart Userflow"
-      },
-      {
-        "type": "gallery",
-        "title": "Setup Design and Renderings",
+        "type": "slideshow",
         "images": [
           {
-            "image": "assets/projects/lifemart/1.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/2.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/3.webp"
-          },
-          {
-            "image": "assets/projects/lifemart/4.webp"
+            "image": "assets/projects/lifemart/final-2026/prototypes.webp",
+            "caption": "Iterations across the website, objects, packaging, and coupons."
           }
         ]
       },
       {
-        "type": "video",
-        "title": "1st Website Prototype Demo",
-        "src": "https://drive.google.com/file/d/1zzMZv19-qAL_NPj8WZmV7Cfrb87VIrK8/view?usp=drive_link"
+        "type": "text",
+        "title": "One life, several systems of value",
+        "body": "The experience begins with a life that has not been priced. Scanning a coupon changes the valuation lens and the representation on screen. The three coupons can be selected in any order; they are alternatives to explore, not a required sequence.\n\nHuman and animal layers differ. Coupon wording and packaging colors correspond to these differences, carrying the rules beyond the screen. The design asks visitors to notice what each system chooses to recognize—and what disappears when a life becomes a category."
       },
       {
-        "type": "video",
-        "title": "1st Userflow Prototype Demo",
-        "src": "https://drive.google.com/file/d/1d4hWRwF7L7uhhz38-f2PaCQGedaPDuJO/view?usp=drive_link"
+        "type": "gallery",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/unpriced.webp",
+            "caption": "Starting point · A life without a price"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/job-market.webp",
+            "caption": "Human layer · Job market value"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/insurance.webp",
+            "caption": "Human layer · Insurance value"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/body-resource.webp",
+            "caption": "Human layer · Body resource value"
+          }
+        ]
+      },
+      {
+        "type": "slideshow",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/layers.webp",
+            "caption": "Human and animal representations change across their respective valuation layers."
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Supporting exploration at self-checkout",
+        "body": "I designed the flow and interface in Figma, including the decisions around changing items, coupon eligibility, clearing coupons, and checking out. A 1/2/3 indicator encourages visitors to explore all three layers without prescribing their order.\n\nPop-ups and voice prompts support the familiar checkout interaction. The system explains when a coupon does not apply, asks for confirmation before replacing an item or removing coupons, and offers a route to checkout without coupons. Designing these branches made the experience coherent beyond its main path."
+      },
+      {
+        "type": "slideshow",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/feedback.webp",
+            "caption": "Eligibility checks, confirmations, and exploration cues in the final interface."
+          }
+        ]
+      },
+      {
+        "type": "split",
+        "title": "The cost of refusing a price",
+        "body": "If a visitor uses no coupons, or cancels them all, an alternative ending becomes possible: a receipt with the life’s photograph and no pricing breakdown. To reach it, they must ask the store attendant—played by me—to scan an employee authorization code.\n\nI deliberately made this outcome less immediate. The intervention echoes the permissions of real self-checkout machines, while making it difficult to step outside every system of valuation. The photograph gives the visitor a different kind of takeaway: an encounter with a life that the receipt does not reduce to a price.",
+        "image": "assets/projects/lifemart/final-2026/unpriced-receipt.webp",
+        "alt": "Alternative receipt with a portrait and no price breakdown.",
+        "caption": "No coupons → staff authorization → a photograph without a price."
+      },
+      {
+        "type": "text",
+        "title": "Carrying the rules into the store",
+        "body": "I designed the packaging in Adobe Illustrator, with colors and coupon copy that correspond to the human and animal systems. Products, promotional posters, coupons, and store signage establish a shared retail language so the conceptual premise can be encountered through familiar objects.\n\nI developed the website with AI assistance and presented it in Google Chrome’s kiosk mode. Physical production included printing, cutting acrylic, and CNC-cutting metal for the pop-up installation. The work brought interaction design, interface design, fabrication, and live facilitation into one experience."
+      },
+      {
+        "type": "gallery",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/products.webp",
+            "caption": "Packaged human and animal products"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/packaging.webp",
+            "caption": "Packaging as an interface to the system"
+          }
+        ]
+      },
+      {
+        "type": "slideshow",
+        "title": "Coupons, posters & fabrication",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/coupons.webp",
+            "caption": "Coupons · The language of a sale becomes a valuation rule"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/poster-human.webp",
+            "caption": "Human poster · A shared retail identity"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/poster-fish.webp",
+            "caption": "Salmon poster · A shared retail identity"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/poster-cow.webp",
+            "caption": "Cow poster · A shared retail identity"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/lettering.webp",
+            "caption": "Fabrication · Store lettering"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/shelves.webp",
+            "caption": "Fabrication · Product shelves"
+          },
+          {
+            "image": "assets/projects/lifemart/final-2026/counter.webp",
+            "caption": "Fabrication · Self-checkout counter"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "What the project taught me",
+        "body": "LifeMart taught me to test whether an interaction communicates an idea, as well as whether someone can operate it. The shift toward scanning connected the concept to a familiar behavior; the staff authorization step used a familiar obstacle to make refusal meaningful.\n\nI learned to connect a research question to specific rules and touchpoints, then use qualitative testing to examine that connection. In this project, ease of use and deliberate friction each had a role: one invited exploration, while the other made an institutional constraint felt."
+      }
+    ],
+    "heroImages": [
+      {
+        "image": "assets/projects/lifemart/final-2026/installation-view.webp",
+        "caption": "A visitor at LifeMart"
+      },
+      {
+        "image": "assets/projects/lifemart/final-2026/choosing-products.webp",
+        "caption": "Choosing human and animal products"
+      },
+      {
+        "image": "assets/projects/lifemart/final-2026/scanning-coupons.webp",
+        "caption": "Scanning a coupon at self-checkout"
+      },
+      {
+        "image": "assets/projects/lifemart/final-2026/printing-receipt.webp",
+        "caption": "Printing a valuation receipt"
       }
     ]
   },
@@ -257,8 +442,8 @@
   },
   {
     "id": "divedex",
-    "title": "DiveDex",
-    "subtitle": "A Post-dive Discovery Companion for Recreational Divers",
+    "title": "DiveDex Smart Goggles",
+    "subtitle": "Smart Diving Goggles for Marine Recognition",
     "year": 2025,
     "tags": [
       "Interaction",
@@ -266,12 +451,16 @@
       "AI"
     ],
     "thumbnail": "assets/projects/divedev/hero_img.webp",
-    "intro": "A post-dive companion concept that helps recreational divers explore marine life in their photos and videos, compare possible identifications, and save discoveries to a personal collection.",
+    "intro": "A smart diving goggle concept combining industrial design, underwater interfaces, and an on-device marine recognition prototype.",
     "meta": {
       "techStack": [
-        "Figma"
+        "Figma",
+        "Rhino",
+        "Google Coral Dev Board",
+        "TensorFlow.js",
+        "Arduino"
       ],
-      "timeline": "",
+      "timeline": "Oct – Dec 2024",
       "role": "Individual Project",
       "video": "",
       "relatedLinks": []
@@ -280,21 +469,7 @@
       {
         "type": "text",
         "title": "Project Overview",
-        "body": "DiveDex explores how underwater photos and videos can become a starting point for learning and remembering after a dive. The revised concept helps recreational divers import their media, compare candidate species, learn distinguishing features, and save discoveries to My Ocean, a personal collection. The focus is on helping divers make sense of what they encountered and take part in the identification, rather than simply receiving a species name."
-      },
-      {
-        "type": "divedex-research",
-        "title": "User Research"
-      },
-      {
-        "type": "text",
-        "title": "Earlier Exploration",
-        "body": "The project began with an exploration of smart goggles for real-time marine recognition and a companion phone app. The revised direction above focuses on the post-dive experience. The designs and prototypes below document the earlier concept, developed in Oct–Dec 2024 using Figma, Rhino, Google Coral Dev Board, TensorFlow.js, and Arduino."
-      },
-      {
-        "type": "image",
-        "image": "assets/projects/divedev/UI.webp",
-        "alt": "DiveDex Ideation and Research"
+        "body": "DiveDex Smart Goggles explores how marine recognition could become part of the underwater experience. The concept combines a physical goggle design, a simple in-dive interface, and a companion app for reviewing detections after surfacing. The work includes Rhino models, interface studies, and an early on-device recognition prototype; integration into working diving goggles remains a future step."
       },
       {
         "type": "image",
@@ -344,23 +519,14 @@
       },
       {
         "type": "text",
-        "title": "Earlier Phone App UI Design",
-        "body": "These screens belong to the original goggles-connected app concept. They are retained here as part of the earlier exploration, rather than as interfaces for the revised post-dive direction."
-      },
-      {
-        "type": "image",
-        "title": "UI Design of the Phone App",
-        "image": "assets/projects/divedev/DiveDexUI.png"
-      },
-      {
-        "type": "text",
         "title": "Tech Prototype setup",
         "body": "This technical prototype focuses on testing the core pipeline of video-based marine species recognition on-device, without relying on an internet connection. At this stage, the system can upload a video clip through the app and run a basic fish-recognition model locally. The current model is an early test version, so its accuracy is still limited—especially when handling motion blur, underwater color shifts, and partially occluded fish."
       },
       {
         "type": "image",
-        "title": "UI Design of the Phone App",
-        "image": "assets/projects/divedev/divedex_coral_setup.webp"
+        "title": "Marine Recognition Prototype",
+        "image": "assets/projects/divedev/divedex_coral_setup.webp",
+        "alt": "Google Coral setup for the marine recognition prototype"
       },
       {
         "type": "video",
@@ -369,7 +535,7 @@
       },
       {
         "type": "text",
-        "title": "Earlier Prototype: Planned Next Steps",
+        "title": "Prototype: Planned Next Steps",
         "body": "At the end of the earlier prototype, I outlined the following possible next steps:\n\n• Model Improvement: Retrain or fine-tune the recognition model using clearer underwater footage and a more diverse fish dataset. Testing a smaller, mobile-optimized model (e.g., MobileNet-based) for faster inference on low-power devices.\n\n• On-Device Performance: Optimize preprocessing of underwater images—color correction, noise removal, and frame selection—to improve accuracy without increasing computation.\n\n• Data System: Add structured local storage so every recognized fish can be saved with timestamp, location, and confidence level. This will support the future “collection page” and user profile features.\n\n• UX Expansion: Design a smoother upload-to-recognition flow, allowing users to review, edit, and organize their recorded dives.\n\n• Integration with Hardware: In later prototypes, connect the app with the physical smart diving goggles to automatically import captured photos or clips.\n\n• Community Features: Long-term additions may include species-sharing, dive logs, and collaborative identification tools."
       }
     ]

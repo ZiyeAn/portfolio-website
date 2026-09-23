@@ -15,9 +15,6 @@
 .finding h3 { font-size: 1.4rem; line-height: 1.35; }
 .implication { border-left: 2px solid #b8d4df; padding-left: 1.25rem; align-self: start; }
 .implication h4 { margin: 0 0 .75rem; font: 14px/1.5 Arial, sans-serif; color: #075d80; }
-.quote { margin: .25rem 0 0; }
-.quote p { font-family: inherit; font-size: 1.1rem; line-height: 1.65; }
-.quote figcaption { margin-top: .5rem; color: #62615b; font: 14px/1.5 Arial, sans-serif; }
 .materials, .direction { display: grid; gap: 1rem; min-width: 0; }
 .direction { padding: clamp(1.25rem, 3vw, 2rem); border-left: 3px solid #075d80; background: #e8edef; }
 .direction ol { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); list-style-position: inside; gap: 1rem; padding-top: 1rem; }
