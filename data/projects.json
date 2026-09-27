@@ -178,7 +178,7 @@
       {
         "type": "text",
         "title": "Website Development",
-        "body": "I built the site with HTML, CSS, and JavaScript, using GSAP for entrance motion, the animated ball, and desktop scroll transitions. The implementation includes a collapsible mobile navigation, separate learning articles, and reduced-motion support. Club membership, paddle purchasing, and merchandise are presented as upcoming features; competition information is marked for confirmation rather than shown as a live results feed."
+        "body": "The website architecture separates content management from the public site. The operations team manages articles, products, prices, and purchase links through an invitation-only Chinese-language Strapi admin. Publishing triggers an Astro build using only published content; the generated site and media are hosted on Tencent Cloud COS and delivered to visitors in mainland China over HTTPS through EdgeOne CDN. The public site connects learning with purchasing: visitors can browse products directly or answer four questions in the paddle guide to receive three recommendations, refine their preferences, and continue to product details and ordering."
       }
     ]
   },
