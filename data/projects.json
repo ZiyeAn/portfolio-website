@@ -136,6 +136,26 @@
         "body": "“Find Your Pace” introduces the site through oversized typography and an abstract court graphic. The page moves from global competitions to pickleball knowledge, paddle selection, and club merchandise. Alternating light, dark, and yellow-green sections give each part a clear place in the reading sequence."
       },
       {
+        "type": "slideshow",
+        "title": "Website Design Strategy",
+        "images": [
+          {
+            "image": "assets/projects/zq-sports/website-design-strategy.png",
+            "caption": "Content & Paddle Selection Strategy"
+          }
+        ]
+      },
+      {
+        "type": "slideshow",
+        "title": "Website System Architecture",
+        "images": [
+          {
+            "image": "assets/projects/zq-sports/website-system-architecture.png",
+            "caption": "Content Publishing & Purchase Architecture"
+          }
+        ]
+      },
+      {
         "type": "image",
         "image": "assets/projects/zq-sports/website-full.webp",
         "alt": "ZQ Sports website showing the opening court graphic, global competitions, learning articles, paddle selection, and club merchandise."
