@@ -420,7 +420,24 @@
   }
 }
 
-.heroGallery {
+.heroPhotos {
   grid-area: media;
   min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 1.75rem);
+}
+
+.heroPhoto {
+  margin: 0;
+  min-width: 0;
+}
+
+.heroPhoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
 }

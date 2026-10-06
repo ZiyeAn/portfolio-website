@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2800" height="1660" viewBox="0 0 2800 1660" role="img" aria-labelledby="title desc">
+<title id="title">LifeMart — Installation and Website Architecture</title>
+<desc id="desc">Hardware and physical touchpoints connect to a kiosk website. Six items start unpriced. Visitors freely switch among three coupon valuation views, check out, and print an itemized receipt. Without coupons, or after removing them all, staff authorization returns the visitor to the original unpriced page and prints a product photograph without pricing details.</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1 L7 4 L1 7" fill="none" stroke="#827f79" stroke-width="1.1"/></marker></defs>
+<style>
+text {font-family:Arial,Helvetica,sans-serif;fill:#22221f}
+.heading {font-size:34px;font-weight:700;letter-spacing:-1px}
+.node {font-size:23px}
+.bold {font-size:23px;font-weight:700}
+.small {font-size:19px;fill:#62615c}
+.note {font-size:20px;font-style:italic;fill:#b65096}
+.branch {fill:none;stroke:#88867e;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.flow {fill:none;stroke:#88867e;stroke-width:1.65;marker-end:url(#arrow)}
+.accent {fill:none;stroke:#db85c5;stroke-width:1.7;stroke-dasharray:5 5;stroke-linecap:round}
+.highlight {fill:#efb6e4;opacity:.72}
+</style>
+<rect width="2800" height="1660" fill="#efede8"/>
+
+<text x="110" y="105" class="heading"><tspan x="110" dy="0">System Architecture</tspan></text>
+<text x="2580" y="105" class="node"><tspan x="2580" dy="0">Ziye An</tspan></text>
+<text x="110" y="149" class="small"><tspan x="110" dy="0">LifeMart™ · Installation, website &amp; two checkout outcomes</tspan></text>
+<path class="highlight" d="M108 757 L261 754 L258 774 L106 772 Z"/>
+<text x="110" y="771" class="heading"><tspan x="110" dy="0">LifeMart™</tspan></text>
+<path class="branch" d="M286 761 C340.08 761, 335.92 354, 390 354"/>
+<path class="branch" d="M286 761 C340.08 761, 335.92 746, 390 746"/>
+<path class="branch" d="M286 761 C340.08 761, 335.92 1285, 390 1285"/>
+<text x="395" y="361" class="bold"><tspan x="395" dy="0">Physical system</tspan></text>
+<text x="395" y="753" class="bold"><tspan x="395" dy="0">Website</tspan></text>
+<text x="395" y="1292" class="bold"><tspan x="395" dy="0">Printed outputs</tspan></text>
+<path class="branch" d="M575 354 C632.2 354, 627.8 230, 685 230"/>
+<path class="branch" d="M575 354 C632.2 354, 627.8 330, 685 330"/>
+<path class="branch" d="M575 354 C632.2 354, 627.8 430, 685 430"/>
+<path class="branch" d="M575 354 C632.2 354, 627.8 530, 685 530"/>
+<text x="690" y="246" class="bold"><tspan x="690" dy="0">Barcode scanner</tspan></text>
+<text x="690" y="278" class="small"><tspan x="690" dy="0">Reads item, coupon and employee codes</tspan></text>
+<text x="690" y="346" class="bold"><tspan x="690" dy="0">Computer + display</tspan></text>
+<text x="690" y="378" class="small"><tspan x="690" dy="0">Website presented in Chrome Kiosk mode</tspan></text>
+<text x="690" y="446" class="bold"><tspan x="690" dy="0">Receipt printer</tspan></text>
+<text x="690" y="478" class="small"><tspan x="690" dy="0">Prints either a valuation receipt or a product image</tspan></text>
+<text x="690" y="546" class="bold"><tspan x="690" dy="0">Retail touchpoints</tspan></text>
+<text x="690" y="578" class="small"><tspan x="690" dy="0">6 packaged items · 3 coupon types · employee code</tspan><tspan x="690" dy="31">Shelves, self-checkout counter, packaging &amp; signage</tspan></text>
+<path class="branch" d="M500 746 C596.2 746, 588.8 695, 685 695"/>
+<text x="690" y="703" class="bold"><tspan x="690" dy="0">Home</tspan></text>
+<path class="highlight" d="M687 723 L849 720 L846 740 L685 738 Z"/>
+<text x="690" y="736" class="node"><tspan x="690" dy="0">Scan to begin</tspan></text>
+<path class="flow" d="M 860 713 C 900 713, 910 713, 952 713"/>
+<text x="880" y="685" class="small"><tspan x="880" dy="0">Scan item</tspan></text>
+<text x="970" y="703" class="bold"><tspan x="970" dy="0">6 item pages</tspan></text>
+<text x="970" y="736" class="node"><tspan x="970" dy="0">Layer 0 · No price</tspan></text>
+<text x="970" y="780" class="small"><tspan x="970" dy="0">3 humans</tspan><tspan x="970" dy="31">Baby · Adult · Older adult</tspan></text>
+<text x="970" y="856" class="small"><tspan x="970" dy="0">3 animals</tspan><tspan x="970" dy="31">Cat · Salmon · Cow</tspan></text>
+<path class="flow" d="M 1165 713 C 1205 713, 1220 713, 1260 713"/>
+<path class="highlight" d="M1277 690 L1512 687 L1509 707 L1275 705 Z"/>
+<text x="1280" y="703" class="bold"><tspan x="1280" dy="0">Coupon selection</tspan></text>
+<text x="1280" y="740" class="small"><tspan x="1280" dy="0">Scan any coupon</tspan><tspan x="1280" dy="31">Switch freely between views</tspan></text>
+<path class="branch" d="M1518 714 C1576.24 714, 1571.76 645, 1630 645"/>
+<path class="branch" d="M1518 714 C1576.24 714, 1571.76 815, 1630 815"/>
+<path class="branch" d="M1518 714 C1576.24 714, 1571.76 985, 1630 985"/>
+<text x="1638" y="650" class="bold"><tspan x="1638" dy="0">Coupon 1 · Layer 1</tspan></text>
+<text x="1638" y="684" class="small"><tspan x="1638" dy="0">Human: job market value</tspan><tspan x="1638" dy="31">Animal: individual / pet value</tspan></text>
+<text x="1638" y="820" class="bold"><tspan x="1638" dy="0">Coupon 2 · Layer 2</tspan></text>
+<text x="1638" y="854" class="small"><tspan x="1638" dy="0">Human: insurance value</tspan><tspan x="1638" dy="31">Animal: research value</tspan></text>
+<text x="1638" y="990" class="bold"><tspan x="1638" dy="0">Coupon 3 · Layer 3</tspan></text>
+<text x="1638" y="1024" class="small"><tspan x="1638" dy="0">Human: body resource value</tspan><tspan x="1638" dy="31">Animal: commodity value</tspan></text>
+<text x="1628" y="577" class="note"><tspan x="1628" dy="0">Alternative views, not a required 1 → 2 → 3 sequence</tspan></text>
+<path class="branch" d="M1955 663 C2035.6 663, 2029.4 822, 2110 822"/>
+<path class="branch" d="M1955 833 C2035.6 833, 2029.4 822, 2110 822"/>
+<path class="branch" d="M1955 1003 C2035.6 1003, 2029.4 822, 2110 822"/>
+<path class="flow" d="M 2110 822 L 2140 822"/>
+<path class="highlight" d="M2152 789 L2292 786 L2289 806 L2150 804 Z"/>
+<text x="2155" y="803" class="bold"><tspan x="2155" dy="0">Checkout</tspan></text>
+<text x="2155" y="844" class="node"><tspan x="2155" dy="0">Thank you for shopping</tspan><tspan x="2155" dy="31">with LifeMart</tspan></text>
+<path class="flow" d="M 2430 822 L 2490 822"/>
+<text x="2510" y="802" class="bold"><tspan x="2510" dy="0">Print out</tspan><tspan x="2510" dy="31">receipt</tspan></text>
+<text x="2510" y="887" class="small"><tspan x="2510" dy="0">Selected valuation</tspan><tspan x="2510" dy="31">+ pricing breakdown</tspan></text>
+<path class="branch" d="M 1195 713 C 1240 713, 1220 1160, 1275 1160"/>
+<path class="highlight" d="M1277 1138 L1552 1135 L1549 1155 L1275 1153 Z"/>
+<text x="1280" y="1152" class="bold"><tspan x="1280" dy="0">No coupon /</tspan><tspan x="1280" dy="31">remove all coupons</tspan></text>
+<path class="flow" d="M 1545 1167 L 1620 1167"/>
+<text x="1640" y="1152" class="node"><tspan x="1640" dy="0">Staff authorization</tspan><tspan x="1640" dy="31">Scan employee code</tspan></text>
+<text x="1640" y="1236" class="note"><tspan x="1640" dy="0">Attendant role performed by the artist</tspan></text>
+<path class="flow" d="M 1900 1167 L 1995 1167"/>
+<text x="2015" y="1152" class="node"><tspan x="2015" dy="0">Original item page</tspan><tspan x="2015" dy="31">Layer 0 · No price</tspan></text>
+<path class="flow" d="M 2250 1167 L 2385 1167"/>
+<path class="highlight" d="M2400 1138 L2655 1135 L2652 1155 L2398 1153 Z"/>
+<text x="2405" y="1152" class="bold"><tspan x="2405" dy="0">Print product image</tspan><tspan x="2405" dy="31">No pricing breakdown</tspan></text>
+<text x="2015" y="1285" class="note"><tspan x="2015" dy="0">Refusing a price requires intervention:</tspan><tspan x="2015" dy="31">a familiar checkout obstacle becomes part of the critique.</tspan></text>
+<path class="branch" d="M587 1285 C637.96 1285, 634.04 1281, 685 1281"/>
+<path class="branch" d="M587 1285 C637.96 1285, 634.04 1402, 685 1402"/>
+<text x="690" y="1288" class="bold"><tspan x="690" dy="0">Valuation receipt</tspan></text>
+<text x="690" y="1320" class="small"><tspan x="690" dy="0">A life represented through a pricing system</tspan></text>
+<text x="690" y="1409" class="bold"><tspan x="690" dy="0">Product photograph</tspan></text>
+<text x="690" y="1441" class="small"><tspan x="690" dy="0">A life represented without a price</tspan></text>
+<path class="branch" d="M501 746 C547.28 746, 543.72 1015, 590 1015"/>
+<text x="595" y="1022" class="bold"><tspan x="595" dy="0">Interaction support</tspan></text>
+<text x="595" y="1061" class="small"><tspan x="595" dy="0">Coupon eligibility checks</tspan><tspan x="595" dy="31">Item-switch and removal confirmations</tspan><tspan x="595" dy="31">1 / 2 / 3 exploration indicator</tspan><tspan x="595" dy="31">Pop-ups + voice prompts</tspan></text>
+<path class="highlight" d="M1615 227 L1838 224 L1835 244 L1613 242 Z"/>
+<text x="1620" y="241" class="bold"><tspan x="1620" dy="0">Input → website → output</tspan></text>
+<text x="1620" y="287" class="node"><tspan x="1620" dy="0">Scanner reads a code → the kiosk website changes state.</tspan><tspan x="1620" dy="31">The website prepares the chosen output → the printer produces it.</tspan></text>
+<text x="1620" y="377" class="small"><tspan x="1620" dy="0">Logical architecture: connection protocols and print drivers</tspan><tspan x="1620" dy="31">are not specified in the project documentation.</tspan></text>
+<path class="accent" d="M 1618 315 C 1550 315, 1550 445, 1485 445"/>
+<path d="M110 1510 H2690" stroke="#d4d0c9" stroke-width="1"/>
+<text x="110" y="1553" class="small"><tspan x="110" dy="0">READING THE SYSTEM</tspan></text>
+<text x="425" y="1553" class="small"><tspan x="425" dy="0">Branches show components and alternatives. Arrowheads show the website and print flow.</tspan></text>
+<text x="110" y="1592" class="note"><tspan x="110" dy="0">The same retail interface supports two outcomes: accepting a valuation, or asking to leave without one.</tspan></text>
+</svg>

@@ -390,16 +390,22 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
           </div>
 
           {heroImages?.length ? (
-            <div className={styles.heroGallery}>
-              <ResearchGallery
-                title={language === "zh" ? "LifeMart 现场记录" : "LifeMart installation documentation"}
-                priority
-                slides={heroImages.map((item) => ({
-                  src: normalizeAsset(item.image),
-                  title: item.caption ?? project.title,
-                  alt: item.caption ?? project.title,
-                }))}
-              />
+            <div className={styles.heroPhotos}>
+              {heroImages.map((item, index) => (
+                <figure key={item.image} className={styles.heroPhoto}>
+                  <Image
+                    src={normalizeAsset(item.image)}
+                    alt={item.caption ?? project.title}
+                    width={2400}
+                    height={1350}
+                    sizes="(max-width: 1095px) 46vw, 506px"
+                    priority={index === 0}
+                  />
+                  {item.caption ? (
+                    <figcaption className={styles.caption}>{item.caption}</figcaption>
+                  ) : null}
+                </figure>
+              ))}
             </div>
           ) : (
           <div className={`${styles.heroMedia} ${heroVideo ? styles.heroMediaVideo : ""}`}>

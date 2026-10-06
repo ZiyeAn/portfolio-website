@@ -262,6 +262,26 @@
         ]
       },
       {
+        "type": "slideshow",
+        "title": "Interaction Architecture",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/interaction-architecture.png",
+            "caption": "Hardware, website states, and the two printed outcomes."
+          }
+        ]
+      },
+      {
+        "type": "slideshow",
+        "title": "Simplified User Flow",
+        "images": [
+          {
+            "image": "assets/projects/lifemart/final-2026/simplified-user-flow.png",
+            "caption": "From scanning an item to checkout, including the staff-authorized route back to an unpriced life."
+          }
+        ]
+      },
+      {
         "type": "text",
         "title": "One life, several systems of value",
         "body": "The experience begins with a life that has not been priced. Scanning a coupon changes the valuation lens and the representation on screen. The three coupons can be selected in any order; they are alternatives to explore, not a required sequence.\n\nHuman and animal layers differ. Coupon wording and packaging colors correspond to these differences, carrying the rules beyond the screen. The design asks visitors to notice what each system chooses to recognize—and what disappears when a life becomes a category."

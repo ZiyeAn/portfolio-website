@@ -107,6 +107,10 @@ export const projectZh: Record<string, ProjectTranslation> = {
 };
 
 const caseStudyTextZh: Record<string, string> = {
+  "Interaction Architecture": "交互架构",
+  "Simplified User Flow": "简化版用户流程",
+  "Hardware, website states, and the two printed outcomes.": "硬件、网站状态与两种打印结果。",
+  "From scanning an item to checkout, including the staff-authorized route back to an unpriced life.": "从扫描商品到结账，以及通过店员授权回到未定价生命的分支。",
   "A visitor at LifeMart": "观众在 LifeMart 现场",
   "Choosing human and animal products": "挑选人类与动物商品",
   "Scanning a coupon at self-checkout": "在自助结账台扫描优惠券",
