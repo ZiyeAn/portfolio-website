@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
+import SiteFooter from "@/components/SiteFooter";
 import TopNav from "@/components/TopNav";
 import WritingList, { type WritingArticle } from "@/components/WritingList";
 import writingData from "@/data/writing.json";
@@ -52,6 +53,7 @@ export default function WritingPage() {
       <div className={worksLayout.pageContainer}>
         <WritingList articles={articles} />
       </div>
+      <SiteFooter theme="dark" />
     </main>
   );
 }

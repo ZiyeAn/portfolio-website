@@ -80,7 +80,9 @@
   background: none;
   color: rgba(247, 241, 232, 0.68);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.07em;
+  line-height: 1.6;
+  text-align: left;
   font-size: 0.78rem;
   cursor: pointer;
   transition: color 0.25s ease;
@@ -238,3 +240,5 @@
     font-size: 0.85rem;
   }
 }
+
+.tagButton:hover, .tagButton:focus-visible, .tagButtonActive { color:#ffd166; }

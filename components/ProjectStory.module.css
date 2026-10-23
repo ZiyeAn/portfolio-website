@@ -441,3 +441,21 @@
   object-fit: cover;
   object-position: center;
 }
+
+.designPlate { background:#080808; display:flex; justify-content:center; align-items:flex-start; gap:clamp(12px,3vw,32px); padding:clamp(18px,3vw,36px); }
+.designPlate figure { margin:0; min-width:0; flex:1; display:flex; flex-direction:column; align-items:center; gap:14px; }
+.designPlate a { display:flex; width:100%; justify-content:center; }
+.designPlate img { width:auto; max-width:100%; height:auto; max-height:620px; object-fit:contain; }
+.designPlate figcaption { color:#c8c8c8; font:12px/1.5 "jetbrains-mono",monospace; text-align:center; }
+.decisionBullets { list-style:disc; padding-left:1.25rem; margin:0; display:grid; gap:10px; }
+@media(max-width:600px) { .designPlate:has(figure:nth-child(3)) { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } }
+.annotatedPlate { background:#080808; color:#eee; display:grid; grid-template-columns:1fr 1fr; gap:30px; padding:28px; }
+.annotatedPanel { margin:0; min-width:0; }
+.annotatedPanel figcaption { font:12px/1.4 "jetbrains-mono",monospace; color:#aaa; margin-bottom:16px; }
+.annotationCanvas { position:relative; }
+.annotationCanvas > a { display:block; width:52%; }
+.annotationCanvas img { width:100%; height:auto; display:block; }
+.imageNote { position:absolute; left:60%; right:0; font:13px/1.65 "PingFang SC","Microsoft YaHei",Arial,sans-serif; color:#eee; }
+.imageNote > span { position:absolute; right:calc(100% + 5px); top:0; color:#ff8d4c; font:22px/1.1 Arial,sans-serif; }
+@media(max-width:1100px) { .annotatedPlate { grid-template-columns:1fr; gap:36px; } .annotationCanvas > a { width:45%; max-width:260px; } .imageNote { left:55%; font-size:14px; } }
+@media(max-width:600px) { .annotatedPlate { padding:18px; } .imageNote { font-size:12px; line-height:1.65; } }

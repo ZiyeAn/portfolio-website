@@ -52,7 +52,7 @@ export default function ProjectsPage() {
           <Link href="/playground">{t("playground", language)}</Link>.
         </p>
       </div>
-      <SiteFooter />
+      <SiteFooter theme="dark" />
     </main>
   );
 }

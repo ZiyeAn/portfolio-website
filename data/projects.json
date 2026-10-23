@@ -1,30 +1,135 @@
 [
   {
     "id": "divedex-mobile-app",
-    "title": "DiveDex Mobile App (WIP, Working Progress)",
-    "subtitle": "A Post-dive Discovery Companion for Recreational Divers",
+    "title": "DiveDex Mobile App",
+    "subtitle": "Turn a sighting into a discovery worth keeping",
     "year": 2026,
     "tags": [
       "UX Design",
       "UI Design",
       "AI"
     ],
-    "thumbnail": "assets/projects/divedev/mobile-2026/direction.webp",
-    "intro": "A post-dive companion concept that helps recreational divers explore marine life in their photos and videos, compare possible identifications, and save discoveries to a personal collection.",
+    "thumbnail": "/assets/projects/divedex/motion-2026/ui-carousel-black-poster.webp",
+    "intro": "A mobile app design prototype for reviewing underwater photos, questioning possible identifications, and collecting personal ocean encounters.",
     "meta": {
       "techStack": [
         "Figma"
       ],
       "timeline": "2026 · Work in Progress",
-      "role": "Individual Project",
-      "video": "",
-      "relatedLinks": []
+      "role": "Research, UX design & interaction prototyping",
+      "video": "/assets/projects/divedex/motion-2026/ui-carousel-black.mp4",
+      "relatedLinks": [
+        {
+          "label": "Figma · Current design prototype",
+          "url": "https://www.figma.com/design/fcbAdLWiwl1fn8im60FEgd/Divedex?node-id=417-336"
+        }
+      ]
     },
     "sections": [
       {
         "type": "text",
-        "title": "Project Overview",
-        "body": "DiveDex Mobile App is a work-in-progress post-dive discovery companion for recreational divers. It explores how photos and short videos can become a starting point for identifying marine life, learning visible traits and fun facts, and collecting personally meaningful discoveries in My Ocean. The current work covers user research, AI interaction decisions, feature priorities, and low-fidelity wireframes; user testing is still needed."
+        "title": "A little ocean of your own",
+        "body": "DiveDex explores what happens after a dive: reviewing the photos you brought back, making sense of possible species matches, and keeping a collection of encounters. The current Figma design connects a personal home, media import, results review, Collection, and species details.\n\nThis is an evolving design prototype. Screens use example species, confidence values, locations, and records to explore the experience; they do not demonstrate a live identification service."
+      },
+      {
+        "type": "prototype-video",
+        "title": "A closer look at the prototype",
+        "src": "/assets/projects/divedex/showcase-2026/hero.mp4",
+        "poster": "/assets/projects/divedex/showcase-2026/hero-poster.webp",
+        "caption": "10-second edited Figma showcase · Home, result details, and save feedback."
+      },
+      {
+        "type": "slideshow",
+        "title": "Eight screens, one evolving experience",
+        "images": [
+          {
+            "image": "/assets/projects/divedex/showcase-2026/screens-overview-01.webp",
+            "caption": "Identify and review"
+          },
+          {
+            "image": "/assets/projects/divedex/showcase-2026/screens-overview-02.webp",
+            "caption": "Revisit your collection"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "From a photo to a personal record",
+        "body": "The proposed flow moves from choosing photos or a short video to reviewing suggested matches and saving selected finds. Results separate “Ready to save” from “Needs a closer look.” A compact card keeps the initial scan light; expanded details make room for identification cues and correction.\n\nThe design aims to make uncertainty visible while leaving the diver involved in the decision. The next test is whether people understand those distinctions and know when to question a suggestion."
+      },
+      {
+        "type": "prototype-video",
+        "title": "Watch the review and save flow",
+        "src": "/assets/projects/divedex/showcase-2026/core-flow.mp4",
+        "poster": "/assets/projects/divedex/showcase-2026/core-flow-poster.webp",
+        "portrait": true,
+        "caption": "36-second edited Figma walkthrough · Example data and simulated analysis. The saved flow currently returns to a grid collection; the newer accordion view is shown separately."
+      },
+      {
+        "type": "text",
+        "title": "Three design questions behind the iteration",
+        "body": "How can Home feel personal? The current direction leads with a stack of photographic memories, putting the diver’s encounters before the next task.\n\nHow much information should a result show at once? Compact cards and expandable detail separate browsing from closer review.\n\nHow can a collection stay easy to browse? Expandable categories keep species within the Collection view, alongside map and timeline views. These are design responses to feedback; their effect on usability still needs testing."
+      },
+      {
+        "type": "slideshow",
+        "title": "Home · From a starting point to personal memories",
+        "images": [
+          {
+            "image": "/assets/projects/divedex/showcase-2026/before-home.webp",
+            "caption": "V2 / home"
+          },
+          {
+            "image": "/assets/projects/divedex/showcase-2026/after-home.webp",
+            "caption": "V3 / home"
+          }
+        ]
+      },
+      {
+        "type": "slideshow",
+        "title": "Results · Refining hierarchy and evidence disclosure",
+        "images": [
+          {
+            "image": "/assets/projects/divedex/showcase-2026/before-results.webp",
+            "caption": "V2 / results"
+          },
+          {
+            "image": "/assets/projects/divedex/showcase-2026/after-results.webp",
+            "caption": "V3 / results"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "body": "V2 already grouped results by readiness for saving. This comparison shows changes in presentation and expanded evidence, rather than a new confidence-handling feature."
+      },
+      {
+        "type": "slideshow",
+        "title": "Collection · Keeping categories in the same view",
+        "images": [
+          {
+            "image": "/assets/projects/divedex/showcase-2026/before-collection.webp",
+            "caption": "V2 / collection"
+          },
+          {
+            "image": "/assets/projects/divedex/showcase-2026/after-collection.webp",
+            "caption": "V3 / collection"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "title": "A system behind the screens",
+        "body": "The Figma work uses shared result cards, recommendation cards, navigation, and collection states to connect the experience. The component study shows how recurring structures support different content and interaction states.\n\nRecommendation cards currently represent designed content variants. Personalized AI recommendations, a chatbot, and real-time sea conditions remain future concepts."
+      },
+      {
+        "type": "slideshow",
+        "title": "Components and interaction states",
+        "images": [
+          {
+            "image": "/assets/projects/divedex/showcase-2026/components-board.webp",
+            "caption": "Reusable components"
+          }
+        ]
       },
       {
         "type": "divedex-research",
@@ -37,12 +142,12 @@
       },
       {
         "type": "text",
-        "title": "Feature Priorities",
+        "title": "Initial Feature Priorities",
         "body": "The must-have scope centers on importing photos or short videos, AI species candidates, visible-trait comparison, confirm/correct/defer actions, a personal discovery record, and the My Ocean collection. Drafts, pending reviews, optional dive details, a private encounter map, and search are next priorities. Regional guides, shareable cards, and opt-in research contributions are potential extensions."
       },
       {
         "type": "slideshow",
-        "title": "AI & Feature Planning",
+        "title": "Early AI & Feature Planning",
         "images": [
           {
             "image": "assets/projects/divedev/mobile-2026/ai-decisions.webp",
@@ -60,12 +165,12 @@
       },
       {
         "type": "text",
-        "title": "App Structure & Wireframes",
+        "title": "Earlier App Structure & Wireframes",
         "body": "The proposed navigation includes Home, Import & Identify, Explore, and My Ocean. Home brings together drafts, pending AI reviews, and recent discoveries; whether it should remain separate from Import is a question for user testing. Explore is a planned area for regional guides and discovery missions. These low-fidelity screens show a proposed structure, not a finished or validated interface."
       },
       {
         "type": "slideshow",
-        "title": "Design in Progress",
+        "title": "Earlier Navigation & Wireframes",
         "images": [
           {
             "image": "assets/projects/divedev/mobile-2026/structure.webp",
@@ -79,8 +184,8 @@
       },
       {
         "type": "text",
-        "title": "Next: User Testing",
-        "body": "Test whether a separate Home helps people resume discoveries, whether the Explore concept is useful, and whether uncertainty cues and simple correction actions are understandable. The findings will guide the next iteration of the navigation and identification flow."
+        "title": "What I need to test next",
+        "body": "Test whether the personal Home gives people a useful starting point, whether the confidence grouping and expandable cards support informed review, and whether the Collection structure makes a saved encounter easy to find again. Validate the clickable flow before treating a polished motion study as evidence of usability."
       }
     ]
   },

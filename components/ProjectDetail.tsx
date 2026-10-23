@@ -33,6 +33,7 @@ type ProjectDetails = {
   images?: string[];
   frame?: string;
   process?: ProcessData;
+  studySections?: { title: string; titleZh: string; body: string; bodyZh: string; image?: string }[];
 };
 
 const normalizeAsset = (src?: string) => {
@@ -71,6 +72,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
   const [showProcess, setShowProcess] = React.useState(false);
 
   const details: ProjectDetails = project.details ?? {};
+  const imagesOnly = rawProject.id === "/works/xiaohongshu-follow-along.html";
   const descriptionHtml = details.description ?? project.intro ?? "";
   const timeline = details.timeline ?? "";
   const techStack = details.techStack ?? [];
@@ -107,7 +109,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
     url: link.url.trim(),
     label:
       typeof link.label === "string" && link.label.trim()
-        ? link.label.trim()
+        ? (language === "zh" && link.label.trim() === "Try clickable prototype" ? "体验交互原型" : link.label.trim())
         : t("openLink", language),
   }));
   const hasMeta =
@@ -120,21 +122,19 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
   return (
     <div className={styles.page}>
       <TopNav />
+      <div className={styles.mobileToolbar}><Link href="/playground" className={styles.projectCategory}>← {language === "zh" ? "探索列表" : "Explorations"}</Link></div>
       <main className={styles.content}>
         <aside className={styles.infoColumn}>
           <div className={styles.infoBlock}>
             <Link href="/playground" className={styles.projectCategory}>
-              ← {t("playground", language)}
+              ← {language === "zh" ? "探索列表" : "Explorations"}
             </Link>
+            <div className={styles.infoFrame}>
+            <p className={styles.fileLabel}>{language === "zh" ? "探索档案" : "Exploration file"}</p>
             <h1 className={styles.projectTitle}>{project.title}</h1>
             {timeline ? <p className={styles.timeline}>{timeline}</p> : null}
 
-            {descriptionHtml ? (
-              <div
-                className={styles.description}
-                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
-              />
-            ) : null}
+
 
             {hasMeta ? (
               <dl className={styles.metaList}>
@@ -169,6 +169,15 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
                 ) : null}
               </dl>
             ) : null}
+
+            {descriptionHtml ? (
+              <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: descriptionHtml }}
+              />
+            ) : null}
+
+            </div>
 
             {process ? (
               <button
@@ -251,6 +260,27 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
                 )}
               </div>
             </BlurFade>
+          ))}
+          {details.studySections?.filter(section => !imagesOnly || section.image).map((section, index) => (
+            <section key={section.title} className={imagesOnly ? undefined : styles.studySection}>
+              {!imagesOnly && <>
+              <p className={styles.studyNumber}>{String(index + 1).padStart(2, "0")}</p>
+              <h2>{language === "zh" ? section.titleZh : section.title}</h2>
+              <p>{language === "zh" ? section.bodyZh : section.body}</p>
+              </>}
+              {section.image ? (
+                <a href={normalizeAsset(section.image)} target="_blank" rel="noreferrer" className={styles.studyImageLink}>
+                  <Image
+                    src={normalizeAsset(section.image)}
+                    alt={language === "zh" ? section.titleZh : section.title}
+                    width={2300}
+                    height={1295}
+                    sizes="(max-width: 900px) 100vw, 72vw"
+                  />
+                  {!imagesOnly && <span>{language === "zh" ? "打开完整设计图 ↗" : "Open full design board ↗"}</span>}
+                </a>
+              ) : null}
+            </section>
           ))}
           {!frameSrc &&
           !driveVideos.length &&

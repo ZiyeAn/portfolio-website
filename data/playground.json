@@ -1,13 +1,122 @@
 {
   "projects": [
     {
+      "title": "Lacquer Art",
+      "selected_work": false,
+      "thumbnail": "assets/playground/lacquer-art/1.webp",
+      "intro": "A selection of my lacquer works.",
+      "tags": [
+        "Lacquer Art",
+        "Material Studies"
+      ],
+      "id": "/works/lacquer-art.html",
+      "category": "Visual & Material Studies",
+      "featured": false,
+      "details": {
+        "description": "<p>A selection of my lacquer works.</p>",
+        "images": [
+          "assets/playground/lacquer-art/1.webp",
+          "assets/playground/lacquer-art/2.webp",
+          "assets/playground/lacquer-art/3.webp",
+          "assets/playground/lacquer-art/4.webp"
+        ]
+      }
+    },
+    {
+      "title": "Xiaohongshu · Follow Along",
+      "selected_work": false,
+      "thumbnail": "assets/playground/xiaohongshu/page-1.webp",
+      "intro": "Helping people move from saved tutorials to hands-on practice and continued discussion. An independent UX design study.",
+      "tags": [
+        "UX Research",
+        "Interaction Design",
+        "UI Design",
+        "Concept Prototype"
+      ],
+      "id": "/works/xiaohongshu-follow-along.html",
+      "category": "UX Studies",
+      "featured": true,
+      "details": {
+        "description": "<p>I explored how a saved tutorial could lead to hands-on practice and ongoing help from others.</p><p>Based on an exploratory review of 18 tutorial posts. Independent design exercise; the proposed flow has not yet been user-tested.</p>",
+        "techStack": [
+          "Figma"
+        ],
+        "timeline": "October 2026",
+        "images": [
+          "assets/playground/xiaohongshu/page-1.webp"
+        ],
+        "relatedLinks": [
+          {
+            "label": "Try clickable prototype",
+            "url": "https://www.figma.com/proto/g4V7ZQsrzx8kZ2ULs21BeO/?page-id=7%3A884&node-id=14-12&starting-point-node-id=14%3A12&scaling=scale-down&content-scaling=fixed&hide-ui=1"
+          }
+        ],
+        "studySections": [
+          {
+            "title": "Start with what people already do",
+            "titleZh": "从已有行为出发",
+            "body": "I often save tutorials without returning to try them. For this design exercise, I reviewed 18 tutorials across software, crochet, and baking. In the comments, people were already asking questions, answering others, and sharing what they had made. This small exploratory sample suggested supporting those existing exchanges, rather than adding mandatory check-ins.",
+            "bodyZh": "我经常收藏想学的教程，却常常没有下文。这次设计练习中，我查看了软件操作、钩织和烘焙三类共 18 篇教程，发现评论里已经有人提问、回答，也有人分享自己的成果。我希望从这些已有行为出发，让大家更容易开始尝试，也能围绕问题继续交流。这是小样本探索，不代表所有用户的情况。",
+            "image": "assets/playground/xiaohongshu/page-2.webp"
+          },
+          {
+            "title": "Where the learning flow breaks",
+            "titleZh": "学习过程在哪里中断",
+            "body": "I mapped the path from saving a tutorial to trying it, looking for help, and trying again. Personal experience and examples from the reviewed posts pointed to five possible gaps: starting after saving, adapting a step to a different situation, finding relevant advice, explaining a problem, and knowing whether a suggestion worked. These became design questions to test.",
+            "bodyZh": "我把流程从收藏、重新打开、边看边做，一直梳理到遇到困难、求助和再次尝试。结合个人经历与帖子中的例子，我整理出五个可能的断点：收藏后没有行动、自己的情况与教程不同、找不到适合的经验、难以说清问题，以及给出建议后不知道结果。这些是后续需要验证的设计问题。",
+            "image": "assets/playground/xiaohongshu/page-3.webp"
+          },
+          {
+            "title": "Keep practice inside the original note",
+            "titleZh": "在原笔记里跟着做",
+            "body": "The concept adds a “Follow Along” mode to a tutorial note. People can jump to the step they need, see discussions attached to that step, and return after trying a suggestion. AI is proposed as support for chapters, reference material, and drafting a question; people review what they post and report whether an answer helped.",
+            "bodyZh": "我在教程笔记里加入“跟着做”：想看哪一步，就看哪一步；卡住时，看看这一步的讨论；试过之后，再回来反馈。AI 帮忙分章节、查资料和整理问题，用户自己检查后发布，再由实际尝试的人说有没有用。",
+            "image": "assets/playground/xiaohongshu/page-4.webp"
+          },
+          {
+            "title": "Make the entry easy to find",
+            "titleZh": "从正在看的教程进入",
+            "body": "I designed entry points in the note, full-screen video, and comments, so the proposed flow can start where someone is already watching or asking for help. The entry takes them back to the same tutorial context.",
+            "bodyZh": "我设计了笔记页、全屏视频和评论区三个入口，让用户在正在看教程或找答案的位置进入，并保留原来的教程语境。",
+            "image": "assets/playground/xiaohongshu/page-5.webp"
+          },
+          {
+            "title": "Find advice for this particular step",
+            "titleZh": "找到这一步的解决办法",
+            "body": "Problem tags lead to related discussions and suggested troubleshooting material. If those do not fit, the person can describe their own situation and ask. The design brings the question, context, and source discussion together; whether this makes useful advice easier to find still needs testing.",
+            "bodyZh": "用户可以从问题标签进入，查看相关讨论和排查建议；如果不适合自己的情况，也可以补充描述再提问。我把问题、教程步骤和来源讨论放在一起，能否帮助用户更快找到适用建议，还需要测试。",
+            "image": "assets/playground/xiaohongshu/page-6.webp"
+          },
+          {
+            "title": "Give the exchange a follow-up",
+            "titleZh": "让交流有后续",
+            "body": "People can add text or images to explain where they are stuck, then return to say whether a suggestion worked, keep asking, or share their own approach. The goal is to let a single answer become a continuing exchange around practice.",
+            "bodyZh": "用户可以用文字和图片说明卡在哪里，再回来告诉帮过自己的人有没有解决，也可以继续问，或者分享自己的做法。我希望一次问答能围绕真实尝试继续下去。",
+            "image": "assets/playground/xiaohongshu/page-7.webp"
+          },
+          {
+            "title": "Try the idea across different tutorials",
+            "titleZh": "看看它能否用于不同教程",
+            "body": "I extended the screens to website building, everyday cooking, video editing, and photography. These are concept scenarios for exploring how the same structure might adapt to different tasks; they are not evidence of adoption.",
+            "bodyZh": "我把界面延展到了网站搭建、日常做菜、视频剪辑和相机拍摄四个场景，用来探索同一套结构如何适应不同任务。这些是设计场景，还不是实际使用结果。",
+            "image": "assets/playground/xiaohongshu/page-8.webp"
+          },
+          {
+            "title": "What I need to test next",
+            "titleZh": "下一步需要验证什么",
+            "body": "This is an independent design exercise, not a shipped Xiaohongshu feature. The reviewed posts informed the concept, but I have not yet validated the proposed flow with users. Next, I would test whether people can find Follow Along, connect a problem to the right step, identify the source of advice, and return to give feedback without feeling obliged to check in.",
+            "bodyZh": "这是独立的体验设计练习，并非小红书已上线的功能。帖子观察帮助我形成方案，但拟定流程还没有经过用户测试。接下来，我想验证：用户能否找到入口，把问题对应到正确步骤，辨认建议的来源，以及在不觉得被要求打卡的情况下回来反馈。"
+          }
+        ]
+      }
+    },
+    {
       "title": "Moth Scene Render",
       "selected_work": true,
       "thumbnail": "assets/playground/moth_animation/moth_scene2.webp",
       "intro": "A moth rendering made with maya.",
       "tags": [
-        "3D Modeling",
-        "✦Ziye’s Pick✧"
+        "3D Modeling"
       ],
       "id": "/works/Moth_Scene_Render.html",
       "details": {
@@ -22,7 +131,9 @@
           "assets/playground/moth_animation/moth.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": true
     },
     {
       "title": "Moth",
@@ -30,8 +141,7 @@
       "thumbnail": "assets/playground/moth_animation/moth.gif",
       "intro": "A moth animation made with maya.",
       "tags": [
-        "3D Modeling",
-        "✦Ziye’s Pick✧"
+        "3D Modeling"
       ],
       "id": "/works/Moth_Animation.html",
       "details": {
@@ -49,7 +159,9 @@
           "assets/playground/moth_animation/moth_process3.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": true
     },
     {
       "title": "Apple Universe",
@@ -57,8 +169,7 @@
       "thumbnail": "assets/playground/apple_animation/appleverse.gif",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": [
-        "3D Modeling",
-        "✦Ziye’s Pick✧"
+        "3D Modeling"
       ],
       "id": "/works/Apple_Universe.html",
       "details": {
@@ -75,7 +186,9 @@
           "assets/playground/apple_animation/Process.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": true
     },
     {
       "title": "Sailor Moon!!!",
@@ -97,7 +210,9 @@
         ],
         "images": [],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Orbit",
@@ -123,7 +238,9 @@
           "../assets/playground/orbit/orbit6.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Swallow Arc Bracelet",
@@ -145,7 +262,9 @@
           "../assets/playground/Rhino_Jew/Swallow1.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Aster Enamel Ring",
@@ -167,7 +286,9 @@
           "../assets/playground/Rhino_Jew/Aster1.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Ripple",
@@ -188,7 +309,9 @@
           "../assets/playground/ripple/ripple1.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Dragonfly",
@@ -210,7 +333,9 @@
           "assets/playground/dragonfly/dragonfly.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Carry Me",
@@ -218,8 +343,7 @@
       "thumbnail": "assets/playground/carry_me/carry_me1.webp",
       "intro": "A cute neclace I made ;",
       "tags": [
-        "fabrication",
-        "✦Ziye’s Pick✧"
+        "fabrication"
       ],
       "id": "/works/Carry_me.html",
       "details": {
@@ -234,7 +358,9 @@
           "../assets/playground/carry_me/carry_me2.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": true
     },
     {
       "title": "Python Playground",
@@ -242,7 +368,7 @@
       "thumbnail": "assets/playground/python/stardew.gif",
       "intro": "\"You don't choose your lifestyle, Data does.\"",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/python_playground.html",
       "details": {
@@ -262,7 +388,9 @@
             "url": "https://github.com/ZiyeAn/Creative_Coding_Python/blob/main/README.md"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Funguide",
@@ -270,7 +398,7 @@
       "thumbnail": "assets/playground/funguide/Funguide.webp",
       "intro": "A web app that uses AI to identify mushroom species from images and generates unique recipes. Built with Gemini API and React.",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/funguide.html",
       "details": {
@@ -297,7 +425,9 @@
             "url": "https://funguide.onrender.com/"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Descent | Ascent",
@@ -327,7 +457,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP"
           }
         ]
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Mountain Spirit 山鬼",
@@ -335,8 +467,7 @@
       "thumbnail": "assets/playground/mountain_spirit/ms3.webp",
       "intro": "An retro Futuristic Diner built with MAYA",
       "tags": [
-        "Tangible",
-        "✦Ziye’s Pick✧"
+        "Tangible"
       ],
       "id": "/works/Mountain_Spirit.html",
       "details": {
@@ -359,7 +490,9 @@
           "../assets/playground/mountain_spirit/ms4.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Physical Interaction",
+      "featured": true
     },
     {
       "title": "An Apple",
@@ -367,8 +500,7 @@
       "thumbnail": "assets/playground/apple/apple.gif",
       "intro": "How can you see an apple from different perspectives?",
       "tags": [
-        "Coding",
-        "✦Ziye’s Pick✧"
+        "Creative Coding"
       ],
       "id": "/works/apple.html",
       "details": {
@@ -394,7 +526,9 @@
             "url": "https://ziyean.github.io/-2-Different-Perspective/"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": true
     },
     {
       "title": "What to cook today?",
@@ -402,7 +536,7 @@
       "thumbnail": "assets/playground/what_to_cook/wtc_hero_img.webp",
       "intro": "A simple cookbook for kids",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/what_to_cook_today.html",
       "details": {
@@ -424,7 +558,9 @@
             "url": "https://ziyean.github.io/-3-Community-Tool-or-Quiz/index.html"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "What to drink today?",
@@ -432,7 +568,7 @@
       "thumbnail": "assets/playground/what_to_drink/wtd1.webp",
       "intro": "Decide what to drink through a digital Chinese divination",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/what-to-drink-today.html",
       "details": {
@@ -456,7 +592,9 @@
             "url": "https://ziyean.github.io/-4-Digital-Divination/index.html"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Marriage Premium",
@@ -464,8 +602,7 @@
       "thumbnail": "../assets/playground/marriage_premium/mp_tn.webp",
       "intro": "A physical computing piece showing gender inequality through gameplay and motion",
       "tags": [
-        "Tangible",
-        "✦Ziye’s Pick✧"
+        "Tangible"
       ],
       "id": "/works/marriage_premium.html",
       "details": {
@@ -491,7 +628,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/full/D6U7c7mQB"
           }
         ]
-      }
+      },
+      "category": "Physical Interaction",
+      "featured": true
     },
     {
       "title": "Autobiographical Game",
@@ -499,7 +638,7 @@
       "thumbnail": "assets/playground/bio_game/g1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/autobiographical_game.html",
       "details": {
@@ -519,7 +658,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/full/YAuL0uRQP"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Heartbeat Fireworks",
@@ -546,7 +687,9 @@
           "../assets/playground/heartbeat_firework/hf.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Physical Interaction",
+      "featured": false
     },
     {
       "title": "Misty Mountains",
@@ -579,7 +722,9 @@
             "url": "https://github.com/ZiyeAn/P5js_arduino_misty_mountain"
           }
         ]
-      }
+      },
+      "category": "Physical Interaction",
+      "featured": false
     },
     {
       "title": "Day and Night",
@@ -587,7 +732,7 @@
       "thumbnail": "../assets/playground/P5/DayAndNight.gif",
       "intro": "A p5.js animation reacting to the position of the mouse",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/day_and_night.html",
       "details": {
@@ -612,7 +757,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/full/CIgdbCDgk"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Data Portrait",
@@ -620,8 +767,7 @@
       "thumbnail": "../assets/playground/P5/DataPortrait.gif",
       "intro": "Data visualization",
       "tags": [
-        "Coding",
-        "✦Ziye’s Pick✧"
+        "Creative Coding"
       ],
       "id": "/works/data_portrait.html",
       "details": {
@@ -643,7 +789,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/sketches/xNtxOtEo9"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": true
     },
     {
       "title": "Experimental Camera",
@@ -651,7 +799,7 @@
       "thumbnail": "../assets/playground/P5/ExperimentalCamera.gif",
       "intro": "Data visualization",
       "tags": [
-        "Coding"
+        "Creative Coding"
       ],
       "id": "/works/experimental_camera.html",
       "details": {
@@ -673,7 +821,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/sketches/0HEqia3HE"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Experimental Clock",
@@ -681,8 +831,7 @@
       "thumbnail": "../assets/playground/P5/ExperimentalClock.gif",
       "intro": "Data visualization",
       "tags": [
-        "Coding",
-        "✦Ziye’s Pick✧"
+        "Creative Coding"
       ],
       "id": "/works/experimental_clock.html",
       "details": {
@@ -705,7 +854,9 @@
             "url": "https://editor.p5js.org/ZiyeAn/sketches/p7ATze3Xz"
           }
         ]
-      }
+      },
+      "category": "Creative Coding",
+      "featured": true
     },
     {
       "title": "Land",
@@ -732,7 +883,9 @@
           "../assets/playground/Land/Land_Spread_Ziye4.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Creative Coding",
+      "featured": false
     },
     {
       "title": "Portart of Pierre",
@@ -740,8 +893,7 @@
       "thumbnail": "assets/playground/portrait_of_pierre/PierP1.webp",
       "intro": "An autobiographical p5.js game exploring self-perception and choices",
       "tags": [
-        "Drawing",
-        "✦Ziye’s Pick✧"
+        "Drawing"
       ],
       "id": "/works/Portart_of_Pierre.html",
       "details": {
@@ -757,7 +909,9 @@
           "assets/playground/portrait_of_pierre/PierP3.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": true
     },
     {
       "title": "Ophelia",
@@ -785,7 +939,9 @@
           "../assets/playground/ophelia/ophelia_4.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Mist",
@@ -811,7 +967,9 @@
           "../assets/playground/mist/mist4.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Bone Clock",
@@ -837,7 +995,9 @@
           "../assets/playground/BoneClock/BoneClock4.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "Maternity",
@@ -860,7 +1020,9 @@
           "assets/playground/drawing/maternity.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     },
     {
       "title": "'Environmental-Friendly'",
@@ -884,7 +1046,9 @@
           "assets/playground/drawing/environmental-friendly.webp"
         ],
         "relatedLinks": []
-      }
+      },
+      "category": "Visual & Material Studies",
+      "featured": false
     }
   ]
 }

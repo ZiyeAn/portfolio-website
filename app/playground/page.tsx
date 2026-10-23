@@ -12,7 +12,7 @@ export default function PlaygroundPage() {
       <div className={styles.pageContainer}>
         <WorksGallery projects={projects.projects} />
       </div>
-      <SiteFooter />
+      <SiteFooter theme="dark" />
     </main>
   );
 }

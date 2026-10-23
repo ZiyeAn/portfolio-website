@@ -2,6 +2,8 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+import FollowAlongCover from "./FollowAlongCover";
 import { BlurFade } from "@/components/ui/blur-fade";
 import styles from "./PlaygroundGallery.module.css";
 import { useLanguage } from "@/components/LanguageProvider";
@@ -13,6 +15,8 @@ export interface Project {
   thumbnail: string;
   intro?: string;
   tags?: string[];
+  category: string;
+  featured?: boolean;
 }
 
 interface WorksGalleryProps {
@@ -32,33 +36,22 @@ const buildProjectHref = (id: string) => {
   return `/works/${cleaned}`;
 };
 
-const buildTagList = (projects: Project[]) => {
-  const tagSet = new Set<string>();
-  projects.forEach((project) => {
-    project.tags?.forEach((tag) => {
-      if (tag?.trim()) {
-        tagSet.add(tag.trim());
-      }
-    });
-  });
-  return ["All", ...Array.from(tagSet).sort((a, b) => a.localeCompare(b))];
-};
+const categories = [
+  "All",
+  "UX Studies",
+  "Creative Coding",
+  "Physical Interaction",
+  "Visual & Material Studies",
+];
 
 export default function WorksGallery({ projects }: WorksGalleryProps) {
   const { language } = useLanguage();
-  const tags = React.useMemo(() => buildTagList(projects), [projects]);
-  const [activeTag, setActiveTag] = React.useState<string>(tags[0] ?? "All");
-
-  React.useEffect(() => {
-    if (!tags.includes(activeTag)) {
-      setActiveTag(tags[0] ?? "All");
-    }
-  }, [tags, activeTag]);
+  const [activeTag, setActiveTag] = React.useState("All");
 
   const filteredProjects = React.useMemo(() => {
     const filtered = activeTag === "All"
       ? projects
-      : projects.filter((project) => project.tags?.includes(activeTag));
+      : projects.filter((project) => project.category === activeTag);
     return filtered.map((project) => localizeProject(project, language));
   }, [projects, activeTag, language]);
 
@@ -75,7 +68,7 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
             onChange={(event) => setActiveTag(event.target.value)}
             className={styles.select}
           >
-            {tags.map((tag) => (
+            {categories.map((tag) => (
               <option key={tag} value={tag}>
                 {tag === "All" ? t("all", language) : language === "zh" ? (tagZh[tag] ?? tag) : tag}
               </option>
@@ -83,12 +76,13 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
           </select>
         </div>
         <nav className={styles.tagList} aria-label={t("projectFilters", language)}>
-          {tags.map((tag) => {
+          {categories.map((tag) => {
             const isActive = tag === activeTag;
             return (
               <button
                 key={tag}
                 type="button"
+                aria-pressed={isActive}
                 onClick={() => setActiveTag(tag)}
                 className={`${styles.tagButton} ${isActive ? styles.tagButtonActive : ""}`}
               >
@@ -111,13 +105,15 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
               delay={0.2 + index * 0.05}
               inView
             >
-              <a
+              <Link
                 href={buildProjectHref(project.id)}
                 className={styles.projectCard}
-                aria-label={`View details for ${project.title}`}
+                aria-label={`${t("viewProject", language)} ${project.title}`}
               >
                 <div className={styles.projectImageWrapper}>
-                  {/\.gif$/i.test(imageSrc) ? (
+                  {project.id === "/works/xiaohongshu-follow-along.html" ? (
+                    <FollowAlongCover />
+                  ) : /\.gif$/i.test(imageSrc) ? (
                     <video
                       src={toWebVideo(imageSrc)}
                       aria-label={project.title}
@@ -142,7 +138,7 @@ export default function WorksGallery({ projects }: WorksGalleryProps) {
                     <span>{project.title}</span>
                   </div>
                 </div>
-              </a>
+              </Link>
             </BlurFade>
           );
         })}

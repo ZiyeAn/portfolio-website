@@ -48,7 +48,7 @@
 .projectIndex {
   font-size: clamp(1rem, 1rem + 0.6vw, 1.6rem);
   letter-spacing: 0.12em;
-  color: #851200;
+  color: #ffd166;
 }
 
 .infoColumn {
@@ -77,13 +77,13 @@
   letter-spacing: 0.18em;
   font-family: "jetbrains-mono", monospace;
   font-size: clamp(0.75rem, 0.7rem + 0.4vw, 0.95rem);
-  color: #851200;
+  color: #ffd166;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .projectLink:hover,
 .projectLink:focus-visible {
-  color: #b11f10;
+  color: #ffd166;
   transform: translateX(6px);
   outline: none;
 }

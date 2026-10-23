@@ -95,7 +95,7 @@
     padding: max(20px, env(safe-area-inset-top)) 20px max(20px, env(safe-area-inset-bottom));
   }
   .links { gap: clamp(1.5rem, 5vh, 2.8rem); padding: 96px 20px 64px; }
-  .label { font-size: clamp(2.25rem, 11vw, 4.5rem); }
+  .label { font-size: clamp(1.45rem, 7.3vw, 3.5rem); }
   .number { font-size: 0.58rem; }
 }
 

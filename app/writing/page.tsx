@@ -1,5 +1,6 @@
 "use client";
 
+import SiteFooter from "@/components/SiteFooter";
 import TopNav from "@/components/TopNav";
 import WritingList, { type WritingArticle } from "@/components/WritingList";
 import writingData from "@/data/writing.json";
@@ -26,6 +27,7 @@ export default function WritingPage() {
         </header>
         <WritingList articles={articles} />
       </div>
+      <SiteFooter theme="dark" />
     </main>
   );
 }

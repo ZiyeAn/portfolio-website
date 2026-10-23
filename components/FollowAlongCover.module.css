@@ -1,0 +1,111 @@
+.cover {
+  container-type: inline-size;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  background: #f4f3ef;
+  color: #141414;
+  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+.topline {
+  position: absolute;
+  z-index: 4;
+  top: 6%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.7cqw;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.type {
+  position: absolute;
+  top: 18%;
+  left: 4%;
+  font-size: 22cqw;
+  font-weight: 900;
+  letter-spacing: -0.085em;
+  line-height: 0.83;
+}
+.type span { display: block; }
+.type span:last-child { color: #f52c4c; }
+.phone {
+  position: absolute;
+  z-index: 2;
+  width: 23%;
+  aspect-ratio: 410 / 874;
+  left: 64%;
+  top: 4%;
+  padding: 0.65cqw;
+  border: 0.2cqw solid #a6a6ad;
+  border-radius: 4.1cqw;
+  background: linear-gradient(115deg, #e3e3e7 0%, #54545c 8%, #18181c 23%, #33333a 75%, #a1a1aa 97%, #d6d6dc 100%);
+  transform: perspective(100cqw) rotateY(-14deg) rotateZ(-12deg);
+  box-shadow:
+    0.28cqw 0.1cqw 0 #62626c,
+    0.55cqw 0.25cqw 0 #25252c,
+    0.8cqw 0.4cqw 0 #777780,
+    1.1cqw 1.5cqw 1.9cqw rgba(0, 0, 0, 0.23),
+    2.2cqw 3.3cqw 4.2cqw rgba(0, 0, 0, 0.18),
+    inset 0 0 0 0.2cqw #dedee2;
+}
+.screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 0.38cqw solid #080809;
+  border-radius: 3.4cqw;
+  background: #fff;
+}
+.screen img { object-fit: cover; }
+.island {
+  position: absolute;
+  z-index: 2;
+  top: 1.2%;
+  left: 34%;
+  width: 32%;
+  height: 3%;
+  border-radius: 2cqw;
+  background: #080809;
+}
+.island::after {
+  content: "";
+  position: absolute;
+  right: 12%;
+  top: 25%;
+  width: 7%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #171b2d;
+  box-shadow: inset 0 0 0 0.07cqw #292d38;
+}
+.volume, .power {
+  position: absolute;
+  width: 0.3cqw;
+  border-radius: 0.2cqw;
+  background: linear-gradient(#bcbcc2, #46464f 35%, #86868f);
+}
+.volume { left: -0.4cqw; top: 23%; height: 12%; }
+.power { right: -0.4cqw; top: 27%; height: 11%; }
+.caption {
+  position: absolute;
+  z-index: 3;
+  left: 5%;
+  bottom: 6%;
+  margin: 0;
+  font-size: 2.05cqw;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.corner {
+  position: absolute;
+  z-index: 3;
+  right: 5%;
+  bottom: 6%;
+  font-size: 1.65cqw;
+  font-weight: 600;
+}

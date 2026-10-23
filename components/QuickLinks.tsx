@@ -6,12 +6,14 @@ import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./QuickLinks.module.css";
+import { useLanguage } from "@/components/LanguageProvider";
+import { t, type UiKey } from "@/lib/i18n";
 
-const links = [
-  { label: "PROJECTS", href: "/projects", number: "01", className: "projects" },
-  { label: "PLAYGROUND", href: "/playground", number: "02", className: "playground" },
-  { label: "THOUGHTS", href: "/thoughts", number: "03", className: "thoughts" },
-  { label: "ABOUT ZIYE", href: "/about", number: "04", className: "about" },
+const links: { label: UiKey; href: string; number: string; className: string }[] = [
+  { label: "projects", href: "/projects", number: "01", className: "projects" },
+  { label: "playground", href: "/playground", number: "02", className: "playground" },
+  { label: "thoughts", href: "/thoughts", number: "03", className: "thoughts" },
+  { label: "about", href: "/about", number: "04", className: "about" },
 ];
 
 // Tune the timing of the single bottle-cap/link scene from one place.
@@ -29,6 +31,7 @@ const QUICK_LINK_MOTION = {
 };
 
 export default function QuickLinks() {
+  const { language } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -77,7 +80,7 @@ export default function QuickLinks() {
           <Link key={link.href} href={link.href} className={`${styles.link} ${styles[link.className]}`}>
             <span className={styles.reveal}>
               <span className={styles.number}>{link.number}</span>
-              <span className={styles.label}>{link.label}</span>
+              <span className={styles.label}>{t(link.label, language).toUpperCase()}</span>
               <span className={styles.arrow} aria-hidden="true">↗</span>
             </span>
           </Link>

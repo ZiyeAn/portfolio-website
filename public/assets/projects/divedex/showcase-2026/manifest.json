@@ -1,0 +1,287 @@
+{
+  "version": 2,
+  "date": "2026-10-23",
+  "assets": [
+    {
+      "path": "/assets/projects/divedex/showcase-2026/screens-overview-01.webp",
+      "width": 2400,
+      "height": 1350,
+      "purpose": "screen-overview",
+      "captionEn": "Identify and review",
+      "captionZh": "从照片到复核",
+      "altEn": "Home, photo selection, mixed results, and an expanded review card.",
+      "altZh": "首页、相册选择、分层结果与展开复核卡。",
+      "sourceNodeId": [
+        "509:3559",
+        "427:2014",
+        "427:1482",
+        "591:3664"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 271882
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/screens-overview-02.webp",
+      "width": 2400,
+      "height": 1350,
+      "purpose": "screen-overview",
+      "captionEn": "Revisit your collection",
+      "captionZh": "回看个人收藏",
+      "altEn": "Category, species detail, map, and timeline screens.",
+      "altZh": "分类、物种详情、地图与时间线。",
+      "sourceNodeId": [
+        "427:2893",
+        "595:4070",
+        "427:3266",
+        "427:3357"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 193764
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/components-board.webp",
+      "width": 2400,
+      "height": 1800,
+      "purpose": "component-board",
+      "captionEn": "Reusable components",
+      "captionZh": "复用组件",
+      "altEn": "Home recommendation variants, a collection accordion, and an expanded result card.",
+      "altZh": "首页推荐变体、收藏手风琴与展开结果卡。",
+      "sourceNodeId": [
+        "602:4335",
+        "557:3517",
+        "588:3539"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 296296
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/before-home.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V2 / home",
+      "captionZh": "旧版 / 首页",
+      "altEn": "Earlier V2 home screen, shown in full.",
+      "altZh": "V2旧版首页完整页面。",
+      "sourceNodeId": [
+        "190:8270"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 71368
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/after-home.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V3 / home",
+      "captionZh": "新版 / 首页",
+      "altEn": "Current V3 home screen, shown in full.",
+      "altZh": "V3当前首页完整页面。",
+      "sourceNodeId": [
+        "509:3559"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 72440
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/before-results.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V2 / results",
+      "captionZh": "旧版 / 识别结果",
+      "altEn": "Earlier V2 results screen, shown in full.",
+      "altZh": "V2旧版识别结果完整页面。",
+      "sourceNodeId": [
+        "190:13977"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 53674
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/after-results.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V3 / results",
+      "captionZh": "新版 / 识别结果",
+      "altEn": "Current V3 results screen, shown in full.",
+      "altZh": "V3当前识别结果完整页面。",
+      "sourceNodeId": [
+        "427:1482"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 62208
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/before-collection.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V2 / collection",
+      "captionZh": "旧版 / 收藏",
+      "altEn": "Earlier V2 collection screen, shown in full.",
+      "altZh": "V2旧版收藏完整页面。",
+      "sourceNodeId": [
+        "190:16269"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 42664
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/after-collection.webp",
+      "width": 1600,
+      "height": 1200,
+      "purpose": "before-after",
+      "captionEn": "V3 / collection",
+      "captionZh": "新版 / 收藏",
+      "altEn": "Current V3 collection screen, shown in full.",
+      "altZh": "V3当前收藏完整页面。",
+      "sourceNodeId": [
+        "427:2893"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "status": "ready-static-design",
+      "implementationStatus": "Figma prototype design; illustrative data, no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "bytes": 64200
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "sourceNodeId": [
+        "509:3559",
+        "509:3663",
+        "427:1482",
+        "457:2210",
+        "427:3060"
+      ],
+      "captionEn": "A little ocean of discoveries. Edited Figma motion showcase.",
+      "captionZh": "个人发现、证据展开与保存反馈。Figma剪辑式动态展示。",
+      "altEn": "A little ocean of discoveries. Edited Figma motion showcase.",
+      "altZh": "个人发现、证据展开与保存反馈。Figma剪辑式动态展示。",
+      "implementationStatus": "Illustrative Figma prototype; no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "path": "/assets/projects/divedex/showcase-2026/hero.mp4",
+      "purpose": "hero-motion",
+      "status": "ready-edited-prototype-video",
+      "duration": 10,
+      "poster": "/assets/projects/divedex/showcase-2026/hero-poster.webp",
+      "codec": "h264",
+      "frames": 240,
+      "bytes": 234152,
+      "muted": true,
+      "fileValidation": "H.264 dimensions and duration verified with ffprobe; sequential decoded contact sheets inspected; local browser playback inspected."
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "sourceNodeId": [
+        "509:3559",
+        "509:3663",
+        "427:1482",
+        "457:2210",
+        "427:3060"
+      ],
+      "captionEn": "A little ocean of discoveries. Edited Figma motion showcase.",
+      "captionZh": "个人发现、证据展开与保存反馈。Figma剪辑式动态展示。",
+      "altEn": "A little ocean of discoveries. Edited Figma motion showcase.",
+      "altZh": "个人发现、证据展开与保存反馈。Figma剪辑式动态展示。",
+      "implementationStatus": "Illustrative Figma prototype; no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "path": "/assets/projects/divedex/showcase-2026/hero-poster.webp",
+      "purpose": "video-poster",
+      "status": "ready-static-poster",
+      "bytes": 134900
+    },
+    {
+      "width": 780,
+      "height": 1688,
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "sourceNodeId": [
+        "509:3559",
+        "427:2014",
+        "427:1817",
+        "427:1482",
+        "457:2210",
+        "591:3664",
+        "427:3060",
+        "427:492"
+      ],
+      "captionEn": "From photo selection to review and a saved collection. Edited Figma walkthrough.",
+      "captionZh": "从相册选择到复核与保存收藏。Figma剪辑式流程演示。",
+      "altEn": "From photo selection to review and a saved collection. Edited Figma walkthrough.",
+      "altZh": "从相册选择到复核与保存收藏。Figma剪辑式流程演示。",
+      "implementationStatus": "Illustrative Figma prototype; no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "path": "/assets/projects/divedex/showcase-2026/core-flow.mp4",
+      "purpose": "core-flow-video",
+      "status": "ready-edited-prototype-video",
+      "duration": 36,
+      "poster": "/assets/projects/divedex/showcase-2026/core-flow-poster.webp",
+      "codec": "h264",
+      "frames": 864,
+      "bytes": 2644110,
+      "muted": true,
+      "fileValidation": "H.264 dimensions and duration verified with ffprobe; sequential decoded contact sheets inspected; local browser playback inspected."
+    },
+    {
+      "width": 780,
+      "height": 1688,
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "sourceNodeId": [
+        "509:3559",
+        "427:2014",
+        "427:1817",
+        "427:1482",
+        "457:2210",
+        "591:3664",
+        "427:3060",
+        "427:492"
+      ],
+      "captionEn": "From photo selection to review and a saved collection. Edited Figma walkthrough.",
+      "captionZh": "从相册选择到复核与保存收藏。Figma剪辑式流程演示。",
+      "altEn": "From photo selection to review and a saved collection. Edited Figma walkthrough.",
+      "altZh": "从相册选择到复核与保存收藏。Figma剪辑式流程演示。",
+      "implementationStatus": "Illustrative Figma prototype; no live AI or backend",
+      "interactionVerification": "Figma player tested: polaroid next; Identify → picker → Add → analysis timeout → results; ready result expand → confirm → Saved → Done → after-save collection; lower-confidence Giant Moray expand → scroll → confirm → Saved; main Collection Fish collapse and expand. Static boards do not prove untested paths.",
+      "path": "/assets/projects/divedex/showcase-2026/core-flow-poster.webp",
+      "purpose": "video-poster",
+      "status": "ready-static-poster",
+      "bytes": 109322
+    }
+  ],
+  "notes": [
+    "Actual Figma designs; edited video presentation, not a continuous screen recording.",
+    "V2 already had ready/review separation. Before/after compares current V2 and V3 canvases, not measured improvement.",
+    "See DELIVERY.md for source-state inconsistencies and verified interaction paths."
+  ]
+}

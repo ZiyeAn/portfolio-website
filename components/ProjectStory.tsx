@@ -1,15 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import TopNav from "@/components/TopNav";
-import SiteFooter from "@/components/SiteFooter";
 import styles from "./ProjectStory.module.css";
 import projectsData from "@/data/projects.json";
 import { useLanguage } from "@/components/LanguageProvider";
 import { localizeProject, t } from "@/lib/i18n";
 import DiveDexResearch from "@/components/DiveDexResearch";
 import ResearchGallery from "@/components/ResearchGallery";
+import PrototypeVideo from "@/components/PrototypeVideo";
+import ProjectDossier from "@/components/ProjectDossier";
 
 type ProjectData = (typeof projectsData)[number];
 
@@ -52,6 +51,14 @@ type VideoSection = BaseSection & {
   caption?: string;
 };
 
+type PrototypeVideoSection = BaseSection & {
+  type: "prototype-video";
+  src: string;
+  poster?: string;
+  caption?: string;
+  portrait?: boolean;
+};
+
 type SplitSection = BaseSection & {
   type: "split";
   body?: string;
@@ -67,6 +74,7 @@ type Section =
   | GallerySection
   | ProcessStepsSection
   | VideoSection
+  | PrototypeVideoSection
   | SplitSection
   | { type: "divedex-research"; title?: string };
 
@@ -118,6 +126,19 @@ const renderParagraphs = (body?: string) => {
 
 const renderSection = (section: Section, index: number) => {
   switch (section.type) {
+    case "prototype-video":
+      return (
+        <section key={`prototype-video-${index}`} className={styles.section}>
+          {section.title ? <h2 className={styles.sectionHeader}>{section.title}</h2> : null}
+          <PrototypeVideo
+            src={normalizeAsset(section.src)}
+            poster={section.poster ? normalizeAsset(section.poster) : undefined}
+            title={section.title ?? "Design prototype"}
+            portrait={section.portrait}
+          />
+          {section.caption ? <p className={styles.caption}>{section.caption}</p> : null}
+        </section>
+      );
     case "slideshow": {
       return (
         <section key={`slideshow-${index}`} className={styles.section}>
@@ -322,74 +343,71 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
     }));
   const sections = project.sections ?? [];
 
-  return (
-    <div className={styles.page} data-project={project.id}>
-      <TopNav />
-      <div className={styles.topBarSpacer} aria-hidden />
-      <main className={styles.main}>
-        <div className={styles.heroTopRow}>
-          <Link href="/projects" className={styles.backLink}>
-            <span aria-hidden>←</span> {t("backToProjects", language)}
-          </Link>
-          {timeline ? (
-            <span className={styles.timelineValue}>{timeline}</span>
-          ) : null}
-        </div>
-        <article className={styles.hero}>
-          <header className={styles.heroHeader}>
-            <span className={styles.srOnly}>{t("project", language)}</span>
-            <h1 className={styles.projectTitle}>{project.title}</h1>
-            {project.subtitle ? (
-              <p className={styles.projectSubtitle}>{project.subtitle}</p>
-            ) : null}
-          </header>
+  if (project.id === "divedex-mobile-app") {
+    const zh = language === "zh";
+    const show = (indices: number[]) => indices.map(index => renderSection(sections[index] as Section, index));
+    const plate = (names: string[], labels: string[]) => <div className={styles.designPlate}>{names.map((name, i) => <figure key={name}><a href={`/assets/projects/divedex/showcase-2026/source/${name}.png`} target="_blank" rel="noreferrer" aria-label={`${labels[i]} — ${zh ? "查看原图" : "View full image"}`}><Image src={`/assets/projects/divedex/showcase-2026/source/${name}.png`} alt={labels[i]} width={390} height={844} sizes="(max-width: 800px) 42vw, 360px" /></a><figcaption>{labels[i]}</figcaption></figure>)}</div>;
 
-          <div className={styles.metaPanel}>
-            {role ? (
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>{t("role", language)}</span>
-                <span className={styles.metaValue}>{role}</span>
-              </div>
-            ) : null}
-            {techStack.length ? (
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>{t(project.id === "lifemart" ? "tools" : "techStack", language)}</span>
-                <span className={styles.metaValue}>{techStack.join(", ")}</span>
-              </div>
-            ) : null}
-            {project.tags?.length ? (
-              <div className={`${styles.metaBlock} ${styles.tagsBlock}`}>
-                <span className={styles.metaLabel}>{t("tags", language)}</span>
-                <div className={styles.metaTags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={styles.tagPill}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-            {normalizedRelatedLinks.length ? (
-              <div className={styles.metaBlock}>
-                <span className={styles.metaLabel}>{t("related", language)}</span>
-                <div className={styles.metaLinks}>
-                  {normalizedRelatedLinks.map((link, index) => (
-                    <a
-                      key={`related-${index}`}
-                      href={link.url}
-                      className={`${styles.metaValue} ${styles.metaLink}`}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {link.label} ↗
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ) : null}
-          </div>
+    const annotatedPlate = (names: string[], notes: { top: number; text: string }[][]) => <div className={styles.annotatedPlate}>{names.map((name, i) => <figure key={name} className={styles.annotatedPanel}><figcaption>V{i + 2}</figcaption><div className={styles.annotationCanvas}><a href={`/assets/projects/divedex/showcase-2026/source/${name}.png`} target="_blank" rel="noreferrer" aria-label={`V${i + 2} — ${zh ? "查看原图" : "View full image"}`}><Image src={`/assets/projects/divedex/showcase-2026/source/${name}.png`} alt={`V${i + 2}`} width={390} height={844} sizes="(max-width: 800px) 45vw, 240px" /></a>{notes[i].map((note,j) => <div key={j} className={styles.imageNote} style={{top:`${note.top}%`}}><span aria-hidden="true">←</span>{note.text}</div>)}</div></figure>)}</div>;
 
-          {heroImages?.length ? (
+    return <ProjectDossier
+      title={project.title} subtitle={project.subtitle} timeline={timeline}
+      role={role} tools={techStack} tags={project.tags ?? []} links={normalizedRelatedLinks} chinese={zh}
+      hero={<PrototypeVideo src={heroVideo} poster={heroImage} title={zh ? "DiveDex 界面动态展示" : "DiveDex interface showcase"} autoPlay />}
+      chapters={[
+        { id: "overview", title: zh ? "项目概览" : "Overview", content: <div className={styles.sectionBody}><p>{zh ? "DiveDex 帮助潜水者回看水下照片、判断可能的物种匹配，并把海洋相遇保存为个人收藏。" : "DiveDex helps divers revisit underwater photos, review possible species matches, and build a personal collection of ocean encounters."}</p><p>{zh ? "当前阶段：Figma 设计原型。识别结果、置信度与地点均为示例数据；下一步是验证用户能否理解不确定性并完成复核。" : "Current stage: Figma design prototype. Matches, confidence values, and locations are illustrative. The next step is testing whether people understand uncertainty and can review a suggestion."}</p></div> },
+        { id: "research", title: zh ? "研究" : "Research", content: show([12]) },
+        { id: "decisions", title: zh ? "设计决策" : "Design decisions", content: <>
+        <details open><summary>{zh ? "查看早期功能规划与线框图" : "View earlier feature planning and wireframes"}</summary><div>{show([13,14,15,16,17])}</div></details>
+        <h3>{zh ? "首页：从功能入口到个人经历" : "Home: from shortcuts to personal memories"}</h3>
+        {annotatedPlate(["before-home","home"],[
+          [{top:22,text:zh ? "更像功能面板，缺少 playful 的探索感。" : "A functional dashboard with little sense of play."},{top:61,text:zh ? "My Collection / Identify 两个大入口占据注意力，个人经历展示不够。" : "Large My Collection / Identify shortcuts dominate; personal memories get less space."}],
+          [{top:24,text:zh ? "照片叠放展示过去的相遇，让自己的经历成为首页主角。" : "A photo stack brings past encounters to the foreground."},{top:61,text:zh ? "Identify 收成一个清晰入口，把更多空间留给回忆与探索。" : "One clear Identify action leaves more room for memories and exploration."}]
+        ])}
+        <h3>{zh ? "识别结果：少一点操作，多一点直观判断" : "Results: less work, more visual review"}</h3>
+        {annotatedPlate(["before-results","results"],[
+          [{top:26,text:zh ? "逐条卡片和展开操作，让每条结果都显得需要处理。" : "Repeated rows and expand controls make every match feel like a task."},{top:53,text:zh ? "已经确信的结果，不必再增加文字和反复确认的负担。" : "Confident matches need less reading and repeated checking."}],
+          [{top:20,text:zh ? "Ready to save 以图片网格快速浏览，减少重复文字。" : "Ready-to-save matches use a visual grid with less repeated text."},{top:61,text:zh ? "需要判断时再展开线索，把注意力留给不确定的结果。" : "Reveal evidence when needed; focus attention on uncertain matches."}]
+        ])}
+        <p>{zh ? "V2 已有置信度分组；本轮调整的是呈现方式与复核负担，效果仍需用户测试。" : "V2 already grouped matches by confidence. This iteration changes presentation and review effort; usability still needs testing."}</p>
+        <h3>{zh ? "收藏：先看到照片，再探索分类" : "Collection: see the photos before exploring categories"}</h3>
+        {annotatedPlate(["before-collection","collection"],[
+          [{top:36,text:zh ? "只有分类名称，需要逐个进入才能看到收藏。" : "Category names require opening each group to see the collection."},{top:65,text:zh ? "用户更想直接回看照片，而不是反复跳转。" : "People want to revisit photos directly, with less back-and-forth."}],
+          [{top:38,text:zh ? "在当前页面展开分类，直接看到物种照片。" : "Expand a category in place to reveal species photos."},{top:68,text:zh ? "目标是让收藏尽可能在一页浏览；当前原型展示 Fish 分类展开。" : "Aim for one-page browsing; the current prototype shows Fish expanded."}]
+        ])}</> },
+        { id: "experience", title: zh ? "使用体验" : "Experience", content: <><p>{zh ? "选择照片 → 查看匹配 → 展开复核 → 确认保存。" : "Choose photos → review matches → inspect evidence → confirm and save."}</p>{show([4])}{plate(["home","photos","results","review"],zh ? ["首页","选择照片","结果","复核"] : ["Home","Photos","Results","Review"])}{plate(["collection","detail","map","timeline"],zh ? ["收藏","物种详情","地图","时间线"] : ["Collection","Species","Map","Timeline"])}</> },
+        { id: "system", title: zh ? "系统与迭代" : "System & iteration", content: <><p>{zh ? "推荐卡、收藏分类与结果卡复用同一套视觉和交互规则。个性化推荐仍是设计概念。" : "Recommendation cards, collection categories, and results share visual and interaction rules. Personalized recommendations remain a concept."}</p>{plate(["recommendations"],zh ? ["推荐卡变体"] : ["Recommendation variants"])}{plate(["accordion","result-card"],zh ? ["分类展开","结果复核"] : ["Category expansion","Result review"])}<details><summary>{zh ? "查看原型细节动效" : "View the prototype motion study"}</summary><div>{show([1])}</div></details></> },
+        { id: "reflection", title: zh ? "反思与下一步" : "Reflection", content: show([18]) },
+      ]}
+    />;
+  }
+
+  // Group existing content into chapters without changing its order or media.
+  const chapterStarts: Record<string, number[]> = {
+    "zq-sports": [0, 1, 3, 7, 10],
+    "lifemart": [0, 1, 5, 9, 12, 15, 18],
+    "i-want-home-i-could-carry-with": [0, 2, 3],
+    "divedex": [0, 2, 7, 10],
+    "labyrinth": [0, 1, 4, 5],
+    "chester-choiceworth": [0, 2, 3, 4, 5],
+    "spinphony": [0, 1, 2],
+    "marbility": [0, 1, 2, 3],
+  };
+  const starts = chapterStarts[project.id] ?? [0];
+  const chapters = starts.map((start, chapterIndex) => ({
+    id: chapterIndex === 0 ? "overview" : `chapter-${chapterIndex + 1}`,
+    title: sections[start]?.title || (language === "zh" ? "项目概览" : "Overview"),
+    content: sections.slice(start, starts[chapterIndex + 1] ?? sections.length).map((section, offset) =>
+      renderSection({ ...section, ...(offset === 0 ? { title: undefined } : {}) } as Section, start + offset)
+    ),
+  }));
+  return <ProjectDossier
+    key={project.id}
+    title={project.title} subtitle={project.subtitle} timeline={timeline}
+    role={role} tools={techStack} tags={project.tags ?? []}
+    links={normalizedRelatedLinks} chinese={language === "zh"}
+    chapters={chapters}
+    hero={heroImages?.length ? (
             <div className={styles.heroPhotos}>
               {heroImages.map((item, index) => (
                 <figure key={item.image} className={styles.heroPhoto}>
@@ -409,7 +427,9 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
             </div>
           ) : (
           <div className={`${styles.heroMedia} ${heroVideo ? styles.heroMediaVideo : ""}`}>
-            {heroVideo ? (
+            {heroVideo && project.id === "divedex-mobile-app" && !heroVideoIsDrive ? (
+              <PrototypeVideo src={heroVideo} poster={heroImage} title={language === "zh" ? "DiveDex 设计原型动效" : "DiveDex design prototype motion"} autoPlay />
+            ) : heroVideo ? (
               heroVideoIsDrive ? (
                 <iframe
                   src={heroVideo}
@@ -442,13 +462,5 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
             )}
           </div>
           )}
-        </article>
-
-        <article className={styles.article}>
-          {sections.map((section, index) => renderSection(section as Section, index))}
-        </article>
-      </main>
-      <SiteFooter />
-    </div>
-  );
+  />;
 }
