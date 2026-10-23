@@ -455,7 +455,9 @@
 .annotationCanvas { position:relative; }
 .annotationCanvas > a { display:block; width:52%; }
 .annotationCanvas img { width:100%; height:auto; display:block; }
-.imageNote { position:absolute; left:60%; right:0; font:13px/1.65 "PingFang SC","Microsoft YaHei",Arial,sans-serif; color:#eee; }
+.imageNote { position:absolute; left:60%; right:0; font:13px/1.65 var(--font-editorial-body, "PingFang SC","Microsoft YaHei",Arial,sans-serif); color:#eee; }
 .imageNote > span { position:absolute; right:calc(100% + 5px); top:0; color:#ff8d4c; font:22px/1.1 Arial,sans-serif; }
 @media(max-width:1100px) { .annotatedPlate { grid-template-columns:1fr; gap:36px; } .annotationCanvas > a { width:45%; max-width:260px; } .imageNote { left:55%; font-size:14px; } }
 @media(max-width:600px) { .annotatedPlate { padding:18px; } .imageNote { font-size:12px; line-height:1.65; } }
+
+:global(html:not([lang="zh-CN"])) :is(.caption,.galleryCaption,.splitCaption) { font-family:"jetbrains-mono",monospace; }

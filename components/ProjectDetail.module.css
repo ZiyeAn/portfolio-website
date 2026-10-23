@@ -78,7 +78,7 @@
   border: 1px dashed rgba(31, 32, 32, 0.25);
   border-radius: 20px;
   text-align: center;
-  font-family: "VT323", monospace;
+  font-family: var(--font-editorial-body, "VT323", monospace);
   letter-spacing: 0.1em;
 }
 
@@ -133,7 +133,7 @@
 }
 
 .metaRow dt {
-  font-family: "VT323", monospace;
+  font-family: var(--font-editorial-body, "VT323", monospace);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.78rem;
@@ -169,7 +169,7 @@
   color: #a70712;
   border: 1px solid rgba(167, 7, 18, 0.4);
   border-radius: 999px;
-  font-family: "VT323", monospace;
+  font-family: var(--font-editorial-body, "VT323", monospace);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   cursor: pointer;
@@ -219,7 +219,7 @@
 }
 
 .processInner h2 {
-  font-family: "VT323", monospace;
+  font-family: var(--font-editorial-body, "VT323", monospace);
   font-size: clamp(2rem, 1.6rem + 1vw, 2.8rem);
   margin-bottom: 2rem;
   letter-spacing: 0.12em;
@@ -234,7 +234,7 @@
 }
 
 .processSections section h3 {
-  font-family: "VT323", monospace;
+  font-family: var(--font-editorial-body, "VT323", monospace);
   font-size: 1.4rem;
   letter-spacing: 0.1em;
   margin-bottom: 0.75rem;
@@ -277,7 +277,7 @@
 }
 
 .studySection { padding: clamp(1.2rem, 3vw, 2rem) 0; border-top: 1px solid rgba(31, 32, 32, 0.18); }
-.studyNumber { font-family: monospace; font-size: 0.8rem; color: #b6002b; }
+.studyNumber { font-family: var(--font-editorial-body, monospace); font-size: 0.8rem; color: #b6002b; }
 .studySection h2 { margin: 0.7rem 0 1rem; font-size: clamp(1.35rem, 2.5vw, 2rem); line-height: 1.3; }
 .studySection > p:not(.studyNumber) { max-width: 46rem; line-height: 1.8; margin-bottom: 1.5rem; color: #505352; }
 .studyImageLink { display: block; color: inherit; text-decoration: none; }

@@ -277,6 +277,79 @@
       "purpose": "video-poster",
       "status": "ready-static-poster",
       "bytes": 109322
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/hero-campaign-v2.png",
+      "width": 1672,
+      "height": 941,
+      "purpose": "campaign-hero",
+      "status": "rejected-direction-retained-for-history",
+      "captionEn": "Bring your little ocean with you.",
+      "captionZh": "把你的海洋发现带在身边。",
+      "altEn": "A vintage black-and-white scuba diver and colorful reef fish approach a DiveDex phone held by a wet diving glove, against paper white and navy.",
+      "altZh": "黑白复古潜水员与彩色鱼游向DiveDex手机，滴水的潜水手套握住手机，背景为纸白和深蓝色块。",
+      "sourceNodeId": [
+        "509:3559"
+      ],
+      "sourceFileKey": "fcbAdLWiwl1fn8im60FEgd",
+      "implementationStatus": "AI-generated commercial poster; screen visually based on actual Figma export, not pixel-exact UI.",
+      "interactionVerification": "Not applicable: static conceptual campaign artwork.",
+      "generationTool": "built-in image_gen",
+      "promptFile": "hero-campaign-v2-prompt.txt"
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/hero-ocean-features-v3.png",
+      "width": 1672,
+      "height": 941,
+      "purpose": "feature-hero-concept",
+      "status": "generated-concept-awaiting-user-feedback",
+      "captionEn": "Discover, collect, and explore with DiveDex.",
+      "captionZh": "用DiveDex识别、收藏与探索海洋发现。",
+      "altEn": "DiveDex on a handheld phone against a blurred turquoise ocean, surrounded by identification, sample study, recommendations and collection cards.",
+      "altZh": "虚化海洋背景前的DiveDex手机，周围悬浮识别、示例研究、推荐和收藏卡片。",
+      "sourceNodeId": [
+        "509:3559",
+        "588:3539",
+        "602:4335",
+        "427:2982"
+      ],
+      "implementationStatus": "AI-generated feature composition based on Figma references. Floating cards are marketing summaries, not exact UI exports; study is illustrative.",
+      "generationTool": "built-in image_gen",
+      "promptFile": "hero-ocean-features-v3-prompt.txt"
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/hero-ocean-features-v4.png",
+      "width": 1672,
+      "height": 941,
+      "purpose": "campaign-hero",
+      "status": "generated-revision-awaiting-feedback",
+      "captionEn": "Turn every dive into a discovery.",
+      "captionZh": "让每一次潜水都有新的发现。",
+      "altEn": "DiveDex headline on the left; an upright handheld phone and translucent floating feature cards on the right against a dark blue blurred ocean.",
+      "altZh": "左侧DiveDex标题与宣传语，右侧竖直手持手机及透明度不同的悬浮功能卡片，背景为深蓝虚化海洋。",
+      "sourceNodeId": [
+        "509:3559",
+        "588:3539",
+        "602:4335",
+        "427:2982"
+      ],
+      "implementationStatus": "AI-generated marketing mockup; card summaries and sample study are illustrative, not exact UI exports.",
+      "generationTool": "built-in image_gen",
+      "promptFile": "hero-ocean-features-v4-prompt.txt"
+    },
+    {
+      "path": "/assets/projects/divedex/showcase-2026/hero-gradient-features-v5.png",
+      "width": 1672,
+      "height": 941,
+      "purpose": "campaign-hero",
+      "status": "generated-revision-awaiting-feedback",
+      "captionEn": "Turn every dive into a discovery.",
+      "captionZh": "让每一次潜水都有新的发现。",
+      "altEn": "DiveDex headline beside an upright phone held by a black silhouette hand, with translucent feature cards against a gray-to-blue gradient.",
+      "altZh": "灰蓝渐变背景，左侧DiveDex宣传语，右侧黑色剪影手持手机与透明悬浮功能卡片。",
+      "implementationStatus": "AI-generated marketing mockup; card summaries and sample study are illustrative, not exact UI exports.",
+      "generationTool": "built-in image_gen",
+      "promptFile": "hero-gradient-features-v5-prompt.txt"
     }
   ],
   "notes": [

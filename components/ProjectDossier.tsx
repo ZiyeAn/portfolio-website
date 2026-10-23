@@ -7,9 +7,9 @@ import SiteFooter from "./SiteFooter";
 import styles from "./ProjectDossier.module.css";
 
 type Chapter = { id: string; title: string; content: ReactNode };
-type Props = { title: string; subtitle?: string; timeline?: string; role?: string; tools: string[]; tags: string[]; links: { label: string; url: string }[]; hero: ReactNode; chapters: Chapter[]; chinese: boolean };
+type Props = { headingFont?: "editorial"; title: string; subtitle?: string; timeline?: string; role?: string; tools: string[]; tags: string[]; links: { label: string; url: string }[]; hero: ReactNode; chapters: Chapter[]; chinese: boolean };
 
-export default function ProjectDossier({ title, subtitle, timeline, role, tools, tags, links, hero, chapters, chinese }: Props) {
+export default function ProjectDossier({ title, subtitle, timeline, role, tools, tags, links, hero, chapters, chinese, headingFont = "editorial" }: Props) {
   const [active, setActive] = useState("overview");
   const menu = useRef<HTMLDetailsElement>(null);
   useEffect(() => {
@@ -33,7 +33,7 @@ export default function ProjectDossier({ title, subtitle, timeline, role, tools,
   const contents = <nav aria-label={chinese ? "项目章节" : "Project chapters"} className={styles.contents}>
     {chapters.map((chapter, index) => <a key={chapter.id} href={`#${chapter.id}`} aria-current={active === chapter.id ? "location" : undefined} onClick={() => { if (menu.current) menu.current.open = false; }}><span>{String(index + 1).padStart(2, "0")}</span>{chapter.title}</a>)}
   </nav>;
-  return <div className={styles.page}><TopNav /><main className={styles.layout}>
+  return <div className={`${styles.page} ${headingFont === "editorial" ? styles.editorialType : ""}`}><TopNav /><main className={styles.layout}>
     <aside className={styles.sidebar}>
       <Link href="/projects" className={styles.back}>← {chinese ? "项目列表" : "Projects"}</Link>
       <div className={styles.infoFrame}><p className={styles.record}>{chinese ? "项目档案" : "Project file"}</p>

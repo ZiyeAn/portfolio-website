@@ -1,0 +1,17 @@
+Tool: built-in image_gen
+
+Edit image 1, the DiveDex ocean hero, according to the user. Image 2 is the crucial floating-card reference; closely match its small upright translucent floating UI snippets and layered photographic depth. Image 3 is the actual app screen to preserve.
+Keep landscape 16:9 WEBSITE HERO composition, but make PHONE VERTICAL upright, with restrained natural perspective, rather than strongly diagonal. Move entire phone, realistic wet hand holding phone, and ALL feature cards into the RIGHT 58% of canvas. LEFT 42% is calm dark ocean negative space for copy. No cards on left side. Hand comes from bottom-right. Phone fully recognizable, screen crisp, actual DiveDex home layout from image3.
+Background: photographic blurred ocean, now considerably DEEPER BLUE and DARKER, rich sapphire/navy, soft muted blue bokeh, no turquoise green cast, no pale bright sky, no busy visible shore. Left half particularly dark for excellent white text contrast, natural seamless darkening, NOT a rigid rectangular split. Luxurious restrained product photograph.
+Main requested change: floating cards must resemble image2 much more closely. Use SMALL COMPACT upright, unrotated cards aligned to image vertical axes; stagger them vertically around phone, some behind phone and partially occluded, some in front of edges. NOT four large solid poster panels. Mix visibly different transparency levels: one rear card around 35% opacity with ocean subtly showing through and softer focus; another around 60% opacity midground; one foreground around 90% white with crisp type and delicate shadow. Thin translucent rounded rectangular surfaces, modest 14-20px corner radii, subtle realistic depth, no neon edges, no bulky 3D slabs, no holographic projection. Cards are compact thumbnail + 1-2 lines snippets, approximately like the Kale/Cranberry/Feta reference. Around 3-4 cards, right side only, never obscure main clownfish polaroid:
+- small crisp front card: fish thumbnail, 'Clown Anemonefish', tiny blue check, small 'Identified' label.
+- faint rear upper card: 'Studies', 'Bali reef fish', tiny 'Sample study' label, reef fish thumbnail.
+- medium translucent lower card: turtle thumbnail, 'For your next dive', 'Explore Bali'.
+- optionally tiny rear collection card: 'My Collection', three small fish thumbnails, no metrics.
+Preserve authentic DiveDex visual design: white UI, Instrument Serif headline, Manrope body, orange Identify CTA, cyan nav.
+LEFT COPY, exactly spelled, no additional wording:
+'DiveDex'
+'Turn every dive'
+'into a discovery.'
+Set DiveDex as large elegant white Instrument Serif brand word near left-middle upper area. Beneath it, two-line slogan in smaller clean white Manrope, comfortable spacing. Give text enough breathing room and large left margin. Professional editorial hierarchy, all text sharp and readable. No extra button, app store badges, tiny footer, logos or watermark.
+Overall: airy commercial app advertisement with distinct left-copy/right-product hierarchy, dark blue blurred ocean, upright mobile device, small translucent floating feature cards at different depth planes, realistic softly lit wet hand, preserve interface appearance. No diver or vintage collage.

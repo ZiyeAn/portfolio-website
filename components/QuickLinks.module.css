@@ -8,7 +8,7 @@
   background: #333333;
   color: #f9f6f1;
   padding: clamp(1.5rem, 4vw, 4rem);
-  font-family: "huiwen", var(--font-geist-sans, system-ui);
+  font-family: var(--font-editorial-body, "huiwen", var(--font-geist-sans, system-ui));
 }
 
 .kicker {
@@ -58,13 +58,13 @@
 }
 
 .label {
-  font-family: "huiwen", var(--font-geist-sans, system-ui);
+  font-family: var(--font-editorial-body, "huiwen", var(--font-geist-sans, system-ui));
   font-size: clamp(2.5rem, 6.2vw, 6.6rem);
   letter-spacing: 0.015em;
 }
 
 .arrow {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-editorial-body, Arial, Helvetica, sans-serif);
   font-size: 0.48em;
   letter-spacing: 0;
   transition: transform 0.25s ease;
@@ -103,3 +103,5 @@
   .reveal { clip-path: inset(0 0 0 0); }
   .cap { display: none; }
 }
+
+:global(html:not([lang="zh-CN"])) .label { font-family:"huiwen",serif; font-weight:400; }

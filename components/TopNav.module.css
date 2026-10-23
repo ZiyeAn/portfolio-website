@@ -353,7 +353,7 @@
   }
   .navLeft { display: none; }
   .navCenter, .navRight { gap: 36px; }
-  .navLinks a { font-family: 'huiwen'; font-size: clamp(1.4rem, 6vw, 1.75rem); line-height: 1.2; }
+  .navLinks a { font-family: var(--font-editorial-body, 'huiwen'); font-size: clamp(1.4rem, 6vw, 1.75rem); line-height: 1.2; }
   .languageSwitchMobile { margin-top: 32px; }
   .languageSwitchMobile button { min-width: 44px; min-height: 44px; font-size: 1rem; }
   .topNavOpen .menuToggle { width: 44px; height: 44px; border-color: transparent; }

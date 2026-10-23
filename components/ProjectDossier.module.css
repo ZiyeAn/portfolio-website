@@ -74,7 +74,7 @@
  .sidebar .infoFrame .info > div:last-child { padding-bottom:10px; }
 }
 
-.chapterContent p, .chapterContent li, .chapterContent summary, .subtitle { font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif; }
+.chapterContent p, .chapterContent li, .chapterContent summary, .subtitle { font-family: var(--font-editorial-body, "PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif); }
 .chapterContent p, .chapterContent li { font-size:16px; line-height:1.85; }
 .chapterContent h3 { margin:0; }
 
@@ -98,3 +98,46 @@
  .layout { padding-top:116px; }
 }
 .sidebar > .back { width:100%; box-sizing:border-box; }
+
+/* DiveDex typography trial, isolated from other projects. */
+:global(html:not([lang="zh-CN"])) .editorialType :is(.sidebar,.mobileToolbar) {
+ font-family:"Cooper Hewitt Light",sans-serif;
+}
+
+@font-face {
+ font-family:"Cooper Hewitt Light";
+ src:url("/assets/CooperHewitt-Light.woff") format("woff");
+ font-weight:300; font-style:normal; font-display:swap;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .document :is(h1,h2,h3,h4,h5,h6) {
+ font-family:"huiwen",serif;
+ font-weight:400;
+ letter-spacing:-.015em;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .chapterContent :is(p,li,summary),
+:global(html:not([lang="zh-CN"])) .editorialType .subtitle {
+ font-family:"Cooper Hewitt Light",sans-serif;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .chapterContent :is(p,li) {
+ font-size:17px;
+ line-height:1.75;
+}
+.editorialType .document figcaption {
+ font-family:"jetbrains-mono",monospace;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .header h1 {
+ font-size:clamp(54px,6.3vw,94px);
+ line-height:1.02;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .chapterHeading h2 {
+ font-size:clamp(38px,4vw,48px);
+ line-height:1.12;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .chapterContent h2 {
+ font-size:clamp(30px,3vw,36px);
+ line-height:1.2;
+}
+:global(html:not([lang="zh-CN"])) .editorialType .chapterContent h3 {
+ font-size:clamp(26px,2.6vw,32px);
+ line-height:1.25;
+}

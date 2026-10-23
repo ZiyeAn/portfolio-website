@@ -7,7 +7,7 @@
   isolation: isolate;
   background: #f4f3ef;
   color: #141414;
-  font-family: Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: var(--font-editorial-body, Arial, "PingFang SC", "Microsoft YaHei", sans-serif);
 }
 .topline {
   position: absolute;
