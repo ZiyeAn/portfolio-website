@@ -45,7 +45,7 @@ export default function ProjectDossier({ title, subtitle, timeline, role, tools,
       <Link href="/projects" className={styles.back}><ArrowLeft size={16} strokeWidth={1.5} aria-hidden="true" /> {chinese ? "项目列表" : "Projects"}</Link>
     <details className={styles.mobileMenu} ref={menu}>
       <summary><span className={styles.currentChapter}>{chapters.find(c => c.id === active)?.title}</span><span>{chinese ? "目录 ＋" : "Index +"}</span></summary>
-      <div className={styles.menuBody}>{contents}<p className={styles.record}>{chinese ? "项目信息" : "Project information"}</p>{info}</div>
+      <div className={styles.menuBody}>{contents}</div>
     </details>
     </div>
     <div className={styles.document}>

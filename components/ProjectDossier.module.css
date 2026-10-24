@@ -90,7 +90,9 @@
  .mobileMenu > summary { min-height:44px; padding:8px 0; align-items:center; }
  .currentChapter { overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:28vw; }
  .mobileMenu > summary > span:last-child { white-space:nowrap; }
- .menuBody { position:absolute; top:100%; left:0; right:0; background:#f7f3eb; box-shadow:0 8px 12px #29282310; }
+ .menuBody { position:absolute; top:100%; left:0; right:0; background:#e5ddd0; border-top:1px solid #b8aa96; border-bottom:1px solid #a99a85; box-shadow:0 12px 24px #29282330; overscroll-behavior:contain; }
+ .mobileMenu[open] > summary { background:#e5ddd0; color:#873b30; box-shadow:0 0 0 8px #e5ddd0; }
+ .menuBody .contents a[aria-current] { background:#d6c8b5; padding-inline:10px; }
  .chapter { scroll-margin-top:140px; }
 }
 @media(max-width:767px) {
