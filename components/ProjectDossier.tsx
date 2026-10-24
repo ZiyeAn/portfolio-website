@@ -1,4 +1,5 @@
 "use client";
+import LinkArrow from "@/components/LinkArrow";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -28,7 +29,7 @@ export default function ProjectDossier({ title, subtitle, timeline, role, tools,
     {role && <div><dt>{chinese ? "角色" : "Role"}</dt><dd>{role}</dd></div>}
     {tools.length > 0 && <div><dt>{chinese ? "工具" : "Tools"}</dt><dd>{tools.join(" / ")}</dd></div>}
     {tags.length > 0 && <div><dt>{chinese ? "标签" : "Tags"}</dt><dd>{tags.join(" / ")}</dd></div>}
-    {links.length > 0 && <div><dt>{chinese ? "相关链接" : "Links"}</dt><dd>{links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label} ↗</a>)}</dd></div>}
+    {links.length > 0 && <div><dt>{chinese ? "相关链接" : "Links"}</dt><dd>{links.map(link => <a key={link.url} href={link.url} target="_blank" rel="noreferrer">{link.label} <LinkArrow /></a>)}</dd></div>}
   </dl>;
   const contents = <nav aria-label={chinese ? "项目章节" : "Project chapters"} className={styles.contents}>
     {chapters.map((chapter, index) => <a key={chapter.id} href={`#${chapter.id}`} aria-current={active === chapter.id ? "location" : undefined} onClick={() => { if (menu.current) menu.current.open = false; }}><span>{String(index + 1).padStart(2, "0")}</span>{chapter.title}</a>)}

@@ -1,4 +1,5 @@
 "use client";
+import LinkArrow from "@/components/LinkArrow";
 
 import { useLanguage } from "./LanguageProvider";
 import styles from "./SiteFooter.module.css";
@@ -18,8 +19,8 @@ export default function SiteFooter({ className = "", theme = "light" }: { classN
             <h3>Contact</h3>
             <a className={styles.email} href="mailto:ziyean076@gmail.com">ziyean076@gmail.com</a>
             <div className={styles.socials}>
-              <a href="https://www.linkedin.com/in/ziye-an-356649269/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-              <a href="https://www.instagram.com/ziye_an_works_archive" target="_blank" rel="noreferrer">Instagram ↗</a>
+              <a href="https://www.linkedin.com/in/ziye-an-356649269/" target="_blank" rel="noreferrer">LinkedIn <LinkArrow /></a>
+              <a href="https://www.instagram.com/ziye_an_works_archive" target="_blank" rel="noreferrer">Instagram <LinkArrow /></a>
             </div>
           </div>
         </div>

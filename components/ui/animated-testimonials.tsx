@@ -1,4 +1,5 @@
 "use client";
+import LinkArrow from "@/components/LinkArrow";
 
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence, useReducedMotion } from "motion/react";
@@ -298,9 +299,9 @@ export const AnimatedTestimonials = ({
         {testimonials[active].href ? (
           <p className={styles.imageHint}>
             {language === "zh" ? (
-              "点击图片，查看项目详情 ↗"
+              <>点击图片，查看项目详情 <LinkArrow /></>
             ) : (
-              <><span className={styles.desktopHint}>Click</span><span className={styles.mobileHint}>Tap</span> image to view project details ↗</>
+              <><span className={styles.desktopHint}>Click</span><span className={styles.mobileHint}>Tap</span> image to view project details <LinkArrow /></>
             )}
           </p>
         ) : null}

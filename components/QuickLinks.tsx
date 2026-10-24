@@ -1,4 +1,5 @@
 "use client";
+import LinkArrow from "@/components/LinkArrow";
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
@@ -81,7 +82,7 @@ export default function QuickLinks() {
             <span className={styles.reveal}>
               <span className={styles.number}>{link.number}</span>
               <span className={styles.label}>{t(link.label, language).toUpperCase()}</span>
-              <span className={styles.arrow} aria-hidden="true">↗</span>
+              <span className={styles.arrow} aria-hidden="true"><LinkArrow /></span>
             </span>
           </Link>
         ))}

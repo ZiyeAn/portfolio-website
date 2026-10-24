@@ -8,7 +8,7 @@ import diverPhoto from "@/public/assets/about/diver.png";
 import styles from "./IdentityCard.module.css";
 
 const identities = [
-  { id: "ux", en: "Product & UX", zh: "产品与体验", mode: "01 / WORK MODE", color: "#e8e3d8", note: "Questions → prototypes → experiences", noteZh: "问题 → 原型 → 体验", medium: "Flows, interfaces & physical experiences", mediumZh: "流程、界面与实体体验", icon: "↗" },
+  { id: "ux", en: "Product & UX", zh: "产品与体验", mode: "01 / WORK MODE", color: "#e8e3d8", note: "Questions → prototypes → experiences", noteZh: "问题 → 原型 → 体验", medium: "Flows, interfaces & physical experiences", mediumZh: "流程、界面与实体体验", icon: "↗︎" },
   { id: "photo", en: "Photographer", zh: "摄影师", mode: "02 / THROUGH MY LENS", color: "#e2dac8", note: "Another way of looking", noteZh: "换个角度看世界", medium: "Light / frames / moments", mediumZh: "光线 / 画面 / 瞬间", icon: "◎" },
   { id: "dive", en: "Free Diver", zh: "自由潜水员", mode: "03 / UNDER THE SURFACE", color: "#d5e2df", note: "See you below the surface", noteZh: "水面之下见", medium: "Water / movement / observation", mediumZh: "水 / 流动 / 观察", icon: "≈" },
   { id: "draw", en: "Sketchbook me", zh: "画画的我", mode: "04 / OFF THE GRID", color: "#e8d9d1", note: "A little room to wander", noteZh: "留一点空间，随手画画", medium: "Lines / paper / unfinished ideas", mediumZh: "线条 / 纸 / 未完成的想法", icon: "✳" },

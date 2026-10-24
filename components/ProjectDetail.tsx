@@ -1,4 +1,5 @@
 "use client";
+import LinkArrow from "@/components/LinkArrow";
 import React from "react";
 import Image from "next/image";
 import styles from "./ProjectDetail.module.css";
@@ -161,7 +162,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
                           target="_blank"
                           rel="noreferrer"
                         >
-                          {link.label} ↗
+                          {link.label} <LinkArrow />
                         </a>
                       ))}
                     </dd>
@@ -277,7 +278,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
                     height={1295}
                     sizes="(max-width: 900px) 100vw, 72vw"
                   />
-                  {!imagesOnly && <span>{language === "zh" ? "打开完整设计图 ↗" : "Open full design board ↗"}</span>}
+                  {!imagesOnly && <span>{language === "zh" ? "打开完整设计图" : "Open full design board"} <LinkArrow /></span>}
                 </a>
               ) : null}
             </section>

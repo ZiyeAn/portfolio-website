@@ -20,7 +20,7 @@ const ui = {
   works: { en: "works", zh: "件作品" },
   year: { en: "Year", zh: "年份" },
   upcoming: { en: "Upcoming", zh: "即将发布" },
-  viewProject: { en: "View project ↗", zh: "查看项目 ↗" },
+  viewProject: { en: "View project ↗︎", zh: "查看项目 ↗︎" },
   backToProjects: { en: "Back to Projects", zh: "返回项目列表" },
   role: { en: "Role", zh: "角色" },
   techStack: { en: "Tech Stack", zh: "技术栈" },
