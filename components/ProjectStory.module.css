@@ -461,3 +461,5 @@
 @media(max-width:600px) { .annotatedPlate { padding:18px; } .imageNote { font-size:12px; line-height:1.65; } }
 
 :global(html:not([lang="zh-CN"])) :is(.caption,.galleryCaption,.splitCaption) { font-family:"jetbrains-mono",monospace; }
+
+.divedexHeroStack { display:grid; gap:clamp(20px,3vw,36px); }

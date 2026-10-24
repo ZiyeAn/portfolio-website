@@ -354,7 +354,10 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
       headingFont="editorial"
       title={project.title} subtitle={project.subtitle} timeline={timeline}
       role={role} tools={techStack} tags={project.tags ?? []} links={normalizedRelatedLinks} chinese={zh}
-      hero={<Image src={heroImage} alt={zh ? "DiveDex 应用首图：手持手机与海洋探索功能" : "DiveDex app: handheld phone and ocean discovery features"} width={1920} height={1080} sizes="100vw" priority style={{ width: "100%", height: "auto", display: "block" }} />}
+      hero={<div className={styles.divedexHeroStack}>
+        <Image src={heroImage} alt={zh ? "DiveDex 应用首图：手持手机与海洋探索功能" : "DiveDex app: handheld phone and ocean discovery features"} width={1920} height={1080} sizes="100vw" priority style={{ width: "100%", height: "auto", display: "block" }} />
+        <PrototypeVideo src={heroVideo} poster="/assets/projects/divedex/motion-2026/ui-carousel-black-poster.webp" title={zh ? "DiveDex 界面动态展示" : "DiveDex interface showcase"} autoPlay />
+      </div>}
       chapters={[
         { id: "overview", title: zh ? "项目概览" : "Overview", content: <div className={styles.sectionBody}><p>{zh ? "DiveDex 帮助潜水者回看水下照片、判断可能的物种匹配，并把海洋相遇保存为个人收藏。" : "DiveDex helps divers revisit underwater photos, review possible species matches, and build a personal collection of ocean encounters."}</p><p>{zh ? "当前阶段：Figma 设计原型。识别结果、置信度与地点均为示例数据；下一步是验证用户能否理解不确定性并完成复核。" : "Current stage: Figma design prototype. Matches, confidence values, and locations are illustrative. The next step is testing whether people understand uncertainty and can review a suggestion."}</p></div> },
         { id: "research", title: zh ? "研究" : "Research", content: show([12]) },

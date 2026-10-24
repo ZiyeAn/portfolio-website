@@ -1,4 +1,5 @@
 "use client";
+import { ArrowLeft } from "lucide-react";
 import LinkArrow from "@/components/LinkArrow";
 
 import { ReactNode, useEffect, useRef, useState } from "react";
@@ -36,12 +37,12 @@ export default function ProjectDossier({ title, subtitle, timeline, role, tools,
   </nav>;
   return <div className={`${styles.page} ${headingFont === "editorial" ? styles.editorialType : ""}`}><TopNav /><main className={styles.layout}>
     <aside className={styles.sidebar}>
-      <Link href="/projects" className={styles.back}>← {chinese ? "项目列表" : "Projects"}</Link>
+      <Link href="/projects" className={styles.back}><ArrowLeft size={16} strokeWidth={1.5} aria-hidden="true" /> {chinese ? "项目列表" : "Projects"}</Link>
       <div className={styles.infoFrame}><p className={styles.record}>{chinese ? "项目档案" : "Project file"}</p>
       {info}</div><div className={styles.desktopContents}><p className={styles.record}>{chinese ? "目录" : "Contents"}</p>{contents}</div>
     </aside>
     <div className={styles.mobileToolbar}>
-      <Link href="/projects" className={styles.back}>← {chinese ? "项目列表" : "Projects"}</Link>
+      <Link href="/projects" className={styles.back}><ArrowLeft size={16} strokeWidth={1.5} aria-hidden="true" /> {chinese ? "项目列表" : "Projects"}</Link>
     <details className={styles.mobileMenu} ref={menu}>
       <summary><span className={styles.currentChapter}>{chapters.find(c => c.id === active)?.title}</span><span>{chinese ? "目录 ＋" : "Index +"}</span></summary>
       <div className={styles.menuBody}>{contents}<p className={styles.record}>{chinese ? "项目信息" : "Project information"}</p>{info}</div>

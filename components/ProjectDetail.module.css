@@ -322,3 +322,6 @@
  .mobileToolbar { top:52px; }
  .content { padding-top:132px; }
 }
+
+.projectCategory { gap:8px; }
+.projectCategory > svg { flex-shrink:0; }

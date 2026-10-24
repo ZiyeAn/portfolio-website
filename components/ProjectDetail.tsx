@@ -1,4 +1,5 @@
 "use client";
+import { ArrowLeft } from "lucide-react";
 import LinkArrow from "@/components/LinkArrow";
 import React from "react";
 import Image from "next/image";
@@ -123,12 +124,12 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
   return (
     <div className={styles.page}>
       <TopNav />
-      <div className={styles.mobileToolbar}><Link href="/playground" className={styles.projectCategory}>← {language === "zh" ? "探索列表" : "Explorations"}</Link></div>
+      <div className={styles.mobileToolbar}><Link href="/playground" className={styles.projectCategory}><ArrowLeft size={16} strokeWidth={1.5} aria-hidden="true" /> {language === "zh" ? "探索列表" : "Explorations"}</Link></div>
       <main className={styles.content}>
         <aside className={styles.infoColumn}>
           <div className={styles.infoBlock}>
             <Link href="/playground" className={styles.projectCategory}>
-              ← {language === "zh" ? "探索列表" : "Explorations"}
+              <ArrowLeft size={16} strokeWidth={1.5} aria-hidden="true" /> {language === "zh" ? "探索列表" : "Explorations"}
             </Link>
             <div className={styles.infoFrame}>
             <p className={styles.fileLabel}>{language === "zh" ? "探索档案" : "Exploration file"}</p>

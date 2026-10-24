@@ -141,3 +141,6 @@
  font-size:clamp(26px,2.6vw,32px);
  line-height:1.25;
 }
+
+.back { gap:8px; }
+.back > svg { flex-shrink:0; }

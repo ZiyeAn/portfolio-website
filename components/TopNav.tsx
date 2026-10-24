@@ -1,5 +1,6 @@
 "use client";
 
+import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -9,6 +10,7 @@ import { t } from "@/lib/i18n";
 
 export default function TopNav() {
   const pathname = usePathname();
+  const [hereHint, setHereHint] = useState<{ x: number; y: number; path: string } | null>(null);
   const { language, setLanguage } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasLightText, setHasLightText] = useState(false);
@@ -153,7 +155,16 @@ export default function TopNav() {
     .join(" ");
 
   return (
-    <nav ref={navRef} className={navClassName} role={menuOpen ? "dialog" : undefined} aria-modal={menuOpen ? true : undefined} aria-label={language === "zh" ? "主导航" : "Main navigation"}>
+    <nav onPointerMove={(event) => {
+      if (event.pointerType !== "mouse") return;
+      const link = (event.target as Element).closest("a");
+      const href = link?.getAttribute("href");
+      if (href !== pathname || link?.classList.contains(styles.brand)) {
+        setHereHint(null);
+        return;
+      }
+      setHereHint({ x: Math.min(event.clientX + 14, window.innerWidth - 130), y: Math.min(event.clientY + 18, window.innerHeight - 36), path: pathname });
+    }} onPointerLeave={() => setHereHint(null)} onClickCapture={() => setHereHint(null)} ref={navRef} className={navClassName} role={menuOpen ? "dialog" : undefined} aria-modal={menuOpen ? true : undefined} aria-label={language === "zh" ? "主导航" : "Main navigation"}>
       <div className={styles.navInner}>
         <Link
           href="/"
@@ -192,21 +203,21 @@ export default function TopNav() {
             </div>
           </div>
           <div className={styles.navCenter}>
-            <Link href="/" onClick={closeMenu}>
+            <Link href="/" aria-current={pathname === "/" ? "page" : undefined} onClick={closeMenu}>
               {t("home", language)}
             </Link>
-            <Link href="/projects" onClick={closeMenu}>
+            <Link href="/projects" aria-current={pathname === "/projects" ? "page" : undefined} onClick={closeMenu}>
               {t("projects", language)}
             </Link>
-            <Link href="/playground" onClick={closeMenu}>
+            <Link href="/playground" aria-current={pathname === "/playground" ? "page" : undefined} onClick={closeMenu}>
               {t("playground", language)}
             </Link>
-            <Link href="/thoughts" onClick={closeMenu}>
+            <Link href="/thoughts" aria-current={pathname === "/thoughts" ? "page" : undefined} onClick={closeMenu}>
               {t("thoughts", language)}
             </Link>
           </div>
           <div className={styles.navRight}>
-            <Link href="/about" onClick={closeMenu}>
+            <Link href="/about" aria-current={pathname === "/about" ? "page" : undefined} onClick={closeMenu}>
               {t("about", language)}
             </Link>
             <div className={`${styles.languageSwitch} ${styles.languageSwitchMobile}`} aria-label="Language / 语言">
@@ -217,6 +228,10 @@ export default function TopNav() {
           </div>
         </div>
       </div>
+      {hereHint?.path === pathname && createPortal(
+        <span className={styles.hereHint} style={{ left: hereHint.x, top: hereHint.y }} aria-hidden="true">You are here</span>,
+        document.body
+      )}
     </nav>
   );
 }

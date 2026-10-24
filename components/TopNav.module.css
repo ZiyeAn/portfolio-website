@@ -368,3 +368,12 @@
   .navLinks a { font-size: 1.25rem; }
   .languageSwitchMobile { margin-top: 0; }
 }
+
+.hereHint {
+ position:fixed; z-index:10001; pointer-events:none;
+ padding:5px 8px; background:#f7f3eb; color:#873b30;
+ border:1px solid #873b3030;
+ font:11px/1.4 "jetbrains-mono",monospace;
+ white-space:nowrap;
+}
+@media (hover:none) { .hereHint { display:none; } }
