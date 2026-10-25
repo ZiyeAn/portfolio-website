@@ -275,6 +275,7 @@ const renderSection = (section: Section, index: number) => {
     case "video": {
       const videoSection = section as VideoSection;
       const isDrive = videoSection.src.includes("drive.google.com");
+      const isBilibili = /^https:\/\/player\.bilibili\.com\/player\.html(?:\?|$)/.test(videoSection.src);
       const src = isDrive
         ? buildDrivePreviewUrl(videoSection.src)
         : normalizeAsset(videoSection.src);
@@ -284,7 +285,7 @@ const renderSection = (section: Section, index: number) => {
             <h2 className={styles.sectionHeader}>{videoSection.title}</h2>
           ) : null}
           <div className={styles.videoWrapper}>
-            {isDrive ? (
+            {isDrive || isBilibili ? (
               <iframe
                 src={src}
                 title={videoSection.title ?? "Project video"}
@@ -296,6 +297,13 @@ const renderSection = (section: Section, index: number) => {
               <video src={src} controls playsInline preload="metadata" />
             )}
           </div>
+          {isBilibili ? (
+            <p className={styles.caption}>
+              <a href={`https://www.bilibili.com/video/${new URL(videoSection.src).searchParams.get("bvid")}/`} target="_blank" rel="noreferrer">
+                在 B 站观看 / Watch on Bilibili
+              </a>
+            </p>
+          ) : null}
           {videoSection.caption ? (
             <p className={styles.caption}>{videoSection.caption}</p>
           ) : null}
@@ -389,7 +397,7 @@ export default function ProjectStory({ project: rawProject }: ProjectStoryProps)
   // Group existing content into chapters without changing its order or media.
   const chapterStarts: Record<string, number[]> = {
     "zq-sports": [0, 1, 3, 7, 10],
-    "lifemart": [0, 1, 5, 9, 12, 15, 18],
+    "lifemart": [0, 2, 6, 10, 13, 16, 19],
     "i-want-home-i-could-carry-with": [0, 2, 3],
     "divedex": [0, 2, 7, 10],
     "labyrinth": [0, 1, 4, 5],
