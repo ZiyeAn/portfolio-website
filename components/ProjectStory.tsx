@@ -48,6 +48,7 @@ type ProcessStepsSection = BaseSection & {
 type VideoSection = BaseSection & {
   type: "video";
   src: string;
+  fallbackUrl?: string;
   caption?: string;
 };
 
@@ -276,6 +277,9 @@ const renderSection = (section: Section, index: number) => {
       const videoSection = section as VideoSection;
       const isDrive = videoSection.src.includes("drive.google.com");
       const isBilibili = /^https:\/\/player\.bilibili\.com\/player\.html(?:\?|$)/.test(videoSection.src);
+      const fallbackUrl = videoSection.fallbackUrl ?? (isBilibili
+        ? `https://www.bilibili.com/video/${new URL(videoSection.src).searchParams.get("bvid")}/`
+        : undefined);
       const src = isDrive
         ? buildDrivePreviewUrl(videoSection.src)
         : normalizeAsset(videoSection.src);
@@ -297,9 +301,9 @@ const renderSection = (section: Section, index: number) => {
               <video src={src} controls playsInline preload="metadata" />
             )}
           </div>
-          {isBilibili ? (
+          {fallbackUrl ? (
             <p className={styles.caption}>
-              <a href={`https://www.bilibili.com/video/${new URL(videoSection.src).searchParams.get("bvid")}/`} target="_blank" rel="noreferrer">
+              <a href={fallbackUrl} target="_blank" rel="noreferrer">
                 在 B 站观看 / Watch on Bilibili
               </a>
             </p>

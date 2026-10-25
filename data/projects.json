@@ -329,7 +329,8 @@
       {
         "type": "video",
         "title": "Video Demo",
-        "src": "https://player.bilibili.com/player.html?bvid=BV1bWHT6xEr1&page=1&autoplay=0&danmaku=0"
+        "src": "https://media.ziyean.com/Lifemart%20demo%201080p.mp4",
+        "fallbackUrl": "https://www.bilibili.com/video/BV1bWHT6xEr1/"
       },
       {
         "type": "text",
