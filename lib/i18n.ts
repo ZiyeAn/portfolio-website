@@ -45,6 +45,9 @@ export type UiKey = keyof typeof ui;
 export const t = (key: UiKey, language: Language) => ui[key][language];
 
 export const tagZh: Record<string, string> = {
+  "Framework Synthesis": "框架整合",
+  "Systems Mapping": "系统映射",
+  "Interactive Visualization": "交互可视化",
   "UX Studies": "用户体验研究",
   "Physical Interaction": "实体交互",
   "Visual & Material Studies": "视觉与材料探索",
@@ -77,6 +80,11 @@ export const tagZh: Record<string, string> = {
 type ProjectTranslation = { title?: string; intro?: string; subtitle?: string; role?: string; description?: string };
 
 export const projectZh: Record<string, ProjectTranslation> = {
+  "/works/innovation-by-design.html": {
+    title: "Innovation by Design",
+    intro: "将课程中的创新框架整理成一座可以探索的建筑。",
+    description: "<p>我为 Innovation by Design 课程制作的建筑隐喻地图，将组织准备、策略选择、协作与实验联系起来。通过探索楼层和房间，查看不同框架之间的关系。</p>",
+  },
   "/works/lacquer-art.html": {
     title: "漆艺作品",
     intro: "我的漆艺作品选集。",

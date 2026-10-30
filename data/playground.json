@@ -1,24 +1,32 @@
 {
   "projects": [
     {
-      "title": "Lacquer Art",
+      "title": "Innovation by Design",
       "selected_work": false,
-      "thumbnail": "assets/playground/lacquer-art/1.webp",
-      "intro": "A selection of my lacquer works.",
+      "thumbnail": "assets/playground/innovation-by-design/overview.webp",
+      "intro": "A course framework map that turns innovation into a building to explore.",
       "tags": [
-        "Lacquer Art",
-        "Material Studies"
+        "Framework Synthesis",
+        "Systems Mapping",
+        "Interactive Visualization"
       ],
-      "id": "/works/lacquer-art.html",
-      "category": "Visual & Material Studies",
+      "id": "/works/innovation-by-design.html",
+      "category": "",
       "featured": false,
       "details": {
-        "description": "<p>A selection of my lacquer works.</p>",
+        "description": "<p>A building-shaped map I created for the Innovation by Design course, connecting organisational readiness, strategic choices, collaboration and experimentation. Explore the floors and rooms to see how the frameworks relate.</p>",
+        "timeline": "October 2026",
         "images": [
-          "assets/playground/lacquer-art/1.webp",
-          "assets/playground/lacquer-art/2.webp",
-          "assets/playground/lacquer-art/3.webp",
-          "assets/playground/lacquer-art/4.webp"
+          "assets/playground/innovation-by-design/original-map.webp",
+          "assets/playground/innovation-by-design/overview.webp"
+        ],
+        "frame": "https://ziyean.github.io/innovation-building-explorer/",
+        "frameAfterImages": true,
+        "relatedLinks": [
+          {
+            "label": "Open interactive map",
+            "url": "https://ziyean.github.io/innovation-building-explorer/"
+          }
         ]
       }
     },
@@ -107,6 +115,28 @@
             "body": "This is an independent design exercise, not a shipped Xiaohongshu feature. The reviewed posts informed the concept, but I have not yet validated the proposed flow with users. Next, I would test whether people can find Follow Along, connect a problem to the right step, identify the source of advice, and return to give feedback without feeling obliged to check in.",
             "bodyZh": "这是独立的体验设计练习，并非小红书已上线的功能。帖子观察帮助我形成方案，但拟定流程还没有经过用户测试。接下来，我想验证：用户能否找到入口，把问题对应到正确步骤，辨认建议的来源，以及在不觉得被要求打卡的情况下回来反馈。"
           }
+        ]
+      }
+    },
+    {
+      "title": "Lacquer Art",
+      "selected_work": false,
+      "thumbnail": "assets/playground/lacquer-art/1.webp",
+      "intro": "A selection of my lacquer works.",
+      "tags": [
+        "Lacquer Art",
+        "Material Studies"
+      ],
+      "id": "/works/lacquer-art.html",
+      "category": "Visual & Material Studies",
+      "featured": false,
+      "details": {
+        "description": "<p>A selection of my lacquer works.</p>",
+        "images": [
+          "assets/playground/lacquer-art/1.webp",
+          "assets/playground/lacquer-art/2.webp",
+          "assets/playground/lacquer-art/3.webp",
+          "assets/playground/lacquer-art/4.webp"
         ]
       }
     },

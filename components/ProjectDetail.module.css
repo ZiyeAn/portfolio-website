@@ -325,3 +325,5 @@
 
 .projectCategory { gap:8px; }
 .projectCategory > svg { flex-shrink:0; }
+
+.mapFrame { aspect-ratio:auto; height:clamp(560px, 78vh, 860px); background:#ded8ce; }

@@ -34,6 +34,7 @@ type ProjectDetails = {
   video_ID?: string[];
   images?: string[];
   frame?: string;
+  frameAfterImages?: boolean;
   process?: ProcessData;
   studySections?: { title: string; titleZh: string; body: string; bodyZh: string; image?: string }[];
 };
@@ -111,7 +112,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
     url: link.url.trim(),
     label:
       typeof link.label === "string" && link.label.trim()
-        ? (language === "zh" && link.label.trim() === "Try clickable prototype" ? "体验交互原型" : link.label.trim())
+        ? (language === "zh" && link.label.trim() === "Try clickable prototype" ? "体验交互原型" : language === "zh" && link.label.trim() === "Open interactive map" ? "打开交互地图" : link.label.trim())
         : t("openLink", language),
   }));
   const hasMeta =
@@ -196,7 +197,7 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
         </aside>
 
         <section className={styles.mediaColumn}>
-          {frameSrc ? (
+          {frameSrc && !details.frameAfterImages ? (
             <div className={styles.videoFrame}>
               <iframe
                 className={styles.driveEmbed}
@@ -263,6 +264,18 @@ export default function ProjectDetail({ project: rawProject }: ProjectDetailProp
               </div>
             </BlurFade>
           ))}
+          {frameSrc && details.frameAfterImages ? (
+            <div className={`${styles.videoFrame} ${styles.mapFrame}`}>
+              <iframe
+                className={styles.driveEmbed}
+                src={frameSrc}
+                title={`${project.title} interactive map`}
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                loading="lazy"
+              />
+            </div>
+          ) : null}
           {details.studySections?.filter(section => !imagesOnly || section.image).map((section, index) => (
             <section key={section.title} className={imagesOnly ? undefined : styles.studySection}>
               {!imagesOnly && <>
