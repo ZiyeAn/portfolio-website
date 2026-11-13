@@ -13,14 +13,23 @@
     "intro": "A mobile app design prototype for reviewing underwater photos, questioning possible identifications, and collecting personal ocean encounters.",
     "meta": {
       "techStack": [
-        "Figma"
+        "Figma",
+        "React"
       ],
-      "timeline": "2026 · Work in Progress",
+      "timeline": "2026",
       "role": "Research, UX design & interaction prototyping",
       "video": "/assets/projects/divedex/motion-2026/ui-carousel-black.mp4",
       "relatedLinks": [
         {
-          "label": "Figma · Current design prototype",
+          "label": "Presentation",
+          "url": "https://www.figma.com/deck/gRriVbzVxKsH7itFmobmsI"
+        },
+        {
+          "label": "DiveDex web prototype",
+          "url": "https://www.divedex.xyz"
+        },
+        {
+          "label": "Figma prototype",
           "url": "https://www.figma.com/design/fcbAdLWiwl1fn8im60FEgd/Divedex?node-id=417-336"
         }
       ]

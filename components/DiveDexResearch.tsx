@@ -80,7 +80,7 @@ const copy = {
       }
     ],
     "directionTitle": "From footage to My Ocean",
-    "direction": "The current concept turns photos and short videos into discoveries through AI candidate suggestions, visible traits, and optional location context, then saves them to a personal collection. AI provides a starting point; the diver can confirm, correct, or defer a result. This flow remains in design and preparation for user testing.",
+    "direction": "The current concept turns photos and short videos into discoveries through AI candidate suggestions, visible traits, and optional location context, then saves them to a personal collection. AI provides a starting point; the diver can confirm, correct, or defer a result.",
     "steps": [
       "Import media",
       "Compare candidates",
@@ -162,7 +162,7 @@ const copy = {
       }
     ],
     "directionTitle": "从影像到 My Ocean",
-    "direction": "当前方向是潜水后的探索伙伴：从照片或短视频中发现生物，通过 AI 候选建议、可见特征与可选的地点信息辅助辨认，再将发现保存到个人收藏。AI 提供起点，用户可以确认、纠正或暂缓判断。这一流程仍在设计与测试准备阶段。",
+    "direction": "当前方向是潜水后的探索伙伴：从照片或短视频中发现生物，通过 AI 候选建议、可见特征与可选的地点信息辅助辨认，再将发现保存到个人收藏。AI 提供起点，用户可以确认、纠正或暂缓判断。",
     "steps": [
       "导入影像",
       "比较候选物种",

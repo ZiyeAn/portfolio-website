@@ -1,0 +1,40 @@
+.strip, .wide { display: grid; gap: 1.2rem; margin: 1.3rem 0 2.4rem; }
+.strip { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+.strip figure, .wide figure { margin: 0; min-width: 0; }
+.strip img, .wide img { display: block; width: 100%; object-fit: contain; background: #edeae3; }
+.strip img { height: clamp(260px, 35vw, 420px); }
+.wide img { height: auto; }
+.strip figcaption, .wide figcaption { margin-top: .5rem; font-family: "JetBrains Mono", monospace; font-size: .8rem; }
+@media (max-width: 520px) {
+  .strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .strip img { height: auto; aspect-ratio: 1 / 2; }
+}
+.strip .phone img{display:block;width:auto;max-width:100%;height:auto;max-height:440px;aspect-ratio:auto;margin-inline:auto;border:5px solid #27292c;border-radius:clamp(17px,2vw,28px);box-shadow:0 0 0 1px #8b9094,0 5px 12px #132e3a20;object-fit:contain}
+.media{position:relative}
+.device{position:relative;isolation:isolate;width:min(100%,210px);aspect-ratio:339/694;margin:auto}
+.device::before,.strip .device img{position:absolute;inset:1.4% 2.8%;width:94.4%;height:97.2%;border-radius:15% / 7.2%}
+.device::before{content:"";background:#f7f6f2}
+.strip .device img{box-sizing:border-box;object-fit:fill;padding-top:6%;background:#f7f6f2}
+.device::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:url('/assets/projects/divedex/iphone-titanium.webp') center/100% 100% no-repeat}
+.media:has(details[open]){z-index:4}
+.componentClip{position:relative}
+.strip .componentClip img{width:100%;height:auto;aspect-ratio:auto}
+.notes{position:absolute;inset:0;z-index:2;pointer-events:none}
+.notes details{pointer-events:auto}
+
+.notes details{cursor:pointer;position:absolute;background:white;padding:0!important;border:1px solid #d8dbe0!important;border-radius:16px 16px 16px 2px;box-shadow:0 2px 7px #14253930;color:#19212b}
+.notes summary{display:grid;place-items:center;width:42px;height:42px;cursor:pointer;list-style:none}
+.notes summary::-webkit-details-marker{display:none}
+.avatar{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:#009ede;color:#0e171f;font:600 16px/1 DiveSans,sans-serif}
+.avatar[data-role=C]{background:#ff6e14}.avatar[data-role=I]{background:#123061;color:white}.avatar[data-role=AI]{background:#4a5761;color:white}
+.notes details[open]{width:var(--card-width,210px);z-index:2;min-width:0;padding:10px 12px 10px 52px!important}
+
+.notes details[open] summary{position:absolute;bottom:0;left:0}
+.notes .bubble{display:block!important;margin:0!important;font:400 16px/1.38 DiveSans,sans-serif}
+.notes .bubble p{font:inherit;margin:5px 0 0}
+.tag{display:inline-block;border-radius:4px;padding:1px 6px;background:#fff1df;color:#774b24;font:600 12px/1.45 DiveSans,sans-serif}
+.tag[data-theme="Visual design"]{background:#f0eefa;color:#594c7d}.tag[data-theme="Page navigation"]{background:#eaf2ff;color:#385877}.tag[data-theme="AI assistance"]{background:#e4f3f1;color:#335e56}
+.liveStage{display:grid;place-items:center;background:#f0f6f7;padding:clamp(10px,2vw,28px);margin:2rem 0}
+.liveViewport{position:relative;width:min(100%,390px,37svh);aspect-ratio:390/828;overflow:hidden;border-radius:18px;background:#f7f6f2;box-shadow:0 0 0 1px #142e4020}
+.liveViewport iframe{position:absolute;inset:0;display:block;max-width:none;border:0;transform-origin:top left}
+@media(max-width:650px){.strip:has(.notes){grid-template-columns:1fr}.liveViewport{width:min(100%,390px)}}

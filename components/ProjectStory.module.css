@@ -463,3 +463,9 @@
 :global(html:not([lang="zh-CN"])) :is(.caption,.galleryCaption,.splitCaption) { font-family:"jetbrains-mono",monospace; }
 
 .divedexHeroStack { display:grid; gap:clamp(20px,3vw,36px); }
+
+.deckFigure { margin: 1.5rem 0 2.25rem; }
+.deckFigure a, .deckFigure img { display: block; width: 100%; }
+.deckFigure img { height: auto; }
+.deckFigure a { cursor: zoom-in; }
+.deckFigure figcaption { margin-top: .6rem; font-family: "JetBrains Mono", monospace; font-size: .8rem; line-height: 1.5; }

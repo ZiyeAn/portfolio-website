@@ -1,0 +1,75 @@
+@font-face{font-family:DiveSerif;src:url('/assets/InstrumentSerif-Regular.ttf');font-display:swap}
+@font-face{font-family:DiveSans;src:url('/assets/projects/divedex/fonts/manrope-latin-400-normal.woff2');font-display:swap}
+@font-face{font-family:DiveSans;src:url('/assets/projects/divedex/fonts/manrope-latin-600-normal.woff2');font-weight:600;font-display:swap}
+.casePage{--blue:#009fe8;--ink:#151719;--serif:DiveSerif,"Songti SC",serif;background:white;color:var(--ink);font:400 1rem/1.55 DiveSans,"PingFang SC",sans-serif;min-height:100vh}
+.casePage :is(h1,h2,h3,h4){font-family:var(--serif);font-weight:400;line-height:1.07;letter-spacing:-.025em}
+.casePage h2{font-size:clamp(3rem,6.5vw,6rem);margin:0 0 .45em}
+.casePage h3{font-size:clamp(2rem,3.6vw,3.6rem);margin:1.1em 0 .35em}
+.casePage h4{font-size:1.8rem}
+.casePage p{max-width:68ch;margin:.55em 0 1em}
+.nav,.footer,.index{display:flex;align-items:center;padding:1rem 5vw;gap:1rem}
+.nav,.footer{justify-content:space-between}
+.nav a,.nav button,.footer a,.index a{font:inherit;color:inherit;text-decoration:none}
+.nav a:first-child{display:flex;align-items:center;gap:.45em}
+.nav a:nth-child(2){font:2.2rem var(--serif)}
+.nav button{cursor:pointer;border:0;background:transparent}
+.hero{max-width:1600px;margin:auto}
+.index{position:sticky;top:0;z-index:3;background:#fff;border-bottom:1px solid #d8e5e9;justify-content:center;gap:clamp(.6rem,4vw,4rem)}
+.index a:hover,.footer a:hover{color:#0075aa}
+.chapter{max-width:1280px;margin:auto;padding:clamp(3rem,7vw,7rem) 5vw;scroll-margin-top:3rem;border-bottom:1px solid #dde5e8}
+.chapter figure img{background:#f4f7f8}
+.chapter figcaption{font-family:inherit}
+.panel{display:grid;grid-template-columns:64fr 36fr;background:white;box-shadow:0 0 0 1px #eaf0f1}
+.goal{display:grid;align-content:space-between;gap:2.2rem;padding:clamp(1.3rem,4vw,4.5rem)}
+.panel h2{font-size:clamp(2.3rem,4vw,4rem);margin:0}
+.panel h3{font-size:clamp(1.6rem,2.7vw,2.6rem);margin:0 0 .4em}
+.goal p{font-size:.94rem;max-width:47ch}
+.stack{display:flex;height:clamp(1.1rem,2.5vw,2.3rem);margin:1rem 0}
+.legend{display:flex;flex-wrap:wrap;list-style:none;justify-content:space-between;gap:.4rem;font-size:.75rem}
+.legend i{display:inline-block;width:.7em;height:.7em;margin-right:.4em}
+.stats{background:var(--blue);color:white;padding:clamp(1.25rem,4vw,4rem);display:grid;align-content:center;gap:2rem;margin:0}
+.stats>div{display:grid;grid-template-columns:1fr 1.3fr;align-items:center}
+.stats svg{grid-row:1/3;width:clamp(30px,4.5vw,65px);height:auto}
+.stats dd{grid-column:2;grid-row:1;font:clamp(2.5rem,4.5vw,4.5rem)/1 var(--serif);margin:0}
+.stats dt{grid-column:2;grid-row:2}
+.sheet{padding:3% 0}
+.chart{display:grid;gap:.6rem;max-width:900px;margin:2rem 0}
+.chart>div{display:grid;grid-template-columns:minmax(8rem,32%) 1fr;gap:1rem;align-items:center}
+.chart>div>span{text-align:right}
+.chart>div>div{display:flex;align-items:center;gap:.4rem}
+.chart i{height:1.65rem;background:var(--blue);border-radius:0 .2rem .2rem 0}
+.chart b{font:1.3rem var(--serif)}
+.columns,.flow{display:grid;gap:.75rem;grid-template-columns:repeat(3,1fr);margin:1.5rem 0}
+.columns>div{background:#fff1e8;padding:1.2rem}
+.columns h4{color:#ac4500}
+.flow{grid-template-columns:repeat(5,1fr);list-style:none}
+.flow li{border-top:3px solid var(--blue);padding:.85rem .25rem}
+.flow span{display:block;margin-top:.45rem}
+.map>div{display:grid;grid-template-columns:1fr 2fr 2fr;gap:.75rem;margin:.5rem 0}
+.map dt,.map dd{padding:.6rem;background:#f1f5f5;margin:0}
+.map dt{background:#c8edfc}
+.footer{background:#062c40;color:white}
+@media(max-width:700px){.panel{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr);gap:.7rem}.stats>div{display:flex;flex-direction:column;align-items:flex-start}.stats dt{order:3;font-size:.8rem}.stats svg{margin-bottom:.5rem}.columns,.flow{grid-template-columns:1fr}.flow li{display:grid;grid-template-columns:1fr 2fr;align-items:center}.flow span{margin:0}.index{font-size:.82rem}.chart{font-size:.8rem}.chapter{scroll-margin-top:3.4rem}.map{font-size:.8rem}}
+.casePage{min-height:0}
+.timeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;padding:0;margin:2rem 0;line-height:1.4}
+.timeline li{position:relative;display:grid;grid-template-rows:1fr 1fr;min-width:0;padding-inline:.4rem}
+.timeline li::before{content:"";position:absolute;top:50%;left:0;right:0;border-top:1px solid #151719}
+.timeline li::after{content:"";position:absolute;top:50%;left:.4rem;height:.85rem;border-left:1px solid #151719}
+.timeline li>div{grid-row:2;padding-top:1.1rem}
+.timeline li:nth-child(even)>div{grid-row:1;align-self:end;padding:0 0 1.1rem}
+.timeline li:nth-child(even)::after{transform:translateY(-100%)}
+.timeline .responsibility{padding:.25rem .5rem;border-left:2px solid #ff6a18;font-size:.83rem}
+.timeline .responsibility summary{color:#a54100;cursor:pointer;font-weight:600}
+.timeline .responsibility p{font-size:inherit;margin:.5rem 0}
+@media(max-width:1150px){.timeline{display:block;border-left:1px solid #151719;margin-left:.4rem}.timeline li{display:block;padding:0 0 1.5rem 1.25rem}.timeline li::before{top:.65rem;width:.8rem}.timeline li::after{display:none}.timeline li>div,.timeline li:nth-child(even)>div{padding:0}}
+.tree>div{display:grid;grid-template-columns:minmax(85px,15%) 1fr;align-items:center;gap:1rem;margin:1.2rem 0}
+.tree h4{background:#009fe8;color:#071e2b;padding:.55rem;border-radius:.4rem;text-align:center;font:600 1rem DiveSans,sans-serif}
+.tree ul{list-style:none;display:grid;gap:.45rem;padding:0 0 0 .85rem;border-left:1px solid #7c929a}
+.tree li{display:flex;flex-wrap:wrap;align-items:center;gap:.35rem .8rem}
+.tree span{position:relative;background:#f7f6f2;border:1px solid #c6cccd;border-radius:.3rem;padding:.25rem .5rem;font-size:.8rem}
+.tree span::before{content:"";position:absolute;width:.8rem;right:100%;top:50%;border-top:1px solid #7c929a}
+@media(max-width:700px){.tree>div{grid-template-columns:1fr}.tree h4{justify-self:start}.tree ul{margin-left:.5rem}}
+.tree details{border-bottom:1px solid #ccdee7!important;padding:.45rem 0!important}
+.tree summary{padding:.65rem 1rem;background:#e9f6fc;color:#005c89;font-weight:600}
+.tree details[open]>summary{background:#0079ad;color:white}
+.tree details ul{margin:.85rem 0 .5rem 1.1rem}

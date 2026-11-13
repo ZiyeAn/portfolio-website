@@ -146,3 +146,16 @@
 
 .back { gap:8px; }
 .back > svg { flex-shrink:0; }
+.diveType{background:white}
+.diveType .layout{--rule:#cddfe7;color:#151719;font-family:DiveSans,"PingFang SC",sans-serif}
+.diveType :is(.sidebar,.mobileToolbar) :is(a,dd,dt,span,summary){font-family:DiveSans,sans-serif}
+.diveType :is(.sidebar,.mobileToolbar) :is(.back,.record,dt,a[aria-current]),.diveType .chapterHeading>span,.diveType .header h1{color:#006e9e}
+.diveType .back{border-color:#007dad}
+.diveType .record,.diveType .header h1,.diveType .chapterHeading h2{font-family:DiveSerif,"Songti SC",serif;font-weight:400}
+.diveType .record{font-size:1.12rem;letter-spacing:0}
+.diveType .chapterHeading h2{font-size:clamp(2rem,4vw,3.5rem)}
+.diveType .mobileToolbar{background:white}
+.diveType .menuBody,.diveType .mobileMenu[open]>summary{background:#e4f5fc;color:#064c71;box-shadow:none}
+.diveType .menuBody .contents a[aria-current]{background:#c6eafa}
+.diveType .layout .back{background:white;color:#006e9e;border-color:#007dad}
+.diveType .layout .back:hover,.diveType .layout .back:focus-visible{background:#0078ad;color:white}

@@ -1,0 +1,242 @@
+{
+  "meet-divedex": [
+    {
+      "author": "Design observation",
+      "stage": "Design review",
+      "theme": "Content discovery",
+      "body": "The page tours introduce too many features at once. It is hard to tell what DiveDex helps divers do.",
+      "x": 12,
+      "y": 35
+    }
+  ],
+  "welcome-entry": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Tutorial feedback",
+      "theme": "Content discovery",
+      "body": "The tour covers too many features at once. DiveDex’s main purpose is hard to grasp.",
+      "x": 15,
+      "y": 76
+    }
+  ],
+  "more-interests": [
+    {
+      "author": "Recreational diver",
+      "stage": "Tutorial feedback",
+      "theme": "Content discovery",
+      "body": "Onboarding asks little about my interests, so later recommendations feel too general.",
+      "x": 18,
+      "y": 38
+    }
+  ],
+  "just-exploring-full": [
+    {
+      "author": "Recreational diver",
+      "stage": "Design review",
+      "theme": "Content discovery",
+      "body": "The recommendations encourage exploration.",
+      "x": 19,
+      "y": 55
+    }
+  ],
+  "home-stages-trimmed": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 1 feedback",
+      "theme": "Visual design",
+      "body": "Home feels crowded and lacks visual variety.",
+      "x": 12,
+      "y": 30
+    }
+  ],
+  "just-exploring": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 1 feedback",
+      "theme": "Page navigation",
+      "body": "Shortcut labels leave their destinations unclear.",
+      "x": 20,
+      "y": 69
+    }
+  ],
+  "after-a-dive-full": [
+    {
+      "author": "Recreational diver",
+      "stage": "Version 1 feedback",
+      "theme": "Content discovery",
+      "body": "Nice to show divers’ own photos in Recent Discoveries.",
+      "x": 14,
+      "y": 56
+    }
+  ],
+  "at-the-spot": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 1 feedback",
+      "theme": "Visual design",
+      "body": "The colour palette feels more suited to a banking app.",
+      "x": 16,
+      "y": 36
+    }
+  ],
+  "collection-views": [
+    {
+      "author": "Recreational diver",
+      "stage": "Version 2 feedback",
+      "theme": "Page navigation",
+      "body": "The route from Collection to a study is unclear.",
+      "x": 22,
+      "y": 73
+    }
+  ],
+  "after-a-dive": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 2 feedback",
+      "theme": "Content discovery",
+      "body": "Explore repeats the same photos.",
+      "x": 18,
+      "y": 57
+    }
+  ],
+  "reef-challenge-card": [
+    {
+      "author": "Recreational diver",
+      "stage": "Design review",
+      "theme": "Content discovery",
+      "body": "Suggest new activities to try.",
+      "x": 10,
+      "y": 43
+    }
+  ],
+  "explore-full": [
+    {
+      "author": "F03 · Instructor",
+      "stage": "Version 1 feedback",
+      "theme": "Content discovery",
+      "body": "A map would make dive sites easier to locate.",
+      "x": 15,
+      "y": 29
+    },
+    {
+      "author": "Course instructor",
+      "stage": "Version 2 feedback",
+      "theme": "Visual design",
+      "body": "A larger map would make sites easier to see.",
+      "x": 49,
+      "y": 39
+    }
+  ],
+  "at-the-spot-full": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 1 feedback",
+      "theme": "Page navigation",
+      "body": "It’s easy to lose track of the current section.",
+      "x": 14,
+      "y": 11
+    }
+  ],
+  "explore-wishlist": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 1 feedback",
+      "theme": "Visual design",
+      "body": "Too much text makes the options hard to compare.",
+      "x": 15,
+      "y": 60
+    }
+  ],
+  "reef-challenge-walkthrough": [
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 2 feedback",
+      "theme": "Content discovery",
+      "body": "Wildlife photos repeat across suggestions.",
+      "x": 52,
+      "y": 38
+    }
+  ],
+  "identify-review": [
+    {
+      "author": "Recreational diver",
+      "stage": "Design review",
+      "theme": "AI assistance",
+      "body": "Being able to correct a suggested ID is helpful.",
+      "x": 17,
+      "y": 72
+    },
+    {
+      "author": "Design review · AI",
+      "stage": "Version 2 feedback",
+      "theme": "AI assistance",
+      "body": "Keep results compact and show details on tap.",
+      "x": 42,
+      "y": 43
+    }
+  ],
+  "identify-full": [
+    {
+      "author": "Design review · AI",
+      "stage": "Version 1 feedback",
+      "theme": "Visual design",
+      "body": "Expanding one match hides the other results.",
+      "x": 17,
+      "y": 48
+    },
+    {
+      "author": "Recreational diver",
+      "stage": "Version 1 feedback",
+      "theme": "Visual design",
+      "body": "Reviewing matches one by one takes too long.",
+      "x": 36,
+      "y": 68
+    },
+    {
+      "author": "Classmate / tester",
+      "stage": "Version 2 feedback",
+      "theme": "AI assistance",
+      "body": "High confidence makes a match feel trustworthy.",
+      "x": 18,
+      "y": 26
+    }
+  ],
+  "blue-tang-record-nov9": [
+    {
+      "author": "Classmate",
+      "stage": "Design review",
+      "theme": "Visual design",
+      "body": "Short facts would be easier to scan.",
+      "x": 16,
+      "y": 58
+    }
+  ],
+  "recognise-a-blue-tang": [
+    {
+      "author": "Design review · AI",
+      "stage": "Version 1 feedback",
+      "theme": "Content discovery",
+      "body": "The fun fact offers few clues for identifying the fish.",
+      "x": 16,
+      "y": 56
+    },
+    {
+      "author": "Design review · AI",
+      "stage": "Version 2 feedback",
+      "theme": "Visual design",
+      "body": "The name is clear, but key markings are hard to find.",
+      "x": 30,
+      "y": 28
+    }
+  ],
+  "blue-tang-walkthrough": [
+    {
+      "author": "Recreational diver",
+      "stage": "Version 1 feedback",
+      "theme": "Content discovery",
+      "body": "Include the diver’s photo in the species record.",
+      "x": 14,
+      "y": 18
+    }
+  ]
+}
